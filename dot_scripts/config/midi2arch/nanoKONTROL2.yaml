@@ -1,0 +1,68 @@
+general:
+  name: nanoKONTROL2
+  port: '28:0'
+  type: controller
+  auto: true
+  control_data:    [name,       midi,  control_type, command]
+
+controls:
+  # TRACK PART
+  track_back:      [Track back,     58, button,      [cmus-remote, -r]]
+  track_forward:   [Track forward,  59, button,      [cmus-remote, --next]]
+  cycle:           [Cycle,          46, button,      [random_album.xsh]] #[cmus-remote, -C, toggle repeat]]
+  back:            [Back,           43, button,      ""]
+  forward:         [Forward,        44, button,      [next_album.xsh]]
+  
+  # MARKER
+  set:             [Set,            60, button,      ""]
+  marker_back:     [Marker back,    61, button,      ""]
+  marker_forward:  [Marker forward, 62, button,      ""]
+  stop:            [Stop,           42, button,      ""] #select playlist
+  play:            [Play,           41, button,      [cmus-remote, -u]]
+  record:          [Record,         45, button,      [albumplayer.xsh]]
+ 
+  # CHANNELS
+  solo_1:          [Solo 1,         32, button,      ""]
+  solo_2:          [Solo 2,         33, button,      ""]
+  solo_3:          [Solo 3,         34, button,      ""]
+  solo_4:          [Solo 4,         35, button,      ""]
+  solo_5:          [Solo 5,         36, button,      ""]
+  solo_6:          [Solo 6,         37, button,      ""]
+  solo_7:          [Solo 7,         38, button,      ""]
+  solo_8:          [Solo 8,         39, button,      ""]
+
+  mute_1:          [Mute 1,         48, button,      ""]
+  mute_2:          [Mute 2,         49, button,      ""]
+  mute_3:          [Mute 3,         50, button,      ""]
+  mute_4:          [Mute 4,         51, button,      ""]
+  mute_5:          [Mute 5,         52, button,      ""]
+  mute_6:          [Mute 6,         53, button,      ""]
+  mute_7:          [Mute 7,         54, button,      ""]
+  mute_8:          [Mute 8,         55, button,      ""]
+
+  rec_1:           [Rec 1,          64, button,      ""]
+  rec_2:           [Rec 2,          65, button,      ""]
+  rec_3:           [Rec 3,          66, button,      ""]
+  rec_4:           [Rec 4,          67, button,      ""]
+  rec_5:           [Rec 5,          68, button,      ""]
+  rec_6:           [Rec 6,          69, button,      ""]
+  rec_7:           [Rec 7,          70, button,      ""]
+  rec_8:           [Rec 8,          71, button,      ""]
+
+  fader_1:         [Fader 1,         0, fader,       ""]
+  fader_2:         [Fader 2,         1, fader,       ""]
+  fader_3:         [Fader 3,         2, fader,       ""]
+  fader_4:         [Fader 4,         3, fader,       ""]
+  fader_5:         [Fader 5,         4, fader,       ""]
+  fader_6:         [Fader 6,         5, fader,       ""]
+  fader_7:         [Fader 7,         6, fader,       ""]
+  fader_8:         [Fader 8,         7, fader,       ""]
+
+  knob_1:          [Knob 1,         16, knob,        ""]
+  knob_2:          [Knob 2,         17, knob,        ""]
+  knob_3:          [Knob 3,         18, knob,        ""]
+  knob_4:          [Knob 4,         19, knob,        ""]
+  knob_5:          [Knob 5,         20, knob,        ""]
+  knob_6:          [Knob 6,         21, knob,        ""]
+  knob_7:          [Knob 7,         22, knob,        ""]
+  knob_8:          [Knob 8,         23, knob,        ""]

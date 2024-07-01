@@ -1,0 +1,4 @@
+AUTHORS
+       Nicholas Marriott <nicholas.marriott@gmail.com>
+
+GNU                                                                                                  $Mdocdate$                                                                                             TMUX(1)
