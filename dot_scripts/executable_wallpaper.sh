@@ -2,6 +2,8 @@
 
 #DOC#@RUN@=2024-07= "Pick random wallpaper from wallpaper list"
 
+#TODO : make GUI work, probably with fzfmenu.sh script (from junegunn)
+
 # Default wallpaper
 DEFAULT_WALLPAPER="$HOME/.wallpapers/_toitssuze.jpg"
 CACHE="/home/matias/.cache/wallpapers.log"

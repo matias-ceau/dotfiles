@@ -1,3 +1,5 @@
+//#DOC#=2024-06=@OTH@ "SC of C script that extracts the metadata of non-binary scripts and outputs a CSV"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

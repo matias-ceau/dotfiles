@@ -1,6 +1,7 @@
  #!/bin/bash
 
- # Check if picom is running
+ #DOC#=2024-07=@RUN@ "Check if picom is running"
+
  if pgrep -x "picom" > /dev/null
  then
      echo "Picom is running. Stopping picom..."

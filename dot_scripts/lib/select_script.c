@@ -1,3 +1,5 @@
+//#DOC#=2024-06=@OTH@$in_progress$ "SC of C script that selects a chosen script with the help of the cached data"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
