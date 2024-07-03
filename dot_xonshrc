@@ -1,0 +1,50 @@
+#
+# ~/.xonshrc
+#
+
+from prompt_toolkit.keys import Keys
+from prompt_toolkit.filters import Condition, EmacsInsertMode, ViInsertMode
+
+try:
+    source-bash '~/.environment'
+    source-bash '~/.aliases'
+except Exception as e:
+    print(e)
+
+
+@events.on_ptk_create
+def custom_keybindings(bindings, **kw):
+
+    @bindings.add(Keys.ControlW)
+    def say_hi(event):
+        event.current_buffer.insert_text('hi')
+
+
+xontrib load coreutils
+#xontrib load debug-tools
+#xontrib load readable-traceback (old?)
+#xontrib load pipeline (not installeDOLD?)
+#xontrib load (fzf-completions NOT INSTALLED)
+#xontrib load mpl
+#xontrib load kitty
+#xontrib load jupyter
+#xontrib load jedi??
+#xontrib load sh
+# CPU PERF (yay -S tuned \n systemctl enable -now tuned.service)
+
+#aliases['change_font'] = "urxvt-font-switch.xsh"
+$XONSH_SHOW_TRACEBACK=True
+$XONSH_STORE_STDIN = True
+$XONSH_STORE_STDOUT = True  # Store stdout in history 
+$SHELL_TYPE='best' #or 'best'
+$XONSH_HISTORY_MATCH_ANYWHERE = True
+$AUTO_SUGGEST_IN_COMPLETIONS = True
+$COMPLETION_DISPLAY = 'single'
+$VI_MODE = True
+$XONSH_AUTO_PAIR = True
+$HISTCONTROL = 'ignoreerr,ignoredups'
+$XONSH_HISTORY_SIZE = (9999, 'commands')
+#PIPEWIRE_LATENCY="128/48000"
+
+$PROMPT_FIELDS['prompt_end'] = '@'
+$PROMPT = '{BOLD_RED}{user}{RESET}@{BOLD_BLUE}{hostname}{RESET}: {BOLD_YELLOW}{cwd}{RESET} {env_name}{BOLD_GREEN}{prompt_end}{RESET} '

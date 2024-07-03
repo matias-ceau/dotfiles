@@ -1,0 +1,3762 @@
+fe
+fc -AI
+echo "hello"
+ls -a | grep hist
+echo
+source .zshrc
+echo Hello
+tree > file
+vim fil
+vim file
+usermod matias -s /bin/zsh
+sudo usermod matias -s /bin/zsh
+cat file
+notes
+cat .zsh/.zsh_history
+sudo pacman -S zsh-syntax-highlighting
+se
+find / | fzf
+find / | fzf | xsel -b
+which zsh
+touch .zsh/power10theme
+vim .zsh/power10theme
+rm .zsh/power10theme
+cat .profile
+cd zsh
+ln -S .profile .zprofile
+ln -s .profile .zprofile
+stow zsh
+cat .zprofile
+pass emn
+pass ls
+pass zotero
+zathura academic/proteomics/DNA_hybridization__kinetics.pdf
+evince academic/proteomics
+evince academic/proteomics/DNA_hybridization__kinetics.pdf
+zathura academic/proteomics/DNA_hybridization__kinetics.pdf & exit
+chmod +x pdfopener.sh
+vim pdfopener.sh
+find -iname *.pdf
+find *.pdf
+find
+findcd
+find / *.pdf
+find / -iname *.pdf
+zathura academic/proteomics/DNA_hybridization__kinetics.pdf & disown
+zathura academic/proteomics/DNA_hybridization__kinetics.pdf & disownq
+zathura projects/m1-presentation/presentation.pdf
+zathura projects/m1-presentation/presentation.pdf & disown
+find / | grep "\.pdf$" | fzf 
+find / 2>/dev/null | grep "\.pdf$" | fzf 
+find -regex pdf
+find -L -regex pdf
+find /
+find / 2>/dev/null
+find / 2>/dev/null | fzf
+find / 2>/dev/null | grep ".pdf" | fzf
+find / 2>/dev/null | grep "\.pdFpdf" | fzf\
+
+find / 2>/dev/null | grep "\.pdFpdf" | fzf
+i3-msg germinal -e ~/scripts/pdfopener.sh
+i3-msg exec germinal -e ~/scripts/pdfopener.sh
+i3-msg exec germinal '-e ~/scripts/pdfopener.sh'
+i3-msg exec 'germinal -e ~/scripts/pdfopener.sh'
+tmux detach-client
+tmux kill-session 0
+tmux kill-session -t 0
+evince $( fzf )
+evince $( fzf ) & disown
+\:
+evince &
+ps | grep evince
+ps | grep evince | awk '{print $1}'
+disown $'ps | grep evince | awk '{print $1}')\
+\
+\
+\
+\
+\
+q
+disown $('ps | grep evince | awk '{print $1}')\
+\
+\
+\
+\
+\
+
+disown $(ps | grep evince | awk '{print $1}')\
+\
+\
+\
+\
+\
+
+evince $ disown $(ps | grep evince | awk '{print $1}')\
+\
+\
+\
+\
+\
+
+nohup zathura
+nohup zathura && disown
+rm nohup.out
+pdfopener.sh
+vim scripts/pdfopener.sh
+find | fzf --multi
+openapp
+man openapp
+man fzf
+openapp zathura
+o\
+weroff
+task minimal
+task 11 done
+task | dmenu
+task | dmenu -l 30
+task | dmenu -l 30 > test
+cat test
+task | dmenu -l 30 | awk '{print $1}'
+urxvt -e task
+task | dmenu -l 30 2>/dev/null | awk '{print $1}'
+task 2>/dev/null | dmenu -l 30 | awk '{print $1}'
+man task
+man dmenu
+cat data/bib/standard.bib
+which vs
+vs citekeytoclipboard
+vim 
+vs clipboard
+f
+vs
+ta
+vs f
+vs citeboard
+chmod +x scripts/*
+abrahamEEGCoherencePostLSD2001\
+
+bbb
+bib
+grep @{ data/bib/standard.bib
+grep "@{" data/bib/standard.bib
+grep "@article" or "@book" data/bib/standard.bib
+grep "@" data/bib/standard.bib
+grep "@" data/bib/standard.bib | grep ,$
+grep "@" data/bib/standard.bib | grep ,$ | sed 's/@article{//g ; s/,$//g'
+grep "^@" data/bib/standard.bib | grep ,$ | sed 's/@article{//g ; s/,$//g'
+grep "^@" data/bib/standard.bib | grep ,$ | sed 's/@.*{//g ; s/,$//g'
+grep "^@" data/bib/standard.bib | grep ,$ | sed 's/@.*{//g ; s/,$//g' | dmenu -l 30
+grep "^@" data/bib/standard.bib | grep ,$ | sed 's/@.*{//g ; s/,$//g' | dmenu -l 30 | xsel -b
+abrahamPsychopharmacologyHallucinogens1996\
+
+grep "^@" data/bib/standard.bib | grep ,$ | sed 's/@.*{//g ; s/,$//g' | dmenu -l 30 | sed 's/\n$//g' | xsel -b
+[200~abrahamLSDlikePanicRisperidone1996
+abrahamLSDlikePanicRisperidone1996\
+
+evince *
+sudo sytemctl restart bluetooth
+man man
+man -R pdf truc
+man -R man
+man -R pdf man
+man -R pdf man | zathura
+xev
+find [200~abrahamEEGCoherencePostLSD2001
+find data/zotero -iname abrahamEEGCoherencePostLSD2001\
+
+find data/zotero\
+
+find data/zotero\
+r
+find data/zotero/storage abrahamEEGCoherencePostLSD2001\
+
+find data/zotero/storage | grep abrahamEEGCoherencePostLSD2001\
+\
+
+abrahamEEGCoherencePostLSD2001
+find data/zotero/storage abrahamEEGCoherencePostLSD2001
+man find
+qutebrowser zotero://select/items/abanadesHallucinogenicsDrugsDreaming2005\
+
+zotero://select/items/abanadesHallucinogenicsDrugsDreaming2005\
+
+open zotero://select/items/abanadesHallucinogenicsDrugsDreaming2005\
+
+zotero abanadesHallucinogenicsDrugsDreaming2005\
+
+find data/strong
+s
+d
+find data/zotero/storage | grep abanadesHallucinogenicsDrugsDreaming2005\
+
+find data/zotero/storage | grep abanadesHallucinogenicsDrugsDreaming2005 | zathura 
+find data/zotero/storage | grep abanadesHallucinogenicsDrugsDreaming2005 | zathura
+find data/zotero/storage | grep abanadesHallucinogenicsDrugsDreaming2005
+zathura data/zotero/storage/STJNPK9J/abanadesHallucinogenicsDrugsDreaming2005.pdf
+find data/zotero/storage | grep abanadesHallucinogenicsDrugsDreaming2005 | xargs zathura
+e
+mupdf
+mupdf data/bib/library.bib:adamecAmphetaminesMethamphetamine2011\
+
+mupdf data/bib/adamecAmphetaminesMethamphetamine2011\
+
+sudo systemctl restart bluetooth
+i3status
+man i3status 
+ping google.com
+cfi
+sudo pacman -S brave
+git clone https://aur.archlinux.org/brave-bin.git\
+cd brave-bin\
+makepkg -si
+sudo pacman -S gedit
+nordvpn c
+nordvpn d
+sudo pacman -S python-adblock
+baobab /
+sudo pacman -Si
+sudo pacman -Su
+sudo pacman -Suy
+tree apps/biovector
+cat apps/biovector/data/programs/monolith.yaml
+vim psswd.txt
+chmod 777 .
+sudo chmod 777 .
+sudo xselb -b > psswd.txt
+sudo xsel -b > psswd.txt
+xsel -b > psswd.txt
+cat psswd.txt
+sudo umount /dev/sda1
+cd projects/ondansetron
+cd ac
+academic
+cd academic
+joplin
+joplin sync
+unzip TVB_Linux_2.3.zip
+mv TVB_Distribution ~/projects
+cd ~/projects
+cd TVB_Distribution
+cat RELEASE_NOTES.txt
+cat U
+cat UserGuide.pdf
+cat scripts/readpaper.sh
+cat scripts/launcher.sh
+task all
+qutebrowser https://training.incf.org/course/virtual-brain-node10-workshop-personalized-multi-scale-brain-simulation
+./tvb_start.sh
+zathura UserGuide.pdf
+cd projects/TVB_Distribution
+cd demo_scripts
+cd bin
+./distribution.sh
+cd TVB
+ls -a | ali
+ls -a | grep ali
+projects/TVB_Distribution/bin/tvb_start.sh
+cp projects/TVB_Distribution/docs/UserGuide.pdf notes/resources/tvbUserGuide.pdf
+cd dotfiles
+cd qutebrowser
+vim quickmarks
+tvb
+mv TVB Dropbox
+ln -s ~/Dropbox/TVB TVB
+sudo pacman -S anaconda
+task
+qutebrowser  https://neuronaldynamics.epfl.ch/online/index.html
+task 53 done
+sudo pacman -S ardour
+sudo pacman -S jack
+sudo pacman -S jackd
+sudo pacman -S qjackctl
+ln -s Dropbox/audio ~/audio
+ls audio
+sudo pacman -S alsa-sequencer
+yay -s obsidian
+sudo vim /etc/security/limits.conf
+sudo -i
+ulimit -l unlimited
+ulimit -l
+sudo pacman -S a2jmidid
+vim .config/pulse/default.pa
+vim .config/pulse/daemon.conf
+ls notes
+cat notes/MIDI.md
+sudo pacman -S a2jmidi
+sudo pacman -S a2j
+yay -S a2jmidi
+vim /etc/security/limits.conf
+sudo vim /etc/security/limits.d
+sudo vim /etc/security/limits.d/audio.conf
+su
+vim notes/ardour.md
+sudo pacman -Syu guitarix
+btmgmt power off
+sudo btmgmt power off
+sudo btmgmt power on
+bluetooth power on
+bluetoothctl power on
+cd notes
+vim bluetooth.md
+cat MIDI.md
+rfkill unblock all
+default-sample-format = float32le\
+default-sample-rate = 48000\
+realtime-scheduling = yes\
+exit-idle-time = -1
+sudo bluetoothctl
+sudo pacman -S pulseaudio-module-jack
+yay -S pulseaudio-module-jack
+sudo pacman -S pipewire
+systemctl bluetooth.service
+systemctl start bluetooth.service
+systemctl enable bluetooth.service
+sudo pacman -S pulseaudio-jack
+cmus-remote -u
+sudo pacman -S pulseaudio-module-bluetooth
+sudo pacman -S pulseaudio-bluetooth-module
+sudo pacman -R pipewire
+sudo pacman -Rn pipewire
+sudo pacman -Rc pipewire
+stratx
+cat /usr/share/dbus-1/system.d/bluetooth.conf
+sudo pacman -S gnome-bluetooth gnome-shell gnome-control-center
+gnome-bluetooth
+bluetooth-player
+enable bluetooth.service
+sudo systemctl enable bluetooth.service
+sudo pacman -S bluedevil
+sudo pacman -S blueberry
+sudo systemctl bluetooth stop
+sudo systemctl stop bluetootl
+sudo systemctl stop bluetooth
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+sudo pacman -S pulseaudio-bluetooth
+sudo vim /etc/pulse/default.pa
+sudo updatedb
+pactl list modules
+pactl list modules | grep "Name:"
+sudo pacman -S hydrogen
+hcitool dev
+sudo pacman -S hcitool
+pulseaudio -k
+sudo service bluetooth restart
+kill jackd
+cat /etc/bluetooth/main.conf
+sudo vim /etc/bluetooth/main.conf
+sudo pacman -R blueberry
+vim notes/bluetooth.md
+sudo pacman -S blueman
+load-module module-bluetooth-discover module-bluetooth-policy
+load module-bluetooth-discover module-bluetooth-policy
+modprobe module-bluetooth-discover module-bluetooth-policy
+vim .bash_history
+vim .zsh/.zsh_history
+o
+help neomutt
+neomutt help
+man neomutttt
+man neomuttt
+man neomutt
+nw
+pass -c protonmail-credentials/
+pass 
+pass matias@ceau.net
+pass -c matias@ceau.net
+pass
+pass protonmail-credentials/
+pass protonmail-credentials/cHJvdG9ubWFpbC9icmlkZ2UvdXNlcnMvOGgyclBhNVZQYWxIQWhZc0ZsenRQX242YVltMW9lWXpZWXJTWmFBRWVxckU4YXp1MW1LQW1GcnlFbXc4RmZaWS1wNTQya2ZQdTV5bmFtSVZKR1AzVmc9PQ==/8h2rPa5VPalHAhYsFlztP_n6aYm1oeYzYYrSZaAEeqrE8azu1mKAmFryEmw8FfZY-p542kfPu5ynamIVJGP3Vg==
+man pass
+mbsync
+mbsync -a
+neo
+neomutt
+ln -s ~/Dropbox/emn emn
+pactl load-module module-bluetooth-discover module-bluetooth-policy
+pactl help
+pactl load-module module-bluetooth-policy
+pactl load-module module-bluetooth-discover module-bluetooth policy
+pactl load-module module-bluetooth-discover
+t emn
+t p2a
+sudo pacman -Syu firefox
+sudo pacman -S nautiluslus
+sudo pacman -S nautilus
+bluetooth
+blutoothctl
+bluetoothctl
+cat notes/bluetooth.md | grep pactl
+cmd = $(
+cmd = $(cmd = $()\
+
+pactl load-module module-bluetooth-discover module-bluetooth-policy\
+
+cat notes/bluetooth.md
+rfkill list all
+rfkill unblock 0
+t 217 219 220 done
+t 1iph EXAM pri:H due:2021-12-16
+t 219 220 done
+t 222 mod dep:217,218
+t 222 mod week 4
+t 1iph week 6
+t 221 mod +exam
+t week
+t 223 mdo dep:222
+t 223 mod dep:222
+cd emn/iph/week\ 6
+ls > tk.sh
+vim tk.sh
+bash tk.sh
+t 223 mod dep:224,225,226,227,228,229
+t 221 mod dep:223
+t 212 mod pri:
+t 217 done
+t 1iph
+t 220 done
+t iph
+t 225 done
+t 225 223 done
+t 223 done
+emn
+t 64 delete
+cp iph.pdf emn/iph
+brave emn/iph/week\ 6/*.pdf
+brave emn/iph/week\ 3/*.pdf
+brave -h
+zathura emn/iph/week\ 3/*.pdf
+zathura emn/iph/week\ 4/*.pdf
+pdftk cat ~/emn/iph/*/*.pdf output iph.pdf
+pdftk help
+pdftk --help
+pdftk --help | grep cat
+pdftk ~/emn/iph/*/*.pdf cat output iph.pdf
+zathura iph.pdf
+zathura emn/iph/week\ 5/*.pdf
+lsblk
+sudo mount /dev/sda1 media
+cd media
+cd Season\ 2
+mpv -fs Twin\ Peaks\ \(1990\)\ -\ S02E01\ -\ May\ the\ Giant\ Be\ with\ You\ \(1080p\ BluRay\ x265\ Silence\).mkv
+pavucontrol
+man mpv
+sudo pacman -R jackd
+sudo pacman -R jack
+which jack
+sudo pacman -S guake
+alsamixer
+gpasswd -a pulse audio
+gpasswd -a matias pulse-access
+sudo pacman -R pulseaudio
+sudo pacman -Rf pulseaudio
+ls /
+ls /usr
+ls /sys
+tree /
+tree -h
+man tree
+tree -L 1
+tree -L 1 /
+tree -L 2 /
+cat /etc/hosts
+tree -L 2 / | grep user
+cat /etc/users
+tree -L 2 / | less
+cd /run/user
+cat 1000
+cd 1000
+pulseaudio
+systemctl stop pulseaudio
+systemctl start pulseaudio
+alsa
+sudo pacman -S alsa
+pip install matplotlib
+pip install PySimpleGUI
+python3 __main__.py
+sudo timeshift --create --comment 'after install'
+sudo pacman -S baobab
+ cd /home/matias/HDD/Dropbox/Online_storage
+ cd /home/matias/audio
+ cd /home/matias/HDD/Dropbox
+ cd /home/matias/music
+ cd '/home/matias/music/Cannonball Adderley'
+ cd /run/user/1000/kio-fuse-HsenhS/trash
+yay -S pycharm
+yay -R pycharm
+which pycharm
+which pycharm-eap
+yay -R pycharm-eap
+yay -Rns pycharm-eap
+baobab HDD
+ cd '/home/matias/music/Cannonball Adderley/Somethinâ€ƒ¹ Else'
+ cd /run/user/1000/kio-fuse-FGDZhL/trash
+ cd /home/matias/downloads
+xdg-open downloads/nicotine_v4bis.pdf q
+ls .zsh
+cat .zsh
+cat .zshrc2
+cat .zshrc2 >> .zshrc
+sudo pacman -S alsa-modular-synth
+yay -S alsa-modular-synth
+yay -S surge
+surge
+cd .jupyter
+jupyter-notebook --generate-config
+vim jupyter_notebook_config.py
+jupyter-notebook list
+jupyter-notebook shutdown
+jupyter-notebook help
+jupyter-notebook help | grep shutdown
+jupyter-notebook help | grep shut
+jupyter-notebook stop
+jupyter-notebook password
+12*9
+eval 12*9
+expr 12*9
+expr 12 * 9
+echo $((12*9))
+echo $((12*4))
+cat midi.py
+cd Untitled\ Folder
+vim chords.csv
+python3 -m pip install mido
+python3 -m pip install midiutil
+sudo pacman -S mpv
+vim jazz.txt
+wget https://midkar.com/jazz/a_cottage_for_sale_rs.mid
+rm a_cottage_for_sale_rs.mid
+mkdir jazzmidi
+cd jazzmidi
+bash ../jazz.txt
+sudo pacman -S termux cmus
+cmus
+python3 -m pip install pygame
+sudo pacman -S timidity
+python3 -m pip install matplotlib
+git
+ssh
+ls .ssh
+sudo pacman -S gh-cli
+yay -S gh-cli
+pamac install gh-cli
+pamac install github
+pamac
+gh
+sudo pacman -S github-cli
+git add .
+git commit -m 'initial commit'
+git branches
+git branche
+git branch
+sudo pacman -S qutebrowser
+gh auth login
+gh repo create
+git commit -m 'new data'
+mkdir data
+mv jazzparser jazzmidi weimar_jazz_database VampireKillerCV groove_midi midi data
+mv jazzparser jazzmidi weimar_jazz_database VampireKillerCV1.mid groove_midi midi data
+git commit -a -m "data folder"
+mkdir archive
+mv *.csv archive
+mv VampireKillerCV3.mid data
+bash script.txt
+vim script.txt
+vim s.txt
+mkdir minor9
+mkdir jazzstd
+mv jazzstd
+vim ../../s.txt
+bash ../../s.txt
+vim t.txt
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/1.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/2.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/3.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/4.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/5.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/6.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/7.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/8.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/9.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/10.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/11.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/12.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/13.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/14.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/15.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/16.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/17.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/18.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/19.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/20A.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/20B.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/21.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/22.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/23.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/24.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/25.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/26.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/27.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/28.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/29.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/30.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/31.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/32.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/33.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/34.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/35.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/36.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/37.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/38.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/39.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/40.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/41.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/42.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/43.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/44.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/45.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/46.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/47.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/48.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/49.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/50.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/51.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/52.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/53.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/54.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/55.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/56.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/57.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/58.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/59.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/60.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/61.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/62.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/63.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/64.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/65.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/66.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/67.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/68.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/69.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/70.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/71.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/72.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/73.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/74.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/75.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/76.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/77.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/78.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/79.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/80.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/81.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/82.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/83.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/84.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/85.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/86.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/87.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/88.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/89.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/90A.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/90B.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/91.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/92.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/93.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/94.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/95.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/96.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/97.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/98.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/99.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/100.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/101.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/102.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/103.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/104.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/105.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/106.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/107.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/108.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/109.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/110.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/111.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/112.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/113.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/114.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/115.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/116.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/117.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/118.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/119.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/120.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/121.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/122.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/123.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/124.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/125.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/126.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/127.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/128.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/129.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/130.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/131.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/132.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/133.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/134.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/135.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/136.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/137.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/138.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/139.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/140.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/141.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/142.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/143.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/144.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/145.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/146.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/147.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/148.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/149.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/150.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/151.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/152.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/153.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/154.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/155.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/156.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/157.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/158.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/159.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/160.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/161.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/162.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/163.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/164.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/165.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/166.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/167.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/168.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/169.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/170.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/171.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/172.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/173.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/174.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/175.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/176.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/177.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/178.MID'\
+curl -O 'https://bhs.minor9.com/midi/patterns4jazz/179.MID'\
+
+mkdir grooves
+mv grooves
+mv *.MID jazzstd
+vim r.txt
+cd minor9
+cd grooves
+mkdir data/minor9/patterns4jazz
+mv *.MID data/minor9/patterns4jazz
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS06E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS07E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS08E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS09E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS10E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS11E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS12E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS13E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS14E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS15E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS16E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS17E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS18E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS19E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS20E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASS21E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1BASSKIL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1CLOUDS.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DANCE13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM06E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM07E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM08E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM09E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM10E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM11E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM12E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM13E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM14E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM15E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM16E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM17E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM18E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM19E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM20E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM21E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM22E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM23E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM24E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM25E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM26E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM27E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM28E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM29E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUM30E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS16.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS17.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS18.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS19.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS20.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS21.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS22.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS23.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS24.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS25.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS26.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS27.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS28.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS29.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS30.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS31.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1DRUMS32.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1ELECT01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1ELECT02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT06E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT07E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT08E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT09E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT10E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1FILT11E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1HOUSE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1NEWDNCE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT06E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT07E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT08E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT09E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT10E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT11E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT12E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT13E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT14E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT15E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT16E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNT17E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNTH3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNTH4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNTH5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/1SYNTH6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ARPEG1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2A_DEMO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS06E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BASS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2BELL01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CHOI01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CHRA01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CLAP01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CLAP02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CLAP03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CLAP04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CLAP05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2COW1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CRASH1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2CYM01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS16.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS17.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS18.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2DRUMS19.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2EUROBEA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2GOBLI1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2GOBLI2E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2GUIR01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2GUIT02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HARMO1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HARMO2E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HARMO3E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HARMO4E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HIHIT1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HIHIT2E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HIHIT3E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HIHIT4E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HIHIT5E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2HYBNO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2KICK01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2KICK02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2KICK03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2KICK04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2MAYDAY7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2METAL1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ORGA01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ORGA02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ORGA03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ORGA04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2ORGA05E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PAD01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PAD02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PAD03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PAN01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PERC01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PERC02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PERC03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2PIANO1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2RIDE01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2RIM01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2RIM02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2RIM03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SAX01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE2E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE3E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE4E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE5E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE6E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SNARE7E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SQUE01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2STR01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2STR02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2STR03E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2STR04E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2STRG01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2SYNT10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TAIKO1E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TAMB01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TAMB02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TAMBO3E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TOMS01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2TOMS02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2WOOD01E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/2WOOD02E.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3BASS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3BASS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3BASS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DISCO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DISCO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DISCO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3DRUMS13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3EASYPO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3EASYPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3POP_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3POP_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3POP_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3POP_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/3POP_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4DRUMS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4FSTRCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4FSTRCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4FSTRCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4FSTRCK4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4ROCK8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4TRPRCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4TRPRCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4TRPRCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4TRPRCK4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_8B_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_8B_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_8B_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_8B_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4_16B_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/4claverythms.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CELLO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5CLASSI6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5GUITAR.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5HARPSI.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5ORGAN1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5ORGAN2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5RECORD.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5STRNG1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5STRNG2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5VIOLA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/5VIOLINE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ACCORD1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ACCORD2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ACOUBA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BALLAD7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BANJO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BASS1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BASS2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BASS3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BASS4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BAVARI1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BAVARI2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BAVARI3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BAVARI4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BAVARI5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEAT6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEGUIN1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEGUIN2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BEGUIN3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BLUES1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BLUES2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BLUES3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BLUES4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOOGIE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOOGIE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOOGIE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOOGIE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOSSA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOSSA1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOSSA2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOSSA3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6BOSSA4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6CALYPSO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6CHACHA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6CHACHA2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6CHA_CHA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6CLAVI1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6COUNTR1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6COUNTR2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6COUNTR3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6COUNTRY.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6COUROCK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DISCO8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DIXILA3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DIXILA4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DIXILA5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DIXILA6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6DRUMS11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EPIANI5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EPIANO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EPIANO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EPIANO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EPIANO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6EXPERL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FASTROC.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FILM_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FILM_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FILM_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FILM_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FOX_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FUNK_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FUNK_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FUNK_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6FUNK_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GIPSY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GO_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GROOVY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GROOVY2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GROOVY3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GROOVY4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GROOVY5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GUITAR.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GUIT_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GUIT_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6GUIT_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6HAPPY.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6HARP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6HARPSI.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ITAPOP1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ITAPOP2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6JAZZGIT.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6JIVE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6JOE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6JOE_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6MBOX1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6MBOX2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6MBOX3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6MUSETTE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIANO8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6PIZZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6POP1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6POP2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6POP3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6R&B.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6RAGGAE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6REGGAE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6RHUMBA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6RHYTHM1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6RHYTHM2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ROCK&R1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ROCK&R2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ROCK&R3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6ROCK&R4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SALSA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SAMBA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SAMBA2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SAMBA3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SLOWAL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SLOWROC.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SLOWWAL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SWING9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SYNTH1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SYNTH2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6SYNTH3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TANGO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TINA_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TR8081.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TWIST.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TWIST2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6TWIST3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6VIBPH1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6VIBPH2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WALZ5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WALZ6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WALZ7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WALZ8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WINEWA1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6WINEWA2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/6_8MARCH.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7AMBI.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7AMBI1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7AMBI2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7ARPEGIO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7BYTIMO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7DEPEC.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7DRUMS.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7DRUMS01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7DRUMS02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7FOREST.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7FUNKY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7FUNKY2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7FUNKY3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LAMBAD2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7LATIN_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7NEWFILM.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7NYLON.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7ORIENT.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7PHIL_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7RCKNRL1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7RCKNRL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7RCKNRL3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7RHUMB1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7RHUMBA1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SCHOW.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SCOTCH1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SLWRCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SLWRCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SLWRCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SLWRCK4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SPACEME.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SWING.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7SWING10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TANGO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TANGO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TANGO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TANGO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TR8081.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TR8082.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7TRIPLE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7WALZ1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7WALZ2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7WALZ3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/7WALZ4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_BEAT_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_ROCK_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_ROCK_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_ROCK_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/8_ROCK_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/16_BEAT8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/34_MARCH.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/44fill06.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/44latin1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/44rock03.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/44swing5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/48BEAT1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/48BEAT2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/48BEAT3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/48BEAT4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/54groov2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/64groov3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/68claverythm.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/74fills4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/78funk.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/128bald3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/128fill6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/128rega3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/416BT_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/416BT_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/416BT_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/416BT_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/616BT_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/AKIWOWO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BAION_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BALLAD_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BALLAD_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BALLAD_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BALLAD_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BALLAD_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BAROQUE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BAVMARCH.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BAVWALZ1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BAVWALZ2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BEATPOP1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BEGUINE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BEGUINE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BEGUINE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BEGUINE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGBAND1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGBAND2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGBAND3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGBWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGROCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BIGROCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BLUEGRAS.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BLUSHUF1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BLUSHUF3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOLERO_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOLERO_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSAN_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSARO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSARO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BOSSARO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BWOOGIE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BWOOGIE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BWOOGIE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/BWOOGIE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CALYPSO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CALYPSO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CARIBIAN.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CASCARA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHACHA_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHACHA_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHACHA_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHACHA_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHANSON.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CHARLST1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CIRCUS.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CLASMAR1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CLASSIC1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CLASWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CONGA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNTRY9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/COUNWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/CUBAN.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DANCEPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DANCE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DANCE_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DANCE_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCOFU1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCOFU2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_16.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_17.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_18.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_19.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_20.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_21.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_22.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_23.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCO_24.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DISCPOLK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DIXIE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DIXIE_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DIXIE_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/DOUBLEBA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/EAVROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ELECTPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ENGWALZ1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ENGWALZ2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/EUROPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FANFARE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FANGA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FANTASY1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FASTROC1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FASTWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FLAMENCO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FOLKLORE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FOXTROT1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FOXTROT2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FRWALTZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNKPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNKSFL1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNKSFL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNK_16.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUNPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUSION_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUSION_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/FUSION_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GENAFR6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GERMARCH.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GERWALTZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITSONG9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTAX14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTOOL7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTUBE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTUBE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTUBE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GITTUBE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/GUAGUANC.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HABANERA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HALFSHUF.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HAPPYR_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDHOU1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDHOU2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HARDROC9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HAWAIIAN.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HIPHOP_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/HOUSE_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ITALOP_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZROC1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZROC2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZROC3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZWAL1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZWAL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZWAL3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JAZZ_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/JIVE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/Jamaica.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/LAMBADA1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/LAMBADA2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/LATINSFL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/LilChips Info.txt'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MAMBO_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MAMBO_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MAMBO_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MANDOLIN.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCHFOX.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARCH_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MARIACHI.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MERENGUE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/METAL_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MEXICAN1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED16.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED17.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MIXED18.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOSAMBIQ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTION1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/MOTOWN13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/Maracaibo.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/NEWAGE_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/NEWAGE_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/OLDIES_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/OLDROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/OLDROCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/OLDROCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PASODOB1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PASODOB2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PBALLAD1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PBALLAD2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIAGIT01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIAGIT02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIAGIT03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/PIANO07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POLKA_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPBALAD.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPSHUF1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPSHUF2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPSHUF3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPSHUF4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POPWALTZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POP_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POP_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/POP_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/QUICKST1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAGTIME.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAPROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAPROCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RAP_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/REGGAE15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RHUMBA_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RHUMBA_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RHUMBA_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RH_BLUE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RH_BLUE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RH_BLUE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RH_BLUE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RICKETYC.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/RIODRUM8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKHOU1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKHOU2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKHOU3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKRAP1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKRAP2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKRAP3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKRAP4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKRAP5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKSHU1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKSHU2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKSHU3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKSHU4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCKSHU5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_12.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_15.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ROCK_N_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/Reggaelektrik.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAFARI.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SALSA_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SALSA_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SALSA_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SALSA_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SALSA_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_01.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_02.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_03.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_04.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_05.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_06.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_07.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_08.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_09.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_10.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_11.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_13.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SAMBA_14.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SCRATCH1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SCRATCH2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SCRATCH3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SECTIO7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SERBEAT1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SERBEAT2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFB_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFB_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFLE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFLE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFLE3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SHUFFLE4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SKA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLOWFUN1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLOWSOU1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLOWWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLROCK_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLROCK_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SLROCK_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SL_BLUE1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SL_BLUE2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SOUL_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SPEEDMET.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/STANDARD.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/STRROCK1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/STRROCK2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/STRROCK3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGF_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGF_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGHO1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGHO2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGHO3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGHO4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGHO5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWINGR_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_0.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_7.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_8.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/SWING_9.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TAKE_78.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TANGO_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TANGO_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TANGO_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TANGO_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TRIPLET6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/TWIST_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/US_MARCH.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_4.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_5.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_5_.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WALTZ_6.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WESTERN1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/WIENWALZ.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/Worldbeat.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_BAION.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_BLUES.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_BLUESFL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_DANCING.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_DELITRP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_DISCPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_EASYPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_FASTROK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_FUNKPOP.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_FUNKSHF.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_HARDFNK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_JAZBLUS.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_LATINPO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_MOTOWN.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_MTWNSHF.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_POPFUNK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_REGGAE.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SAMBA.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SCHUNKL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SLAPST1.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SLAPST2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SLOWFNK.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SOUL2.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_SOUL3.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_STRAITO.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_WALKBLU.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_WESTCST.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_WUSSEL.MID'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/_beat1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/africa.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro7.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afro8.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afrocub2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afrocuba.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/afrocuba1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ardhajai.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/astley.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bali.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ballad.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ballad2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bellclap.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bellresu.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues01.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues02.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues03.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues04.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues05.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues06.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues07.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues08.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues09.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues10.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues11.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues12.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues13.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues14.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blues15.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bluesrok.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bluezrok.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/blusbrsh.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bossanov.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/break6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bridge.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bridge1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/bridge2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/calypso.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/cascbrsh.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/chacha.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/chandetan.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/charchar.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/chartalk.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/chowtal.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/cngacbel.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/country.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dadra.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dave1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dave2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dave3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dave4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dblbsfil.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/dhammar.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/disco.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/disco2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/discofnk.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/discopop.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/drive150.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/drumpatt.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ebo.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ektal.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ellada.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/erskine2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/fill.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/fill1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/fill2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/fstsalsa.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk01.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk02.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk03.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk04.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk05.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk06.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk07.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk08.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk09.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk10.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk11.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk12.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk13.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk14.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk15.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk16.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk17.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk18.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk19.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk20.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk21.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk22.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk23.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk24.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk25.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funk26.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funkrock.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/funkycad.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gahu.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gamomizitas.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmdance.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmhalf.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmjthing.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmlatin.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmsalsa.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmschool.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmsoul.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/gmswbeat.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/halftime.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/halfxcrs.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy7.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy8.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavy9.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/heavyrok.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/india.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/intro.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/jazzrock.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/jhaptal.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/kardamou.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/keharwa.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/kpanlogo.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/latinclv.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/latinfnk.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ltsalsa1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ltsalsa2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo7.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/mambo8.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/modern.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/motown05.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/newwave1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/newwave2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/newwave3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/newwave4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/newwave5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/ochetan.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/paradidl.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/piquante.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/pop.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/randb.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae6.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae7.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae8.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/reggae9.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rock5.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/roknroll.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rokswing.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rpm120.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rupak.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl01.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl02.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl03.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl04.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl05.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl06.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl07.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl08.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl09.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl10.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl11.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl12.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl13.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/rythbl14.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/salsalat.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/samba.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/sambadis.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/sbreggae.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/semiochetan.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/sex.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shkitup.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl01.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl02.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl03.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl04.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl05.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl06.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl07.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl08.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl09.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffl10.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/shuffle.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/sitarkha.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/soulatin.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/stdotom.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/surtos1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/surtos2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/swing.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tintal.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tsifteleli1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tsifteleli2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tsifteleli3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tsifteleli4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/tutugan.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/twist.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/univgruv.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/upadasi.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/upchorus.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/weckl2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/yanvalou.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zeibekiko.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zettl1.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zettl2.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zettl3.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zettl4.mid'\
+curl -O 'https://bhs.minor9.com/midi/drum_grooves/zettl5.mid'\
+
+git commit -a -m "new data"
+vim ../../script.txt
+bash ../../script.txt
+git pull origin main
+git checkout
+git pull
+mv fiberphotopy
+mv dev/tutorial ..
+git commit -m 'h'
+vim maybe.csv
+cd ../..
+git commit -m 'new_data'
+sudo pacman -S keepass
+keepass
+scripts
+epoch_hexadecimal 2022-04-22
+epoch_hexadecimal '2022-04-22'
+epoch_hexadecimal '20220422'
+epoch_hexadecimal '2022-04-22 13:12'
+epoch_hexadecimal '2022-04-22 13:12:00'
+epoch_hexadecimal
+cd fiberphotopy/
+git commit -m 'red'
+python3 -m pip install music21
+which musescore
+sudo pasman -S mscore3
+sudo pacman -S mscore3
+sudo pacman -S mscore
+yay -S mscore
+yay -S mscore3
+cd data/weimar_jazz_database/RELEASE2.0_mid_unquant
+sudo mkdir /usr/share/sounds/sf2
+ln -s /home/matias/audio/SOUNDFONTS/Piano\ Fender\ Rhodes\ AMB\ \(2,653KB\).sf2 /usr/share/sounds/sf2/default.sf2
+sudo ln -s /home/matias/audio/SOUNDFONTS/Piano\ Fender\ Rhodes\ AMB\ \(2,653KB\).sf2 /usr/share/sounds/sf2/default.sf2
+cd /usr/share/sounds/sf2
+sudo 
+cd /usr/share/sounds
+sudo rm sf2
+sudo rm -rf sf2
+sudo mkdir soundfonts
+sudo ln -s /home/matias/audio/SOUNDFONTS/Piano\ Fender\ Rhodes\ AMB\ \(2,653KB\).sf2 /usr/share/soundfonts/
+sudo mv soundfonts ..
+sudo ln -s /home/matias/audio/SOUNDFONTS/Piano\ Fender\ Rhodes\ AMB\ \(2,653KB\).sf2 /usr/share/soundfonts/default.sf2
+fluidsynth ArtPepper_Anthropology_FINAL.mid
+ln -s /usr/bin/musescore /usr/bin/mscore3
+sudo
+sudo ln -s /usr/bin/musescore /usr/bin/mscore3
+python3 -m pip install tikz
+cd SHEETS
+cd Scores
+musescore -j 62T1.mscz test.flac
+musescore -o 62T1.mscz test.json
+musescore -o 62T1.mscz 62T1.json
+musescore -j job.json
+fluidsynth *.mid
+dmenu -l ls
+apps
+rm af.csv rz.csv gq.csv
+mkdir basslines
+cd popsongs
+sudo pacman -S vimv
+curl https://raw.githubusercontent.com/thameera/vimv/master/vimv > ~/.local/bin/vimv && chmod +755 ~/bin/vimv
+curl https://raw.githubusercontent.com/thameera/vimv/master/vimv > ~/bin/vimv && chmod +755 ~/bin/vimv
+curl https://raw.githubusercontent.com/thameera/vimv/master/vimv > ~/bin/vimv && chmod +755 ~/.local/bin/vimv
+$PATH
+$paTH
+PATH
+printf PATH
+mv ~/.local/bin/vimv ~/scripts
+chmod +x vimv
+cd apps/harmonics/data/popsongs
+ls | head
+ls | head 50
+ls | head -l 50
+ls | less
+rm AC%20DC%20-%20You_Shook_Me_All_Night_Long.mid
+yay -S cuda
+cuda
+sudo pacman -S reflector
+yay -S reflector
+ls -lsha /boot
+cd ~/\
+chmod +x ./Miniconda*.sh\
+./Miniconda*.sh
+cd downloads
+mv notes/resources/Miniconda3-latest-Linux-x86_64.sh ~
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+miniconda3
+miniconda
+source .bash_profile
+conda
+conda create -name tensorflow
+conda create -name tf2.0
+conda create -name tensorflow-gpu
+conda init zsh
+conda install pip
+conda install tensorflow-gpu pandas numpy
+python\
+from tensorflow.python.client import device_lib\
+device_lib.list_local_devices()\
+n
+cd apps/harmonics/
+conda install keras
+python3 lstm_real_book.py
+python3 -m pip install scalene
+scalene harmonics.py
+scalene test.py
+pip install numba
+pip install numba==0.53
+conda install seaborn
+conda install nb_conda
+conda install jupyter
+pip install -U tensorflow
+touch element.py voice.py part.py tune.py
+mv *.py harmonics
+conda install h5py
+conda update -n base -c defaults conda
+git commit -m 'we'
+rm data/popsongs/Miniconda3-latest-Linux-x86_64.sh
+mv ../popsongs data
+cd data/popsongs
+vimv
+cd apps/harmonics/data
+vim popsongs_index.csv
+git commit -m 'added'
+jupyter-notebook $
+pip install cipy
+p IP install scipy
+python3 -m pip install scipy
+conda info
+pip install scipy
+sudo pacman -S audacity
+pip install pyaudio
+git commit -m "."
+sleep
+suspend
+systemctl suspend
+pip install skimage
+conda install skimage
+python3 -m pip install skimage
+python3 -m pip install scikit-image
+ls music/AFX/Hangable\ Auto\ Bulb/0
+python3 counterpy/__main__.py 60 1 8
+python3 counterpy/__main__.py 60 1 25
+python3 __main__.py 60 1 8
+python3 __main__.py 60 1 16
+python3 __main__.py 60 1 10
+vim __main__.py
+cd ../harmonics
+ip
+pip install pandas
+pip install pyyaml
+jupyter-notebook apps/harmonics/AUDIO.ipynb
+cd apps/harmonics/counterpy
+vim cc.csv
+vim gm1.csv
+mv gm1.csv gm1.py
+git commit -m 'gn'
+git reset --soft "HEAD^"
+git commit -m 'del\
+'
+git reset --soft HEAD~3
+git commit -m 'del2'
+git commit -m 'e'
+git pull --rebase origin main\
+git push origin main
+git pull --rebase\
+
+rm harmonics
+rm -rf harmonics
+git clone https://github.com/matias-ceau/harmonics
+git remote rename jazz
+git remote rename origin jazz
+touch t
+git commit -a
+git remote set-url --all git@github.com:matias-ceau/harmonics
+git remote set-url jazz git@github.com:matias-ceau/harmonics
+git commit 'flt'
+git commit -m 'flt'
+vim harmonics.py
+cd apps/fiberphotopy
+git remote 
+cd fiberphotopy
+mv fiberphotopy ../fiberARCHIVE
+mv fiberphotopy pyfiber
+git commit -m 'removed'
+git remote set-url origin git@github.com:matias-ceau/pyfiber.git
+sudo pacman -Syu tree
+cat pyproject.toml.txt
+vim pyproject.toml.txt
+mv pyproject.toml.txt pyproject.toml
+mv behavioral_data.py behavior.py
+mv fiber_data.py fiber.py
+vim fiber.py
+lq
+mv fp_utils.py _utils.py
+vim behavior.py
+vim pyfiber/_utils.py
+rm -rf pyfiber.egg-info dist
+mv ~/__test.py pyfiber
+python3 venv bac
+python3 venv help
+python3 -m venv bacasable 
+source activate bacasable/bin
+source bacasable/bin/activate
+rm -rf pyfiber.egg-info dist bacasable
+python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'
+rm __init__.py
+cat __init__.py
+tar --list -f *.gz
+unzip -l *.whl
+vim test.py
+mv pyfiber src
+pip remove pyfiber
+python -m pip -e install .
+pip -e install .
+python -m pip install -e .
+tar --list -f dist/pyfiber-0.1.7.tar.gz
+tar --list -f dist/pyfiber-0.1.8.tar.gz
+unzip -l dist/*.whl
+rm -rf pyfiber.egg-info
+sudo pacman -S tox
+tox-quick-start
+tox-quickstart
+mv config.yaml pyfiber.yaml
+python setup.py test
+pip install pytest
+python -m pytest
+pytest
+pytest test
+pytest tests
+pytest -ra
+python -m unittest discovre
+python -m unittest discover
+python - venv bac
+python -m venv bac
+ln -s /home/matias/HDD/Dropbox/data data
+cd WORK
+cd AD21R_rat_2_Self-Administration_j23
+python3 -m venv bac
+source bac/bin/activate
+cd bac
+cd lib
+tree 
+tree | grep fiber
+ls pyfiber
+rm -rf bac
+pip list | grep fiber
+pip install pyfiber==0.1.9
+git commit -m 'beta released on pypi'
+mv README.md README.rst
+git commit -m 'change readme format'
+conda create harmonics
+vim .bash_profile
+sudo pacman -S rxvt-unicode
+urxvt
+mkdir .v
+rm -rf .v
+mkdir HDD/Dropbox/.v
+ln -s /home/matias/HDD/Dropbox/.v .v
+python -m venv ~/.v/harmonics
+activate
+activate harmonics
+conda --info envs
+conda info envs
+conda list
+conda help
+conda activate ame
+pip freeze > req.txt
+source ~/.v/harmonics/bin/activate
+pip help
+pip3 install -r req.txt
+cat req.txt
+ipython kernel install --user --name=harmonics
+mv counterpy harmonics src
+touch src/__init__.py 
+touch src/counterpy/__init__.py
+touch src/harmonics/__init__.py
+cat gm1.py
+rm gm1.py
+rm cc.csv
+rm __pycache__
+touch LICENCE.txt
+touch README.md
+touch setup.py
+python -m pip install --upgrade pip
+pip install twine
+python
+rm pyfiber.egg-info
+cp setup.py ../biovector/.
+rm setup.py
+cp ../pyfiber/setup.py .
+mkdir src
+mv biovector/ src
+vim config.yaml
+mv data src/biovector
+mv config.yaml src/biovector/
+mkdir dev
+mv exercise.ipynb dev
+rm -rf __pycache__
+vim MANIFEST.in
+rm -rf dist pyfiber.egg-info
+python -m venv ~/.v/testing
+source ~/.v/testing/bin/activate
+pip install biovector
+biovector
+pip install harmonics
+vim .bash_aliaseShistory
+vim .bash_aliases
+ls -a | grep .
+venv
+env 
+v
+del
+new caca
+on caca
+del caca
+new biovector
+lvs
+new lstm
+mv harmonics analysis
+mkdir harmonics
+touch harmonics/__init__.py
+mv analysis counterpy harmonics
+rm -rf *egg*
+mkdir extract
+mkdir analyze
+mkdir create
+mv analysis/* analyze
+cd analysis
+rm -rf analysis
+mv counterpy create
+mkdir cli
+touch cli/__init__.py
+ls -ll
+mv biovector brain
+mv brain apps
+mv brain brain2
+cd brain2
+rm .git
+rm -rf .git
+rm -rf dev/*
+mkdir src/brain2
+rm requirements.txt
+vim harmonics
+git commit -m 'architecture change'
+git push jazz arnold
+git push --force origin
+jupyter kernel help
+pip install jupyter
+ls ~/.local/share/jupyter/kernels
+jupyter notebook
+jupyter-notE Notebook
+pip install pandas numpy scipy
+pip install music21
+pip install music21 mido pyo
+pip install pyAudioanalysis
+pip install librosa
+lspci | grep -i nvidia
+uname -m && cat /etc/*release
+gcc --version
+uname -r
+sudo pacman -S cuda
+sudo pacman -S nvidia-fs libnvidia_nscq fabricmanager
+sudo pacman -S cuda-compiler
+pip install tensorflow
+sudo pacman -S nvidia nvidia-utils cuda cdnn
+yay -S cdnn
+sudo pacman -S nvidia nvidia-utils cuda cudnn
+pip install tensorrt
+sudo pacman -S tensorRT
+mv /home/matias/.v /home/matias/.virtualenv
+yay -S tensorrt
+pamac install tensorrt
+cd HDD
+sudo pacman -S nvidia-dkms nvidia-utils
+cd /etc/grub.d
+cat GM1.Py
+cat 00_header
+sudo modprobe nvidia
+sudo pacman -S linux-headers
+sudo pacman -S linux-headers-rt
+sudo pacman -S linux-headers 5.17.5.arch1-2
+yay -S linux-headers 5.17.5.arch1-2
+cd /opt/cuda
+tree | grep samples
+cat samples
+sudo pacman -S fzf
+cd extras
+sudo cp demo_suite ~
+sudo cp -r demo_suite ~
+cd demo_suite
+./deviceQuery
+pip uninstall tensorflow
+python3 -m pip uninstall tensorflow
+sudo pacman -S python-tensorflow-opt-cuda
+conda deactivate
+sudo pacman -R conda
+sudo pacman -R miniconda3
+yay -R miniconda3
+yay -R miniconda
+sudo pacman -R miniconda
+sudo pacman -R anaconda
+sudo pacman -R anaconda3
+rm -rf demo_suite
+sudo rm -rf demo_suite
+rm -rf miniconda3/
+python3 -mq pip uninstall tensorflow
+deactivate
+cd /usr/share/zsh/
+vim manjaro-zsh-prompt
+pip list -v
+pip install numpy=1.22.3
+pip install numpy==1.22.3
+git clone https://github.com/fchollet/keras
+cd keras
+sudo python setup.py install
+python3 -m build
+xdg-open README.md
+pip list tensorflow
+cd BUILD
+python3 BUILD
+cat BUILD
+pip install -r requirements.txt
+jupyter kernelspec list
+jupyter kernelspec remove harmonics
+ipython kernel install --name harmonics --user
+sudo pacman -S spyder
+yay -S spyder
+sudo pacman -R spyder
+sudo fzf
+cd /home/
+fzf 
+cd /etc
+new spyder
+on spyder
+pip install spyder
+pythoN
+python3 -m pip install --upgrade pip
+spyder
+sudo pacman -S cppcheck
+import harmonics
+cd apps/harmonics 
+touch analyze/__init__.py
+touch audio/__init__.py
+touch symbols/__init__.py
+touch midi.__init__.py
+rm midi.__init__.py
+touch midi/__init__.py
+ls midi
+lsv
+cd .
+jupyter-notebook
+t
+sudo pacman -S tmux
+sudo pacman -S task
+sudo pacman -S taskwarrior
+sudo pacman -S warriortask
+yay -S warriortask
+yay -S taskwarrior
+x
+which m
+chmod +x scripts/cantus.py
+cantus.py -h
+cantus.py
+cantus.py -l 25
+cantus.py -l 28
+twine upload src/*
+lsd
+python -m counterpy
+python counterpy
+python -m counterpy.counterpy
+python -m counterpy.counterpy -h
+git init -b main
+git remote help
+git remote add upstream git@github.com:matias-ceau/counterpy.git
+git commit -m 'release'
+git push upstream --force
+pip install sphinx
+sphinx help
+rm -rf _build conf.py index.rst make.bat Makefile _static _templates
+mkdir doc
+cd doc
+mv doc docs
+cd src/counterpy/c
+rm -rf dist
+\
+ff
+sphinx-build -b html
+mv conf.py index.rst ..
+rm -rf *
+sphinx-quickstart
+rm index.rst conf.py
+mv ../../index.rst .
+mv ../../conf.py .
+sphinx-build -b html docs/source/ docs/build/html
+vim conf.py
+vim requirements.txt
+vim ../src/counterpy/__init__.py
+pip install sphinx-argparse
+rm build/html
+rm -rf build/html
+cd source
+vim source/index.rst
+cd src/counterpy/
+cd apps/counterpy/docs
+rm -rf src/*
+new testing*
+vim README.rst
+git commit -m 'doc bug fix'
+counterpy --help
+counterpy -m 1
+counterpy --mode 2
+counterpy --mode 12
+counterpy --mode -1
+counterpy --mode 1
+pip install playaudio
+pip install playsound
+cd dev
+cd harmonics/dev
+python3
+pip list | grep cou
+cd apps/counterpy/
+vim src/counterpy/counterpy.py
+counterpy -m 7
+counterpy -m 5
+counterpy -m 4
+git commit -m 'added sound engine'
+del testing
+new testing
+pip list -v | grep cou
+pip install counterpy==0.1.0
+counterpy -l 6
+counterpy -l 8
+counterpy -l 10
+cd apps/counterpy
+cd dist
+cd counterpy
+vim counterpy.py
+vim counterpy/counterpy.py
+on testing
+counterpy -l 26
+counterpy -l 26 -s
+..
+c
+visudo 
+ls 
+cd /etc/default
+sudo vim grub
+sudo update-grub
+pip install spyhinx twine build sphinx-rtd-theme
+pip install spihinx twine build sphinx-rtd-theme
+pip install sphinx twine build sphinx-rtd-theme
+pip install counterpy
+counterpy -l 26 -s -m 6
+pip uninstall counterpy
+pip install counterpy==0.1.1
+git commit -m 'docs'
+sphinx-apidoc -o docs src
+sphinx-apidoc -o docs src/pyfiber
+pip install numpy
+pip install numpy scipy pandas pyyaml
+pip install numpy scipy pandas pyyaml matplotlib
+pip install numpy scipy pandas pyyaml matplotlib seaborn
+git commit 'more docs'
+git commit -m 'more docs'
+cat .aliases
+epoch_hexadecimal '2021-12-21'
+date --date 2021-10-21
+date --date 2021-10-21 %s
+date --date 2021-10-21 + %s
+date --date 2021-10-21 +" %s"
+date --date 2021-10-21 + "%s"
+date --date 2021-10-21 +"%s"
+D = $(date --date 2021-10-21 +"%s")
+D=$(date --date 2021-10-21 +"%s")
+$D
+D
+"$D"
+print $D*1000
+print "$D*1000"
+print "$($D*1000)"
+print "$($D * 1000)"
+print "$(expr $D * 1000)"
+$(expr $D * 1000)
+expr $D * 1000
+Z=$D*1000
+D=$(date --date '2021-10-21' +"%ms")
+D=$(date --date '2021-10-21' +"%s")
+print $D
+Z=$(($D*1000))
+printf "%X" $Z
+printf %X $Z
+print %Z
+print Z
+print $Z
+printf "%X" "$Z"
+epoch_hexadecimal '2021-12-09 00:00'
+epoch_hexadecimal '2021-12-21 00:00'
+cd apps/harmonics/src/harmonics/data
+cd harmonics
+ls -l
+cd harmonics/symbols
+git commit -m 'module organisation'
+ls /dev
+ls dev/dev
+rm -rf dev/dev
+ls dev
+git rm AUDIO.ipynb EXTRACT.ipyn INTERVALS.ipynb TENSORFLOW_DATA.ipynb TENSORFLOW_TUTO.ipynb bro.wav canonball_sowhat.wav cc.csv config.yaml counterpy/.cantus.py.swp dolikemiles.wav flute_A.wav gm1.py harmonics melody.wav milesbassflute.wav name.wav pure_c.wav t
+git rm AUDIO.ipynb EXTRACT.ipynb INTERVALS.ipynb TENSORFLOW_DATA.ipynb TENSORFLOW_TUTO.ipynb bro.wav canonball_sowhat.wav cc.csv config.yaml counterpy/.cantus.py.swp dolikemiles.wav flute_A.wav gm1.py harmonics melody.wav milesbassflute.wav name.wav pure_c.wav t
+git pull jazz
+git rm -rf __pycache__/
+git commit -m 'del'
+pip uninstall harmonics
+cls
+counterpy
+jupyter-notebook -h
+git commit -m 'obs'
+pip install sklearn
+spctr.sh *.wav
+pip install pyo mido
+pip install tkintr
+pip install tkinter
+pip uninstall pyo
+sudo pacman -S python-pyo
+yay -S python-pyo
+counterpy -l 25 -m 2
+counterpy -l 25 -m 6
+counterpy -l 20 -m 6
+counterpy -m 6
+counterpy -h
+counterpy -m 6 -p 100 -l 4
+counterpy -m 6 -p 100 -l 6
+counterpy -m 6 -p 100
+counterpy -m 2
+counterpy -m 2 -r 0.5
+counterpy -m 2 -r 0.8
+python3 counterpy.py -o 5
+python3 counterpy.py
+python3 counterpy.py -o 5 -m 2
+python3 counterpy.py -o 5 -m 2 -l 8
+python3 counterpy.py -o 8 -m 2 -l 8
+python3 counterpy.py -o 3 -m 2 -l 8
+python3 counterpy.py -o 4 -m 2 -l 8
+python3 counterpy.py -o 0 -m 2 -l 8
+python3 counterpy.py -o 1 -m 2 -l 8
+python3 counterpy.py -o 2 -m 2 -l 8
+python3 counterpy.py -o 2 -m 2
+on counterpy
+vim setup.py
+rm -rf dist/*
+twine upload dist/*
+git commit -m 'added octave"
+git commit -m 'added octave'
+git push upstream
+sudo pacman -S python-rtmidi
+yay -S python-rtmidi
+https://github.com/thestk/rtmidi
+git clone https://github.com/thestk/rtmidi
+cd rtmidi
+sudo pacman -S autoconf
+sudo pacman -S automake
+./autogen.sh
+./configure
+cd tests
+make
+pip install .
+quit
+rm -rf rtmidi
+pip install rtmidi-python
+python -m pip install python-rtmidi
+python -m pip install rtmidi-python
+git clone https://github.com/superquadratic/rtmidi-python
+cd rtmidi-python
+python setup.py install
+pip list | grep rt
+rm -rf rtmidi-python
+pip install python-rtmidi
+python -m pip install mido --upgrade
+pip list | grep rtmidi
+python -m pip install python-rtmidi --upgrade
+python -m pip install python-rtmidi==1.4.9
+python -m pip3 install python-rtmidi==1.4.9
+python3 -m pip3 install python-rtmidi==1.4.9
+python3 -m pip install python-rtmidi==1.4.9
+python3 -m pip install python-rtmidi=1.4.9
+python3 -m pip install python-rtmidi===1.4.9
+pip uninstall python-rtmidi
+sudo pacman -S pkgconfig
+pip install python-rtmidi-1.4.9.tar.gz
+$
+*
+ls .a
+source .aliases
+source .profile
+pacman-key --
+pacman-key --refresh-keys
+sudo pacman-key --refresh-keys
+rm -rf /var/cache/pacman/pkg/zathura-*
+sudo rm -rf /var/cache/pacman/pkg/zathura-*
+sudo rm -rf /var/cache/pacman/pkg/girara-0.3.*
+sudo pacman -R zathura-ps
+sudo pacman -R zathura-djvu
+sudo pacman -R zathura-pdf-poppler
+sudo pacman -R zathura*
+sudo pacman -R zathura-cb
+sudo pacman -R zathura
+sudo pacman -R girara
+sudo pacman -S zathura
+sudo pacman -S zathura-cb
+sudo pacman -S zathura-pdf-poppler
+sudo pacman -S zathura-djvu
+sudo pacman -S girara
+sudo pacman -S kate
+sudo pacman -S dolphin
+dolphin
+yay -S nordic-kde-git
+sudo pacman -S konsole
+sudo pacman -S qt5ct
+QT_QPA_PLATFORMTHEME = qt5ct
+sudo vim /etc/environment
+sudo pacman -S breeze
+kate
+ cd /
+ cd /home/matias
+ cd /home/matias/academic
+ cd /home/matias/administratif
+ cd /home/matias/dotfiles
+ cd /home/matias/brave-bin
+ cd /home/matias/apps
+ cd /home/matias/data
+cd Dropbox/archives/online_storage/Images/VSO\ downloader
+cd Private
+mpv *
+sudo pacman -S noise-repellent
+inxi -Fxxxrz
+qt5ct
+cd .config
+dropbox -h
+q
+sudo pacman -S xdg-utils
+xdg-utils
+sudo pacman -S ufw-extras
+sudo pacman -S libappindicator-gtk3
+ls -al | grep .
+logout
+systemctl logout
+sudo pacman -S dropbox
+kfilebox
+sudo pacman -R kfilebox
+sudo pacman -R dropbox
+yay -R kfilebox
+yay -S kfilebox
+sudo pacman -S kdebase-runtime
+sudo pacman -S kdebase
+yay -S kdebase
+yay -S kdebase-runtime
+yay -S dropbox
+dropbox
+vim .Xresources
+libappindicator-gtk3
+vim /etc/gtk-2.0/im-multipress.conf
+pacman -Qi dropbox$
+vim .config/gtk-3
+sudo pacman -S adwaita
+sudo pacman -S adwaita-gtk
+yay -S adwaita
+cat /etc/gtk-3.0/im-multipress.conf
+cat /etc/gtk-2.0/im-multipress.conf
+cat /etc/X11/xorg.conf.d/90-mhwd.conf
+cat /etc/X11/xorg.conf.d/00-keyboard.conf
+cat /etc/X11/mhwd.d
+cat /etc/X11/mhwd.d/nvidia.conf
+pacman -Qi dropbox
+fontconfig
+sudo pacman -R linux510-nvidia
+uname -ssrm
+sudo pacman -R nvidia-dkms
+rsync -h
+rsync -h | grep -r
+rsync -h | grep '-r'
+rsync -h | grep "-r"
+rsync -h | grep "r"
+rsync -h | grep "rec"
+
+rsync -avpr HDD/ HDD
+sudo rsync -avpr HDD/ HDD
+sudo rm HDD2/lost+found
+sudo rm -rf HDD2/lost+found
+chmod u+rw HDD2
+sudo chmod u+rw HDD2
+sudo vim /ect/fstab
+rsync -av HDD/ HDD2
+yay -S dropbox-cli
+dropbox-cli -h
+dropbox-cli help exclude
+dropbox-cli exclude
+dropbox-cli status
+baobab
+baobab ~
+id -u
+sudo vim /etc/fstab
+mv HDD TEMPHDD
+dropbox-cli help
+dropbox-cli running
+cd HDD2
+cd Dropbox
+rm -f Dropbox
+rm -rf Dropbox
+vim .stowrc
+rsync -av HDD/Dropbox/ HDD2/dropbox_stuff
+pip install ftplib
+curl http://www.mutopiaproject.org/ftp
+curl https://www.mutopiaproject.org/ftp
+curl https://www.mutopiaproject.org/ftp/
+curl https://www.mutopiaproject.org/ftp/ > mutopia.json
+vim mutopia.json
+mv mutopia.json mutopia.html
+cat mutopia.html
+cat mutopia.html | grep folder.gif
+cat mutopia.html | grep folder.gif > mutopia.txt
+mkdir temp
+mv mutopia.html temp
+mv mutopia.txt temp
+rm command
+cat command
+bash command
+cat command2
+cat command2 | head 10
+cat command2 | head
+curl -s https://www.mutopiaproject.org/ftp/SchubertF/D118
+curl -s https://www.mutopiaproject.org/ftp/SchubertF/D118/
+rm datahtml/*
+vim command2
+bash command2
+stow -h
+man sed
+ls temp/artists | sed html//
+ls temp/artists | sed html//g
+ls temp/artists | sed html///
+ls temp/artists | sed /html//
+ls temp/artists | sed '/html//'
+ls temp/artists | sed '/html/'
+ls temp/artists | sed 's/html/'
+ls temp/artists | sed s/html/
+mkdir HDD2/DATA
+mkdir HDD2/DATA/MUSIC
+mkdir HDD2/DATA/MUSIC/mutopiaproject
+ls temp/artists
+ls temp/artists > cmd.txt
+ls HDD2/DATA/MUSIC
+vim cmd.txt
+bash cmd.txt
+vim command3
+bash command3
+cat .bash_history
+cd HDD2/DATA
+cd MUSIC
+mkdir lakh_midi
+cd lakh_midi
+mkdir groove_midi
+mkdir weimar
+mkdir millionsong
+cd weimar
+vim README.md
+vim command4
+bash command4
+mkdir yetanother
+vim command5
+bash command5
+cd audio
+cd PROJECTS
+cd OTHERPEOPLE
+mpv STE-097.wav
+cat command command2 command3 command4 command5 > all_commands
+vim all_commands
+vim
+cd HDD2/DATA/MUSIC/mutopiaproject
+fzf
+cd temp
+> ALL_commands
+cat all_commands
+cat all_commands | grep Royer
+cat all_commands | grep Proserpina
+https://www.mutopiaproject.org/ftp/AriostiOA/Proserpina/Proserpina-let.ps.gZ
+https://www.mutopiaproject.org/ftp/AriostiOA/Proserpina/Proserpina-mids.zip
+vim mutopia.html
+chmod +x mutopia.py
+cd scripts
+vim whatkey.py
+vim mutopia.py
+mutopia.py '/home/matias/HDD2/DATA/MUSIC/lakh_midi/'
+vim scripts/mutopia.py
+mutopia.py
+pip install ipython_genutils
+mv github github.pub ~/.ssh/
+cat github.pub
+git pull origiN
+ssh-add ~/.ssh/github
+eval "$(ssh-agent -s)"
+ls ~/.ssh
+man ssh
+vim ~/.ssh/config
+ls .v 
+ln -s /home/matias/HDD/Dropbox/.v .virtualenv
+on
+vim .profile
+vim .aliases
+cd Apps/pyfiber
+mv .virtualenv ~
+rm .virtualenv
+ln -s /home/matias/Dropbox/.v .virtualenv
+cd docs
+pip install portion
+make html
+vim .pyfiber/pyfiber.yaml
+ls Dropbox/dotfiles
+ls Dropbox/dotfiles/zsh
+ls -a Dropbox/dotfiles/zsh
+cd Dropbox/dotfiles/zsh
+cat .zshrc\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-04-20\)
+vim data/WORK/FIBER/AD21R_rat_2_Self-Administration_j23/bsa15072021c20_01.dat
+vim behavior.py fiber.py analysis.py
+keepassxc-cli
+keepassxc-cli open -h
+keepassxc-cli open ~/data/.monkeypass/database.kdbx -k ~/notes/resources/georgeabitbol
+keepassxc-cli ls
+keepassxc-cli ls -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx
+keepassxc-cli ls -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx coding
+keepassxc-cli ls -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx etudes
+keepassxc-cli search -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx etudes
+keepassxc-cli search -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx overleaf
+keepassxc-cli search -sa -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -sa -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -sak ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx -sa /work/overleaf.com
+keepassxc-cli show -k ~/notes/resources/georgeabitbol ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -k ~/notes/resources/georgeabitbol gaellechiencarottesrapeesbouteilledevin ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -sa ~/data/.monkeypass/database.kdbx /work/overleaf.com
+keepassxc-cli show -sa ~/data/.monkeypass/database.kdbx work/overleaf.com
+keepassxc-cli show -k ~/notes/resources/georgeabitbol -sa ~/data/.monkeypass/database.kdbx work/overleaf.com
+git clone https://git.overleaf.com/62820483488dc58286474696
+cd FIBER
+git remote
+cd projects
+vim .vimrc
+vim main.tex
+evince projects/MASTER_2/main.pdf
+sudo pacman -S colorreload-gtk-module
+pdflatex main.tex
+man pdflatex
+vim ~/.aliases
+bibtex M2
+lx main.tex
+git commit -m ''
+git config --global user.email "matias@ceau.net"
+git config --global user.name 'Matias Ceau'
+cd projects/MASTER_2
+sudo pacman -S optipng
+ls -als
+cd png_analysis
+cd projects/MASTER_2/png_analysis
+optipng *
+pip install ipykernel
+ipython kernel install --name pyfiber --user
+cd Downloads
+mv Untitled1.tex ~/projects/MASTER_2
+git config pull.rebase false
+git config pull.rebase true
+git pull --force
+mv Untitled1.tex ..
+rm -rf MASTER_2
+git clone git@github.com:matias-ceau/MASTER_2.git
+mv Untitled1.tex MASTER_2
+cd MASTER_2
+rm Untitled1.tex
+mv ~/Downloads/Untitled1.tex .
+coretemp
+sudo pacman -S coretemp
+temp
+htop
+w
+echo level 1 > /proc/acpi/ibm/fan
+sudo echo level 1 > /proc/acpi/ibm/fan
+sudo vim /proc/acpi/ibm/fan
+vim *.tex
+cd content
+rm a.tex
+rm :q.tex
+rm main.pdf main.toc main.*
+evince main.pdf& disown
+evince main.pdf & disown
+cd projects/MASTER_2/
+vim M2.bib
+bibtex main
+pdflatex --interaction=batchmode main.tex 2>&1 > /dev/null\
+
+tmux help
+tmux -h
+man tmux
+tmux a 1
+tmux a -t 1
+dmenu
+ipy
+ipython
+sudo pacman -S zotero
+yay -S zotero
+import harmonics as h
+zsh*
+zsh
+on harmonics
+python -X importtime -c 'import harmonics' 2> pipenv-imports
+cat pipenv-imports
+vim pipenv-imports
+tmux ls
+tmux -a -t MAIN
+tmux a -t MAIN
+mkdirvim HDD2/Dropbox/dotfiles/tmux/.tmux.conf
+mkdir HDD2/Dropbox/dotfiles/tmux/
+mkdir HDD2/Dropbox/dotfiles/tmux/.tmux
+mkdir HDD2/Dropbox/dotfiles/tmux/.tmux/plugins
+stow tmux
+vim HDD2/Dropbox/dotfiles/tmux/.tmux.conf
+bash
+tmux kill-session -t MAIN
+sudo pacman -S ranger
+tr
+r
+cd apps/harmonics
+cd apps/biovector
+cd apps
+cd ppp
+tree -L 2
+ls -al
+rm test.*
+beet ls | grep Herbie
+beet ls | grep Fat Albert
+beet ls | grep Fat
+beet bpm 'Herbie Hancock - Fat Albert Rotunda - Fat Albert Rotunda'
+beet bpm
+cd music
+cd Herbie\ Hancock
+cd Fat\ Albert\ Rotunda
+beet bpm 06\ Fat\ Albert\ Rotunda.flac
+beet help bpm
+beet stats
+beet stats genre
+beet stats genre:"funk"
+beet help write
+beet write -p genre:'fake'
+beet write -p Fat\ Albert genre:'fake'
+beet fields
+beet modify -a Fat Albert Rotunda genre:funk
+beet modify -a Fat Albert Rotunda genre=funk
+mkdir HDD2/Dropbox/dotfiles/playlists/
+mkdir HDD2/Dropbox/dotfiles/playlists/.playlists
+stow playlists
+sudo pip uninstall beets
+sudo pacman -S beets
+beet ls
+beet random -a
+beet -a random
+beet random -p
+cd /usr/lib/python3.10/site-packages/beets
+mkdir beetsplug
+sudo mkdir beetsplug
+cd beetsplug
+sudo git clone https://github.com/coolkehon/beets/blob/master/beetsplug/cmus.py
+sudo curl clone https://github.com/coolkehon/beets/blob/master/beetsplug/cmus.py
+sudo curl https://raw.githubusercontent.com/coolkehon/beets/master/beetsplug/cmus.py
+sudo curl https://raw.githubusercontent.com/coolkehon/beets/master/beetsplug/cmus.py > cmus.py
+touch cmus.py
+sudo touch cmus.py
+sudo curl https://raw.githubusercontent.com/coolkehon/beets/master/beetsplug/cmus.py >> cmus.py
+vim cmus.py
+sudo vim cmus.py
+vim cmus
+curl https://raw.githubusercontent.com/coolkehon/beets/master/beetsplug/cmus.py > cmus.py
+rm *
+sudo rm *
+mv ~/cmus.py .
+sudo mv ~/cmus.py .
+vim __init__.py
+sudo vim __init__.py
+beet cmus
+beet
+sudo pacman -R beets
+python3 -m pip install beets
+pip uninstall beets
+yay -S beets
+cd /usr/lib/python3.10/site-packages/beets/
+vim plugins.py
+beet random
+beet info
+beet info cypress hill
+beet help
+beet export herbie hancock
+beet help export
+vim ~/.config/beets/config.yaml
+beet export -f csv herbie hancock
+beet export -f csv herbie hancock > herbie.csv
+clear
+cd data/WORK/FIBER
+mkdir Dropbox/.ssh
+rm -rf Dropbox/.ssh
+mv .ssh Dropbox
+ln -s ~/Dropbox/.ssh .ssh
+cat .ssh/github
+\:q
+ls -a
+cd 
+cd .ssh
+chmod 555 github
+chmod 555 github.pub
+chmod 555 id_rsa
+chmod 555 id_rsa.pub
+cd
+ssh-agent
+ssh-add
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/github
+ssh-agent /bin/sh
+git remove -rf *(matias-lapin*\
+\
+ls\
+\
+\
+\
+\
+\
+\
+exit
+git remove -rf *(matias-lapin*\
+\
+ls\
+\
+\
+\
+\
+\
+\
+\
+
+rm -rf *(lapinkulta*\
+)
+rm -rf '*(lapinkulta*'\
+
+rm MANIFEST\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-05-26\).in
+rm README\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-05-26\).md
+rm setup\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-05-26\).py
+git push jazz
+tree
+ls src
+cd biovector
+git commit -m '.'
+git push origin
+rm .git/refs/heads/main\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-05-26\)
+git pull origin --force
+rm .git/refs/remotes/origin/main\ \(matias-lapinkulta\'s\ conflicted\ copy\ 2022-05-26\)
+git add *
+git status
+cd ..
+rm -rf pyfiber
+git clone git@github.com:matias-ceau/pyfiber.git
+git remote -v
+git pull origin
+pip install build
+pip install build setuptools
+python -m build
+off
+rm -f ~/.virtualenv/pyfiber
+rm -rf ~/.virtualenv/pyfiber
+new pyfiber
+pip install -e pyfiber
+pip install -e .
+rm -rf .pyfiber
+pip uninstall pyfiber
+on pyfiber
+pip install ipython
+cd apps/pyfiber
+cd src
+cd pyfiber
+vim *
+vim .gtkrc-2.0
+vim .config/gtk-3.0/settings.ini
+sudo pacman -S libreoffice
+ls | dmenu
+ls scripts
+sh scripts/notes.sh
+bash scripts/notes.sh
+bash scripts/audio.sh
+bash scripts/citeboard.sh
+detach
+sudo pacman -S xsel
+vim scripts/citeboard.sh
+sh scripts/citeboard.sh
+sudo pacman -S youtube-dl
+youtube-dl https://daftsex.com/watch/-132301929_456279766
+bv
+cd data
+cd cardio
+i
+poweroff
+sudo pacman -S zoom
+yay -S zoom
+tmux
+time read
+vim timer.py
+python timer.py
+jupyter-notebook --browser=firefox
+pip list
+pip list | grep pyf
+pip install pyfiber
+sudo pacman -S xonsh
+chsh 
+shell
+sh
+import numpy
+cd .config/qtile
+cat config.backup.py > config.py
+man xorg
+xbacklight
+xbacklight--h
+xbacklight --help
+xbacklight -help
+xbacklight help
+xbacklight set 100
+xbacklight set 10
+xbacklight -set 10
+ls
+stow xonsh
+cat .xonshrc
+sudo pacman -S
+sudo pacman -Syu
+whoami
+which xonsh
+chsh
+exit
+reboot
+sgpt "how can you see what is my login shell?"
+sudo pacman -R xonsh
+startx
+vim .zshrc
+sudo pacman -Ss nerdfonts
+paru -Ss nerdfonts
+paru -Ss nerd-fonts
+pacman -Ss nerd-fonts
+$(pacman -Sgq nerd-fonts)
+pacman -Sgq nerd-fonts
+sudo pacman -S $(pacman -Sgq nerd-fonts)
+pacman -Q powerlevel
+pacman -Qs powerlevel
+pacman -Ss powerlevel
+sudo rm -rf /usr/share/zsh-theme-powerlevel10k/
+paru -S zsh-theme-powerlevel10k-git
+paru -S ttf-meslo-nerd-font-powerlevel10k
+paru -S powerlevel10k powerline-fonts awesome-terminal-fonts
+paru -S powerlevel
+paru -Ss powerlevel
+which powerlevel10k
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+ls /usr/share/zsh
+ls /usr/share/zsh-theme-powerlevel10k
+exec zsh
+p10k configure
+echo typeset -g POWERLEVEL9K_INSTANT_PROMPT=off >> .zsh
+vim .zshrc
+ls
+ranger
+neofetch
+sudo pacman -Ss
+sudo pacman -Syu
+rm -rf .venv/beets
+rm -rf .venv/sgpt
+pipx install shell_gpt
+pipx install beets
+pipx install beets --force
+beet
+pipx -h
+pipx runpip -h
+pipx runpip beets install -r .config/beets/requirements_beet.txt
+beet ls -a
+pipx runpip beets install python3-discog-client>=2.3.15 
+pipx runpip beets install "python3-discog-client>=2.3.15"
+pipx runpip beets install 'python3-discog-client>=2.3.15'
+pipx runpip beets install 'python3-discogs-client>=2.3.15'
+pipx runpip beets install discogs
+pipx runpip beets install discogs --upgrade
+beet ls -a
+pipx install 'xonsh[full]'
+ls .local/bin/xonsh
+ls .local/bin/xonsh*
+ls -la .local/bin/xonsh*
+ranger
+which xonsh
+find / -name xonsh
+sudo find / -name xonsh 2>/dev/null
+sudo rm -rf .local/lib/python3.10/site-packages/xonsh
+sudo rm -rf .local/lib/python3.10/site-packages/xontrib
+sudo find / -name xon 2>/dev/null
+pipx install 'xonsh[full]'
+xonsh
+/etc/shells
+cat /etc/shells
+which xonsh
+ls -l .local/bin
+echo $(which xonsh)
+echo $(which xonsh) >> /etc/shells
+sudo echo $(which xonsh) >> /etc/shells
+su
+sgpt "hi"
+xonsh source .xonshrc
+which xonsh
+/home/matias/.local/bin/xonsh -h
+/home/matias/.local/bin/xonsh -c source .xonshrc
+$ENV
+$ENVIRONNEMENT
+which xpip
+xonsh -h
+pipx ls
+pipx list
+pipx runpip xonsh xontrib-coreutils
+pipx -h
+pip environment
+pipx environment
+pipx inject xonsh prompt_toolkit
+pipx inject xonsh xontrib-debug-tools
+echo "#xontrib load debug-tools"
+echo "#xontrib load debug-tools" >> .xonshrc
+pipx inject xonsh xontrib-readable-traceback
+echo "#xontrib load readable-traceback (old?)" >> .xonshrc
+echo "#xontrib load pipeline (not installeDOLD?)" >> .xonshrc
+echo "#xontrib load (fzf-completions NOT INSTALLED)\n" >> .xonshrc
+vim .xonshrc
+pipx inject xonsh xontrib-mpl
+echo "#xontrib load mpl" >> .xonshrc
+pipx inject xonsh xontrib-kitty
+echo "#xontrib load kitty" >> .xonshrc
+pipx inject xonsh xontrip-jupyter
+pipx inject xonsh xontrib-jupyter
+echo "#xontrib load jupyter" >> .xonshrc
+echo "#xontrib load jedi??" >> .xonshrc
+pipx inject xonsh xontrib-sh
+echo "#xontrib load sh" >> .xonshrc
+xonsh
+xonsh
+xonsh
+xonsh
+xonsh
+xonsh
+xonsh
+chsh --shell $(which xonsh)
+ls -la | grep -E '^.'
+ls -la | grep -E ' .'
+ls -la | grep -E ' \.'
+poweroff
+paru -Ss manjaro-zsh
+paru -Si manjaro-zsh
+paru -Si manjaro-zsh-config
+paru -S manjaro-zsh-config
+sudo vim /etc/paru.conf
+paru -S manjaro-zsh-config
+paru -S zsh-theme-powerlevel10k
+paru -Si zsh-theme-powerlevel10k
+paru -Si zsh-theme-powerlevel10k-bin
+paru -Si zsh-theme-powerlevel10k-bin-git
+paru -Si zsh-theme-powerlevel10k-git
+paru -S zsh-theme-powerlevel10k
+paru -Ss zsh-theme-powerlevel10k
+paru -Scc
+paru -S zsh-theme-powerlevel10k
+nv
+neovim
+nvim
+nvim
+nvim
+cp .config/nvim/init.lua init.lua
+vim init.lua
+setxkbmap fr
+paru -S zsh-syntax-highlight
+paru -Ss zsh
+vim .zshrc
+pacman -Ss zsh
+xsel -b > .zshrc
+paru -Scc
+xonsh
+ls
+man 5 paru.conf
+cat .zsh
+cat .zshrc
+cp .zshrc dotfiles/.config/zsh/.zshrc_backup
+cp .zshrc ~/dotfiles/.config/zsh/.zshrc_backup
+cp .zshrc ~/dotfiles/.zshrc_backup
+vim .zshrc
+tldr xsel
+cat .zsh | xsel -ib
+cat .zshrc | xsel -ib
+conda uninstall --help
+conda remove -h
+conda remove shell_gpt
+conda remove shell-gpt
+list
+conda list
+conda env list
+conda deactivate
+conda init
+cat .xonshrc
+sgpt "help me create a package from scratch with simple tools (python)"
+ls .config/nvim
+ls .config/nvim/lua
+nv
+nvim
+nvim
+vim .zshrc
+conda init zsh
+vim .zshrc
+tldr conda
+man conda
+sgpt
+which sgpt
+pacman -Qi sgpt
+pacman -Qo /usr/bin/sgpt
+pip list
+pip uninstall shell_gpt
+pip remove shell_gpt
+paru -R shell_gpt
+paru -Q shell
+paru -Q gpt
+paru -Q
+paru -Q | rg gpt
+paru -Rs shellgpt-git
+which pip
+pipx --help
+tldr pipx
+pipx install shell_gpt
+which sgpt
+sgpt
+sgpt "do you work fine?"
+pipx install 'xonsh[full]'
+pipx inject xontrib-* xonsh
+pipx inject -h
+pipx inject pygments prompt-toolkit setproctitle xonsh
+pipx inject -h
+pipx inject xonsh pygments prompt-toolkit setproctitle
+pipx inject xonsh xontrib-jedi xontrib-argcomplete xontrib-zoxide xontrib-kitty xonntrib-debug-tools xontrib-readable-traceback xontrib-fzf-completions xontrib-jupyter xontrib-mpl xontrib-sh
+pipx inject xonsh xontrib-jedi xontrib-argcomplete xontrib-zoxide xontrib-kitty xontrib-debug-tools xontrib-readable-traceback xontrib-fzf-completions xontrib-jupyter xontrib-mpl xontrib-sh
+pipx inject xonsh carapace-bin
+pipx inject xonsh carapace-sh
+sudo vim /etc/shells
+fd
+tldr rg
+rg notes ALban
+rg Alban notes
+rg '[[' notes
+rg \[\[ notes
+rg "\[\[" notes
+rg -h
+rg kwaito
+vim .config/picom.conf
+LS
+ls
+sgpt "fatsest backend for picomp 'xrender, glx, egl, xr_glx_hybrid' ?"
+cat .xonshrc
+xonsh
+vim .config/qtile/config.py
+vim .config/qtile/config.py
+vim .config/picom.conf
+which xonsh
+sudo ln -sf /home/matias/.local/bin/xonsh /usr/bin/
+which xonsh
+which /usr/bin/xonsh
+sudo rm /usr/bin/xonsh
+ls /usr/bin | grep xon
+ls -la /usr/bin | grep xon
+ls -la .local/bin | grep xon
+/usr/bin/xonsh-cat
+sudo rm -rf /usr/bin/xonsh-* 
+sudo rm -rf /usr/bin/xournalpp-thumbnailer
+sudo rm -rf /usr/bin/xournalpp
+ls | fzfmenu.sh
+exit
+ls
+q
+exit
+ls scripts
+ls .scripts
+obsidian.xsh
+xonsh
+cat .xonshrc
+source .xonshrc
+ch
+xonsh
+cat .zshrc
+beet mbsync
+  beet ls -a mb_albumid::^$
+  beet ls -a mb_albumid::^$ > notes/consider_adding_to_musicbrainz.md
+beet ls
+beet help
+beet help edit
+beet stats
+beet help
+beet mbupdate
+beet fields
+beet help
+beet config
+beet web
+xonsh
+tldr chsh
+stow tealdeer
+tldr chsh
+ls .config/tealdeer
+bat .config/tealdeer/config.toml
+$whoami
+$whoami
+whoami
+execx
+xonsh -h
+xonsh -c $(whoami)
+xonsh -c print($(whoami))
+xonsh -c "print($(whoami))"
+xonsh -c "whomai"
+xonsh -c "whoami"
+sudo chsh $(which xonsh) $(whoami)
+$USER
+sudo chsh $(which xonsh) $USER
+sudo chsh -s $(which xonsh) $(whoami)
+tldr
+tldr chsh
+which tldr
+tldr --show-paths
+paru -S tealdeer
+tldr chsh
+tldr chsh
+tldr chsh
+tldr chsh
+tldr chsh
+tldr chsh
+tldr chsh
+sudo chsh --list-shells
+$(which xonsh)
+vim .aliases
+_a = 12
+_a=12
+echo $_a
+_xsh
+exit
+vim .Xresources
+xrdb -merge .Xresources
+vim .Xresources
+xrdb -merge .Xresources
+vim .Xresources
+xrdb -merge .Xresources
+xrdb -merge .Xresources
+xrdb -merge .Xresources
+fzf
+vim .config/qtile/config.py
+_xsh
+exit
+tmux
+tmux
+exit
+$SHELL
+_xsh
+tmux
+import os
+startx
+import ps
+poweroff
+tmux
+\:q
+xsel >> .xonshrc
+vim .xonshrc
+exit
+bash
+cat .zshrc
+vim .zshrc
+cat .zshrc
+exit
+which pipx
+which pip
+which xpip
+vim .gtkrc-2.0
+cd .config
+cat gtk-3.0/settings.ini
+cat gtk-3.0/settings.ini > gtk-4.0/settings.ini
+vim gtk-4.0/settings.ini
+cd
+vim .Xresources
+pacman -Ss qt6 | rg -v '\[installed\]'
+pacman -Ss qt6
+batman pacman
+pacman -fSs qt6 | rg -v '\[installed\]'
+pacman -Ss --color=always qt6 | rg -v '\[installed\]'
+pacman -Ss --color=always qt6 | rg -v '\[installed\]' | rg "extra"
+pacman -Ss --color=always qt6 | rg -v '\[installed\]' | rg "extra" -C 1
+sudo pacman -S qt6ct
+cat .config/qt5ct/qt5ct.conf
+notify-send "Script" "Changed wallpaper"
+notify-send "Script" "Changed wallpaper
+batman notify-send
+batman libnotify
+libnotify --help
+sgpt "how do i customise notifications send with notify-send (with dunst as backend)"
+vim .config/dunst/dunstrc
+pkill dunst && dunst & disown
+vim .config/dunst/dunstrc
+pkill dunst && dunst & disown
+notify-send --help
+notify-send -u low "jkhjk"
+sgpt "is there a way to get the filename of the image feh picks when running 'feh --bg-scale --randomize wallpapers/'?"
+sgpt "is there a way to get the filename of the image feh picks when running 'feh --bg-scale --randomize wallpapers/' and output it with notify-send?"
+sgpt "is there a way to get the filename of the image feh picks when running 'feh --bg-scale --randomize wallpapers/' and output it with notify-send? remember to use --randomize"
+cd .scripts
+cat wallpaper.sh
+cat wallpaper.sh | sgpt "can you modify this so it accepts arguments : '--random' does what the script currently does, '--select' opens dmenu to choose a file in the '.wallpapers' folder and the same feh command, '--previous [n]' reads the cache (~/.cache/wallpapers.log) and selects the nth last file with the feh command (n is optional and by default n=1, ie the last one), finally if no flag command are given, the default wallpaper (set as a variable at the beginning of the file) is used"
+cat wallpaper.sh | sgpt --chat wallpp "can you modify this so it accepts arguments : '--random' does what the script currently does, '--select' opens dmenu to choose a file in the '.wallpapers' folder and the same feh command, '--previous [n]' reads the cache (~/.cache/wallpapers.log) and selects the nth last file with the feh command (n is optional and by default n=1, ie the last one), finally if no flag command are given, the default wallpaper (set as a variable at the beginning of the file) is used"
+sgpt --chat wallpp "explain 'n=${2:-1}'"
+sgpt --chat wallpp "'n=${2:-1}' doesn't work because then the scripts reads the last entry which is the current one, so n must be 2 by default and 1 should be added to the user's input"
+cat wallpaper.sh | sgpt --chat wallpp "at the end of the script, add a line to remove successive duplicate entries (ie: 'file3\nfile1\nfile2\nfile3\nfile3\file1' => 'file3\nfile1\nfile2\nfile3\file1')"
+sgpt --chat wallpp "it should only delete items if they are successivecat wallpaper.sh | sgpt --chat wallpp "at the end of the script, add a line to remove successive duplicate entries (ie: 'file3\nfile1\nfile2\nfile3\nfile3\file1' => 'file3\nfile1\nfile2\nfile3\file1')"
+sgpt --chat wallpp "it should only delete items if they are successive"
+sgpt --chat wallpp "finally I'd like an option '--gui', that displays the files graphically and allow selecting by clicking, with a scroll bar"
+sgpt --chat wallpp "nice but it doesn't open it the '.wallpaper' folder and the file viewer doesn't show image icons so it's useless. Advice?" 
+sgpt --chat wallpp "nice but it doesn't open it the '.wallpaper' folder and the file viewer doesn't show image icons so it's useless. Advice?" 
+thunar ~/.wallpapers
+pcmanfm ~/.wallpapers
+pcmanfm ~/.wallpapers &
+file = $(pcmanfm ~/.wallpapers)
+$file
+batman pcmanfm
+pcmanfm -f ~/.wallpapers
+ls
+./wallpaper.sh --gui

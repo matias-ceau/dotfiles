@@ -1,0 +1,54 @@
+
+#---------------------------
+#
+# Source profile and aliases
+#
+#---------------------------
+if [[ -f ~/.aliases ]]; then
+  source ~/.aliases
+fi
+if [[ -f ~/.environment ]]; then
+  source ~/.environment
+fi
+#---------------------------
+
+# History settings 
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh/.zsh_history
+setopt append_history
+
+# Navigation settings
+setopt autocd
+
+# Completion settings 
+autoload -U compinit
+zstyle ':completion:*' menu select
+compinit
+_comp_options+=(globdots)
+
+# Edit command line with vim 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^e' edit-command-line
+bindkey -v
+
+# Appearance
+autoload -U colors && colors
+PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
+
+#---------------------------
+#
+#  OPTIONAL PLUGINS
+#
+#---------------------------
+# Plugins (requires zsh-autosuggestions plugin)
+if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+# Syntax highlighting (requires zsh-syntax-highlighting plugin)
+if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+# Plugin: zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
