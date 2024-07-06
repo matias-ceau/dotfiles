@@ -1,3 +1,0 @@
-SYNOPSIS
-       tmux [-2CDlNuVv] [-c shell-command] [-f file] [-L socket-name] [-S socket-path] [-T features] [command [flags]]
-
