@@ -1,0 +1,5 @@
+[user]
+	name = Matias Ceau
+	email = matias@ceau.net
+[init]
+	defaultBranch = main
