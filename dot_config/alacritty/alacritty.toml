@@ -1,0 +1,64 @@
+[window]
+decorations = "None"
+opacity = 1
+blur = false
+
+  [window.padding]
+  x = 0
+  y = 0
+
+[font]
+size = 18
+
+  [font.normal]
+  family = "Iosevka Nerd Font"
+  style = "Regular"
+
+  [font.bold]
+  family = "Iosevka Nerd Font"
+  style = "Bold"
+
+  [font.italic]
+  family = "Iosevka Nerd Font"
+  style = "Italic"
+
+[colors]
+transparent_background_colors = true
+
+  [colors.primary]
+  background = "#000000"
+  foreground = "#cccccc"
+
+  [colors.cursor]
+  text = "#000000"
+  cursor = "#ffffff"
+
+  [colors.normal]
+  black = "#181818"
+  red = "#ac4242"
+  green = "#90a959"
+  yellow = "#f4bf75"
+  blue = "#6a9fb5"
+  magenta = "#aa759f"
+  cyan = "#75b5aa"
+  white = "#d8d8d8"
+
+  [colors.bright]
+  black = "#6b6b6b"
+  red = "#c55555"
+  green = "#aac474"
+  yellow = "#feca88"
+  blue = "#82b8c8"
+  magenta = "#c28cb8"
+  cyan = "#93d3c3"
+  white = "#f8f8f8"
+
+[scrolling]
+history = 10_000
+multiplier = 3
+
+[mouse]
+hide_when_typing = false
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}"

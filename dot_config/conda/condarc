@@ -1,0 +1,11 @@
+auto_activate_base: False
+auto_update_conda: False
+# change the prompt (default is True)
+change_ps1: True
+# default setting to always include pip in an environement
+add_pip_as_python_dependency: True
+# default is false
+update_dependencies: True
+channels:
+  - conda-forge
+  - defaults

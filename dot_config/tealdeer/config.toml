@@ -1,0 +1,41 @@
+[style.description]
+underline = false
+bold = false
+italic = true
+
+[style.example_text]
+foreground = "green"
+underline = false
+bold = false
+italic = true
+
+[style.command_name]
+background = "black"
+foreground = "red"
+underline = false
+bold = true
+italic = false
+
+[style.example_code]
+background = "black"
+foreground = "white"
+underline = false
+bold = true
+italic = false
+
+[style.example_variable]
+background = "black"
+foreground = "blue"
+underline = true
+bold = true
+italic = false
+
+[display]
+compact = false
+use_pager = false
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 720
+
+[directories]

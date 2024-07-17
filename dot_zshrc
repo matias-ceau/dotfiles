@@ -10,6 +10,9 @@ fi
 if [[ -f ~/.environment ]]; then
   source ~/.environment
 fi
+if [[ -f ~/.secret_environment ]]; then
+  source ~/.secret_environment
+fi
 #---------------------------
 
 # History settings 

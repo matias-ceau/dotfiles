@@ -1,0 +1,52 @@
+# Path where chat cache will be stored 
+CHAT_CACHE_PATH=/home/matias/.local/share/sgpt/chat_cache
+
+# Path where general cache will be stored
+CACHE_PATH=/home/matias/.local/share/sgpt/chat_cache
+
+# Maximum number of entries to store in the chat cache
+CHAT_CACHE_LENGTH=100
+
+# Maximum number of entries to store in the general cache
+CACHE_LENGTH=100
+
+# Timeout in seconds for outgoing requests 
+REQUEST_TIMEOUT=60
+
+# Identifier for the default model to use
+DEFAULT_MODEL=gpt-4o
+
+# Default color for the output text
+DEFAULT_COLOR=magenta 
+
+# Path where role configurations are stored
+ROLE_STORAGE_PATH=/home/matias/.config/shell_gpt/roles
+
+# Flag to determine whether to execute shell commands by default 
+DEFAULT_EXECUTE_SHELL_CMD=false 
+
+# Flag to disable streaming of output
+DISABLE_STREAMING=false 
+
+# Theme for code highlighting
+CODE_THEME=dracula
+
+# Path where custom functions for OpenAI are stored
+OPENAI_FUNCTIONS_PATH=/home/matias/.config/shell_gpt/functions
+
+# Flag to enable or disable the use of OpenAI custom functions 
+OPENAI_USE_FUNCTIONS=true 
+
+# Flag to show or hide the output of functions 
+SHOW_FUNCTIONS_OUTPUT=true
+#false 
+
+# Base URL for the API if not using the default
+API_BASE_URL=default
+
+# Flag to prettify markdown output 
+PRETTIFY_MARKDOWN=true
+
+# Flag to determine the use of LiteLLM for processing
+USE_LITELLM=true
+

@@ -1,0 +1,90 @@
+# ~/.bashrc
+
+#---------------------------
+#
+# Source profile and aliases
+#
+#---------------------------
+if [[ -f ~/.aliases ]]; then
+  source ~/.aliases
+fi
+if [[ -f ~/.environment ]]; then
+  source ~/.environment
+fi
+if [[ -f ~/.secret_environment ]]; then
+  source ~/.secret_environment
+fi
+
+shopt -s expand_aliases
+shopt -s autocd
+
+# HISTORY XDG
+mkdir -p "$XDG_STATE_HOME"/bash
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+
+# VIM
+set -o vi
+bind '"\C-e": "\ev"'
+
+PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
+
+# FUNCTIONS
+f() { $1 "$(fzf)" ; }
+vs() { script=$HOME/.scripts/$1 ; echo '#! /usr/bin/env TODO\n\n#DOC# "TODO"\n\n' > $script ; chmod +x $script ; vim $script ; }
+m() { link=$(xsel -b) ; mpv -fs "$link" ; }
+nm() { mv "$1" ~/data/new_music/ ; }
+epoch_hexadecimal() {
+    D=$(date --date="$1" +"%s")
+    SD=$(($D*1000)) 
+    printf "%X" "$SD"
+    } 
+
+lx() {
+    pdflatex --interaction=batchmode $1 2>&1 > /dev/null
+    }
+
+#VENV
+##     on() { source $HOME/.virtualenv/"$1"/bin/activate ; }
+##     new() { python -m venv $HOME/.virtualenv/"$1" ; }
+##     del() { rm -rf $HOME/.virtualenv/"$1" ; }
+
+transform_symlink() {
+    local symlink_path="$1"
+
+    if [[ ! -L "$symlink_path" ]]; then
+        echo "Error: '$symlink_path' is not a symlink."
+        return 1
+    fi
+
+    local target_path
+    target_path=$(readlink "$symlink_path")
+
+    if [[ ! -e "$target_path" ]]; then
+        echo "Error: Target '$target_path' does not exist."
+        return 1
+    fi
+
+    rm "$symlink_path"
+    if cp -r "$target_path" "$symlink_path"; then
+        echo "Symlink '$symlink_path' has been transformed into a copy of its target ('$target_path')."
+    else
+        echo "Error: Failed to copy target '$target_path' to '$symlink_path'."
+        return 1
+    fi
+}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

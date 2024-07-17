@@ -1,0 +1,54 @@
+#
+# ~/.environment
+#
+#export SHELL="$(getent passwd matias | cut -d: -f7 | xargs basename)"
+export EDITOR="vim"
+export BROWSER="qutebrowser"
+
+# PATHS ####################################
+# PATH
+export PATH=$PATH:\
+$PATH:$HOME/.local/bin:\
+
+# PYTHONPATH
+export PYTHONPATH=/usr/bin/python:\
+$PYTHONPATH
+
+# remove duplicates (if I reload .profile for some reason :)
+export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+####################################################
+
+
+# FREEDESKTOP
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
+export XDG_CONFIG_DIRS=/etc/xdg/
+
+# MAKE VIM XDG COMPLIANT
+mkdir -p ~/.config/vim
+mkdir -p ~/.local/share/vim
+mkdir -p ~/.local/state/vim
+export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
+export VIMDATA="${XDG_DATA_HOME:-$HOME/.local/share}/vim"
+export VIMSTATE="${XDG_STATE_HOME:-$HOME/.local/state}/vim"
+
+
+# THEME
+#qt
+#export QT_QPA_PLATFORMTHEME="qt6ct"
+#gtk
+#___both can be useful on old screens
+#export GSK_RENDERER='gl'
+#export GSK_DEBUG='gl-no-fractional'
+
+# RANGER
+export RANGER_LOAD_DEFAULT_RC=false
+
+# OLLAMA
+export OLLAMA_MODELS="/mnt/SSD/ollama_models"
+export OLLAMA_KEEP_ALIVE="10m" #default is 5m
+
