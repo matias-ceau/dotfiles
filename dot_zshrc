@@ -15,7 +15,8 @@ fi
 # History settings 
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.zsh/.zsh_history
+mkdir -p "$XDG_STATE_HOME"/zsh
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 setopt append_history
 
 # Navigation settings
