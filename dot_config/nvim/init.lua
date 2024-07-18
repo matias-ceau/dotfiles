@@ -101,6 +101,15 @@ local nvim_data = xdg_data_home .. "/nvim"
 local nvim_state = xdg_state_home .. "/nvim"
 local nvim_cache = xdg_cache_home .. "/nvim"
 
+-- Ensure directories exist
+local function ensure_directory(path)
+    vim.fn.mkdir(path, "p")
+end
+
+ensure_directory(nvim_data)
+ensure_directory(nvim_state)
+ensure_directory(nvim_cache)
+
 -- Set Neovim options
 vim.opt.runtimepath:remove(home .. "/.config/nvim")
 vim.opt.runtimepath:remove(home .. "/.local/share/nvim/site")
@@ -110,22 +119,22 @@ vim.opt.runtimepath:append(nvim_data .. "/site")
 vim.opt.packpath:remove(home .. "/.local/share/nvim/site")
 vim.opt.packpath:prepend(nvim_data .. "/site")
 
+-- Set data/state/cache directories
 vim.opt.viewdir = nvim_data .. "/view"
 vim.opt.backupdir = nvim_state .. "/backup"
 vim.opt.directory = nvim_state .. "/swap"
 vim.opt.undodir = nvim_state .. "/undo"
-vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
-vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add")
-vim.opt.spelllang = { "en", "fr" }
 
--- Set statedir
-vim.opt.statedir = nvim_state
-
--- Set shada file location
+-- Set shada file location (Neovim's equivalent of viminfo)
+vim.opt.shada = "!,'1000,<50,s10,h"
 vim.opt.shadafile = nvim_state .. "/shada/main.shada"
 
--- Explicitly disable viminfo for Neovim
-vim.opt.viminfofile = "NONE"
+-- Spellfile settings
+vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
+vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add")
+
+-- Set spelllang to include both English and French
+vim.opt.spelllang = { "en", "fr" }
 
 -- ==========================================
 --          END OF CLAUDE CONFIG
