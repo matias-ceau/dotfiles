@@ -47,8 +47,6 @@ Kickstart Guide:
 
    NOTE: "<space>sh" to [s]earch the [h]elp documentation,
 
-   NOTE: Look for lines like this
-
    NOTE: If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 
 --]]
@@ -100,10 +98,9 @@ vim.opt.shadafile = nvim_state .. "/shada/main.shada"
 
 -- Spellfile settings
 vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
--- vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add") TODO: investigate this append stuff that doesn't exist
 
 -- Set spelllang to include both English and French
-vim.opt.spelllang = { "en", "fr" }
+vim.opt.spelllang = { "en_us", "en_uk", "fr", "med" }
 
 -- ==========================================
 --          END OF CLAUDE CONFIG
@@ -139,23 +136,23 @@ vim.opt.showmode = false
 --  See `:help 'clipboard'`
 -- vim.opt.clipboard = 'unnamedplus'
 
--- Enable break indent
+-- Enable break indent (en gros le 'wrapping' est aussi indented)
 vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
 
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- Case-sensitive searching UNLESS \c
+vim.opt.ignorecase = false
+-- vim.opt.smartcase = true
 
--- Keep signcolumn on by default
+-- Keep signcolumn on by default (c'est le machin à gauche avec les trucs github)
 vim.opt.signcolumn = "yes"
 
--- Decrease update time
+-- Decrease update time (default is 4_000)
 vim.opt.updatetime = 250
 
--- Decrease mapped sequence wait time
+-- Decrease mapped sequence wait time (normallement 1000 mais du coup which key peu débarquer vite)
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
@@ -210,7 +207,6 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -244,9 +240,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  To check the current status of your plugins, run
 --    :Lazy
---
 --  You can press `?` in this menu for help. Use `:q` to close the window
---
 --  To update plugins you can run
 --    :Lazy update
 
