@@ -43,45 +43,14 @@ What is Kickstart?
 
 Kickstart Guide:
 
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
+   TODO: Next, run AND READ `:help`.
 
-    If you don't know what this means, type the following:
-      - <escape key>
-      - :
-      - Tutor
-      - <enter key>
-
-    (If you already know the Neovim basics, you can skip this step.)
-
-  Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
-
-  Next, run AND READ `:help`.
-    This will open up a help window with some basic information
-    about reading, navigating and searching the builtin help documentation.
-
-    This should be the first place you go to look when you're stuck or confused
-    with something. It's one of my favorite Neovim features.
-
-    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
-    which is very useful when you're not exactly sure of what you're looking for.
-
-  I have left several `:help X` comments throughout the init.lua
-    These are hints about where to find more information about the relevant settings,
-    plugins or Neovim features used in Kickstart.
+   NOTE: "<space>sh" to [s]earch the [h]elp documentation,
 
    NOTE: Look for lines like this
 
-    Throughout the file. These are for you, the reader, to help you understand what is happening.
-    Feel free to delete them once you know what you're doing, but they should serve as a guide
-    for when you are first encountering a few different constructs in your Neovim config.
+   NOTE: If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 
-If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 -- ==========================================
@@ -103,7 +72,7 @@ local nvim_cache = xdg_cache_home .. "/nvim"
 
 -- Ensure directories exist
 local function ensure_directory(path)
-    vim.fn.mkdir(path, "p")
+	vim.fn.mkdir(path, "p")
 end
 
 ensure_directory(nvim_data)
@@ -131,7 +100,7 @@ vim.opt.shadafile = nvim_state .. "/shada/main.shada"
 
 -- Spellfile settings
 vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
-vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add")
+-- vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add") TODO: investigate this append stuff that doesn't exist
 
 -- Set spelllang to include both English and French
 vim.opt.spelllang = { "en", "fr" }
@@ -151,8 +120,7 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
+-- NOTE: For more options, you can see `:help option-list`
 
 -- Make line numbers default
 vim.opt.number = true
@@ -200,11 +168,11 @@ vim.opt.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
---  and `:help 'listchars'` -- TODO:
+--  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Preview substitutions live, as you type!
+-- Preview substitutions live, as you type! can also be "nosplit"
 vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
@@ -281,8 +249,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  To update plugins you can run
 --    :Lazy update
---
--- NOTE: Here is where you install your plugins.
+
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
@@ -634,7 +601,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				-- tsserver = {},
+				tsserver = {},
 				--
 
 				lua_ls = {
@@ -647,7 +614,7 @@ require("lazy").setup({
 								callSnippet = "Replace",
 							},
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-							-- diagnostics = { disable = { 'missing-fields' } },
+							diagnostics = { disable = { "missing-fields" } },
 						},
 					},
 				},
@@ -774,7 +741,7 @@ require("lazy").setup({
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
 				--
-				-- No, but seriously. Please read `:help ins-completion`, it is really good!
+				-- TODO: No, but seriously. Please read `:help ins-completion`, it is really good!
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
 					["<C-n>"] = cmp.mapping.select_next_item(),
@@ -800,7 +767,8 @@ require("lazy").setup({
 					--  Generally you don't need this, because nvim-cmp will display
 					--  completions whenever it has completion options available.
 					["<C-Space>"] = cmp.mapping.complete({}),
-
+					-- NOTE: wasn't this <C-x> in standard vim
+					--
 					-- Think of <c-l> as moving to the right of your snippet expansion.
 					--  So if you have a snippet that's like:
 					--  function $name($args)
@@ -843,7 +811,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'retrobox', 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("tokyonight-storm")
+			vim.cmd.colorscheme("tokyonight")
 
 			-- You can configure highlights by doing something like:
 			vim.cmd.hi("Comment gui=none")
@@ -899,7 +867,20 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+			ensure_installed = {
+				"python",
+				"rust",
+				"go",
+				"bash",
+				"c",
+				"diff",
+				"html",
+				"lua",
+				"luadoc",
+				"markdown",
+				"vim",
+				"vimdoc",
+			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {
@@ -921,7 +902,7 @@ require("lazy").setup({
 
 			-- There are additional nvim-treesitter modules that you can use to interact
 			-- with nvim-treesitter. You should go explore a few and see what interests you:
-			--
+			--TODO:
 			--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
@@ -945,7 +926,6 @@ require("lazy").setup({
 	-- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-	--    This is the easiest way to modularize your config.
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
