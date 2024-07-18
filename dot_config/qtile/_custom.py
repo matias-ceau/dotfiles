@@ -1,4 +1,5 @@
 import os
+import csv
 import socket
 from libqtile.lazy import lazy
 from qtile_extras import widget
@@ -19,13 +20,15 @@ if hostname == "karhu":
 
 # ----- CMD DICTS / SPECIAL -----(to be modified)----------------------------------------
 # SCRIPTS
+def csv_to_dict(file_path):
+    result = {}
+    with open(file_path, mode='r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            result[row['file']] = os.path.expanduser(f"~/{row['file']}")
+    return result
 
-SCRIPTS = dict()
-for i in os.listdir(f"{home}/apps/scripts"):
-    for c, e in script_dict.items():
-        if "." + i.split(".")[-1] == e:
-            SCRIPTS[i.split(".")[0]] = f"{c} {home}/apps/scripts/{i}"
-
+SCRIPTS = csv_to_dict(f'{scripts}/data/script_info.csv')
 
 # QUICKLAUNCHES
 # jupyter

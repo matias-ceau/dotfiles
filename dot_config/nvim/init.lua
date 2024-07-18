@@ -84,6 +84,53 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- ==========================================
+-- CLAUDE'S HELP WITH ENSURING XDG COMPLIANCY
+-- ==========================================
+
+-- Use XDG Base Directory Specification
+local home = os.getenv("HOME")
+local xdg_config_home = os.getenv("XDG_CONFIG_HOME") or home .. "/.config"
+local xdg_data_home = os.getenv("XDG_DATA_HOME") or home .. "/.local/share"
+local xdg_state_home = os.getenv("XDG_STATE_HOME") or home .. "/.local/state"
+local xdg_cache_home = os.getenv("XDG_CACHE_HOME") or home .. "/.cache"
+
+-- Set Neovim-specific directories
+local nvim_config = xdg_config_home .. "/nvim"
+local nvim_data = xdg_data_home .. "/nvim"
+local nvim_state = xdg_state_home .. "/nvim"
+local nvim_cache = xdg_cache_home .. "/nvim"
+
+-- Set Neovim options
+vim.opt.runtimepath:remove(home .. "/.config/nvim")
+vim.opt.runtimepath:remove(home .. "/.local/share/nvim/site")
+vim.opt.runtimepath:prepend(nvim_config)
+vim.opt.runtimepath:append(nvim_data .. "/site")
+
+vim.opt.packpath:remove(home .. "/.local/share/nvim/site")
+vim.opt.packpath:prepend(nvim_data .. "/site")
+
+vim.opt.viewdir = nvim_data .. "/view"
+vim.opt.backupdir = nvim_state .. "/backup"
+vim.opt.directory = nvim_state .. "/swap"
+vim.opt.undodir = nvim_state .. "/undo"
+vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
+vim.opt.spellfile:append(nvim_data .. "/spell/fr.utf-8.add")
+vim.opt.spelllang = { "en", "fr" }
+
+-- Set statedir
+vim.opt.statedir = nvim_state
+
+-- Set shada file location
+vim.opt.shadafile = nvim_state .. "/shada/main.shada"
+
+-- Explicitly disable viminfo for Neovim
+vim.opt.viminfofile = "NONE"
+
+-- ==========================================
+--          END OF CLAUDE CONFIG
+-- ==========================================
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -230,7 +277,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -788,7 +834,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'retrobox', 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("retrobox")
+			vim.cmd.colorscheme("tokyonight-storm")
 
 			-- You can configure highlights by doing something like:
 			vim.cmd.hi("Comment gui=none")

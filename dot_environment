@@ -32,10 +32,7 @@ export XDG_CONFIG_DIRS=/etc/xdg/
 mkdir -p ~/.config/vim
 mkdir -p ~/.local/share/vim
 mkdir -p ~/.local/state/vim
-export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
-export VIMDATA="${XDG_DATA_HOME:-$HOME/.local/share}/vim"
-export VIMSTATE="${XDG_STATE_HOME:-$HOME/.local/state}/vim"
-
+export VIM_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/vim"
 
 # THEME
 #qt
