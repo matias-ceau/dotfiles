@@ -1,8 +1,0 @@
-[type]
-fake_config = True
-
-[version]
-host = karhu
-
-[modified]
-modified with chezmoi edit ~/.testrc

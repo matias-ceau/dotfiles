@@ -36,7 +36,7 @@ export VIM_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/vim"
 
 # THEME
 #qt
-#export QT_QPA_PLATFORMTHEME="qt6ct"
+export QT_QPA_PLATFORMTHEME="qt6ct"
 #gtk
 #___both can be useful on old screens
 #export GSK_RENDERER='gl'
