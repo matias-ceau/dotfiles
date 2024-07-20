@@ -20,15 +20,20 @@ alias p44='pw-metadata -n settings 0 clock.force-rate 44100'
 alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 
+alias f=fzf
+alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
+# TMUX
+alias ta='tmux attach'
+alias ts='tmux new -s'
+#alias tac='tmux attach -t music:cmus'
 
 alias serv='list_process.sh'
 
 alias s='eza -l $HOME/.scripts'
 alias xxx='conda deactivate'
 alias ooo='conda activate base'
-
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
@@ -55,18 +60,12 @@ alias ip_livebox="curl -4 -s ifconfig.me"
 ##      alias fgrep='fgrep --color=auto'
 ##      alias egrep='egrep --color=auto'
 ##      
-##      # TMUX
-##      alias t='tmux attach'
-##      alias s='tmux new -s'
-##      alias c='tmux attach -t music:cmus'
 ##      
 ##      # own apps
 ##      # alias biovector='cd /home/matias/code/biovector/biovector && python3 main.py'
 ##      # alias bv='biovector'
 ##      
 ##      # apps
-##      alias f=fzf
-##      alias r='ranger'
 ##      alias p=python3
 ##      
 ##      # cmus
