@@ -8,50 +8,87 @@ blur = false
   y = 0
 
 [font]
-size = 18
-
-  [font.normal]
-  family = "Iosevka Nerd Font"
-  style = "Regular"
-
-  [font.bold]
-  family = "Iosevka Nerd Font"
-  style = "Bold"
-
-  [font.italic]
-  family = "Iosevka Nerd Font"
-  style = "Italic"
+size = 14
+builtin_box_drawing = false
+normal = { family = "Iosevka Nerd Font", style = "Regular" }
+bold = { family = "Iosevka Nerd Font", style = "Bold" }
+italic = { family = "Iosevka Nerd Font", style = "Italic" }
+bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
 
 [colors]
 transparent_background_colors = true
+line_indicator = { foreground = "None", background = "None" } #unmodif
+#    Color used for the indicator displaying the position in history during search and vi mode.
+#    Setting this to "None" will use the opposing primary color.
+footer_bar = { foreground = "#181818", background = "#d8d8d8" }
+# TODO:
+#    Color used for the footer bar on the bottom, used by search regex input, hyperlink URI preview, etc.
+selection = { text = "CellBackground", background = "CellForeground" }
+#    Colors used for drawing selections.
+#    Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
+draw_bold_text_with_bright_colors = true
+
+[colors.search]
+#    Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
+    matches = { foreground = "#181818", background = "#ac4242" }
+# TODO:
+    focused_match = { foreground = "#181818", background = "#f4bf75" }
+# TODO:
+
+[colors.hints]
+    start = { foreground = "#181818", background = "#f4bf75" }
+# TODO:
+#        First character in the hint label.
+#        Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
+    end = { foreground = "#181818", background = "#ac4242" }
+# TODO:
+#        All characters after the first one in the hint label.
+#        Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
 
   [colors.primary]
-  background = "#000000"
-  foreground = "#cccccc"
+  background = "#000000" #flexoki betrayal :(   "#1C1B1A"
+  foreground = "#FFFCF0"
+  bright_foreground = "#FFFCF0"
+  dim_foreground = "#FFFCF0"
+
 
   [colors.cursor]
-  text = "#000000"
-  cursor = "#ffffff"
+  text = "#FFFCF0"
+  cursor = "#FFFCF0"
+
+  [colors.vi_mode_cursor]
+  text = "CellBackground"
+  cursor = "CellForeground"
 
   [colors.normal]
-  black = "#181818"
-  red = "#ac4242"
-  green = "#90a959"
-  yellow = "#f4bf75"
-  blue = "#6a9fb5"
-  magenta = "#aa759f"
-  cyan = "#75b5aa"
-  white = "#d8d8d8"
+  black = "#100F0F"
+  red = "#AF3029"
+  green = "#66800B"
+  yellow = "#AD8301"
+  blue = "#205EA6"
+  magenta = "#A02F6F"
+  cyan = "#24837B"
+  white = "#FFFCF0"
 
   [colors.bright]
-  black = "#6b6b6b"
-  red = "#c55555"
-  green = "#aac474"
-  yellow = "#feca88"
-  blue = "#82b8c8"
-  magenta = "#c28cb8"
-  cyan = "#93d3c3"
-  white = "#f8f8f8"
+  black = "#100F0F"
+  red = "#D14D41"
+  green = "#879A39"
+  yellow = "#D0A215"
+  blue = "#4385BE"
+  magenta = "#CE5D97"
+  cyan = "#3AA99F"
+  white = "#FFFCF0"
+
+  [colors.dim]
+  black = "#100F0F"
+  red = "#AF3029"
+  green = "#66800B"
+  yellow = "#AD8301"
+  blue = "#205EA6"
+  magenta = "#A02F6F"
+  cyan = "#24837B"
+  white = "#FFFCF0"
 
 [scrolling]
 history = 10_000
