@@ -37,7 +37,7 @@ What is Kickstart?
       - https://learnxinyminutes.com/docs/lua/
 
     After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
+    reference  #ff0000 for how Neovim integrates Lua.
     - :help lua-guide
     - (or HTML version): https://neovim.io/doc/user/lua-guide.html
 
@@ -276,7 +276,9 @@ require("lazy").setup({
 			},
 		},
 	},
-
+	{
+		"norcalli/nvim-colorizer.lua",
+	},
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
@@ -400,7 +402,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader><leader>r", builtin.registers, { desc = "[R]egisters" })
 			vim.keymap.set("n", "<leader><leader>m", builtin.man_pages, { desc = "[M]an" })
 			vim.keymap.set("n", "<leader><leader>b", builtin.buffers, { desc = "[B]uffers" })
-
+			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
