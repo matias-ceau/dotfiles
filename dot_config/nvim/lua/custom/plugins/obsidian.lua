@@ -23,8 +23,5 @@ return {
 				path = "~/notes",
 			},
 		},
-
-		-- see below for full list of options 👇
 	},
 }
-

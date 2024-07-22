@@ -18,7 +18,8 @@ $PYTHONPATH
 export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 ####################################################
-
+export CHEZMOI=$(chezmoi source-path)
+#####################################################
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share

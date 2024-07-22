@@ -1,3 +1,67 @@
+! Flexoki color scheme for the X Window System
+!
+! https://stephango.com/flexoki
+! xrdb -merge $PWD/Xresources/flexoki-dark
+
+! Dark Tones 
+#define yellow       #AD8301
+#define orange       #BC5215
+#define red          #AF3029
+#define magenta      #A02F6F
+#define violet       #5E409D
+#define blue         #205EA6
+#define cyan         #24837B
+#define green        #66800B
+#define white        #FFFCF0
+#define black        #100F0F
+
+
+#define bryellow     #D0A215
+#define brorange     #DA702C
+#define brred        #D14D41
+#define brmagenta    #CE5D97
+#define brviolet     #8B7EC8
+#define brblue       #4385BE
+#define brcyan       #3AA99F
+#define brgreen      #879A39
+#define brwhite      #F2F0E5 
+#define brblack      #1C1B1A 
+
+*background:              black
+*foreground:              brwhite
+*fading:                  40
+*fadeColor:               black
+*cursorColor:             brwhite
+*pointerColorBackground:  brblack
+*pointerColorForeground:  black
+
+
+!black
+*color0:     black
+*color8:     brblack
+!red
+*color1:     red
+*color9:     brred
+!green
+*color2:     green
+*color10:    brgreen
+!yellow
+*color3:     yellow
+*color11:    bryellow
+!blue
+*color4:     blue
+*color12:    brblue
+!magenta
+*color5:     magenta
+*color13:    brmagenta
+!cyan
+*color6:     cyan
+*color14:    brcyan
+!white
+*color7:     white
+*color15:    brwhite
+
+
 !urxvt*font:            xft:monospace:size=15
 URxvt.font:            xft:Iosevka Nerd Font:size=12:antialias=true
 urxvt*termName:         rxvt
@@ -8,29 +72,9 @@ urxvt*perl-ext-common:  default,matcher,resize-font
 urxvt*urlLauncher:      /usr/bin/jumanji
 urxvt*matcher.button:   1
 
-
-urxvt*background:       rgba:0000/0000/0000/cccc
+!urxvt*background:       rgba:0000/0000/0000/cccc
 
 !URxvt.shading:       20
- 
-URxvt*color0:      #000000
-URxvt*color1:      #9e1828
-URxvt*color2:      #aece92
-URxvt*color3:      #968a38
-URxvt*color4:      #414171
-URxvt*color5:      #963c59
-URxvt*color6:      #418179
-URxvt*color7:      #bebebe
-URxvt*color8:      #666666
-URxvt*color9:      #cf6171
-URxvt*color10:     #c5f779
-URxvt*color11:     #fff796
-URxvt*color12:     #4186be
-URxvt*color13:     #cf9ebe
-URxvt*color14:     #71bebe
-URxvt*color15:     #ffffff
-
-
 
 ! Font settings
 XTerm*faceName: Iosevka Nerd Font
@@ -40,7 +84,7 @@ XTerm*faceSize: 15
 XTerm*termName: xterm
 
 ! Foreground color
-XTerm*foreground: #cccccc
+!XTerm*foreground: #cccccc
 
 ! Scrollbar
 XTerm*scrollBar: false
@@ -50,22 +94,39 @@ Xft*antialias: false
 Xft*hinting:            slight
 
 ! Background color with transparency (Note: xterm does not support true transparency)
-XTerm*background: #000000
+!XTerm*background: #000000
 
 ! Color settings
-XTerm*color0: #000000
-XTerm*color1: #9e1828
-XTerm*color2: #aece92
-XTerm*color3: #968a38
-XTerm*color4: #414171
-XTerm*color5: #963c59
-XTerm*color6: #418179
-XTerm*color7: #bebebe
-XTerm*color8: #666666
-XTerm*color9: #cf6171
-XTerm*color10: #c5f779
-XTerm*color11: #fff796
-XTerm*color12: #4186be
-XTerm*color13: #cf9ebe
-XTerm*color14: #71bebe
-XTerm*color15: #ffffff
+!XTerm*color0: #000000
+!XTerm*color1: #9e1828
+!XTerm*color2: #aece92
+!XTerm*color3: #968a38
+!XTerm*color4: #414171
+!XTerm*color5: #963c59
+!XTerm*color6: #418179
+!XTerm*color7: #bebebe
+!XTerm*color8: #666666
+!XTerm*color9: #cf6171
+!XTerm*color10: #c5f779
+!XTerm*color11: #fff796
+!XTerm*color12: #4186be
+!XTerm*color13: #cf9ebe
+!XTerm*color14: #71bebe
+!XTerm*color15: #ffffff
+
+!URxvt*color0:      #000000
+!URxvt*color1:      #9e1828
+!URxvt*color2:      #aece92
+!URxvt*color3:      #968a38
+!URxvt*color4:      #414171
+!URxvt*color5:      #963c59
+!URxvt*color6:      #418179
+!URxvt*color7:      #bebebe
+!URxvt*color8:      #666666
+!URxvt*color9:      #cf6171
+!URxvt*color10:     #c5f779
+!URxvt*color11:     #fff796
+!URxvt*color12:     #4186be
+!URxvt*color13:     #cf9ebe
+!URxvt*color14:     #71bebe
+!URxvt*color15:     #ffffff

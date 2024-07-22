@@ -1,31 +1,33 @@
 [style.description]
+foreground = { rgb = { r = 252, g = 238, b = 184 } }
+background = "black"
 underline = false
 bold = false
 italic = true
 
 [style.example_text]
-foreground = "green"
+foreground = { rgb = { r = 135, g = 154, b = 57 } }
 underline = false
 bold = false
 italic = true
 
 [style.command_name]
 background = "black"
-foreground = "red"
+foreground = { rgb = { r = 188, g = 82, b = 21 } }
 underline = false
 bold = true
 italic = false
 
 [style.example_code]
 background = "black"
-foreground = "white"
+foreground = { rgb = { r = 206, g = 205, b = 195} }
 underline = false
 bold = true
 italic = false
 
 [style.example_variable]
 background = "black"
-foreground = "blue"
+foreground = { rgb = { r = 67, g = 133, b = 190} }
 underline = true
 bold = true
 italic = false
@@ -36,6 +38,6 @@ use_pager = false
 
 [updates]
 auto_update = true
-auto_update_interval_hours = 720
+auto_update_interval_hours = 72
 
 [directories]
