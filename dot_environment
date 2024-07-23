@@ -20,7 +20,11 @@ export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -
 ####################################################
 export CHEZMOI=$(chezmoi source-path)
 export LOCALDATA="$HOME/.localdata"
+<<<<<<< Updated upstream
 export SCRIPTS="$HOME/.scripts"
+=======
+export SCRIPTS="$HOME/.scripts/"
+>>>>>>> Stashed changes
 #####################################################
 
 # FREEDESKTOP
