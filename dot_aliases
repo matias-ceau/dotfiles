@@ -9,6 +9,7 @@ alias _xsh="sudo chsh -s $(which xonsh) $(whoami)"
 alias _zsh="sudo chsh -s $(which zsh) $(whoami)"
 alias _bsh="sudo chsh -s $(which bash) $(whoami)"
 
+alias cfg="edit_chezmoi_cfg_files.sh"
 alias local_data_stow="stow --dir=$HOME/Dropbox/local_appdata --target=$HOME"
 
 alias fuckingpipe='systemctl --user restart pipewire.service'
