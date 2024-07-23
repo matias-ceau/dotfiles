@@ -4,16 +4,17 @@
 # Source profile and aliases
 #
 #---------------------------
-if [[ -f ~/.aliases ]]; then
-  source ~/.aliases
-fi
-if [[ -f ~/.environment ]]; then
-  source ~/.environment
-fi
-if [[ -f ~/.secret_environment ]]; then
-  source ~/.secret_environment
-fi
-#---------------------------
+# #---------------------------
+ if [ -f ~/.environment ]; then
+   . ~/.environment
+ fi
+ if [ -f ~/.secret_environment ]; then
+   . ~/.secret_environment
+ fi
+ if [ -f ~/.aliases ]; then
+   . ~/.aliases
+ fi
+ #---------------------------
 
 # History settings 
 HISTSIZE=10000
