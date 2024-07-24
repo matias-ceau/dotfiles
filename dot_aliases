@@ -45,6 +45,7 @@ alias ooo='conda activate base'
 #alias ls='ls --color=auto'
 #alias grep='grep --color=auto'
 alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 150 --save /etc/pacman.d/mirrorlist'
+alias git_sync='sync-repo.sh'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
