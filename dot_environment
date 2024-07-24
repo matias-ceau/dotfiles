@@ -18,9 +18,10 @@ $PYTHONPATH
 export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 ####################################################
-export CHEZMOI=$(chezmoi source-path)
+export CHEZMOI="$(chezmoi source-path)"
 export LOCALDATA="$HOME/.localdata"
 export SCRIPTS="$HOME/.scripts"
+export GIT_REPOS="$HOME/git"
 #####################################################
 
 # FREEDESKTOP
