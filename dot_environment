@@ -68,6 +68,21 @@ export RANGER_LOAD_DEFAULT_RC=false
 export OLLAMA_MODELS="/mnt/SSD/ollama_models"
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
+export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat" #Customize the location of the config dir. Defaults to <user_config_dir>/aichat.
+
+export AICHAT_CONFIG_FILE="$AICHAT_CONFIG_DIR/config.yaml" #Customize the location of the config.yaml file.
+export AICHAT_FUNCTIONS_DIR="$AICHAT_CONFIG_DIR/functions" #Customize the location of the functions dir.
+export AICHAT_ROLES_FILE="$AICHAT_CONFIG_DIR/roles.yaml" #Customize the location of the roles.yaml file.
+export AICHAT_AGENTS_FUNCTIONS_DIR="$AICHAT_CONFIG_DIR/functions/agents" #Customize the location of the functions/agents dir.
+export AICHAT_AGENTS_CONFIG_DIR="$AICHAT_CONFIG_DIR/agents" #Customize the location of the agents dir.
+
+mkdir -p "$XDG_DATA_HOME/aichat"
+mkdir -p "$XDG_DATA_HOME/aichat/rags"
+mkdir -p "$XDG_DATA_HOME/aichat/sessions"
+export AICHAT_MESSAGES_FILE="$XDG_DATA_HOME/aichat/messages.md" #Customize the location of the messages.md file.
+export AICHAT_SESSIONS_DIR="$XDG_DATA_HOME/aichat/sessions" #Customize the location of the sessions dir.
+export AICHAT_RAGS_DIR="$XDG_DATA_HOME/aichat/rags" #Customize the location of the rags dir.
+
 if [ -z "${SPOTIFY_CLIENT_SECRET}" ]; then
     export SPOTIFY_CLIENT_SECRET="$(pass ENV/SPOTIFY_CLIENT_SECRET)"
 fi
