@@ -16,6 +16,7 @@
    . ~/.aliases
  fi
  #---------------------------
+export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash-completion/bash_completion"
 
 shopt -s expand_aliases
 shopt -s autocd
@@ -90,3 +91,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(register-python-argcomplete pipx)"
+eval "$(zoxide init bash)"

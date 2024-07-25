@@ -49,3 +49,5 @@ $XONSH_HISTORY_SIZE = (9999, 'commands')
 
 $PROMPT_FIELDS['prompt_end'] = '@'
 $PROMPT = '{BOLD_RED}{user}{RESET}@{BOLD_BLUE}{hostname}{RESET}: {BOLD_YELLOW}{cwd}{RESET} {env_name}{BOLD_GREEN}{prompt_end}{RESET} '
+
+execx($(zoxide init xonsh), 'exec', __xonsh__.ctx, filename='zoxide')

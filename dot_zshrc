@@ -1,4 +1,3 @@
-
 #---------------------------
 #
 # Source profile and aliases
@@ -8,9 +7,9 @@
  if [ -f ~/.environment ]; then
    . ~/.environment
  fi
- if [ -f ~/.secret_environment ]; then
-   . ~/.secret_environment
- fi
+# if [ -f ~/.secret_environment ]; then
+#   . ~/.secret_environment
+# fi
  if [ -f ~/.aliases ]; then
    . ~/.aliases
  fi
@@ -22,6 +21,8 @@ SAVEHIST=10000
 mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 setopt append_history
+setopt inc_append_history
+setopt histignorespace
 
 # Navigation settings
 setopt autocd
@@ -29,8 +30,15 @@ setopt autocd
 # Completion settings 
 autoload -U compinit
 zstyle ':completion:*' menu select
-compinit
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' use-cache on
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
+
+eval "$(register-python-argcomplete pipx)"
+eval "$(zoxide init zsh)"
 
 # Edit command line with vim 
 autoload edit-command-line
@@ -51,9 +59,16 @@ PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
 if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+# Plugin: zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
 # Syntax highlighting (requires zsh-syntax-highlighting plugin)
 if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-# Plugin: zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# AICHAT SIGODEN
+aichat="$GIT_REPOS/sigoden/aichat"
+if [ -f "$aichat/scripts/completions/aichat.zsh" ]; then 
+  source "$aichat/scripts/completions/aichat.zsh"
+fi
