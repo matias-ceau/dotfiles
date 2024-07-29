@@ -129,10 +129,10 @@ keys = [
     Key(['mod4', "shift"], "d", lazy.spawn("dmenu_run -l 30"), desc="Run app with dmenu"),
     Key(['mod4'], "space", lazy.spawn("fzfmenu_run.sh"), desc="Run app with fzfmenu"),
     Key(['mod4', "shift"], "space", lazy.spawn("rofi -show drun"), desc="Run app with rofi (desktop apps)"),
-    Key(['mod4'], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="bookmarks"),  # TODO (also add, auto format, copy/paste)
+  Key(['mod4'], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="bookmarks"),  # TODO: (also add, auto format, copy/paste)
     Key(['mod4'], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(['mod4'], "dollar", lazy.spawn(["alacritty", "-T", "dis_term"]), desc="Launch terminal",),
-    Key(['mod4'], "asterisk", lazy.spawn(["alacritty", "-T", "floating", "-o", "window.dimensions.columns=150", "-o", "window.dimensions.lines=30"]), desc="Launch terminal",),
+    Key(['mod4'], "asterisk", lazy.spawn(["alacritty", "-T", "floating", "-o", "window.dimensions.columns=200", "-o", "window.dimensions.lines=50"]), desc="Launch terminal",),
     Key(['mod4'], "o", lazy.spawn("obsidian.xsh"), desc="Open obsidian vault"),
     Key(['mod4'], "Print", lazy.spawn("flameshot gui")),
     # quicklaunch
