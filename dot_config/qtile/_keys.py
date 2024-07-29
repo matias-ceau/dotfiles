@@ -156,11 +156,7 @@ keys = [
     ),
     # scripts
     Key(
-        ['mod4'],
-        "x",
-        lazy.run_extension(
-            extension.CommandSet(commands=SCRIPTS, dmenu_lines=30, pre_commands=[])
-        ),
+        ['mod4'], "x", lazy.spawn('script_launcher.sh'),
     ),
     # CMUS
     # TODO add seek etc
