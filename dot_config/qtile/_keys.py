@@ -1,4 +1,4 @@
-from _custom import show_power_menu, NOTEBOOKS, SCRIPTS, home, scripts
+from _custom import show_power_menu, NOTEBOOKS, scripts
 from libqtile.lazy import lazy
 from libqtile import extension
 from libqtile.config import (
@@ -141,7 +141,7 @@ keys = [
         "less",
         [
             Key([], "h", lazy.spawn("notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'")),
-            Key([], "n", lazy.run_extension(extension.CommandSet(commands=NOTEBOOKS, dmenu_lines=30)),),
+            Key([], "n", lazy.run_extension(extension.CommandSet(commands=NOTEBOOKS, dmenu_lines=30)),), # TODO: change notebook to custom script
             Key(["shift"], "n", lazy.spawn("jupyter_new_notebook.xsh"), desc="Launch new notebook",),
             Key(["control"], "c", lazy.ungrab_all_chords(), desc="Exit",),
             Key([], "q", lazy.ungrab_all_chords(), desc="Exit",),
@@ -164,7 +164,7 @@ keys = [
         "s",
         [
             Key([], "h", lazy.spawn("notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'")),
-            Key([], "c", lazy.spawn("urxvt -T floating -e tmux attach -t music:cmus"), desc="attach tmux",),
+            Key([], "c", lazy.spawn("urxvt -T floating -e tmux attach -t MUSIC:cmus"), desc="attach tmux",),
             Key([], "Right", lazy.spawn("cmus-remote -n"), desc="next song"),
             Key(["control"], "Right", lazy.spawn(f"{scripts}/next_album.xsh"), desc="Next album",),
             Key([], "Left", lazy.spawn("cmus-remote -r"), desc="previous song"),

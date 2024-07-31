@@ -10,7 +10,7 @@ from qtile_extras.popup.toolkit import (
 
 hostname = socket.gethostname()
 home = os.path.expanduser("~")
-scripts = home + "/.scripts"
+scripts = os.environ.get('SCRIPTS')
 script_dict = {"xonsh": ".xsh", "sh": ".sh", "python3": ".py"}
 
 # HOST SPECIFIC
@@ -56,8 +56,7 @@ elif (hostname == "karjala") or (hostname == "kukko"):
 else:
     Cameleon = type("Cameleon", widget.Sep.__bases__, dict(widget.Sep.__dict__))
 
-## POPUP MENU
- #{{{
+## TODO: POPUP MENU
 def show_power_menu(qtile):
 
     controls = [
