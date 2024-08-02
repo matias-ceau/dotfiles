@@ -1,6 +1,7 @@
 
 # ---- llm ----
-model: openai:gpt-4o             # Specify the LLM to use
+#model: openai:gpt-4o             # Specify the LLM to use
+model: claude:claude-3-5-sonnet-20240620             # Specify the LLM to use
 temperature: null                # Set default temperature parameter
 top_p: null                      # Set default top-p parameter, range (0, 1)
 

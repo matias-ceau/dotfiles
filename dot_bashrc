@@ -1,21 +1,19 @@
-# ~/.bashrc
-
 #---------------------------
 #
 # Source profile and aliases
 #
 #---------------------------
- #---------------------------
- if [ -f ~/.environment ]; then
-   . ~/.environment
- fi
- if [ -f ~/.secret_environment ]; then
-   . ~/.secret_environment
- fi
- if [ -f ~/.aliases ]; then
-   . ~/.aliases
- fi
- #---------------------------
+#---------------------------
+if [ -f ~/.environment ]; then
+    . ~/.environment
+fi
+if [ -f ~/.secret_environment ]; then
+    . ~/.secret_environment
+fi
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+#---------------------------
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash-completion/bash_completion"
 
 shopt -s expand_aliases
@@ -32,19 +30,27 @@ bind '"\C-e": "\ev"'
 PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
 
 # FUNCTIONS
-f() { $1 "$(fzf)" ; }
-vs() { script=$HOME/.scripts/$1 ; echo '#! /usr/bin/env TODO\n\n#DOC# "TODO"\n\n' > $script ; chmod +x $script ; vim $script ; }
-m() { link=$(xsel -b) ; mpv -fs "$link" ; }
-nm() { mv "$1" ~/data/new_music/ ; }
+f() { $1 "$(fzf)"; }
+vs() {
+    script=$HOME/.scripts/$1
+    echo '#! /usr/bin/env TODO\n\n#DOC# "TODO"\n\n' >$script
+    chmod +x $script
+    vim $script
+}
+m() {
+    link=$(xsel -b)
+    mpv -fs "$link"
+}
+nm() { mv "$1" ~/data/new_music/; }
 epoch_hexadecimal() {
     D=$(date --date="$1" +"%s")
-    SD=$(($D*1000)) 
+    SD=$(($D * 1000))
     printf "%X" "$SD"
-    } 
+}
 
 lx() {
-    pdflatex --interaction=batchmode $1 2>&1 > /dev/null
-    }
+    pdflatex --interaction=batchmode $1 2>&1 >/dev/null
+}
 
 #VENV
 ##     on() { source $HOME/.virtualenv/"$1"/bin/activate ; }
@@ -78,7 +84,7 @@ transform_symlink() {
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/miniforge3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
