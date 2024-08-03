@@ -27,8 +27,8 @@ export LOCALDATA="$HOME/.localdata"
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
-export SCRIPTS="$HOME/.scripts"
 
+export SCRIPTS="$HOME/.scripts"
 export GIT_REPOS="$HOME/git"
 #####################################################
 
