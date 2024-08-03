@@ -28,4 +28,5 @@
 --map-syntax '*condarc:YAML' 
 --map-syntax '*.Xresources:Fortran (Modern)' 
 --map-syntax '*xinitrc:Bourne Again Shell (bash)'
+--map-syntax '*rc.conf:VimL'
 
