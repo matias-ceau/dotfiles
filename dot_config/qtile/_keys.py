@@ -132,7 +132,7 @@ keys = [
   Key(['mod4'], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="bookmarks"),  # TODO: (also add, auto format, copy/paste)
     Key(['mod4'], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(['mod4'], "dollar", lazy.spawn(["alacritty", "-T", "dis_term"]), desc="Launch terminal",),
-    Key(['mod4'], "asterisk", lazy.spawn(["alacritty", "-T", "floating", "-o", "window.dimensions.columns=200", "-o", "window.dimensions.lines=50"]), desc="Launch terminal",),
+    Key(['mod4'], "asterisk", lazy.spawn(["alacritty", "-T", "floating"]), desc="Launch terminal",),
     Key(['mod4'], "o", lazy.spawn("obsidian.xsh"), desc="Open obsidian vault"),
     Key(['mod4'], "Print", lazy.spawn("flameshot gui")),
     # quicklaunch
@@ -201,6 +201,9 @@ keys = [
     Key(['mod4'], "c", lazy.group["scratch"].dropdown_toggle("chatbot")),
     Key(['mod4'], "n", lazy.group["scratch"].dropdown_toggle("note")),
     Key(['mod4'], "p", lazy.group["scratch"].dropdown_toggle("keepassxc")),
+  # FLOATING WINDOWS
+    Key(['mod4'], "minus", lazy.window.resize_floating(-16,-9), lazy.window.center()),
+    Key(['mod4'], "equal", lazy.window.resize_floating(16,9), lazy.window.center()),
 ]
 ### Mouse
   #{{{
