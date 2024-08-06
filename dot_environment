@@ -1,18 +1,17 @@
 #
 # ~/.environment
 #
-#export SHELL="$(getent passwd matias | cut -d: -f7 | xargs basename)"
-export EDITOR="vim"
+# vim: set filetype=bash
+#
+export EDITOR="nvim"
 export BROWSER="qutebrowser"
 
 # PATHS ####################################
 # PATH
-export PATH=$PATH:\
-$PATH:$HOME/.local/bin:\
+export PATH="$PATH:$HOME/.local/bin"
 
 # PYTHONPATH
-export PYTHONPATH=/usr/bin/python:\
-$PYTHONPATH
+export PYTHONPATH="/usr/bin/python:$PYTHONPATH"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
@@ -28,7 +27,6 @@ export SCRIPTS="$HOME/.scripts"
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
-
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share
@@ -63,7 +61,9 @@ export FZF_DEFAULT_OPTS="
 export RANGER_LOAD_DEFAULT_RC=false
 
 # OLLAMA
-export OLLAMA_MODELS="/mnt/SSD/ollama_models"
+if [ "$(hostnamectl hostname)" = "karjala" ]; then
+    export OLLAMA_MODELS="/mnt/SSD/ollama_models"
+fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
 export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat" #Customize the location of the config dir. Defaults to <user_config_dir>/aichat.
@@ -81,24 +81,13 @@ export AICHAT_MESSAGES_FILE="$XDG_DATA_HOME/aichat/messages.md" #Customize the l
 export AICHAT_SESSIONS_DIR="$XDG_DATA_HOME/aichat/sessions" #Customize the location of the sessions dir.
 export AICHAT_RAGS_DIR="$XDG_DATA_HOME/aichat/rags" #Customize the location of the rags dir.
 
-if [ -z "${SPOTIFY_CLIENT_SECRET}" ]; then
+if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
+    export LOADED_PASS_SECRET_ENV=1
     export SPOTIFY_CLIENT_SECRET="$(pass ENV/SPOTIFY_CLIENT_SECRET)"
-fi
-if [ -z "${ANTHROPIC_API_KEY}" ]; then
     export ANTHROPIC_API_KEY="$(pass ENV/ANTHROPIC_API_KEY)"
-fi
-if [ -z "${GEMINI_API_KEY}" ]; then
     export GEMINI_API_KEY="$(pass ENV/GEMINI_API_KEY)"
-fi
-if [ -z "${OPENAI_API_KEY}" ]; then
     export OPENAI_API_KEY="$(pass ENV/OPENAI_API_KEY)"
-fi
-if [ -z "${PERPLEXITY_API_KEY}" ]; then
     export PERPLEXITY_API_KEY="$(pass ENV/PERPLEXITY_API_KEY)"
-fi
-if [ -z "${MISTRAL_API_KEY}" ]; then
     export MISTRAL_API_KEY="$(pass ENV/MISTRAL_API_KEY)"
-fi
-if [ -z "${CLAUDE_API_KEY}" ]; then
     export CLAUDE_API_KEY="$(pass ENV/CLAUDE_API_KEY)"
 fi
