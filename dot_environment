@@ -24,6 +24,7 @@ export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -
 ####################################################
 export CHEZMOI="$(chezmoi source-path)"
 export LOCALDATA="$HOME/.localdata"
+export SCRIPTS="$HOME/.scripts"
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
