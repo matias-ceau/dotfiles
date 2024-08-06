@@ -7,9 +7,6 @@
 if [ -f ~/.environment ]; then
     . ~/.environment
 fi
-if [ -f ~/.secret_environment ]; then
-    . ~/.secret_environment
-fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi

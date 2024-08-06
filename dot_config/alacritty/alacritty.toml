@@ -71,7 +71,7 @@ draw_bold_text_with_bright_colors = true
   white = "#FFFCF0"
 
   [colors.bright]
-  black = "#100F0F"
+  black = "#403E3C"
   red = "#D14D41"
   green = "#879A39"
   yellow = "#D0A215"
@@ -81,7 +81,7 @@ draw_bold_text_with_bright_colors = true
   white = "#FFFCF0"
 
   [colors.dim]
-  black = "#100F0F"
+  black = "#282726"
   red = "#AF3029"
   green = "#66800B"
   yellow = "#AD8301"
