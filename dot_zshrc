@@ -3,17 +3,13 @@
 # Source profile and aliases
 #
 #---------------------------
-# #---------------------------
- if [ -f ~/.environment ]; then
-   . ~/.environment
- fi
-# if [ -f ~/.secret_environment ]; then
-#   . ~/.secret_environment
-# fi
- if [ -f ~/.aliases ]; then
-   . ~/.aliases
- fi
- #---------------------------
+#
+if [ -z "${COMMON_SHELL_FILES_SOURCED}" ]; then
+  export COMMON_SHELL_FILES_SOURCED='yes'
+  [[ -f ~/.environment ]] && . ~/.environment
+  [[ -f ~/.aliases ]] && . ~/.aliases
+fi
+#---------------------------
 
 # History settings 
 HISTSIZE=10000
@@ -55,17 +51,8 @@ PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
 #  OPTIONAL PLUGINS
 #
 #---------------------------
-# Plugins (requires zsh-autosuggestions plugin)
-if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
 # Plugin: zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-
-# Syntax highlighting (requires zsh-syntax-highlighting plugin)
-if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # AICHAT SIGODEN
 aichat="$GIT_REPOS/sigoden/aichat"

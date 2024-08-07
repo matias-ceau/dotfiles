@@ -82,7 +82,7 @@ export AICHAT_SESSIONS_DIR="$XDG_DATA_HOME/aichat/sessions" #Customize the locat
 export AICHAT_RAGS_DIR="$XDG_DATA_HOME/aichat/rags" #Customize the location of the rags dir.
 
 if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
-    export LOADED_PASS_SECRET_ENV=1
+    export LOADED_PASS_SECRET_ENV='yes'
     export SPOTIFY_CLIENT_SECRET="$(pass ENV/SPOTIFY_CLIENT_SECRET)"
     export ANTHROPIC_API_KEY="$(pass ENV/ANTHROPIC_API_KEY)"
     export GEMINI_API_KEY="$(pass ENV/GEMINI_API_KEY)"
