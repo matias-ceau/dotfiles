@@ -90,4 +90,6 @@ if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
     export PERPLEXITY_API_KEY="$(pass ENV/PERPLEXITY_API_KEY)"
     export MISTRAL_API_KEY="$(pass ENV/MISTRAL_API_KEY)"
     export CLAUDE_API_KEY="$(pass ENV/CLAUDE_API_KEY)"
+    clear
+    fastfetch
 fi
