@@ -9,21 +9,23 @@ export BROWSER="qutebrowser"
 # PATHS ####################################
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
+export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 
 # PYTHONPATH
 export PYTHONPATH="/usr/bin/python:$PYTHONPATH"
+export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 # remove duplicates (if I reload .profile for some reason :)
-export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
-export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 ####################################################
 export CHEZMOI="$(chezmoi source-path)"
 export LOCALDATA="$HOME/.localdata"
 export SCRIPTS="$HOME/.scripts"
+
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
@@ -44,7 +46,7 @@ export VIM_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/vim"
 
 # THEME
 #qt
-#export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 export FZF_DEFAULT_OPTS="
     --color=fg:#878580,bg:#100F0F,hl:#879a39
@@ -57,6 +59,9 @@ export FZF_DEFAULT_OPTS="
 #export GSK_RENDERER='gl'
 #export GSK_DEBUG='gl-no-fractional'
 
+# ZOXIDE
+export _ZO_ECHO=1
+
 # RANGER
 export RANGER_LOAD_DEFAULT_RC=false
 
@@ -66,6 +71,7 @@ if [ "$(hostnamectl hostname)" = "karjala" ]; then
 fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
+#TODO: Move everything related to aichat to the .env file in config (as per 0.20)
 export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat" #Customize the location of the config dir. Defaults to <user_config_dir>/aichat.
 
 export AICHAT_CONFIG_FILE="$AICHAT_CONFIG_DIR/config.yaml" #Customize the location of the config.yaml file.
@@ -80,9 +86,10 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 export AICHAT_MESSAGES_FILE="$XDG_DATA_HOME/aichat/messages.md" #Customize the location of the messages.md file.
 export AICHAT_SESSIONS_DIR="$XDG_DATA_HOME/aichat/sessions" #Customize the location of the sessions dir.
 export AICHAT_RAGS_DIR="$XDG_DATA_HOME/aichat/rags" #Customize the location of the rags dir.
+#end of TODO:
 
 if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
-    export LOADED_PASS_SECRET_ENV='yes'
+    export LOADED_PASS_SECRET_ENV=1
     export SPOTIFY_CLIENT_SECRET="$(pass ENV/SPOTIFY_CLIENT_SECRET)"
     export ANTHROPIC_API_KEY="$(pass ENV/ANTHROPIC_API_KEY)"
     export GEMINI_API_KEY="$(pass ENV/GEMINI_API_KEY)"

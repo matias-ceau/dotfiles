@@ -3,7 +3,6 @@
 # ~/.aliases
 #
 # COMMON ALIASES FOR ALL SHELLS
-#
 
 # Switching shells
 alias _xsh="sudo chsh -s $(which xonsh) $(whoami)"
@@ -11,7 +10,9 @@ alias _zsh="sudo chsh -s $(which zsh) $(whoami)"
 alias _bsh="sudo chsh -s $(which bash) $(whoami)"
 
 alias cfg="edit_chezmoi_cfg_files.sh"
-alias local_data_stow="stow --dir=$HOME/Dropbox/local_appdata --target=$HOME"
+alias cð="cd $HOME/Desktop/"
+alias ð="$HOME/Desktop"
+#alias local_data_stow="stow --dir=$HOME/Dropbox/local_appdata --target=$HOME"
 
 alias fuckingpipe='systemctl --user restart pipewire.service'
 alias fuckingtile='qtile cmd-obj -o cmd -f reload_config'
@@ -22,7 +23,7 @@ alias p44='pw-metadata -n settings 0 clock.force-rate 44100'
 alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 
-alias f=fzf
+#alias f=fzf
 alias e='editor.sh'
 alias r='ranger'
 alias ai='aichat'
@@ -32,11 +33,11 @@ alias ta='tmux attach'
 alias ts='tmux new -s'
 #alias tac='tmux attach -t music:cmus'
 
-alias serv='list_process.sh'
+alias serv='echo "script: list_process.sh"; list_process.sh'
 
 alias s='eza -l $HOME/.scripts'
-alias xxx='conda deactivate'
-alias ooo='conda activate base'
+#alias xxx='conda deactivate'
+#alias ooo='conda activate base'
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
@@ -52,7 +53,6 @@ alias git_clone='git_clone_by_author-repo.sh'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
-#rclone mount mega:repositories /mnt/mega-repos/ --vfs-cache-mode writes
 
 ##      shopt -s expand_aliases
 ##
@@ -71,24 +71,8 @@ alias ip_livebox="curl -4 -s ifconfig.me"
 ##      # apps
 ##      alias p=python3
 ##
-##      # cmus
-##      alias re='cmus-remote'
-##      alias u='re -u'
-##      alias n='re -n'
-##
 ##      # two letter app
-##
-##      # configs
-##      alias cfb='vim ~/.bashrc'
-##      alias cfz='vim ~/.zshrc'
-##      alias cfv='vim ~/.vimrc'
-##      alias cfi='vim ~/.config/i3/config'
-##      alias cfr='vim ~/.config/ranger/rc.conf'
 ##
 ##      # bib files
 ##      alias bib='vim ~/data/bib/standard.bib'
 ##      alias bbb='vim ~/data/bib/bibliotheque.bib'
-##
-##      # FUNCTIONS ###########################################################
-##
-##      doi() { bash ~/Documents/Scripts/doitg.sh $1; }
