@@ -4,11 +4,8 @@
 #
 #---------------------------
 #
-if [ -z "${COMMON_SHELL_FILES_SOURCED}" ]; then
-  export COMMON_SHELL_FILES_SOURCED='yes'
-  [[ -f ~/.environment ]] && . ~/.environment
-  [[ -f ~/.aliases ]] && . ~/.aliases
-fi
+ [[ -f ~/.environment ]] && . ~/.environment
+ [[ -f ~/.aliases ]] && . ~/.aliases
 #---------------------------
 
 # History settings 
