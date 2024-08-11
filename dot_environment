@@ -44,7 +44,7 @@ export VIM_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/vim"
 
 # THEME
 #qt
-export QT_QPA_PLATFORMTHEME="qt6ct"
+#export QT_QPA_PLATFORMTHEME=qt6ct
 
 export FZF_DEFAULT_OPTS="
     --color=fg:#878580,bg:#100F0F,hl:#879a39
