@@ -29,7 +29,7 @@ DEFAULT_EXECUTE_SHELL_CMD=false
 DISABLE_STREAMING=false 
 
 # Theme for code highlighting
-CODE_THEME=dracula
+CODE_THEME=monokai
 
 # Path where custom functions for OpenAI are stored
 OPENAI_FUNCTIONS_PATH=/home/matias/.config/shell_gpt/functions
@@ -48,5 +48,5 @@ API_BASE_URL=default
 PRETTIFY_MARKDOWN=true
 
 # Flag to determine the use of LiteLLM for processing
-USE_LITELLM=true
+USE_LITELLM=false
 
