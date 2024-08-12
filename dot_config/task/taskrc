@@ -15,7 +15,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/.local/share/task
+data.location=$LOCALDATA/taskwarrior
 hooks.location=~/.config/task/hooks
 
 # To use the default location of the XDG directories,
