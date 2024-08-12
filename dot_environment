@@ -30,6 +30,11 @@ export D="$HOME/Desktop"
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
+=======
+export CHEZMOI=$(chezmoi source-path)
+export LOCALDATA="$HOME/.localdata"
+export SCRIPTS="$HOME/.scripts/"
+#####################################################
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share
