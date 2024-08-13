@@ -202,8 +202,10 @@ keys = [
     Key(['mod4'], "n", lazy.group["scratch"].dropdown_toggle("note")),
     Key(['mod4'], "p", lazy.group["scratch"].dropdown_toggle("keepassxc")),
   # FLOATING WINDOWS
-    Key(['mod4'], "minus", lazy.window.resize_floating(-16,-9), lazy.window.center()),
-    Key(['mod4'], "equal", lazy.window.resize_floating(16,9), lazy.window.center()),
+    Key(['mod4'], "minus", lazy.window.resize_floating(-60,-40), lazy.window.center()),
+    Key(['mod4','shift'], "minus", lazy.window.resize_floating(-15,-10), lazy.window.center()),
+    Key(['mod4'], "equal", lazy.window.resize_floating(60,40), lazy.window.center()),
+    Key(['mod4', 'shift'], "equal", lazy.window.resize_floating(15,10), lazy.window.center()),
 ]
 ### Mouse
   #{{{

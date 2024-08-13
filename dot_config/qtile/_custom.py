@@ -3,14 +3,11 @@ import csv
 import socket
 from libqtile.lazy import lazy
 from qtile_extras import widget
-from qtile_extras.popup.toolkit import (
-        PopupRelativeLayout,
-        PopupImage,
-        PopupText)
+from qtile_extras.popup.toolkit import PopupRelativeLayout, PopupImage, PopupText
 
 hostname = socket.gethostname()
 home = os.path.expanduser("~")
-scripts = os.environ.get('SCRIPTS')
+scripts = os.environ.get("SCRIPTS")
 script_dict = {"xonsh": ".xsh", "sh": ".sh", "python3": ".py"}
 
 # HOST SPECIFIC
@@ -18,17 +15,8 @@ scale = 1.0
 if hostname == "karhu":
     scale = 0.5
 
-# ----- CMD DICTS / SPECIAL -----(to be modified)----------------------------------------
-# SCRIPTS
-def csv_to_dict(file_path):
-    result = {}
-    with open(file_path, mode='r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            result[row['file']] = os.path.expanduser(f"~/{row['file']}")
-    return result
 
-SCRIPTS = csv_to_dict(f'{scripts}/data/script_info.csv')
+# ----- CMD DICTS / SPECIAL -----(to be modified)----------------------------------------
 
 # QUICKLAUNCHES
 # jupyter
@@ -56,6 +44,7 @@ elif (hostname == "karjala") or (hostname == "kukko"):
 else:
     Cameleon = type("Cameleon", widget.Sep.__bases__, dict(widget.Sep.__dict__))
 
+
 ## TODO: POPUP MENU
 def show_power_menu(qtile):
 
@@ -66,9 +55,7 @@ def show_power_menu(qtile):
             pos_y=0.1,
             width=0.1,
             height=0.5,
-            mouse_callbacks={
-                "Button1": lazy.spawn("/path/to/lock_cmd")
-            }
+            mouse_callbacks={"Button1": lazy.spawn("/path/to/lock_cmd")},
         ),
         PopupImage(
             filename="/home/matias/.wallpapers/0.jpg",
@@ -76,9 +63,7 @@ def show_power_menu(qtile):
             pos_y=0.1,
             width=0.1,
             height=0.5,
-            mouse_callbacks={
-                "Button1": lazy.spawn("/path/to/sleep_cmd")
-            }
+            mouse_callbacks={"Button1": lazy.spawn("/path/to/sleep_cmd")},
         ),
         PopupImage(
             filename="/home/matias/.wallpapers/0.jpg",
@@ -87,25 +72,13 @@ def show_power_menu(qtile):
             width=0.1,
             height=0.5,
             highlight="A00000",
-            mouse_callbacks={
-                "Button1": lazy.shutdown()
-            }
+            mouse_callbacks={"Button1": lazy.shutdown()},
         ),
         PopupText(
-            text="Lock",
-            pos_x=0.1,
-            pos_y=0.7,
-            width=0.2,
-            height=0.2,
-            h_align="center"
+            text="Lock", pos_x=0.1, pos_y=0.7, width=0.2, height=0.2, h_align="center"
         ),
         PopupText(
-            text="Sleep",
-            pos_x=0.4,
-            pos_y=0.7,
-            width=0.2,
-            height=0.2,
-            h_align="center"
+            text="Sleep", pos_x=0.4, pos_y=0.7, width=0.2, height=0.2, h_align="center"
         ),
         PopupText(
             text="Shutdown",
@@ -113,7 +86,7 @@ def show_power_menu(qtile):
             pos_y=0.7,
             width=0.2,
             height=0.2,
-            h_align="center"
+            h_align="center",
         ),
     ]
 
@@ -127,5 +100,6 @@ def show_power_menu(qtile):
     )
 
     layout.show(centered=True)
- #}}}
 
+
+# }}}

@@ -1,11 +1,7 @@
-from libqtile.config import (
-    Group,
-    ScratchPad,
-    DropDown
-)
+from libqtile.config import Group, ScratchPad, DropDown
 import os
 
-home = os.path.expanduser('~')
+home = os.path.expanduser("~")
 
 
 groups = [
@@ -89,10 +85,10 @@ groups = [
             DropDown(
                 "keepassxc",
                 ["keepassxc"],
-                x=0.2,
-                width=0.6,
-                y=0.2,
-                height=0.6,
+                x=0.1,
+                width=0.8,
+                y=0.1,
+                height=0.8,
             ),
         ],
     ),
