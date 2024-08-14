@@ -1,6 +1,92 @@
+(setf (uiop/os:getenv "WEBKIT_DISABLE_COMPOSITING_MODE") "1")
+
 (define-configuration buffer
   ((default-modes
     (pushnew 'nyxt/mode/vi:vi-normal-mode %slot-value%))))
+
+;; (define-configuration browser
+;;   ((theme (make-instance 'theme:theme 
+;;                          :dark-p t
+;; 			 :background-color- "#1C1B1A"
+;; 			 :background-color "#100F0F"
+;; 			 :background-color+ "#282726"
+;; 			 :on-background-color "#CECDC3"
+;; 			 :primary-color- "#878580"
+;; 			 :primary-color "#6F6E69"
+;; 			 :primary-color+ "#575653"
+;; 			 :on-primary-color "#FFFCF0"
+;; 			 :secondary-color- "#403E3C"
+;; 			 :secondary-color "#343331"
+;; 			 :secondary-color+ "#282726"
+;; 			 :on-secondary-color "#CECDC3"
+;; 			 :action-color- "#8B7EC8"
+;; 			 :action-color "#AD8301"
+;; 			 :action-color+ "#D0A215"
+;; 			 :on-action-color "#100F0F"
+;; 			 :highlight-color- "#DA702C"
+;; 			 :highlight-color "#D0A215"
+;; 			 :highlight-color+ "#FCEEB8"
+;; 			 :on-highlight-color "#100F0F"
+;; 			 :success-color- "#66800B"
+;; 			 :success-color "#879A39"
+;; 			 :success-color+ "#DAD8CE"
+;; 			 :on-success-color "#100F0F"
+;; 			 :warning-color- "#BC5215"
+;; 			 :warning-color "#DA702C"
+;; 			 :warning-color+ "#FCEEB8"
+;; 			 :on-warning-color "#100F0F"
+;; 			 :codeblock-color- "#1C1B1A"
+;; 			 :codeblock-color "#282726"
+;; 			 :codeblock-color+ "#343331"
+;; 			 :on-codeblock-color "#CECDC3"
+;; 			 :text-color- "#DAD8CE"
+;; 			 :text-color "#CECDC3"
+;; 			 :text-color+ "#B7B5AC"
+;; 			 :contrast-text-color "#100F0F"
+;;   ))))
+;;
+
+(define-configuration browser
+ ((theme (make-instance 'theme:theme 
+                        :dark-p t
+                        :background-color- "#000000"  ; true_black
+                        :background-color "#100F0F"   ; black (bg)
+                        :background-color+ "#1C1B1A"  ; brblack (bg-2)
+                        :on-background-color "#CECDC3" ; brwhite (tx)
+                        :primary-color- "#878580"     ; base-500
+                        :primary-color "#6F6E69"      ; base-600
+                        :primary-color+ "#575653"     ; base-700
+                        :on-primary-color "#FFFFFF"   ; true_white
+                        :secondary-color- "#403E3C"   ; base-800
+                        :secondary-color "#343331"    ; base-850
+                        :secondary-color+ "#282726"   ; base-900
+                        :on-secondary-color "#CECDC3" ; brwhite (tx)
+                        :action-color- "#3AA99F"      ; brcyan
+                        :action-color "#AD8301"       ; yellow
+                        :action-color+ "#CE5D97"      ; brmagenta
+                        :on-action-color "#100F0F"    ; black (bg)
+                        :highlight-color- "#DA702C"   ; brorange
+                        :highlight-color "#D0A215"    ; bryellow
+                        :highlight-color+ "#FCEEB8"   ; yellow-100
+                        :on-highlight-color "#100F0F" ; black (bg)
+                        :success-color- "#66800B"     ; green
+                        :success-color "#879A39"      ; brgreen
+                        :success-color+ "#DAD8CE"     ; base-100
+                        :on-success-color "#100F0F"   ; black (bg)
+                        :warning-color- "#AF3029"     ; red
+                        :warning-color "#D14D41"      ; brred
+                        :warning-color+ "#DA702C"     ; brorange
+                        :on-warning-color "#100F0F"   ; black (bg)
+                        :codeblock-color- "#1C1B1A"   ; brblack (bg-2)
+                        :codeblock-color "#282726"    ; base-900
+                        :codeblock-color+ "#343331"   ; base-850
+                        :on-codeblock-color "#CECDC3" ; brwhite (tx)
+                        :text-color- "#DAD8CE"        ; base-100
+                        :text-color "#CECDC3"         ; brwhite (tx)
+                        :text-color+ "#B7B5AC"        ; base-200
+                        :contrast-text-color "#100F0F" ; black (bg)
+ ))))
+
 
 (defvar *my-search-engines*
   (list
@@ -9,10 +95,6 @@
      "https://docs.python.org/3")
    '("doi" "https://dx.doi.org/~a" "https://dx.doi.org/"))
   "List of search engines.")
-
-(define-configuration web-buffer
-  ((default-modes
-    (pushnew 'nyxt/mode/blocker:blocker-mode %slot-value%))))
 
 (define-configuration context-buffer
   "Go through the search engines above and `make-search-engine' out of them."
@@ -31,6 +113,7 @@ peeking at the screen."
   (setf (password:password-file interface)
           "/home/matias/.localdata/monkeypass/database.kdbx"
         (password:key-file interface) "/home/matias/notes/resources/georgeabitbol"
+	(password:yubikey-slot interface) nil
         ))
 
 (define-configuration nyxt/mode/password:password-mode
@@ -41,88 +124,8 @@ peeking at the screen."
   ((default-modes
     (append (list 'nyxt/mode/password:password-mode) %slot-value%))))
 
-(define-configuration browser
-  ((theme (make-instance 'theme:theme 
-			 :dark-p t
-			 :background-color "#000000"
-			 :on-background-color  "#ffffff"
-			 :primary-color "#b7b5ac" 
-			 :on-primary-color "#100f0f" 
-			 :secondary-color "#403e3c" 
-			 :on-secondary-color "#000000" 
-			 :accent-color "#ad8301" 
-			 :on-accent-color "#000000" 
-			 :action-color "#ad8301" 
-			 :success-color "#66800b" 
-			 :warning-color "#dc322f"
-			 :highlight-color "#d33682" 
-			 :codeblock-color "#8b7ec8"
-			 :text-color "#b7b5ac"
-			 :contrast-text-color "#282726")
-)))
 
+;; (define-configuration web-buffer
+;;   ((default-modes
+;;     (pushnew 'nyxt/mode/blocker:blocker-mode %slot-value%))))
 
-
-;; (define-configuration prompt-buffer
-;;   ((style (str:concat
-;;            %slot-default%
-;;            (cl-css:css
-;;             '((body
-;;                :background-color "#000000"
-;;                :color "#808080")
-;;               ("#prompt-area"
-;;                :background-color "#000000")
-;;               ;; The area you input text in.
-;;               ("#input"
-;;                :background-color "#ffffff")
-;;               (".source-name"
-;;                :color "#000000"
-;;                :background-color "#575653")
-;;               (".source-content"
-;;                :background-color "#000000")
-;;               (".source-content th"
-;;                :border "1px solid black"
-;;                :background-color "#000000")
-;;               ;; The currently highlighted option.
-;;               ("#selection"
-;;                :background-color "#ad8301"
-;;                :color "#000000")
-;;               (.marked :background-color "#1c1b1a"
-;;                        :font-weight "bold"
-;;                        :color "#ffffff")
-;;               (.selected :background-color "#000000"
-;;                          :color "#ffffff")))))))
-
-;; ;;; Panel buffers are the same in regards to style.
-;; (define-configuration (internal-buffer panel-buffer)
-;;   ((style
-;;     (str:concat
-;;      %slot-default%
-;;      (cl-css:css
-;;       '((body
-;;          :background-color "#000000"
-;;          :color "#878580")
-;;         (hr
-;;          :color "#1c1b1a")
-;;         (a
-;;          :color "#878580")
-;;         (.button
-;;          :color "#878580"
-;;          :background-color "#575653")))))))
-;;
-;; ;;; Panel buffers are the same in regards to style.
-;; (define-configuration (internal-buffer panel-buffer)
-;;   ((style
-;;     (str:concat
-;;      %slot-default%
-;;      (cl-css:css
-;;       '((body
-;;          :background-color "#000000"
-;;          :color "#878580")
-;;         (hr
-;;          :color "#1c1b1a")
-;;         (a
-;;          :color "#878580")
-;;         (.button
-;;          :color "#878580"
-;;          :background-color "#575653")))))))
