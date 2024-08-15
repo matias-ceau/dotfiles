@@ -11,6 +11,14 @@ export BROWSER="qutebrowser"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 
+# FREEDESKTOP
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
+export XDG_CONFIG_DIRS=/etc/xdg/
+
 # PYTHONPATH
 export PYTHONPATH="/usr/bin/python:$PYTHONPATH"
 export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
@@ -33,13 +41,6 @@ export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
 #####################################################
 
-# FREEDESKTOP
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_STATE_HOME=$HOME/.local/state
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
-export XDG_CONFIG_DIRS=/etc/xdg/
 
 # MAKE VIM XDG COMPLIANT
 mkdir -p ~/.config/vim
