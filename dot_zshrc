@@ -9,13 +9,14 @@
 #---------------------------
 
 # History settings 
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 setopt append_history
 setopt inc_append_history
 setopt histignorespace
+setopt share_history
 
 # Navigation settings
 setopt autocd

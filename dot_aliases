@@ -5,9 +5,9 @@
 # COMMON ALIASES FOR ALL SHELLS
 
 # Switching shells
-alias _xsh="sudo chsh -s $(which xonsh) $(whoami)"
-alias _zsh="sudo chsh -s $(which zsh) $(whoami)"
-alias _bsh="sudo chsh -s $(which bash) $(whoami)"
+#alias _xsh="sudo chsh -s $(which xonsh) $(whoami)"
+#alias _zsh="sudo chsh -s $(which zsh) $(whoami)"
+#alias _bsh="sudo chsh -s $(which bash) $(whoami)"
 
 alias cfg="edit_chezmoi_cfg_files.sh"
 alias cð="cd $HOME/Desktop/"
@@ -54,6 +54,12 @@ alias git_clone='git_clone_by_author-repo.sh'
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
 
+# FUNCTIONS
+
+_sgpt() {
+	last_cmd="$(fc -ln -1)"
+	echo "$last_cmd" | sgpt "$@"
+}
 ##      shopt -s expand_aliases
 ##
 ##      # ALIASES ####################################################################
