@@ -24,7 +24,8 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 set -o vi
 bind '"\C-e": "\ev"'
 
-PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
+#PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
+PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # FUNCTIONS
 f() { $1 "$(fzf)"; }
@@ -54,45 +55,30 @@ lx() {
 ##     new() { python -m venv $HOME/.virtualenv/"$1" ; }
 ##     del() { rm -rf $HOME/.virtualenv/"$1" ; }
 
-transform_symlink() {
-    local symlink_path="$1"
-
-    if [[ ! -L "$symlink_path" ]]; then
-        echo "Error: '$symlink_path' is not a symlink."
-        return 1
-    fi
-
-    local target_path
-    target_path=$(readlink "$symlink_path")
-
-    if [[ ! -e "$target_path" ]]; then
-        echo "Error: Target '$target_path' does not exist."
-        return 1
-    fi
-
-    rm "$symlink_path"
-    if cp -r "$target_path" "$symlink_path"; then
-        echo "Symlink '$symlink_path' has been transformed into a copy of its target ('$target_path')."
-    else
-        echo "Error: Failed to copy target '$target_path' to '$symlink_path'."
-        return 1
-    fi
-}
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniforge3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+#transform_symlink() {
+#    local symlink_path="$1"
+#
+#    if [[ ! -L "$symlink_path" ]]; then
+#        echo "Error: '$symlink_path' is not a symlink."
+#        return 1
+#    fi
+#
+#    local target_path
+#    target_path=$(readlink "$symlink_path")
+#
+#    if [[ ! -e "$target_path" ]]; then
+#        echo "Error: Target '$target_path' does not exist."
+#        return 1
+#    fi
+#
+#    rm "$symlink_path"
+#    if cp -r "$target_path" "$symlink_path"; then
+#        echo "Symlink '$symlink_path' has been transformed into a copy of its target ('$target_path')."
+#    else
+#        echo "Error: Failed to copy target '$target_path' to '$symlink_path'."
+#        return 1
+#    fi
+#}
 
 eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"

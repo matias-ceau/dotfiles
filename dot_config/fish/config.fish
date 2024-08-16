@@ -1,12 +1,14 @@
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/miniforge3/bin/conda
-    eval /opt/miniforge3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/opt/miniforge3/etc/fish/conf.d/conda.fish"
-        . "/opt/miniforge3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/miniforge3/bin" $PATH
-    end
+# ~/.config/fish/config.fish
+
+function fish_prompt
+    set_color red
+    echo -n "@"
+    set_color yellow
+    echo -n (hostname)
+    set_color cyan
+    echo -n " "(prompt_pwd)" "
+    set_color green
+    echo -n "→"
+    set_color normal
+    echo -n " "
 end
-# <<< conda initialize <<<

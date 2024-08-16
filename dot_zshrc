@@ -42,7 +42,8 @@ bindkey -v
 
 # Appearance
 autoload -U colors && colors
-PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
+#PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
+PROMPT='%F{red}@%f%F{yellow}%m%F{cyan} %~ %F{green}%%%f '
 
 #---------------------------
 #
