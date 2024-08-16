@@ -37,18 +37,9 @@ What is Kickstart?
       - https://learnxinyminutes.com/docs/lua/
 
     After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference  #ff0000 for how Neovim integrates Lua.
+    reference for how Neovim integrates Lua.
     - :help lua-guide
     - (or HTML version): https://neovim.io/doc/user/lua-guide.html
-
-Kickstart Guide:
-
-   TODO: Next, run AND READ `:help`.
-
-   NOTE: "<space>sh" to [s]earch the [h]elp documentation,
-
-   NOTE: If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
-
 --]]
 
 -- ==========================================
@@ -106,84 +97,39 @@ vim.opt.spelllang = { "en_us", "en_uk", "fr", "med" }
 --          END OF CLAUDE CONFIG
 -- ==========================================
 
--- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.mapleader = ","
+vim.g.maplocalleader = ";"
 vim.g.have_nerd_font = true
 
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: For more options, you can see `:help option-list`
-
--- Make line numbers default
+-- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
-
--- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
-
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
--- vim.opt.clipboard = 'unnamedplus'
-
--- Enable break indent (en gros le 'wrapping' est aussi indented)
-vim.opt.breakindent = true
-
--- Save undo history
+vim.opt.showmode = false -- already in the status line
+vim.opt.breakindent = true -- le 'wrapping' est aussi indented)
 vim.opt.undofile = true
-
--- Case-sensitive searching UNLESS \c
-vim.opt.ignorecase = false
--- vim.opt.smartcase = true
-
--- Keep signcolumn on by default (c'est le machin à gauche avec les trucs github)
+vim.opt.ignorecase = false -- Case-sensitive UNLESS \c (vim.opt.smartcase = true)
 vim.opt.signcolumn = "yes"
-
--- Decrease update time (default is 4_000)
-vim.opt.updatetime = 250
-
--- Decrease mapped sequence wait time (normallement 1000 mais du coup which key peu débarquer vite)
--- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
-
--- PERSONAL conceallevel
-vim.opt.conceallevel = 1
-
--- Configure how new splits should be opened
+vim.opt.updatetime = 250 --(default is 4_000)
+vim.opt.timeoutlen = 300 -- Displays which-key popup sooner (default 1000)
+vim.opt.conceallevel = 1 --important for obsidian
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
+vim.opt.list = true --  See `:help 'list'` and `:help 'listchars'`
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
--- Preview substitutions live, as you type! can also be "nosplit"
-vim.opt.inccommand = "split"
-
--- Show which line your cursor is on
+vim.opt.inccommand = "split" -- or "nosplit"
 vim.opt.cursorline = true
-
--- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+-- [[ Basic Keymaps ]] See `:help vim.keymap.set()`
+vim.opt.hlsearch = true -- highlight on search
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
 
--- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+-- Leader and Local leader remaps
+vim.keymap.set("n", "<leader>,", ",", { noremap = true, desc = "Repeat f/t/F/T in opposite direction" })
+vim.keymap.set("n", "<localleader>;", ";", { noremap = true, desc = "Repeat last f/t/F/T motion" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -299,12 +245,13 @@ require("lazy").setup({
 		event = "VeryLazy",
 		opts = {
 			-- your configuration comes here
+			-- TODO:
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 		},
 		keys = {
 			{
-				"<leader>?",
+				"<space>?",
 				function()
 					require("which-key").show({ global = false })
 				end,
@@ -389,22 +336,23 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader><leader>h", builtin.help_tags, { desc = "[H]elp" })
-			vim.keymap.set("n", "<leader><leader>k", builtin.keymaps, { desc = "[K]eymaps" })
-			vim.keymap.set("n", "<leader><leader>f", builtin.find_files, { desc = "[F]iles" })
-			vim.keymap.set("n", "<leader><leader>s", builtin.builtin, { desc = "[S]elect Telescope" })
-			vim.keymap.set("n", "<leader><leader>w", builtin.grep_string, { desc = "Current [W]ord" })
-			vim.keymap.set("n", "<leader><leader>g", builtin.live_grep, { desc = "[G]rep" })
-			vim.keymap.set("n", "<leader><leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
-			vim.keymap.set("n", "<leader><leader>a", builtin.resume, { desc = "[A]gain" })
-			vim.keymap.set("n", "<leader><leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<leader><leader>c", builtin.commands, { desc = "[C]ommands" })
-			vim.keymap.set("n", "<leader><leader>r", builtin.registers, { desc = "[R]egisters" })
-			vim.keymap.set("n", "<leader><leader>m", builtin.man_pages, { desc = "[M]an" })
-			vim.keymap.set("n", "<leader><leader>b", builtin.buffers, { desc = "[B]uffers" })
+			vim.keymap.set("n", "<space><space>h", builtin.help_tags, { desc = "[H]elp" })
+			vim.keymap.set("n", "<space><space>k", builtin.keymaps, { desc = "[K]eymaps" })
+			vim.keymap.set("n", "<space><space>f", builtin.find_files, { desc = "[F]iles" })
+			vim.keymap.set("n", "<space><space>s", builtin.builtin, { desc = "[S]elect Telescope" })
+			vim.keymap.set("n", "<space><space>w", builtin.grep_string, { desc = "Current [W]ord" })
+			vim.keymap.set("n", "<space><space>g", builtin.live_grep, { desc = "[G]rep" })
+			vim.keymap.set("n", "<space><space>d", builtin.diagnostics, { desc = "[D]iagnostics" })
+			vim.keymap.set("n", "<space><space>a", builtin.resume, { desc = "[A]gain" })
+			vim.keymap.set("n", "<space><space>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
+			vim.keymap.set("n", "<space><space>c", builtin.commands, { desc = "[C]ommands" })
+			vim.keymap.set("n", "<space><space>r", builtin.registers, { desc = "[R]egisters" })
+			vim.keymap.set("n", "<space><space>m", builtin.man_pages, { desc = "[M]an" })
+			vim.keymap.set("n", "<space><space>b", builtin.buffers, { desc = "[B]uffers" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
+
 			-- Slightly advanced example of overriding default behavior and theme
-			vim.keymap.set("n", "<leader>/", function()
+			vim.keymap.set("n", "<space>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
@@ -414,7 +362,7 @@ require("lazy").setup({
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<leader><leader>/", function()
+			vim.keymap.set("n", "<space><space>/", function()
 				builtin.live_grep({
 					grep_open_files = true,
 					prompt_title = "Live Grep in Open Files",
@@ -422,7 +370,7 @@ require("lazy").setup({
 			end, { desc = "Search [/] in Open Files" })
 
 			-- Shortcut for searching your Neovim configuration files
-			vim.keymap.set("n", "<leader><leader>n", function()
+			vim.keymap.set("n", "<space><space>n", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
 			end, { desc = "Search [N]eovim files" })
 		end,
@@ -505,12 +453,14 @@ require("lazy").setup({
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map("<leader>s", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					-- was leader ds
 
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
-						"<leader>ws",
+						"<leader>S",
+						-- was leader ws
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
 						"[W]orkspace [S]ymbols"
 					)
@@ -664,7 +614,7 @@ require("lazy").setup({
 			},
 		},
 		opts = {
-			notify_on_error = false,
+			notify_on_error = true, --false by default
 			format_on_save = function(bufnr)
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
@@ -802,7 +752,6 @@ require("lazy").setup({
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.
-		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
 
 		"kepano/flexoki-neovim",
@@ -918,7 +867,6 @@ require("lazy").setup({
 	},
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	{ import = "custom.plugins" },
