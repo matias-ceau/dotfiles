@@ -174,7 +174,7 @@ keys = [
         lazy.spawn(["alacritty", "-T", "floating"]),
         desc="Launch terminal",
     ),
-    Key(["mod4"], "o", lazy.spawn("obsidian.xsh"), desc="Open obsidian vault"),
+    Key(["mod4"], "o", lazy.spawn("obsidian-vault-selector.sh"), desc="Open obsidian vault"),
     Key(["mod4"], "Print", lazy.spawn("flameshot gui")),
     # quicklaunch
     KeyChord(
