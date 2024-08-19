@@ -60,6 +60,13 @@ _sgpt() {
 	last_cmd="$(fc -ln -1)"
 	echo "$last_cmd" | sgpt "$@"
 }
+
+ooo() {
+	source "$(fd 'activate$' -I . | fzf --select-1)"
+}
+xxx() {
+	deactivate
+}
 ##      shopt -s expand_aliases
 ##
 ##      # ALIASES ####################################################################
