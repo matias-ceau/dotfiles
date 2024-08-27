@@ -1,4 +1,4 @@
-setxkbmap fr
+setxkbmap us altgr-intl
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 #exec i3
