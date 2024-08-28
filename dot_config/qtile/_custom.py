@@ -1,9 +1,11 @@
 import os
-import csv
+
+# import csv
 import socket
+
 from libqtile.lazy import lazy
 from qtile_extras import widget
-from qtile_extras.popup.toolkit import PopupRelativeLayout, PopupImage, PopupText
+from qtile_extras.popup.toolkit import PopupImage, PopupRelativeLayout, PopupText
 
 hostname = socket.gethostname()
 home = os.path.expanduser("~")
@@ -95,7 +97,7 @@ def show_power_menu(qtile):
         width=1000,
         height=200,
         controls=controls,
-        background="00000060",
+        background="00000090",
         initial_focus=None,
     )
 

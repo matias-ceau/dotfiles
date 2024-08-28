@@ -8,32 +8,26 @@ keys = [
     ### Navigation
     Key(["mod4", "control"], "Home", lazy.next_screen(), desc="Go to next screen"),
     Key(["mod4"], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key(["mod4"], "Left", lazy.layout.left(), desc="Move focus to left"),
     Key(["mod4"], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key(["mod4"], "Right", lazy.layout.right(), desc="Move focus to right"),
     Key(["mod4"], "j", lazy.layout.down(), desc="Move focus down"),
-    Key(["mod4"], "Down", lazy.layout.down(), desc="Move focus down"),
     Key(["mod4"], "k", lazy.layout.up(), desc="Move focus up"),
-    Key(["mod4"], "Up", lazy.layout.up(), desc="Move focus up"),
-    Key(
-        ["mod1"], "space", lazy.layout.next(), desc="Move window focus to other window"
-    ),
-    Key(["mod4"], "Tab", lazy.screen.next_group(), desc="Cycle groups"),
-    Key(["mod4"], "BackSpace", lazy.screen.prev_group(), desc="Cycle groups"),
-    Key(["mod4"], "twosuperior", lazy.next_layout(), desc="Toggle between layouts"),
+    Key(["mod4"], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key(["mod4"], "Right", lazy.screen.next_group(), desc="Cycle groups"),
+    Key(["mod4"], "Left", lazy.screen.prev_group(), desc="Cycle groups"),
+    Key(["mod4"], "grave", lazy.next_layout(), desc="Toggle between layouts"),
     Key(["mod4"], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(["mod4", "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key(
         ["mod4", "control"],
         "q",
         lazy.function(show_power_menu),
-        desc="Qtile-extras pop up menu",
+        desc="Qtile-extras pop up menu",  # TODO: modify the popup menu
     ),
     Key(
         ["mod4"],
         "w",
         lazy.run_extension(extension.WindowList()),
-        desc="List all windows",
+        desc="List all windows",  # TODO: modify to use fzf
     ),
     ### Move
     Key(
@@ -49,9 +43,7 @@ keys = [
         desc="Move window to the right",
     ),
     Key(["mod4", "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key(["mod4", "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down"),
     Key(["mod4", "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    Key(["mod4", "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up"),
     Key(
         ["mod4", "control"],
         "h",
@@ -61,29 +53,12 @@ keys = [
     ### Resize
     Key(
         ["mod4", "control"],
-        "Left",
-        lazy.layout.grow_left(),
-        desc="Grow window to the left",
-    ),
-    Key(
-        ["mod4", "control"],
         "l",
         lazy.layout.grow_right(),
         desc="Grow window to the right",
     ),
-    Key(
-        ["mod4", "control"],
-        "Right",
-        lazy.layout.grow_right(),
-        desc="Grow window to the right",
-    ),
     Key(["mod4", "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key(["mod4", "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
     Key(["mod4", "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key(["mod4", "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
-    Key(
-        ["mod4", "control"], "n", lazy.layout.normalize(), desc="Reset all window sizes"
-    ),
     Key(
         ["mod4", "control"],
         "equal",
@@ -164,17 +139,22 @@ keys = [
     Key(["mod4"], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(
         ["mod4"],
-        "dollar",
+        "a",
         lazy.spawn(["alacritty", "-T", "dis_term"]),
         desc="Launch terminal",
     ),
     Key(
         ["mod4"],
-        "asterisk",
+        "t",
         lazy.spawn(["alacritty", "-T", "floating"]),
         desc="Launch terminal",
     ),
-    Key(["mod4"], "o", lazy.spawn("obsidian-vault-selector.sh"), desc="Open obsidian vault"),
+    Key(
+        ["mod4"],
+        "o",
+        lazy.spawn("obsidian-vault-selector.sh"),
+        desc="Open obsidian vault",
+    ),
     Key(["mod4"], "Print", lazy.spawn("flameshot gui")),
     # quicklaunch
     KeyChord(
@@ -359,7 +339,7 @@ mouse = [
 
 ## Groups
 
-for g in "azerty":
+for g in "123456":
     keys.extend(
         [
             Key(

@@ -1,16 +1,17 @@
-from libqtile.config import Group, ScratchPad, DropDown
 import os
+
+from libqtile.config import DropDown, Group, ScratchPad
 
 home = os.path.expanduser("~")
 
 
 groups = [
-    Group("a", label="\u1d00"),
-    Group("z", label="\u1d22"),
-    Group("e", label="\u1d07"),
-    Group("r", label="\u0280"),
-    Group("t", label="\u1d1b"),
-    Group("y", label="\u028f"),
+    Group("1", label="\u2680"),
+    Group("2", label="\u2681"),
+    Group("3", label="\u2682"),
+    Group("4", label="\u2683"),
+    Group("5", label="\u2684"),
+    Group("6", label="\u2685"),
     ScratchPad(
         "dock",
         [

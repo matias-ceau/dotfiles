@@ -1,16 +1,9 @@
-from _style import (
-    colors,
-    powerline_1,
-    decoration_group,
-    extension_defaults,
-    widget_defaults,
-)
-from _custom import Cameleon, custom_args, system_clock_args, scale
-from libqtile.config import Screen
+from _custom import Cameleon, custom_args, scale, system_clock_args
+from _style import colors
 from libqtile import bar
+from libqtile.config import Screen
 from libqtile.lazy import lazy
 from qtile_extras import widget
-
 
 # ------ SCREEN AND BAR DEFINITION ---------------------------------------------
 screens = [
@@ -27,10 +20,11 @@ screens = [
                     highlight_method="block",
                     disable_drag=True,
                     inactive=colors["groupbox_inactive"],
-                    **decoration_group,
+                    this_current_screen_border=colors["groupbox_block"],
+                    this_screen_border=colors["groupbox_block"],
                 ),
                 # Current Layout icon
-                widget.CurrentLayoutIcon(use_mask=True, scale=0.9, **powerline_1),
+                widget.CurrentLayoutIcon(use_mask=True, scale=0.9),
                 # Chords
                 widget.Chord(
                     chords_colors={
@@ -60,7 +54,6 @@ screens = [
                     scroll=True,
                     scroll_fixed_width=True,
                     foreground=colors["net"],
-                    **powerline_1,
                 ),
                 # Volume
                 widget.Volume(
@@ -70,10 +63,9 @@ screens = [
                         "Button3": lazy.spawn("amixer -q set Master toggle")
                     },
                     foreground=colors["volume"],
-                    **powerline_1,
                 ),
                 # Cameleon
-                Cameleon(foreground=colors["cameleon"], **custom_args, **powerline_1),
+                Cameleon(foreground=colors["cameleon"], **custom_args),
                 # Thermal Sensor CPU
                 widget.ThermalSensor(
                     format="\u2102\u3014 {temp:.0f}\u2103 ",
@@ -81,7 +73,6 @@ screens = [
                     width=55,
                     padding=0,
                     foreground=colors["cpu_temp"],
-                    **powerline_1,
                 ),
                 # CPU load
                 widget.CPU(
@@ -97,16 +88,16 @@ screens = [
                     format="\u3014 {uf:3} \u3015",
                     visible_on_warn=False,
                     partition="/",
-                    **powerline_1,
                 ),
-                widget.Memory(measure_mem="G", foreground=colors["RAM"], **powerline_1),
-                widget.Systray(foreground=colors["systray"], **powerline_1),
+                widget.Memory(measure_mem="G", foreground=colors["RAM"]),
+                widget.Systray(
+                    foreground=colors["systray"],
+                ),
                 widget.Clock(
                     **system_clock_args,
                     fmt="<b>\u3014 {} \u3015</b>",
                     foreground=colors["clock"][0],
                     background=colors["clock"][1],
-                    **powerline_1,
                 ),
                 widget.QuickExit(default_text="\u23cf"),
             ],
