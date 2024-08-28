@@ -65,6 +65,26 @@ keys = [
         lazy.layout.normalize(),
         desc="Reset all window sizes",
     ),
+    # FLOATING WINDOWS
+    Key(["mod4"], 
+        "minus", 
+        lazy.window.resize_floating(-60, -40).when(when_floating=True),
+        lazy.window.center().when(when_floating=True), desc="Shrink and center floating"),
+    Key(
+        ["mod4", "shift"],
+        "minus",
+        lazy.window.resize_floating(-15, -10).when(when_floating=True),
+        lazy.window.center().when(when_floating=True),
+        desc="Shrink and center floating (small inc)"
+    ),
+    Key(["mod4"], "equal", lazy.window.resize_floating(60, 40).when(when_floating=True), lazy.window.center().when(when_floating=True),desc="Grow and center floating"),
+    Key(
+        ["mod4", "shift"],
+        "equal",
+        lazy.window.resize_floating(15, 10).when(when_floating=True),
+        lazy.window.center().when(when_floating=True),
+        desc="Grow and center floating (small increment)"
+    ),
     # Toggle between split and unsplit sides of stack.
     Key(
         ["mod4"],
@@ -85,16 +105,16 @@ keys = [
         desc="Toggle fullscreen",
     ),
     ## Media keys / function keys (other than scratchpads)
-    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10")),
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Increase brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="Decrease brightness"),
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="Toggle mute with amixer"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute"), desc="Lower volume"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"), desc="Raise volume"),
     Key(
         ["mod4"],
         "a",
         lazy.spawn("jgmenu_run"),
-        desc="Jgmenu",
+        desc="Jgmenu app list",
     ),
     Key(["mod4"], "F2", lazy.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
     Key(
@@ -107,47 +127,49 @@ keys = [
         ["mod4", "control"],
         "F2",
         lazy.spawn("wallpaper.sh --gui"),
-        desc="Wallpaper select",
+        desc="Wallpaper select with GUI (WIP)",
     ),
     Key(
         ["mod4", "mod1"],
         "F2",
         lazy.spawn("wallpaper.sh --select"),
-        desc="Wallpaper select",
+        desc="Wallpaper select with fzf",
     ),
     ## Commands
     ### General
     Key(
-        ["mod4"],
-        "d",
-        lazy.run_extension(extension.DmenuRun(dmenu_lines=30)),
-        desc="Dmenu run",
-    ),
-    Key(
         ["mod4", "shift"], "d", lazy.spawn("dmenu_run -l 30"), desc="Run app with dmenu"
     ),
-    Key(["mod4"], "space", lazy.spawn("fzfmenu_run.sh"), desc="Run app with fzfmenu"),
+    Key(["mod4"], "space", lazy.spawn("fzfmenu_run.sh"), desc="Basic app launcher (using fzfmenu)"),
     Key(
         ["mod4", "shift"],
         "space",
         lazy.spawn("rofi -show drun"),
         desc="Run app with rofi (desktop apps)",
+        # TODO: change to something else (fzf)
     ),
     Key(
-        ["mod4"], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="bookmarks"
+        ["mod4"], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="Bookmarks menu (WIP)"
     ),  # TODO: (also add, auto format, copy/paste)
+    # scripts
+    Key(
+        ["mod4"],
+        "x",
+        lazy.spawn("script_launcher.sh"),
+        desc="Launch and edit user scripts",
+    ),
     Key(["mod4"], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(
         ["mod4", "shift"],
         "t",
         lazy.spawn(["alacritty", "-T", "dis_term"]),
-        desc="Launch terminal",
+        desc="Launch secondary terminal",
     ),
     Key(
         ["mod4"],
         "t",
         lazy.spawn(["alacritty", "-T", "floating"]),
-        desc="Launch terminal",
+        desc="Launch floating terminal",
     ),
     Key(
         ["mod4"],
@@ -155,7 +177,7 @@ keys = [
         lazy.spawn("obsidian-vault-selector.sh"),
         desc="Open obsidian vault",
     ),
-    Key(["mod4"], "Print", lazy.spawn("flameshot gui")),
+    Key(["mod4"], "Print", lazy.spawn("flameshot gui"), desc="Take screenshot"),
     # quicklaunch
     KeyChord(
         ["mod4"],
@@ -202,12 +224,7 @@ keys = [
         ],
         name="quicklaunch",
         mode=True,
-    ),
-    # scripts
-    Key(
-        ["mod4"],
-        "x",
-        lazy.spawn("script_launcher.sh"),
+        desc="Launch menu",
     ),
     # CMUS
     # TODO add seek etc
@@ -291,6 +308,7 @@ keys = [
         ],
         name="cmus",
         mode=True,
+        desc="Sound menu (music players)",
     ),
     KeyChord(
         ["mod4"],
@@ -330,32 +348,18 @@ keys = [
         ],
         name="help",
         mode=True,
+        desc="Help menu for this qtile config",
     ),
-    # dmenu_command='dmenu -l 30', pre_commands=[]))),
     ### Scratchpads
-    Key([], "F12", lazy.group["dock"].dropdown_toggle("terminal")),
+    Key([], "F12", lazy.group["dock"].dropdown_toggle("terminal"), desc="Toggle dropdown terminal"),
     # TODO make smth + F12 just do F12
-    Key(["mod4"], "F11", lazy.group["dock"].dropdown_toggle("vimwiki")),
-    Key(["mod4"], "F10", lazy.group["dock"].dropdown_toggle("ranger")),
-    Key(["mod4"], "F9", lazy.group["dock"].dropdown_toggle("sysmon")),
-    Key(["mod4"], "c", lazy.group["scratch"].dropdown_toggle("chatbot")),
-    Key(["mod4"], "n", lazy.group["scratch"].dropdown_toggle("note")),
-    Key(["mod4"], "p", lazy.group["scratch"].dropdown_toggle("keepassxc")),
-    # FLOATING WINDOWS
-    Key(["mod4"], "minus", lazy.window.resize_floating(-60, -40), lazy.window.center()),
-    Key(
-        ["mod4", "shift"],
-        "minus",
-        lazy.window.resize_floating(-15, -10),
-        lazy.window.center(),
-    ),
-    Key(["mod4"], "equal", lazy.window.resize_floating(60, 40), lazy.window.center()),
-    Key(
-        ["mod4", "shift"],
-        "equal",
-        lazy.window.resize_floating(15, 10),
-        lazy.window.center(),
-    ),
+    Key(["mod4"], "F11", lazy.group["dock"].dropdown_toggle("vimwiki"), desc="Toggle vimwiki"),
+    Key(["mod4"], "F10", lazy.group["dock"].dropdown_toggle("ranger"), desc="Toggle ranger"),
+    Key(["mod4"], "F9", lazy.group["dock"].dropdown_toggle("sysmon"), desc="Toggle sysmon"),
+    Key(["mod4"], "c", lazy.group["scratch"].dropdown_toggle("chatbot"), desc="Toggle llm chatbot"),
+    Key(["mod4"], "n", lazy.group["scratch"].dropdown_toggle("note"), desc="Toggle note"),
+    Key(["mod4"], "p", lazy.group["scratch"].dropdown_toggle("keepassxc"), desc="Toggle keepassxc"),
+    # TODO: add a keybinding to cycle through scratch windows
 ]
 ### Mouse
 
@@ -391,7 +395,7 @@ for g in "123456":
                 ["mod4", "shift"],
                 g,
                 lazy.window.togroup(g),
-                desc=f"move focused window to group {g}",
+                desc=f"Move focused window to group {g}",
             ),
         ]
     )
