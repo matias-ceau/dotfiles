@@ -17,7 +17,7 @@ groups = [
         [
             DropDown(
                 "terminal",
-                ["alacritty"],
+                ["alacritty", "-T", "terminal"],
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -44,7 +44,7 @@ groups = [
             ),
             DropDown(
                 "ranger",
-                ["alacritty", "-e" "ranger"],
+                ["alacritty", "-T", "ranger", "-e" "ranger"],
                 x=0.01,
                 y=0,
                 width=0.98,
