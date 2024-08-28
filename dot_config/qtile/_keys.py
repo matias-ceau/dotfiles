@@ -11,10 +11,23 @@ keys = [
     Key(["mod4"], "l", lazy.layout.right(), desc="Move focus to right"),
     Key(["mod4"], "j", lazy.layout.down(), desc="Move focus down"),
     Key(["mod4"], "k", lazy.layout.up(), desc="Move focus up"),
-    Key(["mod4"], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key(["mod4"], "Tab", lazy.layout.next(), desc="Move window focus to other panes"),
+    Key(
+        ["mod4", "mod1"],
+        "j",
+        lazy.group.next_window(),
+        desc="Move window focus to next window in group",
+    ),
+    Key(
+        ["mod4", "mod1"],
+        "k",
+        lazy.group.prev_window(),
+        desc="Move window focus to prev window in group",
+    ),
     Key(["mod4"], "Right", lazy.screen.next_group(), desc="Cycle groups"),
     Key(["mod4"], "Left", lazy.screen.prev_group(), desc="Cycle groups"),
     Key(["mod4"], "grave", lazy.next_layout(), desc="Toggle between layouts"),
+    Key(["mod4", "shift"], "grave", lazy.prev_layout(), desc="Toggle between layouts"),
     Key(["mod4"], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(["mod4", "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key(
@@ -66,24 +79,33 @@ keys = [
         desc="Reset all window sizes",
     ),
     # FLOATING WINDOWS
-    Key(["mod4"], 
-        "minus", 
+    Key(
+        ["mod4"],
+        "minus",
         lazy.window.resize_floating(-60, -40).when(when_floating=True),
-        lazy.window.center().when(when_floating=True), desc="Shrink and center floating"),
+        lazy.window.center().when(when_floating=True),
+        desc="Shrink and center floating",
+    ),
     Key(
         ["mod4", "shift"],
         "minus",
         lazy.window.resize_floating(-15, -10).when(when_floating=True),
         lazy.window.center().when(when_floating=True),
-        desc="Shrink and center floating (small inc)"
+        desc="Shrink and center floating (small inc)",
     ),
-    Key(["mod4"], "equal", lazy.window.resize_floating(60, 40).when(when_floating=True), lazy.window.center().when(when_floating=True),desc="Grow and center floating"),
+    Key(
+        ["mod4"],
+        "equal",
+        lazy.window.resize_floating(60, 40).when(when_floating=True),
+        lazy.window.center().when(when_floating=True),
+        desc="Grow and center floating",
+    ),
     Key(
         ["mod4", "shift"],
         "equal",
         lazy.window.resize_floating(15, 10).when(when_floating=True),
         lazy.window.center().when(when_floating=True),
-        desc="Grow and center floating (small increment)"
+        desc="Grow and center floating (small increment)",
     ),
     # Toggle between split and unsplit sides of stack.
     Key(
@@ -105,11 +127,33 @@ keys = [
         desc="Toggle fullscreen",
     ),
     ## Media keys / function keys (other than scratchpads)
-    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Increase brightness"),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="Decrease brightness"),
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="Toggle mute with amixer"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute"), desc="Lower volume"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"), desc="Raise volume"),
+    Key(
+        [], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Increase brightness"
+    ),
+    Key(
+        [],
+        "XF86MonBrightnessDown",
+        lazy.spawn("light -U 10"),
+        desc="Decrease brightness",
+    ),
+    Key(
+        [],
+        "XF86AudioMute",
+        lazy.spawn("amixer -q set Master toggle"),
+        desc="Toggle mute with amixer",
+    ),
+    Key(
+        [],
+        "XF86AudioLowerVolume",
+        lazy.spawn("amixer -c 0 sset Master 1- unmute"),
+        desc="Lower volume",
+    ),
+    Key(
+        [],
+        "XF86AudioRaiseVolume",
+        lazy.spawn("amixer -c 0 sset Master 1+ unmute"),
+        desc="Raise volume",
+    ),
     Key(
         ["mod4"],
         "a",
@@ -140,7 +184,12 @@ keys = [
     Key(
         ["mod4", "shift"], "d", lazy.spawn("dmenu_run -l 30"), desc="Run app with dmenu"
     ),
-    Key(["mod4"], "space", lazy.spawn("fzfmenu_run.sh"), desc="Basic app launcher (using fzfmenu)"),
+    Key(
+        ["mod4"],
+        "space",
+        lazy.spawn("fzfmenu_run.sh"),
+        desc="Basic app launcher (using fzfmenu)",
+    ),
     Key(
         ["mod4", "shift"],
         "space",
@@ -149,7 +198,10 @@ keys = [
         # TODO: change to something else (fzf)
     ),
     Key(
-        ["mod4"], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="Bookmarks menu (WIP)"
+        ["mod4"],
+        "b",
+        lazy.spawn('notify-send "Hello" "hihi"'),
+        desc="Bookmarks menu (WIP)",
     ),  # TODO: (also add, auto format, copy/paste)
     # scripts
     Key(
@@ -351,14 +403,46 @@ keys = [
         desc="Help menu for this qtile config",
     ),
     ### Scratchpads
-    Key([], "F12", lazy.group["dock"].dropdown_toggle("terminal"), desc="Toggle dropdown terminal"),
+    Key(
+        [],
+        "F12",
+        lazy.group["dock"].dropdown_toggle("terminal"),
+        desc="Toggle dropdown terminal",
+    ),
     # TODO make smth + F12 just do F12
-    Key(["mod4"], "F11", lazy.group["dock"].dropdown_toggle("vimwiki"), desc="Toggle vimwiki"),
-    Key(["mod4"], "F10", lazy.group["dock"].dropdown_toggle("ranger"), desc="Toggle ranger"),
-    Key(["mod4"], "F9", lazy.group["dock"].dropdown_toggle("sysmon"), desc="Toggle sysmon"),
-    Key(["mod4"], "c", lazy.group["scratch"].dropdown_toggle("chatbot"), desc="Toggle llm chatbot"),
-    Key(["mod4"], "n", lazy.group["scratch"].dropdown_toggle("note"), desc="Toggle note"),
-    Key(["mod4"], "p", lazy.group["scratch"].dropdown_toggle("keepassxc"), desc="Toggle keepassxc"),
+    Key(
+        ["mod4"],
+        "F11",
+        lazy.group["dock"].dropdown_toggle("vimwiki"),
+        desc="Toggle vimwiki",
+    ),
+    Key(
+        ["mod4"],
+        "F10",
+        lazy.group["dock"].dropdown_toggle("ranger"),
+        desc="Toggle ranger",
+    ),
+    Key(
+        ["mod4"],
+        "F9",
+        lazy.group["dock"].dropdown_toggle("sysmon"),
+        desc="Toggle sysmon",
+    ),
+    Key(
+        ["mod4"],
+        "c",
+        lazy.group["scratch"].dropdown_toggle("chatbot"),
+        desc="Toggle llm chatbot",
+    ),
+    Key(
+        ["mod4"], "n", lazy.group["scratch"].dropdown_toggle("note"), desc="Toggle note"
+    ),
+    Key(
+        ["mod4"],
+        "p",
+        lazy.group["scratch"].dropdown_toggle("keepassxc"),
+        desc="Toggle keepassxc",
+    ),
     # TODO: add a keybinding to cycle through scratch windows
 ]
 ### Mouse
