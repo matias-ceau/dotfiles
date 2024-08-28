@@ -92,7 +92,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
     Key(
         ["mod4"],
-        "F1",
+        "a",
         lazy.spawn("jgmenu_run"),
         desc="Jgmenu",
     ),
@@ -138,8 +138,8 @@ keys = [
     ),  # TODO: (also add, auto format, copy/paste)
     Key(["mod4"], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(
-        ["mod4"],
-        "a",
+        ["mod4", "shift"],
+        "t",
         lazy.spawn(["alacritty", "-T", "dis_term"]),
         desc="Launch terminal",
     ),
@@ -290,6 +290,45 @@ keys = [
             ),
         ],
         name="cmus",
+        mode=True,
+    ),
+    KeyChord(
+        ["mod4"],
+        "F1",
+        [
+            Key(
+                [],
+                "h",
+                lazy.spawn(
+                    "notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'"
+                ),
+            ),
+            Key(
+                [],
+                "k",
+                lazy.spawn(f"{scripts}/keyboard-help.sh"),
+                desc="show keymap",
+            ),
+            Key(
+                [],
+                "q",
+                lazy.ungrab_all_chords(),
+                desc="Exit",
+            ),
+            Key(
+                ["control"],
+                "c",
+                lazy.ungrab_all_chords(),
+                desc="Exit",
+            ),
+            Key(
+                ["mod4"],
+                "F1",
+                lazy.ungrab_all_chords(),
+                desc="Exit",
+            ),
+        ],
+        name="help",
         mode=True,
     ),
     # dmenu_command='dmenu -l 30', pre_commands=[]))),
