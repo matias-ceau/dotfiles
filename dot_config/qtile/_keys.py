@@ -229,7 +229,18 @@ keys = [
         lazy.spawn("obsidian-vault-selector.sh"),
         desc="Open obsidian vault",
     ),
-    Key(["mod4"], "Print", lazy.spawn("flameshot gui"), desc="Take screenshot"),
+    Key(
+        ["mod4"],
+        "Print",
+        lazy.spawn("flameshot full"),
+        desc="Take screenshot of the full screen",
+    ),
+    Key(
+        ["mod4", "control"],
+        "Print",
+        lazy.spawn("flameshot gui"),
+        desc="Take screenshot of selected area",
+    ),
     # quicklaunch
     KeyChord(
         ["mod4"],
