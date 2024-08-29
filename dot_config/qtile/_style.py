@@ -4,6 +4,8 @@ widget_defaults = dict(
     fontsize=12,
     padding=1,
 )
+
+
 extension_defaults = widget_defaults.copy()
 
 colors = dict(
