@@ -1,6 +1,7 @@
 (setf (uiop/os:getenv "WEBKIT_DISABLE_COMPOSITING_MODE") "1")
 
-(define-configuration buffer
+;; buffer instead of web-buffer
+(define-configuration web-buffer
   ((default-modes
     (pushnew 'nyxt/mode/vi:vi-normal-mode %slot-value%))))
 
