@@ -99,8 +99,8 @@ vim.opt.spelllang = { "en_us", "en_uk", "fr", "med" }
 
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ","
-vim.g.maplocalleader = ";"
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
@@ -128,14 +128,14 @@ vim.opt.hlsearch = true -- highlight on search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
 
 -- Leader and Local leader remaps
-vim.keymap.set("n", "<leader>,", ",", { noremap = true, desc = "Repeat f/t/F/T in opposite direction" })
-vim.keymap.set("n", "<localleader>;", ";", { noremap = true, desc = "Repeat last f/t/F/T motion" })
+-- vim.keymap.set("n", "<leader>,", ",", { noremap = true, desc = "Repeat f/t/F/T in opposite direction" })
+-- vim.keymap.set("n", "<localleader>;", ";", { noremap = true, desc = "Repeat last f/t/F/T motion" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.keymap.set("n", "<localleader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
+vim.keymap.set("n", "<localleader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -251,7 +251,7 @@ require("lazy").setup({
 		},
 		keys = {
 			{
-				"<space>?",
+				"<localleader>?",
 				function()
 					require("which-key").show({ global = false })
 				end,
@@ -336,23 +336,23 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<space><space>h", builtin.help_tags, { desc = "[H]elp" })
-			vim.keymap.set("n", "<space><space>k", builtin.keymaps, { desc = "[K]eymaps" })
-			vim.keymap.set("n", "<space><space>f", builtin.find_files, { desc = "[F]iles" })
-			vim.keymap.set("n", "<space><space>s", builtin.builtin, { desc = "[S]elect Telescope" })
-			vim.keymap.set("n", "<space><space>w", builtin.grep_string, { desc = "Current [W]ord" })
-			vim.keymap.set("n", "<space><space>g", builtin.live_grep, { desc = "[G]rep" })
-			vim.keymap.set("n", "<space><space>d", builtin.diagnostics, { desc = "[D]iagnostics" })
-			vim.keymap.set("n", "<space><space>a", builtin.resume, { desc = "[A]gain" })
-			vim.keymap.set("n", "<space><space>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<space><space>c", builtin.commands, { desc = "[C]ommands" })
-			vim.keymap.set("n", "<space><space>r", builtin.registers, { desc = "[R]egisters" })
-			vim.keymap.set("n", "<space><space>m", builtin.man_pages, { desc = "[M]an" })
-			vim.keymap.set("n", "<space><space>b", builtin.buffers, { desc = "[B]uffers" })
+			vim.keymap.set("n", "<leader><leader>h", builtin.help_tags, { desc = "[H]elp" })
+			vim.keymap.set("n", "<leader><leader>k", builtin.keymaps, { desc = "[K]eymaps" })
+			vim.keymap.set("n", "<leader><leader>f", builtin.find_files, { desc = "[F]iles" })
+			vim.keymap.set("n", "<leader><leader>s", builtin.builtin, { desc = "[S]elect Telescope" })
+			vim.keymap.set("n", "<leader><leader>w", builtin.grep_string, { desc = "Current [W]ord" })
+			vim.keymap.set("n", "<leader><leader>g", builtin.live_grep, { desc = "[G]rep" })
+			vim.keymap.set("n", "<leader><leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
+			vim.keymap.set("n", "<leader><leader>a", builtin.resume, { desc = "[A]gain" })
+			vim.keymap.set("n", "<leader><leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
+			vim.keymap.set("n", "<leader><leader>c", builtin.commands, { desc = "[C]ommands" })
+			vim.keymap.set("n", "<leader><leader>r", builtin.registers, { desc = "[R]egisters" })
+			vim.keymap.set("n", "<leader><leader>m", builtin.man_pages, { desc = "[M]an" })
+			vim.keymap.set("n", "<leader><leader>b", builtin.buffers, { desc = "[B]uffers" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 
 			-- Slightly advanced example of overriding default behavior and theme
-			vim.keymap.set("n", "<space>/", function()
+			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
@@ -362,7 +362,7 @@ require("lazy").setup({
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<space><space>/", function()
+			vim.keymap.set("n", "<leader><leader>/", function()
 				builtin.live_grep({
 					grep_open_files = true,
 					prompt_title = "Live Grep in Open Files",
@@ -370,7 +370,7 @@ require("lazy").setup({
 			end, { desc = "Search [/] in Open Files" })
 
 			-- Shortcut for searching your Neovim configuration files
-			vim.keymap.set("n", "<space><space>n", function()
+			vim.keymap.set("n", "<leader><leader>n", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
 			end, { desc = "Search [N]eovim files" })
 		end,
@@ -449,17 +449,17 @@ require("lazy").setup({
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
-					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+					map("<localleader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<leader>s", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map("<localleader>s", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 					-- was leader ds
 
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
-						"<leader>S",
+						"<localleader>S",
 						-- was leader ws
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
 						"[W]orkspace [S]ymbols"
@@ -467,11 +467,11 @@ require("lazy").setup({
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
-					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+					map("<localleader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
-					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+					map("<localleader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
 					-- Opens a popup that displays documentation about the word under your cursor
 					--  See `:help K` for why this keymap.
@@ -516,7 +516,7 @@ require("lazy").setup({
 					--
 					-- This may be unwanted, since they displace some of your code
 					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-						map("<leader>th", function()
+						map("<localleader>th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 						end, "[T]oggle Inlay [H]ints")
 					end
@@ -605,7 +605,7 @@ require("lazy").setup({
 		lazy = false,
 		keys = {
 			{
-				"<leader>f",
+				"<localleader>f",
 				function()
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
