@@ -9,11 +9,11 @@ blur = false
 
 [font]
 size = 14
-builtin_box_drawing = false
-normal = { family = "Iosevka Nerd Font", style = "Regular" }
-bold = { family = "Iosevka Nerd Font", style = "Bold" }
-italic = { family = "Iosevka Nerd Font", style = "Italic" }
-bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
+builtin_box_drawing = true #false
+normal = { family = "IosevkaTerm NFM", style = "Regular" }
+bold = { family = "IosevkaTerm NFM", style = "Bold" }
+italic = { family = "IosevkaTerm NFM", style = "Italic" }
+bold_italic = { family = "IosevkaTerm NFM", style = "Bold Italic" }
 
 [colors]
 transparent_background_colors = true

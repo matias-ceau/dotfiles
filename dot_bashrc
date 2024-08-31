@@ -1,4 +1,4 @@
-#---------------------------
+#!/bin/bash
 #
 # Source profile and aliases
 #
@@ -13,33 +13,42 @@ fi
 #---------------------------
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash-completion/bash_completion"
 
+shopt -s autocd                  # change directory without entering the 'cd' command
+shopt -s cdspell                 # automatically fix directory typos when changing directory
+shopt -s direxpand               # automatically expand directory globs when completing
+shopt -s dirspell                # automatically fix directory typos when completing
+shopt -s globstar                # ** recursive glob
+shopt -s histappend              # append to history, don't overwrite
+shopt -s histverify              # expand, but don't automatically execute, history expansions
+shopt -s nocaseglob              # case-insensitive globbing
+shopt -s no_empty_cmd_completion # do not TAB expand empty lines
 shopt -s expand_aliases
-shopt -s autocd
 
 # HISTORY XDG
 mkdir -p "$XDG_STATE_HOME"/bash
-export HISTFILE="$XDG_STATE_HOME"/bash/history
+HISTFILE="$XDG_STATE_HOME"/bash/history
+HISTCONTROL=ignoreboth:erasedups        # Ignore and erase duplicates
+HISTIGNORE=?:??                         # Ignore one and two letter commands
+HISTFILESIZE=99999                      # Max size of history file
+HISTSIZE=99999                          # Amount of history to preserve
+PROMPT_COMMAND="history -a; history -n" # Share history between concurrent sessions
 
 # VIM
 set -o vi
-bind '"\C-e": "\ev"'
+#bind '"\C-e": "\ev"'
 
 #PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
 PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # FUNCTIONS
 f() { $1 "$(fzf)"; }
-vs() {
-    script=$HOME/.scripts/$1
-    echo '#! /usr/bin/env TODO\n\n#DOC# "TODO"\n\n' >$script
-    chmod +x $script
-    vim $script
+ns() {
+    $SCRIPTS/new_script_creator.sh "$1"
 }
 m() {
     link=$(xsel -b)
     mpv -fs "$link"
 }
-nm() { mv "$1" ~/data/new_music/; }
 epoch_hexadecimal() {
     D=$(date --date="$1" +"%s")
     SD=$(($D * 1000))
@@ -54,31 +63,6 @@ lx() {
 ##     on() { source $HOME/.virtualenv/"$1"/bin/activate ; }
 ##     new() { python -m venv $HOME/.virtualenv/"$1" ; }
 ##     del() { rm -rf $HOME/.virtualenv/"$1" ; }
-
-#transform_symlink() {
-#    local symlink_path="$1"
-#
-#    if [[ ! -L "$symlink_path" ]]; then
-#        echo "Error: '$symlink_path' is not a symlink."
-#        return 1
-#    fi
-#
-#    local target_path
-#    target_path=$(readlink "$symlink_path")
-#
-#    if [[ ! -e "$target_path" ]]; then
-#        echo "Error: Target '$target_path' does not exist."
-#        return 1
-#    fi
-#
-#    rm "$symlink_path"
-#    if cp -r "$target_path" "$symlink_path"; then
-#        echo "Symlink '$symlink_path' has been transformed into a copy of its target ('$target_path')."
-#    else
-#        echo "Error: Failed to copy target '$target_path' to '$symlink_path'."
-#        return 1
-#    fi
-#}
 
 eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
