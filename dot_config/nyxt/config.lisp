@@ -1,55 +1,42 @@
 (setf (uiop/os:getenv "WEBKIT_DISABLE_COMPOSITING_MODE") "1")
 
-;; buffer instead of web-buffer
-(define-configuration buffer
+;; ---------------------------------------------------------
+;; default keybinding
+;; ---------------------------------------------------------
+(define-configuration buffer ; web buffer?
   ((default-modes
     (pushnew 'nyxt/mode/vi:vi-normal-mode %slot-value%))))
 
 (define-configuration prompt-buffer
   ((default-modes (append '(vi-insert-mode) %slot-default%))))
 
-;; (define-configuration browser
-;;   ((theme (make-instance 'theme:theme 
-;;                          :dark-p t
-;; 			 :background-color- "#1C1B1A"
-;; 			 :background-color "#100F0F"
-;; 			 :background-color+ "#282726"
-;; 			 :on-background-color "#CECDC3"
-;; 			 :primary-color- "#878580"
-;; 			 :primary-color "#6F6E69"
-;; 			 :primary-color+ "#575653"
-;; 			 :on-primary-color "#FFFCF0"
-;; 			 :secondary-color- "#403E3C"
-;; 			 :secondary-color "#343331"
-;; 			 :secondary-color+ "#282726"
-;; 			 :on-secondary-color "#CECDC3"
-;; 			 :action-color- "#8B7EC8"
-;; 			 :action-color "#AD8301"
-;; 			 :action-color+ "#D0A215"
-;; 			 :on-action-color "#100F0F"
-;; 			 :highlight-color- "#DA702C"
-;; 			 :highlight-color "#D0A215"
-;; 			 :highlight-color+ "#FCEEB8"
-;; 			 :on-highlight-color "#100F0F"
-;; 			 :success-color- "#66800B"
-;; 			 :success-color "#879A39"
-;; 			 :success-color+ "#DAD8CE"
-;; 			 :on-success-color "#100F0F"
-;; 			 :warning-color- "#BC5215"
-;; 			 :warning-color "#DA702C"
-;; 			 :warning-color+ "#FCEEB8"
-;; 			 :on-warning-color "#100F0F"
-;; 			 :codeblock-color- "#1C1B1A"
-;; 			 :codeblock-color "#282726"
-;; 			 :codeblock-color+ "#343331"
-;; 			 :on-codeblock-color "#CECDC3"
-;; 			 :text-color- "#DAD8CE"
-;; 			 :text-color "#CECDC3"
-;; 			 :text-color+ "#B7B5AC"
-;; 			 :contrast-text-color "#100F0F"
-;;   ))))
-;;
+;; ---------------------------------------------------------
+;; keybindings
+;; ---------------------------------------------------------
+(defvar *my-keymap* (make-keymap "my-map"))
 
+(define-key *my-keymap* 
+            "` `" 'nyxt/mode/annotate:show-annotation
+            "` l" 'nyxt/mode/annotate:show-annotations
+            "` u" 'nyxt/mode/annotate:annotate-current-url
+            "` t" 'nyxt/mode/annotate:annotate-highlighted-text
+            "M-/" 'nyxt/mode/search-buffer:search-buffers)
+
+(define-mode my-mode
+    nil
+  "Dummy mode for the custom key bindings in *my-keymap*."
+  ((keyscheme-map
+    (nkeymaps/core:make-keyscheme-map nyxt/keyscheme:cua *my-keymap*
+                                      nyxt/keyscheme:emacs *my-keymap*
+                                      nyxt/keyscheme:vi-normal *my-keymap*))))
+
+(define-configuration web-buffer
+  "Enable this mode by default."
+  ((default-modes (pushnew 'my-mode %slot-value%))))
+
+;; ---------------------------------------------------------
+;; theme
+;; ---------------------------------------------------------
 (define-configuration browser
  ((theme (make-instance 'theme:theme 
                         :dark-p t
@@ -94,6 +81,9 @@
  ))))
 
 
+;; ---------------------------------------------------------
+;; search engines
+;; ---------------------------------------------------------
 (defvar *my-search-engines*
   (list
    '("google" "https://google.com/search?q=~a" "https://google.com")
@@ -110,6 +100,9 @@
              *my-search-engines*)
      %slot-default%))))
 
+;; ---------------------------------------------------------
+;; password manager
+;; ---------------------------------------------------------
 (defmethod initialize-instance :after
            ((interface password:keepassxc-interface)
             &key &allow-other-keys)
@@ -130,8 +123,24 @@ peeking at the screen."
   ((default-modes
     (append (list 'nyxt/mode/password:password-mode) %slot-value%))))
 
+;; ---------------------------------------------------------
+;; change fonts
+;; ---------------------------------------------------------
+(defmethod ffi-buffer-make :after ((buffer nyxt/renderer/gtk:gtk-buffer))
+  "Set fonts for the WebKitGTK renderer."
+  (let ((settings (webkit:webkit-web-view-get-settings (nyxt/renderer/gtk:gtk-object buffer))))
+    (setf (webkit:webkit-settings-serif-font-family settings) "Iosevka"
+          (webkit:webkit-settings-sans-serif-font-family settings) "Iosevka"
+          (webkit:webkit-settings-monospace-font-family settings) "Iosevka")))
 
+;; ---------------------------------------------------------
+;; remove tabs
+;; ---------------------------------------------------------
+(defmethod format-status-tabs ((status status-buffer))
+  "Disable tabs section."
+  "")
+
+;; ---------------------------------------------------------
 ;; (define-configuration web-buffer
 ;;   ((default-modes
 ;;     (pushnew 'nyxt/mode/blocker:blocker-mode %slot-value%))))
-
