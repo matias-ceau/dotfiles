@@ -128,8 +128,14 @@ keys = [
     ),
     Key(
         ["mod4"],
-        "Up",
+        "Down",
         lazy.spawn("qtile-dice-group.sh"),
+        desc=f"Switch to complimentary group (eg: c+n=7)",
+    ),
+    Key(
+        ["mod4"],
+        "Up",
+        lazy.screen.toggle_group(),
         desc=f"Switch to complimentary group (eg: c+n=7)",
     ),
     ## Media keys / function keys (other than scratchpads)
