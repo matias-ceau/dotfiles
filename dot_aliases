@@ -29,27 +29,24 @@ alias e='editor.sh'
 alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
-alias +x='chmod +x'
+alias cx='chmod +x'
 
 # TMUX
 alias ta='tmux attach'
 alias ts='tmux new -s'
+alias tl='tmux ls'
 #alias tac='tmux attach -t music:cmus'
 
 alias serv='echo "script: list_process.sh"; list_process.sh'
 
 alias s='eza -l $HOME/.scripts'
-#alias xxx='conda deactivate'
-#alias ooo='conda activate base'
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
 #aliases['cpu-min'] = 'tuned-adm profile laptop-battery-powersave'
 #aliases['lobechat'] = 'docker run -p 3210:3210 f7e1581b25a3'
 ################################
-# Maybe useful for zsh or bash
-#alias ls='ls --color=auto'
-#alias grep='grep --color=auto'
+
 alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 150 --save /etc/pacman.d/mirrorlist'
 alias git_sync='sync-repo.sh'
 alias git_clone='git_clone_by_author-repo.sh'
@@ -65,7 +62,7 @@ _sgpt() {
 }
 
 ooo() {
-	source "$(fd 'activate$' -I . | fzf --select-1)"
+	source "$(fd 'activate$' -I | fzf --select-1)"
 }
 xxx() {
 	deactivate

@@ -126,6 +126,12 @@ keys = [
         lazy.window.toggle_fullscreen(),
         desc="Toggle fullscreen",
     ),
+    Key(
+        ["mod4"],
+        "Up",
+        lazy.spawn("qtile-dice-group.sh"),
+        desc=f"Switch to complimentary group (eg: c+n=7)",
+    ),
     ## Media keys / function keys (other than scratchpads)
     Key(
         [], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="Increase brightness"
