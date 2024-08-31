@@ -53,6 +53,8 @@
 (define-configuration browser
  ((theme (make-instance 'theme:theme 
                         :dark-p t
+                        :font-family "Iosevka"
+                        :monospace-font-family "Iosevka"
                         :background-color- "#000000"  ; true_black
                         :background-color "#100F0F"   ; black (bg)
                         :background-color+ "#1C1B1A"  ; brblack (bg-2)
