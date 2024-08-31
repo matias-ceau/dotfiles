@@ -29,6 +29,8 @@ alias e='editor.sh'
 alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
+alias +x='chmod +x'
+
 # TMUX
 alias ta='tmux attach'
 alias ts='tmux new -s'
