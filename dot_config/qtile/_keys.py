@@ -129,7 +129,7 @@ keys = [
     Key(
         ["mod4"],
         "Down",
-        lazy.spawn("qtile-dice-group.sh"),
+        lazy.spawn("qtile_dice_group.py"),
         desc=f"Switch to complimentary group (eg: c+n=7)",
     ),
     Key(
