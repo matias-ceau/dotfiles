@@ -9,14 +9,14 @@
 #---------------------------
 
 # History settings 
-HISTSIZE=100000
-SAVEHIST=100000
 mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
-setopt append_history
-setopt inc_append_history
-setopt histignorespace
-setopt share_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HISTIGNORESPACE
+setopt SHARE_HISTORY
 
 # Navigation settings
 setopt autocd
@@ -37,8 +37,8 @@ eval "$(zoxide init zsh)"
 # Edit command line with vim 
 autoload edit-command-line
 zle -N edit-command-line
-bindkey '^e' edit-command-line
 bindkey -v
+bindkey '\ee' edit-command-line
 
 # Appearance
 autoload -U colors && colors
@@ -52,6 +52,8 @@ PROMPT='%F{red}@%f%F{yellow}%m%F{cyan} %~ %F{green}%%%f '
 #---------------------------
 # Plugin: zsh-autosuggestions
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # AICHAT SIGODEN
 aichat="$GIT_REPOS/sigoden/aichat"
