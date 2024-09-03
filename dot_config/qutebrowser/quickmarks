@@ -18,3 +18,4 @@ tvb https://training.incf.org/course/virtual-brain-node10-workshop-personalized-
 qutebrowser_shortcuts https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/img/cheatsheet-big.png
 dropbox_sdk https://github.com/dropbox/dropbox-sdk-python/blob/master/example/updown.py
 papers_with_code https://paperswithcode.com/sota
+qkbd qute://bindings/
