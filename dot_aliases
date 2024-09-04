@@ -24,7 +24,9 @@ alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 
 #alias f=fzf
-alias la='eza -la'
+alias l=eza
+alias ll='eza -l --icons=auto'
+alias la='eza -la --icons=auto'
 alias e='editor.sh'
 alias r='ranger'
 alias ai='aichat'
