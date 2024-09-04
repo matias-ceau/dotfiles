@@ -4,40 +4,40 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 # --------------------------------------------
 #                    COLORS
 # --------------------------------------------
-red = "#d14d41" 
-red_2 = "#af3029" 
-orange = "#da702c" 
-orange_2 = "#bc5215" #     Warning text     Functions
-css_or = "#fceeb8" 
-yellow = "#d0a215" 
-yellow_2 = "#ad8301" #                     Constants
-css_ye = "#4d3a0b" 
-green = "#879a39" 
-green_2 = "#66800b" #    Success text     Keywords
-css_gr = "#ebf2e7" 
-cyan = "#3aa99f" 
-cyan_2 = "#24837b" #    Links, active    Strings
-css_bl = "#142625" 
-blue = "#4385be" 
-blue_2 = "#205ea6" #                    Variables, attributes
-purple = "#8b7ec8" 
-purple_2 = "#5e409d" #                    Numbers
-magenta = "#ce5d97" 
-magenta_2 = "#a02f6f" #                    Language featureds
-bg = "#100f0f" #      Background 1
-bg_2 = "#1c1b1a" #    Background 2
-ui = "#282726" #      Borders
-ui_2 = "#343331" #    Hoveredd borders
-ui_3 = "#403e3c" #    Active borders
-tx_3 = "#575653" #    Faint text      Comments
-lg_tx_2 = "#6f6e69" 
-tx_2 = "#878580" #    Muted text      Punctuation, operators
-lg_tx_3 = "#979592" 
-tx = "#b7b5ac" #      Primary text
-lg_ui_2 = "#cecdc3" 
-lg_ui = "#dad8ce" 
-lg_bg_2 = "#e6e4d9" 
-lg_bg = "#fffcf0" 
+red = "#d14d41"
+red_2 = "#af3029"
+orange = "#da702c"
+orange_2 = "#bc5215"  #     Warning text     Functions
+css_or = "#fceeb8"
+yellow = "#d0a215"
+yellow_2 = "#ad8301"  #                     Constants
+css_ye = "#4d3a0b"
+green = "#879a39"
+green_2 = "#66800b"  #    Success text     Keywords
+css_gr = "#ebf2e7"
+cyan = "#3aa99f"
+cyan_2 = "#24837b"  #    Links, active    Strings
+css_bl = "#142625"
+blue = "#4385be"
+blue_2 = "#205ea6"  #                    Variables, attributes
+purple = "#8b7ec8"
+purple_2 = "#5e409d"  #                    Numbers
+magenta = "#ce5d97"
+magenta_2 = "#a02f6f"  #                    Language featureds
+bg = "#100f0f"  #      Background 1
+bg_2 = "#1c1b1a"  #    Background 2
+ui = "#282726"  #      Borders
+ui_2 = "#343331"  #    Hoveredd borders
+ui_3 = "#403e3c"  #    Active borders
+tx_3 = "#575653"  #    Faint text      Comments
+lg_tx_2 = "#6f6e69"
+tx_2 = "#878580"  #    Muted text      Punctuation, operators
+lg_tx_3 = "#979592"
+tx = "#b7b5ac"  #      Primary text
+lg_ui_2 = "#cecdc3"
+lg_ui = "#dad8ce"
+lg_bg_2 = "#e6e4d9"
+lg_bg = "#fffcf0"
 
 ## Background color of the completion widget category headers. ## Type: QssColor
 c.colors.completion.category.bg = (
@@ -150,7 +150,7 @@ c.colors.hints.match.fg = "green"
 c.colors.keyhint.bg = "rgba(0, 0, 0, 80%)"
 
 ## Text color for the keyhint widget. ## Type: QssColor
-c.colors.keyhint.fg = bg
+c.colors.keyhint.fg = lg_bg
 
 ## Highlight color for keys to complete the current keychain. ## Type: QssColor
 c.colors.keyhint.suffix.fg = yellow
@@ -346,7 +346,7 @@ c.colors.webpage.bg = None
 c.colors.webpage.darkmode.algorithm = "lightness-cielab"
 
 ## Contrast for dark mode. This only has an effect when `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or `brightness-rgb`. ## Type: Float
-c.colors.webpage.darkmode.contrast : float = 0.0
+c.colors.webpage.darkmode.contrast: float = 0.0
 
 ## Render all web contents using a dark theme. On QtWebEngine < 6.7, this setting requires a restart and does not support URL patterns, only the global setting is applied. Example configurations from Chromium's
 ## `chrome://flags`: - "With simple HSL/CIELAB/RGB-based inversion": Set
@@ -355,7 +355,7 @@ c.colors.webpage.darkmode.contrast : float = 0.0
 ## image inversion": qutebrowser default settings.
 ## Type: Bool
 c.colors.webpage.darkmode.enabled = False
-#True
+# True
 
 ## Which images to apply dark mode to.
 ## Type: String
@@ -402,6 +402,4 @@ c.colors.webpage.darkmode.threshold.foreground = 256
 ##   - light: Force a light theme.
 ##   - dark: Force a dark theme.
 c.colors.webpage.preferred_color_scheme = "dark"
-# 
-
-
+#
