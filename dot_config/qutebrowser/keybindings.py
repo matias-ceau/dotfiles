@@ -22,17 +22,17 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 ## `bindings.commands`), the mapping is ignored.
 ## Type: Dict
 c.bindings.key_mappings = {
-#    "<Ctrl-[>": "<Escape>",
+    #    "<Ctrl-[>": "<Escape>",
     "<Ctrl-6>": "<Ctrl-^>",
-#    "<Ctrl-M>": "<Return>",
-#    "<Ctrl-J>": "<Return>",
-    "<Ctrl-I>": "<Tab>",
-#    "<Shift-Return>": "<Return>",
+    #    "<Ctrl-M>": "<Return>",
+    #    "<Ctrl-J>": "<Return>",
+    # "<Ctrl-I>": "<Tab>",
+    #    "<Shift-Return>": "<Return>",
     "<Enter>": "<Return>",
-#    "<Shift-Enter>": "<Return>",
+    #    "<Shift-Enter>": "<Return>",
     "<Ctrl-Enter>": "<Ctrl-Return>",
 }
-# 
+#
 
 ## Bindings for normal mode
 config.bind("'", "mode-enter jump_mark")
@@ -73,7 +73,7 @@ config.bind("<Ctrl-F>", "scroll-page 0 1")
 config.bind("<Ctrl-N>", "open -w")
 config.bind("<Ctrl-PgDown>", "tab-next")
 config.bind("<Ctrl-PgUp>", "tab-prev")
-config.bind("<Ctrl-Q>", "quit")
+# config.bind("<Ctrl-Q>", "quit")
 config.bind("<Ctrl-Return>", "selection-follow -t")
 config.bind("<Ctrl-Shift-N>", "open -p")
 config.bind("<Ctrl-Shift-T>", "undo")
@@ -83,7 +83,7 @@ config.bind("<Ctrl-T>", "open -t")
 config.bind("<Ctrl-Tab>", "tab-focus last")
 config.bind("<Ctrl-U>", "scroll-page 0 -0.5")
 config.bind("<Ctrl-V>", "mode-enter passthrough")
-config.bind("<Ctrl-W>", "tab-close")
+config.bind("<Ctrl-Q>", "tab-close")
 config.bind("<Ctrl-X>", "navigate decrement")
 config.bind("<Ctrl-^>", "tab-focus last")
 config.bind("<Ctrl-h>", "home")
@@ -103,9 +103,9 @@ config.bind("F", "hint all tab")
 config.bind("G", "scroll-to-perc")
 config.bind("H", "back")
 config.bind("J", "tab-next")
-config.bind("]", "tab-next") #added
+config.bind("]", "tab-next")  # added
 config.bind("K", "tab-prev")
-config.bind("[", "tab-prev") #added
+config.bind("[", "tab-prev")  # added
 config.bind("L", "forward")
 config.bind("M", "bookmark-add ;; spawn qutebrowser-modify-source-bookmarks.sh")
 config.bind("m", "quickmark-save ;; spawn qutebrowser-modify-source-bookmarks.sh")
@@ -125,10 +125,10 @@ config.bind("U", "undo -w")
 config.bind("V", "mode-enter caret ;; selection-toggle --line")
 config.bind("ZQ", "quit")
 config.bind("ZZ", "quit --save")
-config.bind("<Ctrl-O>", "navigate prev") #added
-config.bind("<Ctrl-I>", "navigate next") #added
-config.bind("<Ctrl-Shift-O>", "navigate prev -t") #added
-config.bind("<Ctrl-Shift-I>", "navigate next -t") #added
+config.bind("<Ctrl-O>", "navigate prev")  # added
+config.bind("<Ctrl-I>", "navigate next")  # added
+config.bind("<Alt-O>", "navigate prev -t")  # added
+config.bind("<Alt-I>", "navigate next -t")  # added
 config.bind("`", "mode-enter set_mark")
 config.bind("ad", "download-cancel")
 config.bind("cd", "download-clear")
@@ -285,19 +285,19 @@ config.bind("w", "move-to-next-word", mode="caret")
 config.bind("y", "yank selection", mode="caret")
 config.bind("{", "move-to-end-of-prev-block", mode="caret")
 config.bind("}", "move-to-end-of-next-block", mode="caret")
-# 
+#
 
 ## Bindings for command mode
 config.bind("<Tab>", "completion-item-focus next", mode="command")
 config.bind("<Down>", "completion-item-focus --history next", mode="command")
-config.bind("<Ctrl-J>", "completion-item-focus next", mode="command") #added
+config.bind("<Ctrl-J>", "completion-item-focus next", mode="command")  # added
 config.bind("<Shift-Tab>", "completion-item-focus prev", mode="command")
 config.bind("<Up>", "completion-item-focus --history prev", mode="command")
-config.bind("<Ctrl-K>", "completion-item-focus prev", mode="command") #added
+config.bind("<Ctrl-K>", "completion-item-focus prev", mode="command")  # added
 config.bind("<Ctrl-Tab>", "completion-item-focus next-category", mode="command")
-config.bind("<Ctrl-Shift-J>", "completion-item-focus next", mode="command") #added
+config.bind("<Ctrl-N>", "completion-item-focus next", mode="command")  # added
 config.bind("<Ctrl-Shift-Tab>", "completion-item-focus prev-category", mode="command")
-config.bind("<Ctrl-Shift-K>", "completion-item-focus prev", mode="command") #added
+config.bind("<Ctrl-P>", "completion-item-focus prev", mode="command")  # added
 config.bind("<PgDown>", "completion-item-focus next-page", mode="command")
 config.bind("<PgUp>", "completion-item-focus prev-page", mode="command")
 config.bind("<Alt-B>", "rl-backward-word", mode="command")
@@ -321,11 +321,11 @@ config.bind("<Ctrl-Shift-W>", "rl-filename-rubout", mode="command")
 config.bind("<Ctrl-U>", "rl-unix-line-discard", mode="command")
 config.bind("<Ctrl-W>", 'rl-rubout " "', mode="command")
 # config.bind("<Ctrl-Y>", "rl-yank", mode="command")
-config.bind("<Ctrl-Y>", "command-accept", mode="command") #added
+config.bind("<Ctrl-Y>", "command-accept", mode="command")  # added
 config.bind("<Escape>", "mode-leave", mode="command")
 config.bind("<Return>", "command-accept", mode="command")
 config.bind("<Shift-Delete>", "completion-item-del", mode="command")
-# 
+#
 
 ## Bindings for hint mode
 config.bind("<Ctrl-B>", "hint all tab-bg", mode="hint")
@@ -333,18 +333,18 @@ config.bind("<Ctrl-F>", "hint links", mode="hint")
 config.bind("<Ctrl-R>", "hint --rapid links tab-bg", mode="hint")
 config.bind("<Escape>", "mode-leave", mode="hint")
 config.bind("<Return>", "hint-follow", mode="hint")
-# 
+#
 
 ## Bindings for insert mode
 config.bind("<Alt-E>", "edit-text", mode="insert")
 config.bind("<Escape>", "mode-leave", mode="insert")
 config.bind("<Shift-Escape>", "fake-key <Escape>", mode="insert")
 config.bind("<Shift-Ins>", "insert-text -- {primary}", mode="insert")
-# 
+#
 
 ## Bindings for passthrough mode
 config.bind("<Shift-Escape>", "mode-leave", mode="passthrough")
-# 
+#
 
 ## Bindings for prompt mode
 config.bind("<Alt-B>", "rl-backward-word", mode="prompt")
@@ -373,11 +373,11 @@ config.bind("<Return>", "prompt-accept", mode="prompt")
 config.bind("<Shift-Tab>", "prompt-item-focus prev", mode="prompt")
 config.bind("<Tab>", "prompt-item-focus next", mode="prompt")
 config.bind("<Up>", "prompt-item-focus prev", mode="prompt")
-# 
+#
 
 ## Bindings for register mode
 config.bind("<Escape>", "mode-leave", mode="register")
-# 
+#
 
 ## Bindings for yesno mode
 config.bind("<Alt-Shift-Y>", "prompt-yank --sel", mode="yesno")
@@ -388,5 +388,5 @@ config.bind("N", "prompt-accept --save no", mode="yesno")
 config.bind("Y", "prompt-accept --save yes", mode="yesno")
 config.bind("n", "prompt-accept no", mode="yesno")
 config.bind("y", "prompt-accept yes", mode="yesno")
-# 
-# 
+#
+#
