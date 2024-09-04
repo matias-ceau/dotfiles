@@ -32,6 +32,7 @@ alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
 alias cx='chmod +x'
+alias kd='sudo keyd reload'
 
 # TMUX
 alias ta='tmux attach'
