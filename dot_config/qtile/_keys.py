@@ -6,7 +6,7 @@ from libqtile.lazy import lazy
 keys = [
     ## Windows
     ### Navigation
-    Key(["mod4", "control"], "Home", lazy.next_screen(), desc="Go to next screen"),
+    Key(["mod4", "mod1"], "Home", lazy.next_screen(), desc="Go to next screen"),
     Key(["mod4"], "h", lazy.layout.left(), desc="Move focus to left"),
     Key(["mod4"], "l", lazy.layout.right(), desc="Move focus to right"),
     Key(["mod4"], "j", lazy.layout.down(), desc="Move focus down"),
@@ -23,6 +23,18 @@ keys = [
         "k",
         lazy.group.prev_window(),
         desc="Move window focus to prev window in group",
+    ),
+    Key(
+        ["mod4", "shift"],
+        "bracketright",
+        lazy.spawn("qtile_window_to_group_and_switch.py -n"),
+        desc="Send to next group and switch",
+    ),
+    Key(
+        ["mod4", "shift"],
+        "bracketleft",
+        lazy.spawn("qtile_window_to_group_and_switch.py -p"),
+        desc="Send to previous group and switch",
     ),
     Key(["mod4"], "Right", lazy.screen.next_group(), desc="Cycle groups"),
     Key(["mod4"], "bracketright", lazy.screen.next_group(), desc="Cycle groups"),
@@ -260,7 +272,7 @@ keys = [
     # quicklaunch
     KeyChord(
         ["mod4"],
-        "less",
+        "x",
         [
             Key(
                 [],
