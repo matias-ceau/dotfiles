@@ -10,6 +10,7 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 ## Remove it to not load settings done via the GUI.# 
 config.load_autoconfig(False)
 config.source('keybindings.py')
+config.source('colors.py')
 
 #   ALIASES  
 # --------------------------------------------
