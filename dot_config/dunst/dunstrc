@@ -332,7 +332,6 @@
     foreground = "#CECDC3"
     frame_color= "#d0a215"
     timeout = 10
-    override_pause_lsvel = 30
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
