@@ -163,8 +163,20 @@ keys = [
         desc="Decrease brightness",
     ),
     # Key( [], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="Toggle mute with amixer",),
-    # Key( [], "XF86AudioLowerVolume", # lazy.spawn("amixer -c 0 sset Master 1- unmute"), lazy.widget["volume"].decrease_vol(), desc="Lower volume",),
-    # Key( [], "XF86AudioRaiseVolume", # lazy.spawn("amixer -c 0 sset Master 1+ unmute"), lazy.widget["volume"].increase_vol(), desc="Raise volume",),
+    # Key( [], "XF86AudioLowerVolume",  lazy.spawn("amixer -c 0 sset Master 1- unmute"), lazy.widget["volume"].decrease_vol(), desc="Lower volume",),
+    # Key( [], "XF86AudioRaiseVolume",  lazy.spawn("amixer -c 0 sset Master 1+ unmute"), lazy.widget["volume"].increase_vol(), desc="Raise volume",),
+    Key(
+        [],
+        "XF86AudioLowerVolume",
+        lazy.spawn("xdotool mousemove_relative 100 0"),
+        desc="Lower volume",
+    ),
+    Key(
+        [],
+        "XF86AudioRaiseVolume",
+        lazy.spawn("xdotool mousemove_relative -- -100 0"),
+        desc="Raise volume",
+    ),
     Key(
         ["mod4"],
         "a",
@@ -217,7 +229,7 @@ keys = [
     # scripts
     Key(
         ["mod4"],
-        "x",
+        "semicolon",
         lazy.spawn("script_launcher.sh"),
         desc="Launch and edit user scripts",
     ),
