@@ -8,28 +8,41 @@ A = ["mod1"]
 S = ["shift"]
 C = ["control"]
 brightnessdown, brightnessup = "XF86MonBrightnessDown", "XF86MonBrightnessUp"
-volumedown, volumeup, mute = "XF86AudioLowerVolume", "XF86AudioRaiseVolume", "XF86AudioMute"
+volumedown, volumeup, mute = (
+    "XF86AudioLowerVolume",
+    "XF86AudioRaiseVolume",
+    "XF86AudioMute",
+)
 
 keys = [
     ## Windows
     ### Navigation
-    Key(M+A, "Home", L.next_screen(), desc="Go to next screen"),
+    Key(M + A, "Home", L.next_screen(), desc="Go to next screen"),
     Key(M, "h", L.layout.left(), desc="Move focus to left"),
     Key(M, "l", L.layout.right(), desc="Move focus to right"),
     Key(M, "j", L.layout.down(), desc="Move focus down"),
     Key(M, "k", L.layout.up(), desc="Move focus up"),
     Key(M, "Tab", L.layout.next(), desc="Move window focus to other panes"),
-    Key(M+A, "j", L.group.next_window(), desc="Move window focus to next window in group"),
-    Key(M+A, "k", L.group.prev_window(), desc="Move window focus to prev window in group",
+    Key(
+        M + A,
+        "j",
+        L.group.next_window(),
+        desc="Move window focus to next window in group",
     ),
     Key(
-        M+S,
+        M + A,
+        "k",
+        L.group.prev_window(),
+        desc="Move window focus to prev window in group",
+    ),
+    Key(
+        M + S,
         "bracketright",
         L.spawn("qtile_window_to_group_and_switch.py -n"),
         desc="Send to next group and switch",
     ),
     Key(
-        M+S,
+        M + S,
         "bracketleft",
         L.spawn("qtile_window_to_group_and_switch.py -p"),
         desc="Send to previous group and switch",
@@ -39,13 +52,13 @@ keys = [
     Key(M, "Left", L.screen.prev_group(), desc="Cycle groups"),
     Key(M, "bracketleft", L.screen.prev_group(), desc="Cycle groups"),
     Key(M, "grave", L.next_layout(), desc="Toggle between layouts"),
-    Key(M+S, "grave", L.prev_layout(), desc="Toggle between layouts"),
+    Key(M + S, "grave", L.prev_layout(), desc="Toggle between layouts"),
     Key(M, "q", L.window.kill(), desc="Kill focused window"),
-    Key(M+C, "r", L.reload_config(), desc="Reload the config"),
-    Key(M+A, "r", L.restart(), desc="Restart qtile"),
-    Key(M+A, "q", L.shutown(), desc="Shutdown qtile"),
+    Key(M + C, "r", L.reload_config(), desc="Reload the config"),
+    Key(M + A, "r", L.restart(), desc="Restart qtile"),
+    Key(M + A, "q", L.shutown(), desc="Shutdown qtile"),
     Key(
-        M+C,
+        M + C,
         "q",
         L.function(show_power_menu),
         desc="Qtile-extras pop up menu",  # TODO: modify the popup menu
@@ -58,36 +71,36 @@ keys = [
     ),
     ### Move
     Key(
-        M+S,
+        M + S,
         "h",
         L.layout.shuffle_left(),
         desc="Move window to the left",
     ),
     Key(
-        M+S,
+        M + S,
         "l",
         L.layout.shuffle_right(),
         desc="Move window to the right",
     ),
-    Key(M+S, "j", L.layout.shuffle_down(), desc="Move window down"),
-    Key(M+S, "k", L.layout.shuffle_up(), desc="Move window up"),
+    Key(M + S, "j", L.layout.shuffle_down(), desc="Move window down"),
+    Key(M + S, "k", L.layout.shuffle_up(), desc="Move window up"),
     Key(
-        M+C,
+        M + C,
         "h",
         L.layout.grow_left(),
         desc="Grow window to the left",
     ),
     ### Resize
     Key(
-        M+C,
+        M + C,
         "l",
         L.layout.grow_right(),
         desc="Grow window to the right",
     ),
-    Key(M+C, "j", L.layout.grow_down(), desc="Grow window down"),
-    Key(M+C, "k", L.layout.grow_up(), desc="Grow window up"),
+    Key(M + C, "j", L.layout.grow_down(), desc="Grow window down"),
+    Key(M + C, "k", L.layout.grow_up(), desc="Grow window up"),
     Key(
-        M+C,
+        M + C,
         "equal",
         L.layout.normalize(),
         desc="Reset all window sizes",
@@ -101,7 +114,7 @@ keys = [
         desc="Shrink and center floating",
     ),
     Key(
-        M+S,
+        M + S,
         "minus",
         L.window.resize_floating(-15, -10).when(when_floating=True),
         L.window.center().when(when_floating=True),
@@ -115,7 +128,7 @@ keys = [
         desc="Grow and center floating",
     ),
     Key(
-        M+S,
+        M + S,
         "equal",
         L.window.resize_floating(15, 10).when(when_floating=True),
         L.window.center().when(when_floating=True),
@@ -153,24 +166,67 @@ keys = [
         desc=f"Switch to last group",
     ),
     ## Media keys / function keys (other than scratchpads)
-    Key(
-        [], brightnessup, L.spawn("light -a 10"), desc="increase brightness"
-    ),
+    Key([], brightnessup, L.spawn("light -a 10"), desc="increase brightness"),
     Key(
         [],
         brightnessdown,
         L.spawn("light -U 10"),
         desc="Decrease brightness",
     ),
-    Key( [], mute, L.spawn("amixer -q set Master toggle"), desc="Toggle mute with amixer",),
-    Key( [], volumedown, L.widget["volume"].decrease_vol(), desc="Lower volume",),
-    Key( [], volumeup, L.widget["volume"].increase_vol(), desc="Raise volume",),
-    Key( M, volumedown, L.spawn("xdotool mousemove_relative -- -50 0"), desc="Mouse left",),
-    Key( M, volumeup, L.spawn("xdotool mousemove_relative 50 0"), desc="Mouse right",),
-    Key( M+S, volumedown, L.spawn("xdotool mousemove_relative -- 0 -50"), desc="Mouse down",),
-    Key( M+S, volumeup, L.spawn("xdotool mousemove_relative 0 50"), desc="Mouse up",),
-    Key( M, mute, L.spawn("xdotool click 1"), desc="Left click",),
-    Key( M+S, mute, L.spawn("xdotool click 3"), desc="Right click",),
+    Key(
+        [],
+        mute,
+        L.spawn("amixer -q set Master toggle"),
+        desc="Toggle mute with amixer",
+    ),
+    Key(
+        [],
+        volumedown,
+        L.widget["volume"].decrease_vol(),
+        desc="Lower volume",
+    ),
+    Key(
+        [],
+        volumeup,
+        L.widget["volume"].increase_vol(),
+        desc="Raise volume",
+    ),
+    Key(
+        M,
+        volumedown,
+        L.spawn("xdotool mousemove_relative -- -50 0"),
+        desc="Mouse left",
+    ),
+    Key(
+        M,
+        volumeup,
+        L.spawn("xdotool mousemove_relative 50 0"),
+        desc="Mouse right",
+    ),
+    Key(
+        M + S,
+        volumedown,
+        L.spawn("xdotool mousemove_relative -- 0 -50"),
+        desc="Mouse down",
+    ),
+    Key(
+        M + S,
+        volumeup,
+        L.spawn("xdotool mousemove_relative 0 50"),
+        desc="Mouse up",
+    ),
+    Key(
+        M,
+        mute,
+        L.spawn("xdotool click 1"),
+        desc="Left click",
+    ),
+    Key(
+        M + S,
+        mute,
+        L.spawn("xdotool click 3"),
+        desc="Right click",
+    ),
     Key(
         M,
         "a",
@@ -179,28 +235,26 @@ keys = [
     ),
     Key(M, "F2", L.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
     Key(
-        M+S,
+        M + S,
         "F2",
         L.spawn("wallpaper.sh --previous"),
         desc="Wallpaper previous",
     ),
     Key(
-        M+C,
+        M + C,
         "F2",
         L.spawn("wallpaper.sh --gui"),
         desc="Wallpaper select with GUI (WIP)",
     ),
     Key(
-        M+A,
+        M + A,
         "F2",
         L.spawn("wallpaper.sh --select"),
         desc="Wallpaper select with fzf",
     ),
     ## Commands
     ### General
-    Key(
-        M+S, "d", L.spawn("dmenu_run -l 30"), desc="Run app with dmenu"
-    ),
+    Key(M + S, "d", L.spawn("dmenu_run -l 30"), desc="Run app with dmenu"),
     Key(
         M,
         "space",
@@ -208,7 +262,7 @@ keys = [
         desc="Basic app launcher (using fzfmenu)",
     ),
     Key(
-        M+S,
+        M + S,
         "space",
         L.spawn("rofi -show drun"),
         desc="Run app with rofi (desktop apps)",
@@ -229,7 +283,7 @@ keys = [
     ),
     Key(M, "Return", L.spawn(["kitty", "-1"]), desc="Launch terminal"),
     Key(
-        M+S,
+        M + S,
         "t",
         L.spawn(["alacritty", "-T", "dis_term"]),
         desc="Launch secondary terminal",
@@ -253,7 +307,7 @@ keys = [
         desc="Take screenshot of the full screen",
     ),
     Key(
-        M+C,
+        M + C,
         "Print",
         L.spawn("flameshot gui"),
         desc="Take screenshot of selected area",
@@ -462,9 +516,7 @@ keys = [
         L.group["scratch"].dropdown_toggle("chatbot"),
         desc="Toggle llm chatbot",
     ),
-    Key(
-        M, "n", L.group["scratch"].dropdown_toggle("note"), desc="Toggle note"
-    ),
+    Key(M, "n", L.group["scratch"].dropdown_toggle("note"), desc="Toggle note"),
     Key(
         M,
         "p",
@@ -477,8 +529,18 @@ keys = [
 
 # Drag floating layouts.
 mouse = [
-    Drag(M, "Button1", L.window.set_position_floating(), start=L.window.get_position(),),
-    Drag(M, "Button3", L.window.set_size_floating(), start=L.window.get_size(),),
+    Drag(
+        M,
+        "Button1",
+        L.window.set_position_floating(),
+        start=L.window.get_position(),
+    ),
+    Drag(
+        M,
+        "Button3",
+        L.window.set_size_floating(),
+        start=L.window.get_size(),
+    ),
     Click(M, "Button2", L.window.bring_to_front()),
 ]
 
@@ -487,7 +549,14 @@ mouse = [
 for g in "123456":
     keys.extend(
         [
-            Key(M, g, L.group[g].toscreen(toggle=True), desc=f"Switch to group {g}",),
-            Key(M+S, g, L.window.togroup(g), desc=f"Move focused window to group {g}"),
+            Key(
+                M,
+                g,
+                L.group[g].toscreen(toggle=True),
+                desc=f"Switch to group {g}",
+            ),
+            Key(
+                M + S, g, L.window.togroup(g), desc=f"Move focused window to group {g}"
+            ),
         ]
     )
