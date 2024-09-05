@@ -127,10 +127,6 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true -- highlight on search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
 
--- Leader and Local leader remaps
--- vim.keymap.set("n", "<leader>,", ",", { noremap = true, desc = "Repeat f/t/F/T in opposite direction" })
--- vim.keymap.set("n", "<localleader>;", ";", { noremap = true, desc = "Repeat last f/t/F/T motion" })
-
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
@@ -223,7 +219,7 @@ require("lazy").setup({
 		},
 	},
 	{
-		"norcalli/nvim-colorizer.lua",
+		{ "norcalli/nvim-colorizer.lua", opts = {} },
 	},
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
