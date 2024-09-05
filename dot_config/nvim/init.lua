@@ -550,9 +550,8 @@ require("lazy").setup({
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
 				--    https://github.com/pmizio/typescript-tools.nvim
-				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				ts_ls = {},
+				-- ts_ls = {},
 				--
 
 				lua_ls = {
@@ -631,6 +630,7 @@ require("lazy").setup({
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
 				python = { "isort", "black" },
+				bash = { "beautysh" },
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
