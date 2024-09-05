@@ -44,6 +44,8 @@ keys = [
     Key(["mod4", "shift"], "grave", lazy.prev_layout(), desc="Toggle between layouts"),
     Key(["mod4"], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(["mod4", "control"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key(["mod4", "mod1"], "r", lazy.restart(), desc="Restart qtile"),
+    Key(["mod4", "alt"], "q", lazy.shutown(), desc="Shutdown qtile"),
     Key(
         ["mod4", "control"],
         "q",
