@@ -209,12 +209,9 @@ keys = [
         L.spawn("xdotool mousemove_relative -- 0 -50"),
         desc="Mouse down",
     ),
-    Key(
-        M + S,
-        volumeup,
-        L.spawn("xdotool mousemove_relative 0 50"),
-        desc="Mouse up",
-    ),
+    Key( M + S, volumeup, L.spawn("xdotool mousemove_relative 0 50"), desc="Mouse up",),
+    Key( A, volumeup, L.spawn("xdotool click 5"), desc="Mouse down",),
+    Key( A, volumedown, L.spawn("xdotool click 4"), desc="Mouse up",),
     Key(
         M,
         mute,
