@@ -212,24 +212,9 @@ keys = [
     Key( M + S, volumeup, L.spawn("xdotool mousemove_relative 0 50"), desc="Mouse up",),
     Key( A, volumeup, L.spawn("xdotool click 5"), desc="Mouse down",),
     Key( A, volumedown, L.spawn("xdotool click 4"), desc="Mouse up",),
-    Key(
-        M,
-        mute,
-        L.spawn("xdotool click 1"),
-        desc="Left click",
-    ),
-    Key(
-        M + S,
-        mute,
-        L.spawn("xdotool click 3"),
-        desc="Right click",
-    ),
-    Key(
-        M,
-        "a",
-        L.spawn("jgmenu_run"),
-        desc="Jgmenu app list",
-    ),
+    Key( M, mute, L.spawn("xdotool click 1"), desc="Left click",),
+    Key( M + S, mute, L.spawn("xdotool click 3"), desc="Right click",),
+    # Key( M, "a", L.spawn("jgmenu_run"), desc="Jgmenu app list",),
     Key(M, "F2", L.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
     Key(
         M + S,
