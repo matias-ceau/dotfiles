@@ -120,7 +120,7 @@ vim.opt.splitbelow = true
 vim.opt.list = true --  See `:help 'list'` and `:help 'listchars'`
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- or "nosplit"
-vim.opt.cursorline = true
+vim.opt.cursorline = false -- true
 vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]] See `:help vim.keymap.set()`
@@ -332,19 +332,19 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader><leader>h", builtin.help_tags, { desc = "[H]elp" })
-			vim.keymap.set("n", "<leader><leader>k", builtin.keymaps, { desc = "[K]eymaps" })
-			vim.keymap.set("n", "<leader><leader>f", builtin.find_files, { desc = "[F]iles" })
-			vim.keymap.set("n", "<leader><leader>s", builtin.builtin, { desc = "[S]elect Telescope" })
-			vim.keymap.set("n", "<leader><leader>w", builtin.grep_string, { desc = "Current [W]ord" })
-			vim.keymap.set("n", "<leader><leader>g", builtin.live_grep, { desc = "[G]rep" })
-			vim.keymap.set("n", "<leader><leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
-			vim.keymap.set("n", "<leader><leader>a", builtin.resume, { desc = "[A]gain" })
-			vim.keymap.set("n", "<leader><leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<leader><leader>c", builtin.commands, { desc = "[C]ommands" })
-			vim.keymap.set("n", "<leader><leader>r", builtin.registers, { desc = "[R]egisters" })
-			vim.keymap.set("n", "<leader><leader>m", builtin.man_pages, { desc = "[M]an" })
-			vim.keymap.set("n", "<leader><leader>b", builtin.buffers, { desc = "[B]uffers" })
+			vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "[H]elp" })
+			vim.keymap.set("n", "<leader>k", builtin.keymaps, { desc = "[K]eymaps" })
+			vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "[F]iles" })
+			vim.keymap.set("n", "<leader>T", builtin.builtin, { desc = "[T]elescope builtins" })
+			vim.keymap.set("n", "<leader>w", builtin.grep_string, { desc = "Current [W]ord" })
+			vim.keymap.set("n", "<leader>gb", builtin.live_grep, { desc = "[G]rep in current [B]uffer" })
+			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
+			vim.keymap.set("n", "<leader>a", builtin.resume, { desc = "[A]gain" })
+			vim.keymap.set("n", "<leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
+			vim.keymap.set("n", "<leader>c", builtin.commands, { desc = "[C]ommands" })
+			vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "[R]egisters" })
+			vim.keymap.set("n", "<leader>m", builtin.man_pages, { desc = "[M]an" })
+			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "[B]uffers" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 
 			-- Slightly advanced example of overriding default behavior and theme
@@ -352,21 +352,21 @@ require("lazy").setup({
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
-					previewer = false,
+					previewer = true, -- false by default
 				}))
 			end, { desc = "[/] Fuzzily search in current buffer" })
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<leader><leader>/", function()
+			vim.keymap.set("n", "<leader>gd", function()
 				builtin.live_grep({
 					grep_open_files = true,
-					prompt_title = "Live Grep in Open Files",
+					prompt_title = "Live Grep in buffer relative dir",
 				})
-			end, { desc = "Search [/] in Open Files" })
+			end, { desc = "Search [?] in Open Files" })
 
 			-- Shortcut for searching your Neovim configuration files
-			vim.keymap.set("n", "<leader><leader>n", function()
+			vim.keymap.set("n", "<leader>n", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
 			end, { desc = "Search [N]eovim files" })
 		end,
@@ -449,7 +449,7 @@ require("lazy").setup({
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<localleader>s", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map("<localleader>s", require("telescope.builtin").lsp_document_symbols, "Document [s]ymbols")
 					-- was leader ds
 
 					-- Fuzzy find all the symbols in your current workspace.
@@ -458,7 +458,7 @@ require("lazy").setup({
 						"<localleader>S",
 						-- was leader ws
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"[W]orkspace [S]ymbols"
+						"Workspace [S]ymbols"
 					)
 
 					-- Rename the variable under your cursor.
@@ -618,7 +618,7 @@ require("lazy").setup({
 				-- languages here or re-enable it for the disabled ones.
 				local disable_filetypes = { c = true, cpp = true }
 				return {
-					timeout_ms = 500,
+					timeout_ms = 1000,
 					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
 				}
 			end,
