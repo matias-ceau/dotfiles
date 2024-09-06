@@ -743,7 +743,7 @@ c.downloads.prevent_mixed_content = True
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
 ## Type: Int
-c.downloads.remove_finished = -1
+c.downloads.remove_finished = 5000
 # 
 
 ## Editor (and arguments) to use for the `edit-*` commands. The following

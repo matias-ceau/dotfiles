@@ -24,10 +24,7 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 c.bindings.key_mappings = {
     #    "<Ctrl-[>": "<Escape>",
     "<Ctrl-6>": "<Ctrl-^>",
-    #    "<Ctrl-M>": "<Return>",
-    #    "<Ctrl-J>": "<Return>",
-    # "<Ctrl-I>": "<Tab>",
-    #    "<Shift-Return>": "<Return>",
+    #    "<Ctrl-M>": "<Return>", "<Ctrl-J>": "<Return>", "<Ctrl-I>": "<Tab>", "<Shift-Return>": "<Return>",
     "<Enter>": "<Return>",
     #    "<Shift-Enter>": "<Return>",
     "<Ctrl-Enter>": "<Ctrl-Return>",

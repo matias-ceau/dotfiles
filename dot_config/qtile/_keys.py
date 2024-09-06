@@ -13,6 +13,7 @@ volumedown, volumeup, mute = (
     "XF86AudioRaiseVolume",
     "XF86AudioMute",
 )
+forward, back = "XF86Forward", "XF86Back"
 
 keys = [
     ## Windows
@@ -191,15 +192,19 @@ keys = [
         L.widget["volume"].increase_vol(),
         desc="Raise volume",
     ),
-    Key( M, volumedown, L.spawn("xdotool mousemove_relative --clearmodifiers -- -50 0"), desc="Mouse left",),
-    Key(M, volumeup, L.spawn("xdotool mousemove_relative --clearmodifiers 50 0"), desc="Mouse right",),
-    Key( M + S, volumedown, L.spawn("xdotool mousemove_relative --clearmodifiers -- 0 -50"), desc="Mouse down",),
-    Key( M + S, volumeup, L.spawn("xdotool mousemove_relative --clearmodifiers 0 50"), desc="Mouse up",),
-    Key( A, volumeup, L.spawn("xdotool click --clearmodifiers 5"), desc="Scroll down",),
-    Key( A, volumedown, L.spawn("xdotool click --clearmodifiers 4"), desc="Scroll up",),
+    Key( M, volumedown, L.spawn("xdotool mousemove_relative  -- -50 0"), desc="Mouse left",),
+    Key(M, volumeup, L.spawn("xdotool mousemove_relative  50 0"), desc="Mouse right",),
+    Key( M + C, volumedown, L.spawn("xdotool mousemove_relative  -- -10 0"), desc="Mouse left",),
+    Key(M + C, volumeup, L.spawn("xdotool mousemove_relative  10 0"), desc="Mouse right",),
+    Key( M + S, volumedown, L.spawn("xdotool mousemove_relative  -- 0 -50"), desc="Mouse down",),
+    Key( M + S, volumeup, L.spawn("xdotool mousemove_relative  0 50"), desc="Mouse up",),
+    Key( M + S + C, volumedown, L.spawn("xdotool mousemove_relative  -- 0 -10"), desc="Mouse down",),
+    Key( M + S + C, volumeup, L.spawn("xdotool mousemove_relative  0 10"), desc="Mouse up",),
     Key( M, mute, L.spawn("xdotool click --clearmodifiers 1"), desc="Left click",),
     Key( M + S, mute, L.spawn("xdotool click --clearmodifiers 3"), desc="Right click",),
     # Key( M, "a", L.spawn("jgmenu_run"), desc="Jgmenu app list",),
+    Key( [], forward, L.spawn("xdotool click  5"), desc="Scroll down",),
+    Key( [], back, L.spawn("xdotool click  4"), desc="Scroll up",),
     Key(M, "F2", L.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
     Key(
         M + S,
@@ -304,24 +309,6 @@ keys = [
                 L.spawn("jupyter_new_notebook.xsh"),
                 desc="Launch new notebook",
             ),
-            Key(
-                C,
-                "c",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
-            Key(
-                [],
-                "q",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
-            Key(
-                M,
-                "less",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
         ],
         name="quicklaunch",
         mode=True,
@@ -394,18 +381,6 @@ keys = [
                 L.ungrab_all_chords(),
                 desc="Exit",
             ),
-            Key(
-                C,
-                "c",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
-            Key(
-                M,
-                "s",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
         ],
         name="cmus",
         mode=True,
@@ -431,18 +406,6 @@ keys = [
             Key(
                 [],
                 "q",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
-            Key(
-                C,
-                "c",
-                L.ungrab_all_chords(),
-                desc="Exit",
-            ),
-            Key(
-                M,
-                "F1",
                 L.ungrab_all_chords(),
                 desc="Exit",
             ),
