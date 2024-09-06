@@ -154,6 +154,7 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<localleader>C", ":ColorizerAttachToBuffer<CR>", { desc = "Move focus to the upper window" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -338,7 +339,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>T", builtin.builtin, { desc = "[T]elescope builtins" })
 			vim.keymap.set("n", "<leader>w", builtin.grep_string, { desc = "Current [W]ord" })
 			vim.keymap.set("n", "<leader>gb", builtin.live_grep, { desc = "[G]rep in current [B]uffer" })
-			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
+			vim.keymap.set("n", "<leader>D", builtin.diagnostics, { desc = "[D]iagnostics" })
 			vim.keymap.set("n", "<leader>a", builtin.resume, { desc = "[A]gain" })
 			vim.keymap.set("n", "<leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader>c", builtin.commands, { desc = "[C]ommands" })
@@ -358,9 +359,9 @@ require("lazy").setup({
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<leader>gd", function()
+			vim.keymap.set("n", "<leader>d", function()
 				builtin.live_grep({
-					grep_open_files = true,
+					grep_open_files = false,
 					prompt_title = "Live Grep in buffer relative dir",
 				})
 			end, { desc = "Search [?] in Open Files" })
