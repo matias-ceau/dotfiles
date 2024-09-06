@@ -17,7 +17,7 @@ groups = [
         [
             DropDown(
                 "terminal",
-                ["alacritty", "-T", "terminal"],
+                "alacritty -T terminal",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -26,16 +26,7 @@ groups = [
             ),
             DropDown(
                 "vimwiki",
-                [
-                    "alacritty",
-                    "--working-directory",
-                    f"{home}/notes",
-                    "-T",
-                    "vimwiki",
-                    "-e",
-                    "nvim",
-                    f"{home}/notes/atlas/index.md",
-                ],
+                f"alacritty --working-directory {home}/notes -T vimwiki -e nvim {home}/notes/atlas/index.md",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -44,7 +35,7 @@ groups = [
             ),
             DropDown(
                 "ranger",
-                ["alacritty", "-T", "ranger", "-e" "ranger"],
+                "alacritty -T ranger -e ranger",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -53,7 +44,7 @@ groups = [
             ),
             DropDown(
                 "sysmon",
-                ["xterm", "-fs", "10", "-e", "btop"],
+                "xterm -fs 10 -e btop",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -69,7 +60,7 @@ groups = [
         [
             DropDown(
                 "chatbot",
-                ["alacritty", "-e", "aichat"],
+                "alacritty -e aichat",
                 x=0.2,
                 width=0.6,
                 y=0.2,
@@ -77,7 +68,7 @@ groups = [
             ),
             DropDown(
                 "note",
-                ["alacritty", "-e", "vim", f"{home}/notes/draft.md"],
+                f"alacritty -e nvim {home}/notes/draft.md",
                 x=0.2,
                 width=0.6,
                 y=0.2,
@@ -85,7 +76,7 @@ groups = [
             ),
             DropDown(
                 "keepassxc",
-                ["keepassxc"],
+                "keepassxc",
                 x=0.1,
                 width=0.8,
                 y=0.1,
