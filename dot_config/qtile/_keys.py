@@ -352,9 +352,7 @@ keys = [
             Key(
                 [],
                 "h",
-                L.spawn(
-                    "notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'"
-                ),
+                L.spawn("notify-send 'HELP' 'This will be a help menu"),
             ),
             Key(
                 [],
@@ -384,9 +382,7 @@ keys = [
             Key(
                 [],
                 "h",
-                L.spawn(
-                    "notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'"
-                ),
+                L.spawn("notify-send 'HELP' 'This will be a help menu"),
             ),
             Key(
                 [],
@@ -447,9 +443,7 @@ keys = [
             Key(
                 [],
                 "h",
-                L.spawn(
-                    "notify-send 'HELP' 'This will be a help menu\nExit with <q> or <C-c>'"
-                ),
+                L.spawn("notify-send 'HELP' 'This will be a help menu"),
             ),
             Key(
                 [],
