@@ -243,12 +243,8 @@ require("lazy").setup({
 
 	{
 		"folke/which-key.nvim",
-		event = "VeryLazy",
+		event = "VimEnter",
 		opts = {
-			-- your configuration comes here
-			-- TODO:
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
 		},
 		keys = {
 			{
@@ -266,6 +262,15 @@ require("lazy").setup({
 				desc = "Global Keymaps (which-key)",
 			},
 		},
+    spec = {
+        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+        { '<leader>d', group = '[D]ocument' },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      },
 	},
 
 	-- NOTE: Plugins can specify dependencies.
@@ -327,15 +332,17 @@ require("lazy").setup({
 				--
 				defaults = {
 				  mappings = {
-				    i = { ['<c-f>'] = 'to_fuzzy_refine', },
-				},
-				-- pickers = {}
-				extensions = {
+				    i = {
+              ['<c-f>'] = 'to_fuzzy_refine',
+            },
+          },
+            extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
 					},
 				},
-			})
+			},
+    })
 
 			-- Enable Telescope extensions if they are installed
 			pcall(require("telescope").load_extension, "fzf")
@@ -386,8 +393,21 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- LSP Configuration & Plugins
-		"neovim/nvim-lspconfig",
+	-- LSP Configuration & Plugins
+    {
+    -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+    -- used for completion, annotations and signatures of Neovim apis
+    'folke/lazydev.nvim',
+    ft = 'lua',
+    opts = {
+      library = {
+        -- Load luvit types when the `vim.uv` word is found
+        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
+      },
+    },
+  },
+  { 'Bilal2453/luvit-meta', lazy = true },
+  {"neovim/nvim-lspconfig", -- Main LSP Configuration
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
 			{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
@@ -440,8 +460,9 @@ require("lazy").setup({
 					--
 					-- In this case, we create a function that lets us more easily define mappings specific
 					-- for LSP related items. It sets the mode, buffer and description for us each time.
-					local map = function(keys, func, desc)
-						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+					local map = function(keys, func, desci, mode)
+            mode = mode or 'n'
+						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
 
 					-- Jump to the definition of the word under your cursor.
@@ -481,7 +502,7 @@ require("lazy").setup({
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
-					map("<localleader>la", vim.lsp.buf.code_action, "Code [a]ction")
+					map("<localleader>la", vim.lsp.buf.code_action, "Code [a]ction", {'n', 'x'})
 
 					-- Opens a popup that displays documentation about the word under your cursor
 					--  See `:help K` for why this keymap.
@@ -497,9 +518,8 @@ require("lazy").setup({
 					--
 					-- When you move your cursor, the highlights will be cleared (the second autocommand).
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
-					if client and client.server_capabilities.documentHighlightProvider then
-						local highlight_augroup =
-							vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
+          if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+						local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
 						vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 							buffer = event.buf,
 							group = highlight_augroup,
@@ -613,27 +633,34 @@ require("lazy").setup({
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
-		lazy = false,
+    event = { 'BufWritePre' },
+		cmd = { 'ConformInfo' },
 		keys = {
 			{
 				"<localleader>F",
 				function()
-					require("conform").format({ async = true, lsp_fallback = true })
+					require("conform").format({ async = true, lsp_format = 'fallback' })
 				end,
 				mode = "",
 				desc = "[F]ormat buffer",
 			},
 		},
 		opts = {
-			notify_on_error = true, --false by default
+			notify_on_error = false,
 			format_on_save = function(bufnr)
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
 				local disable_filetypes = { c = true, cpp = true }
+        local lsp_format_opt
+        if disable_filetypes[vim.bo[bufnr].filetype] then
+          lsp_format_opt = 'never'
+        else
+          lsp_format_opt = 'fallback'
+        end
 				return {
 					timeout_ms = 1000,
-					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+					lsp_fallback = lsp_format_opt,
 				}
 			end,
 			formatters_by_ft = {
@@ -644,7 +671,7 @@ require("lazy").setup({
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
+				-- javascript = { { "prettierd", "prettier", stop_after_first = true } },
 			},
 		},
 	},
@@ -685,7 +712,7 @@ require("lazy").setup({
 			--  into multiple repos for maintenance purposes.
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
-		},
+		}, 
 		config = function()
 			-- See `:help cmp`
 			local cmp = require("cmp")
@@ -808,7 +835,7 @@ require("lazy").setup({
         hint = { "DiagnosticHint", "#10B981" },
         default = { "Identifier", "#7C3AED" },
         test = { "Identifier", "#FF00FF" }
-    }}},
+    }}}},
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()
@@ -845,6 +872,8 @@ require("lazy").setup({
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 		opts = {
 			ensure_installed = {
 				"python",
@@ -872,21 +901,12 @@ require("lazy").setup({
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
-		config = function(_, opts)
-			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
-			-- Prefer git instead of curl in order to improve connectivity in some environments
-			require("nvim-treesitter.install").prefer_git = true
-			---@diagnostic disable-next-line: missing-fields
-			require("nvim-treesitter.configs").setup(opts)
-
 			-- There are additional nvim-treesitter modules that you can use to interact
 			-- with nvim-treesitter. You should go explore a few and see what interests you:
 			--TODO:
 			--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-		end,
 	},
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -898,19 +918,19 @@ require("lazy").setup({
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
 		icons = vim.g.have_nerd_font and {} or {
-			cmd = "⌘",
-			config = "🛠",
-			event = "📅",
-			ft = "📂",
-			init = "⚙",
-			keys = "🗝",
-			plugin = "🔌",
-			runtime = "💻",
-			require = "🌙",
-			source = "📄",
-			start = "🚀",
-			task = "📌",
-			lazy = "💤 ",
+      cmd = '⌘',
+      config = '🛠',
+      event = '📅',
+      ft = '📂',
+      init = '⚙',
+      keys = '🗝',
+      plugin = '🔌',
+      runtime = '💻',
+      require = '🌙',
+      source = '📄',
+      start = '🚀',
+      task = '📌',
+      lazy = '💤 ',
 		},
 	},
 })
