@@ -33,13 +33,13 @@ return {
 			{ "<leader>Di", dap.step_into, desc = "[D]ebug: Step [i]nto" },
 			{ "<leader>Do", dap.step_over, desc = "[D]ebug: Step [o]ver" },
 			{ "<leader>DO", dap.step_out, desc = "[D]ebug: Step [O]ut" },
-			{ "<leader>Db", dap.toggle_breakpoint, desc = "Debug: Toggle Breakpoint" },
+			{ "<leader>Db", dap.toggle_breakpoint, desc = "[D]ebug: Toggle [b]reakpoint" },
 			{
 				"<leader>DB",
 				function()
 					dap.set_breakpoint(vim.fn.input("Debug: Breakpoint condition: "))
 				end,
-				desc = "Debug: Set Breakpoint",
+				desc = "[D]ebug: Set [B]reakpoint",
 			},
 			-- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
 			{ "<leader>Dr", dapui.toggle, desc = "[D]ebug: See last session [r]esult." },

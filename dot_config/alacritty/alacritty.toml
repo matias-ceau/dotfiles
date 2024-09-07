@@ -9,11 +9,11 @@ blur = false
 
 [font]
 size = 14
-builtin_box_drawing = true #false
-normal = { family = "IosevkaTerm NFP", style = "Regular" }
-bold = { family = "IosevkaTerm NFP", style = "Bold" }
-italic = { family = "IosevkaTerm NFP", style = "Italic" }
-bold_italic = { family = "IosevkaTerm NFP", style = "Bold Italic" }
+builtin_box_drawing = false #true #false
+normal = { family = "Iosevka NF", style = "Regular" }
+bold = { family = "Iosevka NF", style = "Bold" }
+italic = { family = "Iosevka NF", style = "Italic" }
+bold_italic = { family = "Iosevka NF", style = "Bold Italic" }
 
 [colors]
 transparent_background_colors = true
