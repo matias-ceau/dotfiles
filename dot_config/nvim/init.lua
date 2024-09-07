@@ -327,10 +327,7 @@ require("lazy").setup({
 				--
 				defaults = {
 				  mappings = {
-				    i = { ['<c-f>'] = 'to_fuzzy_refine',
-               ['<c-w>'] = 'which_key'},
-            -- n = {}
-				  },
+				    i = { ['<c-f>'] = 'to_fuzzy_refine', },
 				},
 				-- pickers = {}
 				extensions = {
