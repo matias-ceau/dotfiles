@@ -158,7 +158,7 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("n", "<localleader>cb", ":ColorizerAttachToBuffer<CR>", { desc = "[C]olorizer attach to [B]uffer" })
-vim.keymap.set("n", "<localleader>cc", ":ColorizerToggle<CR>", { desc = "Move fosss to the upper window" })
+vim.keymap.set("n", "<localleader>cc", ":ColorizerToggle<CR>", { desc = "[c]olorizer toggle" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
