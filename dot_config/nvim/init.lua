@@ -24,7 +24,7 @@ What is Kickstart?
 
   Kickstart.nvim is *not* a distribution.
 
-  Kickstart.nvim is a starting point for your own configuration.
+  Kskstart.nvim is a starting point for your own configuration.
     The goal is that you can read every line of code, top-to-bottom, understand
     what your configuration is doing, and modify it to suit your needs.
 
@@ -105,13 +105,13 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false -- true
 vim.opt.mouse = "a"
 vim.opt.showmode = false -- already in the status line
 vim.opt.breakindent = true -- le 'wrapping' est aussi indented)
 vim.opt.undofile = true
 vim.opt.ignorecase = false -- Case-sensitive UNLESS \c (vim.opt.smartcase = true)
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "number" -- "yes"
 vim.opt.updatetime = 250 --(default is 4_000)
 vim.opt.timeoutlen = 300 -- Displays which-key popup sooner (default 1000)
 vim.opt.conceallevel = 1 --important for obsidian
@@ -120,12 +120,15 @@ vim.opt.splitbelow = true
 vim.opt.list = true --  See `:help 'list'` and `:help 'listchars'`
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- or "nosplit"
-vim.opt.cursorline = false -- true
+vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]] See `:help vim.keymap.set()`
 vim.opt.hlsearch = true -- highlight on search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
+
+-- Remove this standard mapping for mini surround to work (cl works similarly)
+vim.keymap.set({ "n", "x" }, "s", "<Nop>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -154,7 +157,8 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-vim.keymap.set("n", "<localleader>C", ":ColorizerAttachToBuffer<CR>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<localleader>cb", ":ColorizerAttachToBuffer<CR>", { desc = "[C]olorizer attach to [B]uffer" })
+vim.keymap.set("n", "<localleader>ct", ":ColorizerToggle<CR>", { desc = "Move fosss to the upper window" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -248,11 +252,18 @@ require("lazy").setup({
 		},
 		keys = {
 			{
-				"<localleader>?",
+				"<localleader>kl",
 				function()
 					require("which-key").show({ global = false })
 				end,
 				desc = "Buffer Local Keymaps (which-key)",
+			},
+			{
+				"<localleader>kg",
+				function()
+					require("which-key").show({ global = true })
+				end,
+				desc = "Global Keymaps (which-key)",
 			},
 		},
 	},
@@ -314,11 +325,13 @@ require("lazy").setup({
 				-- You can put your default mappings / updates / etc. in here
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
+				defaults = {
+				  mappings = {
+				    i = { ['<c-f>'] = 'to_fuzzy_refine',
+               ['<c-w>'] = 'which_key'},
+            -- n = {}
+				  },
+				},
 				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
@@ -346,6 +359,9 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "[R]egisters" })
 			vim.keymap.set("n", "<leader>m", builtin.man_pages, { desc = "[M]an" })
 			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "[B]uffers" })
+			vim.keymap.set("n", "<leader>Gc", builtin.git_commits, { desc = "[G]it [c]ommits" })
+			vim.keymap.set("n", "<leader>Gs", builtin.git_status, { desc = "[G]it [s]tatus" })
+			vim.keymap.set("n", "<leader>ts", builtin.git_status, { desc = "[G]it [s]tatus" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 
 			-- Slightly advanced example of overriding default behavior and theme
@@ -359,10 +375,10 @@ require("lazy").setup({
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<leader>d", function()
+			vim.keymap.set("n", "<leader>gd", function()
 				builtin.live_grep({
 					grep_open_files = false,
-					prompt_title = "Live Grep in buffer relative dir",
+					prompt_title = "Live [g]rep in buffer [d]ir",
 				})
 			end, { desc = "Search [?] in Open Files" })
 
@@ -446,20 +462,20 @@ require("lazy").setup({
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
-					map("<localleader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+					map("<localleader>td", require("telescope.builtin").lsp_type_definitions, "[T]ype [D]efinition")
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<localleader>s", require("telescope.builtin").lsp_document_symbols, "Document [s]ymbols")
+					map("<localleader>ls", require("telescope.builtin").lsp_document_symbols, "[d]ocument [s]ymbols")
 					-- was leader ds
 
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
-						"<localleader>S",
+						"<localleader>ws",
 						-- was leader ws
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"Workspace [S]ymbols"
+						"[w]orkspace [s]ymbols"
 					)
 
 					-- Rename the variable under your cursor.
@@ -468,7 +484,7 @@ require("lazy").setup({
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
-					map("<localleader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+					map("<localleader>la", vim.lsp.buf.code_action, "Code [a]ction")
 
 					-- Opens a popup that displays documentation about the word under your cursor
 					--  See `:help K` for why this keymap.
@@ -476,7 +492,7 @@ require("lazy").setup({
 
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
 					--  For example, in C this would take you to the header.
-					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+					map("gD", vim.lsp.buf.declaration, "[g]oto [D]eclaration")
 
 					-- The following two autocommands are used to highlight references of the
 					-- word under your cursor when your cursor rests there for a little while.
@@ -515,7 +531,7 @@ require("lazy").setup({
 					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
 						map("<localleader>th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-						end, "[T]oggle Inlay [H]ints")
+						end, "[t]oggle Inlay [h]ints")
 					end
 				end,
 			})
@@ -603,7 +619,7 @@ require("lazy").setup({
 		lazy = false,
 		keys = {
 			{
-				"<localleader>f",
+				"<localleader>F",
 				function()
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
@@ -771,22 +787,35 @@ require("lazy").setup({
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
-		-- existing ones are
-		-- FIX:   "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
-		-- TODO:  icon = " ", color = "info" },
-		-- HACK:  icon = " ", color = "warning" },
-		-- WARN:  icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-		-- PERF:  icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-		-- NOTE:  icon = " ", color = "hint", alt = { "INFO" } },
-		-- TEST:  icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-	},
-
+		opts = {
+      signs = true, -- show icons in the signs column
+      sign_priority = 8, -- sign priority
+      -- keywords recognized as todo comments
+      keywords = {
+        FIX = {
+          icon = " ",
+          color = "error", -- can be a hex color, or a named color (see below)
+          alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
+          -- signs = false, -- configure signs for some keywords individually
+        },
+        TODO = { icon = " ", color = "info" },
+        HACK = { icon = " ", color = "warning" },
+        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+        TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+      colors = {
+        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+        info = { "DiagnosticInfo", "#2563EB" },
+        hint = { "DiagnosticHint", "#10B981" },
+        default = { "Identifier", "#7C3AED" },
+        test = { "Identifier", "#FF00FF" }
+    }}},
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()
 			-- Better Around/Inside textobjects
-			--
 			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
@@ -794,7 +823,6 @@ require("lazy").setup({
 			require("mini.ai").setup({ n_lines = 500 })
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
-			--
 			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']

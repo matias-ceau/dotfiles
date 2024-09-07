@@ -1,4 +1,3 @@
-## Configuration
 widget_defaults = dict(
     font="Iosevka Nerd Font",
     fontsize=12,
