@@ -14,14 +14,24 @@ alias cð="cd $HOME/Desktop/"
 alias ð="$HOME/Desktop"
 #alias local_data_stow="stow --dir=$HOME/Dropbox/local_appdata --target=$HOME"
 
-alias fuckingpipe='systemctl --user restart pipewire.service'
-alias fuckingtile='qtile cmd-obj -o cmd -f reload_config'
+alias pipe-restart='systemctl --user restart pipewire.service'
+alias qtile-reload='qtile cmd-obj -o cmd -f reload_config'
+alias qtile-restart='qtile cmd-obj -o cmd -f restart'
 alias poweroff='sudo systemctl poweroff'
 alias reboot='sudo systemctl reboot'
 alias suspend='sudo systemctl suspend'
 alias p44='pw-metadata -n settings 0 clock.force-rate 44100'
 alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
+alias kdr='sudo keyd reload'
+alias gsync='sync-repo.sh'
+alias gsC="cd $CHEZMOI && git status" 
+alias syncC="sync-repo.sh $CHEZMOI && git status" 
+alias gsS="cd $SCRIPTS && git status" 
+alias syncS="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh" 
+alias gsL="cd $LOCALDATA && git status" 
+alias syncL="sync-repo.sh $LOCALDATA && chezmoi apply && sudo keyd reload" 
+alias gclone='git_clone_by_author-repo.sh'
 
 #alias f=fzf
 alias l=eza
@@ -51,8 +61,6 @@ alias s='eza -l $HOME/.scripts'
 ################################
 
 alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 150 --save /etc/pacman.d/mirrorlist'
-alias git_sync='sync-repo.sh'
-alias git_clone='git_clone_by_author-repo.sh'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
