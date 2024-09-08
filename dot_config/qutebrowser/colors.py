@@ -40,12 +40,12 @@ base50 = "#e6e4d9"
 f_white = "#fffcf0"
 
 ## Background color of the completion widget category headers. ## Type: QssColor
-c.colors.completion.category.bg = base900  # ( f"qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {tx_2}, stop:1 {tx_3})")
+c.colors.completion.category.bg = "#000000"  # ( f"qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {tx_2}, stop:1 {tx_3})")
 ## Foreground color of completion widget category headers. ## Type: QtColor
 c.colors.completion.category.fg = f_magenta
 ## Bottom and top border color of the completion widget category headers. ## Type: QssColor
-c.colors.completion.category.border.top = f_yellow
-c.colors.completion.category.border.bottom = f_black
+c.colors.completion.category.border.top = base950
+c.colors.completion.category.border.bottom = base950
 
 ## Text color of the completion widget. Either one or list of 3 ## Type: List of QtColor, or QtColor
 c.colors.completion.fg = [f_white, f_white, f_white]
@@ -66,7 +66,7 @@ c.colors.completion.item.selected.match.fg = f_white
 c.colors.completion.match.fg = f_yellow
 
 ## Color of the scrollbar in the completion view. ## Type: QssColor
-c.colors.completion.scrollbar.fg = f_white
+c.colors.completion.scrollbar.fg = base900
 c.colors.completion.scrollbar.bg = base850
 
 ## Background color of disabled items in the context menu. null = Qt default ## Type: QssColor
