@@ -7,16 +7,16 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 
 # AUTOCONFIG.YAML
 ## This is here so configs done via the GUI are still loaded.
-## Remove it to not load settings done via the GUI.# 
+## Remove it to not load settings done via the GUI.#
 config.load_autoconfig(False)
-config.source('keybindings.py')
-config.source('colors.py')
+config.source("keybindings.py")
+config.source("colors.py")
 
-#   ALIASES  
+#   ALIASES
 # --------------------------------------------
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
-## Type: Dict 
+## Type: Dict
 c.aliases = {
     "w": "session-save",
     "q": "close",
@@ -88,7 +88,7 @@ c.completion.delay = 0
 ## Default filesystem autocomplete suggestions for :open. The elements of
 ## this list show up in the completion window under the Filesystem
 ## category when the command line contains `:open` but no argument.
-## Type: List of String TODO
+## Type: List of String TODO:
 c.completion.favorite_paths = []
 
 ## Height (in pixels or as percentage of the window) of the completion.
@@ -126,7 +126,7 @@ c.completion.scrollbar.padding = 2
 
 ## Width (in pixels) of the scrollbar in the completion window.
 ## Type: Int
-c.completion.scrollbar.width = 12
+c.completion.scrollbar.width = 5
 
 ## When to show the autocompletion window.
 ## Type: String
@@ -165,7 +165,7 @@ c.completion.web_history.exclude = []
 ## unlimited
 ## Type: Int
 c.completion.web_history.max_items = -1
-# 
+#
 
 ## Require a confirmation before quitting the application.
 ## Type: ConfirmQuit
@@ -233,7 +233,7 @@ c.content.blocking.hosts.lists = [
 ##   - adblock: Use Brave's ABP-style adblocker
 ##   - hosts: Use hosts blocking
 ##   - both: Use both hosts blocking and Brave's ABP-style adblocker
-c.content.blocking.method = "auto"
+c.content.blocking.method = "both"
 
 ## A list of patterns that should always be loaded, despite being blocked
 ## by the ad-/host-blocker. Local domains are always exempt from
@@ -260,13 +260,13 @@ c.content.cache.appcache = True
 ## to _n_ pages. For more information about the feature, please refer to:
 ## https://webkit.org/blog/427/webkit-page-cache-i-the-basics/
 ## Type: Int
-c.content.cache.maximum_pages = 0
+c.content.cache.maximum_pages = 10
 
 ## Size (in bytes) of the HTTP network cache. Null to use the default
 ## value. With QtWebEngine, the maximum supported value is 2147483647 (~2
 ## GB).
 ## Type: Int
-c.content.cache.size = None
+c.content.cache.size = 268_435_456
 
 ## Allow websites to read canvas elements. Note this is needed for some
 ## websites to work properly. On QtWebEngine < 6.6, this setting requires
@@ -306,14 +306,11 @@ c.content.cookies.store = True
 ## Default encoding to use for websites. The encoding must be a string
 ## describing an encoding such as _utf-8_, _iso-8859-1_, etc.
 ## Type: String
-c.content.default_encoding = "iso-8859-1"
+c.content.default_encoding = "utf-8"  # iso-8859-1"
 
 ## Allow websites to share screen content.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: - true - false - ask
 c.content.desktop_capture = "ask"
 
 ## Try to pre-fetch DNS entries to speed up browsing.
@@ -497,34 +494,22 @@ c.content.local_storage = True
 
 ## Allow websites to record audio.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: true false ask
 c.content.media.audio_capture = "ask"
 
 ## Allow websites to record audio and video.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: true false ask
 c.content.media.audio_video_capture = "ask"
 
 ## Allow websites to record video.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: true false ask
 c.content.media.video_capture = "ask"
 
 ## Allow websites to lock your mouse pointer.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: true false ask
 c.content.mouse_lock = "ask"
 
 ## Automatically mute tabs. Note that if the `:tab-mute` command is used,
@@ -539,10 +524,7 @@ c.content.netrc_file = None
 
 ## Allow websites to show notifications.
 ## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
+## Valid values: true false ask
 c.content.notifications.enabled = "ask"
 
 ## What notification presenter to use for web notifications. Note that
@@ -693,7 +675,7 @@ c.content.webrtc_ip_handling_policy = "all-interfaces"
 ## https://www.chromium.org/developers/design-documents/xss-auditor
 ## Type: Bool
 c.content.xss_auditing = False
-# 
+#
 
 # --------------------------------------------
 #                    DOWNLOADS
@@ -744,7 +726,7 @@ c.downloads.prevent_mixed_content = True
 ## If set to -1, downloads are never removed.
 ## Type: Int
 c.downloads.remove_finished = 5000
-# 
+#
 
 ## Editor (and arguments) to use for the `edit-*` commands. The following
 ## placeholders are defined:  * `{file}`: Filename of the file to be
@@ -753,7 +735,20 @@ c.downloads.remove_finished = 5000
 ## `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand TODO
-c.editor.command = ["gvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
+c.editor.command = [
+    "setsid",
+    "alacritty",
+    "-T",
+    "--class",
+    "Alacritty,floating-term",
+    "-T",
+    "qutebrowser-editor",
+    "-e",
+    "nvim",
+    "{file}",
+    "-c",
+    "normal {line}G{column0}l",
+]
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -780,7 +775,7 @@ c.fileselect.folder.command = ["urxvt", "-e", "ranger", "--choosedir={}"]
 ## Valid values:
 ##   - default: Use the default file selector.
 ##   - external: Use an external command.
-c.fileselect.handler = "default"
+c.fileselect.handler = "external"
 
 ## Command (and arguments) to use for selecting multiple files in forms.
 ## The command should write the selected file paths to the specified file
@@ -802,6 +797,11 @@ c.fileselect.single_file.command = ["xterm", "-e", "ranger", "--choosefile={}"]
 # --------------------------------------------
 #                    FONTS
 # --------------------------------------------
+## Default font families to use. Whenever "default_family" is used in a
+## font setting, it's replaced with the fonts listed here. If set to an
+## empty value, a system-specific monospace default is used.
+## Type: List of Font, or Font
+c.fonts.default_family = ["Iosevka Nerd Font"]
 ## Font used in the completion categories.
 ## Type: Font
 c.fonts.completion.category = "bold default_size default_family"
@@ -815,11 +815,6 @@ c.fonts.contextmenu = None
 ## Font used for the debugging console.
 ## Type: Font
 c.fonts.debug_console = "default_size default_family"
-## Default font families to use. Whenever "default_family" is used in a
-## font setting, it's replaced with the fonts listed here. If set to an
-## empty value, a system-specific monospace default is used.
-## Type: List of Font, or Font
-c.fonts.default_family = []
 ## Default font size to use. Whenever "default_size" is used in a font
 ## setting, it's replaced with the size listed here. Valid values are
 ## either a float value with a "pt" suffix, or an integer value with a
@@ -890,7 +885,7 @@ c.fonts.web.size.minimum = 0
 ## out.
 ## Type: Int
 c.fonts.web.size.minimum_logical = 6
-# 
+#
 
 # --------------------------------------------
 #                    HINTS
@@ -911,7 +906,7 @@ c.hints.auto_follow_timeout = 0
 
 ## CSS border value for hints.
 ## Type: String
-c.hints.border = "1px solid #E3BE23"
+c.hints.border = "1px solid #d0a215"
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
@@ -1044,7 +1039,7 @@ c.hints.selectors = {
 ## Make characters in hint strings uppercase.
 ## Type: Bool
 c.hints.uppercase = False
-# 
+#
 
 ## Maximum time (in minutes) between two history items for them to be
 ## considered being from the same browsing session. Items with less time
@@ -1139,7 +1134,7 @@ c.input.partial_timeout = 0
 ## towards the right and which element they probably want.
 ## Type: Bool
 c.input.spatial_navigation = False
-# 
+#
 
 ## Keychains that shouldn't be shown in the keyhint dialog. Globs are
 ## supported, so `;*` will blacklist all keychains starting with `;`. Use
@@ -1150,7 +1145,7 @@ c.keyhint.blacklist = []
 ## Time (in milliseconds) from pressing a key to seeing the keyhint
 ## dialog.
 ## Type: Int
-c.keyhint.delay = 500
+c.keyhint.delay = 300
 
 ## Rounding radius (in pixels) for the edges of the keyhint dialog.
 ## Type: Int
@@ -1196,7 +1191,7 @@ c.messages.timeout = 3000
 ##   - tab-bg-silent: Open a new background tab in the existing window without activating the window.
 ##   - window: Open in a new window.
 ##   - private-window: Open in a new private window.
-c.new_instance_open_target = "tab"
+c.new_instance_open_target = "window"  # tab
 
 ## Which window to choose when opening links as new tabs. When
 ## `new_instance_open_target` is set to `window`, this is ignored.
@@ -1345,7 +1340,7 @@ c.qt.workarounds.locale = False
 ## negatively impact start-up time.
 ## Type: Bool
 c.qt.workarounds.remove_service_workers = False
-# 
+#
 
 ## When/how to show the scrollbar.
 ## Type: String
@@ -1620,7 +1615,7 @@ c.tabs.pinned.shrink = True
 ##   - bottom
 ##   - left
 ##   - right
-c.tabs.position = "top"
+c.tabs.position = "bottom"
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1650,19 +1645,12 @@ c.tabs.tabs_are_windows = False
 
 ## Alignment of the text inside of tabs.
 ## Type: TextAlignment
-## Valid values:
-##   - left
-##   - right
-##   - center
+## Valid values: left right center
 c.tabs.title.alignment = "left"
 
 ## Position of ellipsis in truncated title of tabs.
 ## Type: ElidePosition
-## Valid values:
-##   - left
-##   - right
-##   - middle
-##   - none
+## Valid values: left right middle none
 c.tabs.title.elide = "right"
 
 ## Format to use for the tab title. The following placeholders are
@@ -1679,7 +1667,7 @@ c.tabs.title.elide = "right"
 ## web page. * `{protocol}`: Protocol (http/https/...) of the current web
 ## page. * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-c.tabs.title.format = "{audio}{index}: {current_title}"
+c.tabs.title.format = "{private}{audio}{index}: {current_title}"
 
 ## Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
@@ -1694,7 +1682,7 @@ c.tabs.tooltips = True
 ## Number of closed tabs (per window) and closed windows to remember for
 ## :undo (-1 for no maximum).
 ## Type: Int
-c.tabs.undo_stack_size = 100
+c.tabs.undo_stack_size = -1
 
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
@@ -1704,7 +1692,7 @@ c.tabs.width = "15%"
 ## Wrap when changing tabs.
 ## Type: Bool
 c.tabs.wrap = True
-# 
+#
 
 ## What search to start when something else than a URL is entered.
 ## Type: String
@@ -1755,7 +1743,13 @@ c.url.open_base_url = True
 ## the search engine name to the search term, e.g. `:open google
 ## qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}"}
+c.url.searchengines = {
+    "DEFAULT": "https://duckduckgo.com/?q={}",
+    "g": "https://google.com/search?q={}",
+    "py": "https://docs.python.org/3/search.html?q={}",
+    "doi": "https://dx.doi.org/{}",
+    "arch": "https://wiki.archlinux.org/title/Special:Search/{}",
+}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
@@ -1824,4 +1818,3 @@ c.zoom.mouse_divider = 512
 ## Apply the zoom factor on a frame only to the text or to all content.
 ## Type: Bool
 c.zoom.text_only = False
-

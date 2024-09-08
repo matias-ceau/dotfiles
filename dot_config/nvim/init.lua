@@ -334,7 +334,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "[H]elp" })
 			vim.keymap.set("n", "<leader>k", builtin.keymaps, { desc = "[K]eymaps" })
 			vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "[F]iles" })
-			vim.keymap.set("n", "<leader>T", builtin.builtin, { desc = "[T]elescope builtins" })
+			vim.keymap.set("n", "<leader><leader>", builtin.builtin, { desc = "Telescope builtins" })
 			vim.keymap.set("n", "<leader>w", builtin.grep_string, { desc = "Current [W]ord" })
 			vim.keymap.set("n", "<leader>gb", builtin.live_grep, { desc = "[G]rep in current [B]uffer" })
 			vim.keymap.set("n", "<leader>D", builtin.diagnostics, { desc = "[D]iagnostics" })

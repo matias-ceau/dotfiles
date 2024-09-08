@@ -28,7 +28,6 @@ export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-# remove duplicates (if I reload .profile for some reason :)
 ####################################################
 export CHEZMOI="$(chezmoi source-path)"
 export LOCALDATA="$HOME/.localdata"
@@ -43,21 +42,52 @@ export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 
 
 # MAKE VIM XDG COMPLIANT
-mkdir -p ~/.config/vim
-mkdir -p ~/.local/share/vim
-mkdir -p ~/.local/state/vim
-export VIM_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/vim"
+mkdir -p "$XDG_CONFIG_HOME/vim"
+mkdir -p "$XDG_STATE_HOME/vim"
+mkdir -p "$XDG_DATA_HOME/vim"
+export VIM_CONFIG_HOME="$XDG_CONFIG_HOME/vim"
 
 # THEME
-#qt
+export FLEXOKI_BLACK='#100f0f'
+export FLEXOKI_BASE_950='#1C1B1A'
+export FLEXOKI_BASE_900='#282726'
+export FLEXOKI_BASE_850='#343331'
+export FLEXOKI_BASE_800='#403E3C'
+export FLEXOKI_BASE_700='#575653'
+export FLEXOKI_BASE_600='#6F6E69'
+export FLEXOKI_BASE_500='#878580'
+export FLEXOKI_BASE_300='#B7B5AC'
+export FLEXOKI_BASE_200='#CECDC3'
+export FLEXOKI_BASE_150='#DAD8CE'
+export FLEXOKI_BASE_100='#E6E4D9'
+export FLEXOKI_BASE_50='#F2F0E5'
+export FLEXOKI_PAPER='#FFFCF0'
+export FLEXOKI_RED='#AF3029'
+export FLEXOKI_ORANGE='#BC5215'
+export FLEXOKI_YELLOW='#AD8301'
+export FLEXOKI_GREEN='#66800B'
+export FLEXOKI_CYAN='#24837B'
+export FLEXOKI_BLUE='#205EA6'
+export FLEXOKI_PURPLE='#5E409D'
+export FLEXOKI_MAGENTA='#A02F6F'
+export FLEXOKI_RED_2='#D14D41'
+export FLEXOKI_ORANGE_2='#DA702C'
+export FLEXOKI_YELLOW_2='#D0A215'
+export FLEXOKI_GREEN_2='#879A39'
+export FLEXOKI_CYAN_2='#3AA99F'
+export FLEXOKI_BLUE_2='#4385BE'
+export FLEXOKI_PURPLE_2='#8B7EC8'
+export FLEXOKI_MAGENTA_2='#CE5D97'
+
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 export FZF_DEFAULT_OPTS="
-    --color=fg:#878580,bg:#100F0F,hl:#879a39
-    --color=fg+:#fffcf0,bg+:#1C1B1A,hl+:#879a39
-    --color=border:#ad8301,header:#FFFCF0,gutter:#100F0F
-    --color=spinner:#205ea6,info:#205ea6,separator:#1C1B1A
-    --color=pointer:#AD8301,scrollbar:#AF3029,prompt:#AD8301"
+--color=fg:$FLEXOKI_BASE_200,bg:$FLEXOKI_BLACK,hl:$FLEXOKI_MAGENTA
+--color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_500,hl+:$FLEXOKI_MAGENTA
+--color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK
+--color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700
+--color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW"
+
 #gtk
 #___both can be useful on old screens
 #export GSK_RENDERER='gl'
