@@ -700,7 +700,7 @@ c.downloads.location.remember = True
 ##   - path: Show only the download path.
 ##   - filename: Show only download filename.
 ##   - both: Show download path and filename.
-c.downloads.location.suggestion = "path"
+c.downloads.location.suggestion = "filename"
 
 ## Default program used to open downloads. If null, the default internal
 ## handler is used. Any `{}` in the string will be expanded to the
@@ -736,7 +736,6 @@ c.downloads.remove_finished = 5000
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand TODO
 c.editor.command = [
-    "setsid",
     "alacritty",
     "-T",
     "--class",
@@ -820,7 +819,7 @@ c.fonts.debug_console = "default_size default_family"
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = "10pt"
+c.fonts.default_size = "12pt"
 ## Font used for the downloadbar.
 ## Type: Font
 c.fonts.downloads = "default_size default_family"
@@ -970,7 +969,7 @@ c.hints.prev_regexes = [
 
 ## Rounding radius (in pixels) for the edges of hints.
 ## Type: Int
-c.hints.radius = 3
+c.hints.radius = 6
 
 ## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for
 ## number hints.
@@ -1349,7 +1348,7 @@ c.qt.workarounds.remove_service_workers = False
 ##   - never: Never show the scrollbar.
 ##   - when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
 ##   - overlay: Show an overlay scrollbar. On macOS, this is unavailable and equal to `when-searching`; with the QtWebKit backend, this is equal to `never`. Enabling/disabling overlay scrollbars requires a restart.
-c.scrolling.bar = "overlay"
+c.scrolling.bar = "never"
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
@@ -1472,11 +1471,11 @@ c.statusbar.show = "always"
 ##   - clock: Display current time. The format can be changed by adding a format string via `clock:...`. For supported format strings, see https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes[the Python datetime documentation].
 c.statusbar.widgets = [
     "keypress",
-    "search_match",
     "url",
     "scroll",
     "history",
     "tabs",
+    "search_match",
     "progress",
 ]
 
@@ -1507,7 +1506,7 @@ c.tabs.close_mouse_button_on_bar = "new-tab"
 ## Scaling factor for favicons in the tab bar. The tab size is unchanged,
 ## so big favicons also require extra `tabs.padding`.
 ## Type: Float
-c.tabs.favicons.scale = 1.0
+c.tabs.favicons.scale = 0.8
 
 ## When to show favicons in the tab bar. When switching this from never
 ## to always/pinned, note that favicons might not be loaded yet, thus
@@ -1573,11 +1572,7 @@ c.tabs.mousewheel_switching = True
 ## Position of new tabs opened from another tab. See
 ## `tabs.new_position.stacking` for controlling stacking behavior.
 ## Type: NewTabPosition
-## Valid values:
-##   - prev: Before the current tab.
-##   - next: After the current tab.
-##   - first: At the beginning.
-##   - last: At the end.
+## Valid values: prev: Before the current tab. next: After the current tab. first: At the beginning. last: At the end.
 c.tabs.new_position.related = "next"
 
 ## Stack related tabs on top of each other when opened consecutively.
@@ -1589,11 +1584,7 @@ c.tabs.new_position.stacking = True
 ## Position of new tabs which are not opened from another tab. See
 ## `tabs.new_position.stacking` for controlling stacking behavior.
 ## Type: NewTabPosition
-## Valid values:
-##   - prev: Before the current tab.
-##   - next: After the current tab.
-##   - first: At the beginning.
-##   - last: At the end.
+## Valid values: prev: Before the current tab. next: After the current tab. first: At the beginning. last: At the end.
 c.tabs.new_position.unrelated = "last"
 
 ## Padding (in pixels) around text for tabs.
@@ -1615,7 +1606,7 @@ c.tabs.pinned.shrink = True
 ##   - bottom
 ##   - left
 ##   - right
-c.tabs.position = "bottom"
+c.tabs.position = "top"
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1745,10 +1736,10 @@ c.url.open_base_url = True
 ## Type: Dict
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-    "g": "https://google.com/search?q={}",
-    "py": "https://docs.python.org/3/search.html?q={}",
-    "doi": "https://dx.doi.org/{}",
-    "arch": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "@g": "https://google.com/search?q={}",
+    "@p": "https://docs.python.org/3/search.html?q={}",
+    "@d": "https://dx.doi.org/{}",
+    "@a": "https://wiki.archlinux.org/title/Special:Search/{}",
 }
 
 ## Page(s) to open at the start.
@@ -1770,7 +1761,7 @@ c.url.yank_ignored_parameters = [
 ## Hide the window decoration.  This setting requires a restart on
 ## Wayland.
 ## Type: Bool
-c.window.hide_decoration = False
+c.window.hide_decoration = True  # False
 
 ## Format to use for the window title. The same placeholders like for
 ## `tabs.title.format` are defined.
