@@ -109,7 +109,7 @@ c.colors.hints.fg = f_black
 c.colors.hints.bg = "qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(252, 238, 184, 0.8), stop:1 rgba(208, 162, 21, 0.8))"
 
 ## Font color for the matched part of hints. ## Type: QtColor
-c.colors.hints.match.fg = f_purple
+c.colors.hints.match.fg = f_red
 
 ## Background color of the keyhint widget. ## Type: QssColor
 c.colors.keyhint.fg = f_white
@@ -142,11 +142,11 @@ c.colors.prompts.selected.bg = base900
 c.colors.prompts.selected.fg = f_white
 
 ## Background color of the statusbar in caret mode. ## Type: QssColor
-c.colors.statusbar.caret.fg = f_white
-c.colors.statusbar.caret.bg = f_purple_2
+c.colors.statusbar.caret.fg = f_green
+c.colors.statusbar.caret.bg = f_black
 
 ## Background color of the statusbar in caret mode with a selection. ## Type: QssColor
-c.colors.statusbar.caret.selection.fg = f_magenta
+c.colors.statusbar.caret.selection.fg = f_green
 c.colors.statusbar.caret.selection.bg = f_black
 
 ## Background color of the statusbar in command mode. ## Type: QssColor
@@ -155,22 +155,22 @@ c.colors.statusbar.command.bg = f_black
 
 ## Background color of the statusbar in insert mode. ## Type: QssColor
 c.colors.statusbar.insert.fg = f_cyan
-c.colors.statusbar.insert.bg = base900
+c.colors.statusbar.insert.bg = base850
 
 ## Background color of the statusbar. ## Type: QssColor
 c.colors.statusbar.normal.fg = f_yellow
 c.colors.statusbar.normal.bg = f_black
 
 ## Background color of the statusbar in passthrough mode. ## Type: QssColor
-c.colors.statusbar.passthrough.fg = f_green
+c.colors.statusbar.passthrough.fg = f_purple
 c.colors.statusbar.passthrough.bg = f_black
 
 ## Background color of the statusbar in private browsing mode. ## Type: QssColor
-c.colors.statusbar.private.fg = base850
+c.colors.statusbar.private.fg = base700
 c.colors.statusbar.private.bg = f_purple_2
 
 ## Background color of the statusbar in private browsing + command mode. ## Type: QssColor
-c.colors.statusbar.command.private.fg = base900
+c.colors.statusbar.command.private.fg = base800
 c.colors.statusbar.command.private.bg = f_purple
 
 ## Background color of the progress bar. ## Type: QssColor
@@ -192,13 +192,13 @@ c.colors.tabs.bar.bg = f_black
 c.colors.tabs.odd.fg = f_white
 c.colors.tabs.even.fg = f_white
 c.colors.tabs.odd.bg = base900
-c.colors.tabs.even.bg = base950
+c.colors.tabs.even.bg = base900
 
 ## Background color of selected even tabs. ## Type: QtColor
 c.colors.tabs.selected.even.fg = f_yellow
 c.colors.tabs.selected.odd.fg = f_yellow
-c.colors.tabs.selected.even.bg = f_black
-c.colors.tabs.selected.odd.bg = f_black
+c.colors.tabs.selected.even.bg = "#000000"
+c.colors.tabs.selected.odd.bg = "#000000"
 
 ## Color for the tab indicator on errors. ## Type: QtColor
 c.colors.tabs.indicator.error = f_red_2
