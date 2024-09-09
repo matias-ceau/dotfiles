@@ -737,7 +737,6 @@ c.downloads.remove_finished = 5000
 ## Type: ShellCommand TODO
 c.editor.command = [
     "alacritty",
-    "-T",
     "--class",
     "Alacritty,floating-term",
     "-T",
