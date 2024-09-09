@@ -38,7 +38,7 @@ c.auto_save.interval = 15000
 ## session which was last loaded. This behavior can be customized via the
 ## `session.default_name` setting.
 ## Type: Bool
-c.auto_save.session = False
+c.auto_save.session = True
 
 ## /!\ already defined
 ## Backend to use to display websites. qutebrowser supports two different
@@ -383,25 +383,15 @@ c.content.headers.referer = "same-domain"
 ## Type: FormatString
 c.content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}"
 
-## Enable hyperlink auditing (`<a ping>`).
-## Type: Bool
-c.content.hyperlink_auditing = False
+c.content.hyperlink_auditing = False  ## Enable hyperlink auditing (`<a ping>`).
 
-## Load images automatically in web pages.
-## Type: Bool
-c.content.images = True
+c.content.images = True  ## Load images automatically in web pages.
 
-## Show javascript alerts.
-## Type: Bool
-c.content.javascript.alert = True
-
-## Allow JavaScript to close tabs.
-## Type: Bool
-c.content.javascript.can_close_tabs = False
-
-## Allow JavaScript to open new tabs without user interaction.
-## Type: Bool
-c.content.javascript.can_open_tabs_automatically = False
+c.content.javascript.alert = True  ## Show javascript alerts.
+c.content.javascript.can_close_tabs = False  ## Allow JavaScript to close tabs.
+c.content.javascript.can_open_tabs_automatically = (
+    False  ## Allow JavaScript to open new tabs without user interaction.
+)
 
 ## Allow JavaScript to read from or write to the clipboard. With
 ## QtWebEngine, writing the clipboard as response to a user interaction
@@ -413,9 +403,7 @@ c.content.javascript.can_open_tabs_automatically = False
 ##   - access-paste: Allow accessing the clipboard and pasting clipboard content.
 c.content.javascript.clipboard = "none"
 
-## Enable JavaScript.
-## Type: Bool
-c.content.javascript.enabled = True
+c.content.javascript.enabled = True  ## Enable JavaScript.
 
 ## Enables the legacy touch event feature. This affects JS APIs such as:
 ## - ontouch* members on window, document, Element -
@@ -472,45 +460,29 @@ c.content.javascript.log_message.levels = {
 }
 
 ## Use the standard JavaScript modal dialog for `alert()` and
-## `confirm()`.
-## Type: Bool
-c.content.javascript.modal_dialog = False
+c.content.javascript.modal_dialog = False  ## `confirm()`.
 
-## Show javascript prompts.
-## Type: Bool
-c.content.javascript.prompt = True
+c.content.javascript.prompt = True  ## Show javascript prompts.
 
-## Allow locally loaded documents to access other local URLs.
-## Type: Bool
-c.content.local_content_can_access_file_urls = True
+c.content.local_content_can_access_file_urls = (
+    True  ## Allow locally loaded documents to access other local URLs.
+)
 
-## Allow locally loaded documents to access remote URLs.
-## Type: Bool
-c.content.local_content_can_access_remote_urls = False
+c.content.local_content_can_access_remote_urls = (
+    False  ## Allow locally loaded documents to access remote URLs.
+)
 
-## Enable support for HTML 5 local storage and Web SQL.
-## Type: Bool
-c.content.local_storage = True
+c.content.local_storage = True  ## Enable support for HTML 5 local storage and Web SQL.
 
-## Allow websites to record audio.
-## Type: BoolAsk
-## Valid values: true false ask
-c.content.media.audio_capture = "ask"
+c.content.media.audio_capture = "ask"  ## Allow websites to record audio.
 
-## Allow websites to record audio and video.
-## Type: BoolAsk
-## Valid values: true false ask
-c.content.media.audio_video_capture = "ask"
+c.content.media.audio_video_capture = "ask"  ## Allow websites to record audio and video. ## Type: BoolAsk ## Valid values: true false ask
 
-## Allow websites to record video.
-## Type: BoolAsk
-## Valid values: true false ask
-c.content.media.video_capture = "ask"
+c.content.media.video_capture = (
+    "ask"  ## Allow websites to record video. ## Type: BoolAsk
+)
 
-## Allow websites to lock your mouse pointer.
-## Type: BoolAsk
-## Valid values: true false ask
-c.content.mouse_lock = "ask"
+c.content.mouse_lock = "ask"  ## Allow websites to lock your mouse pointer.
 
 ## Automatically mute tabs. Note that if the `:tab-mute` command is used,
 ## the mute status for the affected tab is now controlled manually, and
@@ -518,14 +490,11 @@ c.content.mouse_lock = "ask"
 ## Type: Bool
 c.content.mute = False
 
-## Netrc-file for HTTP authentication. If unset, `~/.netrc` is used.
-## Type: File
-c.content.netrc_file = None
+c.content.netrc_file = None  ## Netrc-file for HTTP authentication. If unset, `~/.netrc` is used. ## Type: File
 
-## Allow websites to show notifications.
-## Type: BoolAsk
-## Valid values: true false ask
-c.content.notifications.enabled = "ask"
+c.content.notifications.enabled = (
+    "ask"  ## Allow websites to show notifications. ## Type: BoolAsk
+)
 
 ## What notification presenter to use for web notifications. Note that
 ## not all implementations support all features of notifications: - The
@@ -560,18 +529,9 @@ c.content.notifications.show_origin = True
 ## Type: Bool
 c.content.pdfjs = True  # False
 
-## Allow websites to request persistent storage quota via
-## `navigator.webkitPersistentStorage.requestQuota`.
-## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
-c.content.persistent_storage = "ask"
+c.content.persistent_storage = "ask"  ## Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`.
 
-## Enable plugins in Web pages.
-## Type: Bool
-c.content.plugins = False
+c.content.plugins = False  ## Enable plugins in Web pages.
 
 ## Request websites to minimize non-essentials animations and motion.
 ## This results in the `prefers-reduced-motion` CSS media query to
@@ -581,14 +541,11 @@ c.content.plugins = False
 ## Type: Bool
 c.content.prefers_reduced_motion = False
 
-## Draw the background color and images also when the page is printed.
-## Type: Bool
-c.content.print_element_backgrounds = True
+c.content.print_element_backgrounds = (
+    True  ## Draw the background color and images also when the page is printed.
+)
 
-## Open new windows in private browsing mode which does not record
-## visited pages.
-## Type: Bool
-c.content.private_browsing = False
+c.content.private_browsing = False  ## Open new windows in private browsing mode which does not record visited pages.
 
 ## Proxy to use. In addition to the listed values, you can use a
 ## `socks://...` or `http://...` URL. Note that with QtWebEngine, it will
@@ -601,23 +558,11 @@ c.content.private_browsing = False
 ##   - none: Don't use any proxy
 c.content.proxy = "system"
 
-## Send DNS requests over the configured proxy.
-## Type: Bool
-c.content.proxy_dns_requests = True
+c.content.proxy_dns_requests = True  ## Send DNS requests over the configured proxy.
 
-## Allow websites to register protocol handlers via
-## `navigator.registerProtocolHandler`.
-## Type: BoolAsk
-## Valid values:
-##   - true
-##   - false
-##   - ask
-c.content.register_protocol_handler = "ask"
+c.content.register_protocol_handler = "ask"  ## Allow websites to register protocol handlers via `navigator.registerProtocolHandler`. Type: BoolAsk
 
-## Enable quirks (such as faked user agent headers) needed to get
-## specific sites to work properly.
-## Type: Bool
-c.content.site_specific_quirks.enabled = True
+c.content.site_specific_quirks.enabled = True  ## Enable quirks (such as faked user agent headers) needed to get specific sites to work properly.
 
 ## Disable a list of named quirks.
 ## Type: FlagList
@@ -655,9 +600,7 @@ c.content.unknown_url_scheme_policy = "allow-from-user-interaction"
 ## Type: List of File, or File
 c.content.user_stylesheets = []
 
-## Enable WebGL.
-## Type: Bool
-c.content.webgl = True
+c.content.webgl = True  ## Enable WebGL.
 
 ## Which interfaces to expose via WebRTC.
 ## Type: String
@@ -680,19 +623,11 @@ c.content.xss_auditing = False
 # --------------------------------------------
 #                    DOWNLOADS
 # --------------------------------------------
-## Directory to save downloads to. If unset, a sensible OS-specific
-## default is used.
-## Type: Directory
-c.downloads.location.directory = "~/Downloads"
+c.downloads.location.directory = "~/Downloads"  ## Directory to save downloads to. If unset, a sensible OS-specific default is used.
 
-# Prompt the user for the download location. If set to false,
-## `downloads.location.directory` will be used.
-## Type: Bool
-c.downloads.location.prompt = True
+c.downloads.location.prompt = True  # Prompt the user for the download location. If set to false,`downloads.location.directory` will be used.
 
-## Remember the last used download directory.
-## Type: Bool
-c.downloads.location.remember = True
+c.downloads.location.remember = True  ## Remember the last used download directory.
 
 ## What to display in the download filename input.
 ## Type: String
@@ -708,12 +643,9 @@ c.downloads.location.suggestion = "filename"
 ## Type: String
 c.downloads.open_dispatcher = None
 
-## Where to show the downloaded files.
-## Type: VerticalPosition
-## Valid values:
-##   - top
-##   - bottom
-c.downloads.position = "top"
+c.downloads.position = (
+    "top"  ## Where to show the downloaded files. ## Valid values:  - top - bottom
+)
 
 ## Automatically abort insecure (HTTP) downloads originating from secure
 ## (HTTPS) pages. For per-domain settings, the relevant URL is the URL
@@ -722,10 +654,7 @@ c.downloads.position = "top"
 ## Type: Bool
 c.downloads.prevent_mixed_content = True
 
-## Duration (in milliseconds) to wait before removing finished downloads.
-## If set to -1, downloads are never removed.
-## Type: Int
-c.downloads.remove_finished = 5000
+c.downloads.remove_finished = 5000  ## Duration (in milliseconds) to wait before removing finished downloads. If set to -1, downloads are never removed.
 #
 
 ## Editor (and arguments) to use for the `edit-*` commands. The following
@@ -748,13 +677,9 @@ c.editor.command = [
     "normal {line}G{column0}l",
 ]
 
-## Encoding to use for the editor.
-## Type: Encoding
-c.editor.encoding = "utf-8"
+c.editor.encoding = "utf-8"  ## Encoding to use for the editor.
 
-## Delete the temporary file upon closing the editor.
-## Type: Bool
-c.editor.remove_file = True
+c.editor.remove_file = True  ## Delete the temporary file upon closing the editor.
 
 ## Command (and arguments) to use for selecting a single folder in forms.
 ## The command should write the selected folder path to the specified
@@ -809,7 +734,7 @@ c.fonts.completion.entry = "default_size default_family"
 ## Font used for the context menu. If set to null, the Qt default is
 ## used.
 ## Type: Font
-c.fonts.contextmenu = None
+c.fonts.contextmenu = "default_size default_family"
 ## Font used for the debugging console.
 ## Type: Font
 c.fonts.debug_console = "default_size default_family"
@@ -851,25 +776,25 @@ c.fonts.tabs.selected = "default_size default_family"
 c.fonts.tabs.unselected = "default_size default_family"
 ## Font used for tooltips. If set to null, the Qt default is used.
 ## Type: Font
-c.fonts.tooltip = None
+c.fonts.tooltip = "default_size default_family"
 ## Font family for cursive fonts.
 ## Type: FontFamily
-c.fonts.web.family.cursive = ""
+c.fonts.web.family.cursive = "Iosevka Nerd Font"
 ## Font family for fantasy fonts.
 ## Type: FontFamily
-c.fonts.web.family.fantasy = ""
+c.fonts.web.family.fantasy = "Iosevka Nerd Font"
 ## Font family for fixed fonts.
 ## Type: FontFamily
-c.fonts.web.family.fixed = ""
+c.fonts.web.family.fixed = "Iosevka Nerd Font"
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.sans_serif = ""
+c.fonts.web.family.sans_serif = "Iosevka Nerd Font"
 ## Font family for serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.serif = ""
+c.fonts.web.family.serif = "Iosevka Nerd Font"
 ## Font family for standard fonts.
 ## Type: FontFamily
-c.fonts.web.family.standard = ""
+c.fonts.web.family.standard = "Iosevka Nerd Font"
 ## Default font size (in pixels) for regular text.
 ## Type: Int
 c.fonts.web.size.default = 16
@@ -902,16 +827,12 @@ c.hints.auto_follow = "unique-match"
 ## Type: Int
 c.hints.auto_follow_timeout = 0
 
-## CSS border value for hints.
-## Type: String
-c.hints.border = "1px solid #d0a215"
+c.hints.border = "1px solid #d0a215"  ## CSS border value for hints.
 
-## Characters used for hint strings.
-## Type: UniqueCharString
+## Characters used for hint strings. ## Type: UniqueCharString
 c.hints.chars = "asdfghjkl"
 
-## Dictionary file to be used by the word hints.
-## Type: File
+## Dictionary file to be used by the word hints. ## Type: File
 c.hints.dictionary = "/usr/share/dict/words"
 
 ## Which implementation to use to find elements to hint.
@@ -925,13 +846,9 @@ c.hints.find_implementation = "python"
 ## Type: Bool
 c.hints.hide_unmatched_rapid_hints = True
 
-## Leave hint mode when starting a new page load.
-## Type: Bool
-c.hints.leave_on_load = False
+c.hints.leave_on_load = False  ## Leave hint mode when starting a new page load.
 
-## Minimum number of characters used for hint strings.
-## Type: Int
-c.hints.min_chars = 1
+c.hints.min_chars = 1  ## Minimum number of characters used for hint strings.
 
 ## Mode to use for hints.
 ## Type: String
@@ -970,10 +887,7 @@ c.hints.prev_regexes = [
 ## Type: Int
 c.hints.radius = 6
 
-## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for
-## number hints.
-## Type: Bool
-c.hints.scatter = True
+c.hints.scatter = True  ## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for number hints.
 
 ## CSS selectors used to determine which elements on a page should have
 ## hints.
@@ -1034,9 +948,7 @@ c.hints.selectors = {
     ],
 }
 
-## Make characters in hint strings uppercase.
-## Type: Bool
-c.hints.uppercase = False
+c.hints.uppercase = False  ## Make characters in hint strings uppercase.
 #
 
 ## Maximum time (in minutes) between two history items for them to be
@@ -1049,9 +961,7 @@ c.history_gap_interval = 30
 # --------------------------------------------
 #                    INPUT
 # --------------------------------------------
-## Allow Escape to quit the crash reporter.
-## Type: Bool
-c.input.escape_quits_reporter = True
+c.input.escape_quits_reporter = True  ## Allow Escape to quit the crash reporter.
 
 ## Which unbound keys to forward to the webview in normal mode.
 ## Type: String
@@ -1061,61 +971,39 @@ c.input.escape_quits_reporter = True
 ##   - none: Don't forward any keys.
 c.input.forward_unbound_keys = "auto"
 
-## Enter insert mode if an editable element is clicked.
-## Type: Bool
-c.input.insert_mode.auto_enter = True
+c.input.insert_mode.auto_enter = (
+    True  ## Enter insert mode if an editable element is clicked.
+)
 
-## Leave insert mode if a non-editable element is clicked.
-## Type: Bool
-c.input.insert_mode.auto_leave = True
+c.input.insert_mode.auto_leave = (
+    True  ## Leave insert mode if a non-editable element is clicked.
+)
 
-## Automatically enter insert mode if an editable element is focused
-## after loading the page.
-## Type: Bool
-c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = False  ## Automatically enter insert mode if an editable element is focused after loading the page.
 
-## Leave insert mode when starting a new page load. Patterns may be
-## unreliable on this setting, and they may match the url you are
-## navigating to, or the URL you are navigating from.
-## Type: Bool
-c.input.insert_mode.leave_on_load = True
+c.input.insert_mode.leave_on_load = True  ## Leave insert mode when starting a new page load. Patterns may be unreliable on this setting, and they may match the url you are navigating to, or the URL you are navigating from.
 
-## Switch to insert mode when clicking flash and other plugins.
-## Type: Bool
-c.input.insert_mode.plugins = False
+c.input.insert_mode.plugins = (
+    False  ## Switch to insert mode when clicking flash and other plugins.
+)
 
-## Include hyperlinks in the keyboard focus chain when tabbing.
-## Type: Bool
-c.input.links_included_in_focus_chain = True
+c.input.links_included_in_focus_chain = (
+    True  ## Include hyperlinks in the keyboard focus chain when tabbing.
+)
 
-## Interpret number prefixes as counts for bindings. This enables for vi-
-## like bindings that can be prefixed with a number to indicate a count.
-## Disabling it allows for emacs-like bindings where number keys are
-## passed through (according to `input.forward_unbound_keys`) instead.
-## Type: Bool
-c.input.match_counts = True
+c.input.match_counts = True  ## Interpret number prefixes as counts for bindings. This enables for vi- like bindings that can be prefixed with a number to indicate a count.
 
-## Whether the underlying Chromium should handle media keys. On Linux,
-## disabling this also disables Chromium's MPRIS integration.
-## Type: Bool
-c.input.media_keys = True
+c.input.media_keys = True  ## Whether the underlying Chromium should handle media keys. On Linux, disabling this also disables Chromium's MPRIS integration.
 
-## Mode to change to when focusing on a tab/URL changes.
-## Type: String
-## Valid values:
-##   - normal
-##   - insert
-##   - passthrough
-c.input.mode_override = None
+c.input.mode_override = None  ## Mode to change to when focusing on a tab/URL changes. ## Valid values: normal insert passthrough
 
-## Enable back and forward buttons on the mouse.
-## Type: Bool
-c.input.mouse.back_forward_buttons = True
+c.input.mouse.back_forward_buttons = (
+    True  ## Enable back and forward buttons on the mouse.
+)
 
-## Enable Opera-like mouse rocker gestures. This disables the context
-## menu.
-## Type: Bool
-c.input.mouse.rocker_gestures = False
+c.input.mouse.rocker_gestures = (
+    False  ## Enable Opera-like mouse rocker gestures. This disables the context menu.
+)
 
 ## Timeout (in milliseconds) for partially typed key bindings. If the
 ## current input forms only partial matches, the keystring will be
@@ -1134,48 +1022,23 @@ c.input.partial_timeout = 0
 c.input.spatial_navigation = False
 #
 
-## Keychains that shouldn't be shown in the keyhint dialog. Globs are
-## supported, so `;*` will blacklist all keychains starting with `;`. Use
-## `*` to disable keyhints.
-## Type: List of String
-c.keyhint.blacklist = []
+c.keyhint.blacklist = (
+    []
+)  ## Keychains that shouldn't be shown in the keyhint dialog. Globs are supported, so `;*` will blacklist all keychains starting with `;`. Use `*` to disable keyhints.
 
-## Time (in milliseconds) from pressing a key to seeing the keyhint
-## dialog.
-## Type: Int
-c.keyhint.delay = 300
+c.keyhint.delay = (
+    300  ## Time (in milliseconds) from pressing a key to seeing the keyhint dialog.
+)
 
-## Rounding radius (in pixels) for the edges of the keyhint dialog.
-## Type: Int
-c.keyhint.radius = 6
+c.keyhint.radius = (
+    6  ## Rounding radius (in pixels) for the edges of the keyhint dialog.
+)
 
-## Level for console (stdout/stderr) logs. Ignored if the `--loglevel` or
-## `--debug` CLI flags are used.
-## Type: LogLevel
-## Valid values:
-##   - vdebug
-##   - debug
-##   - info
-##   - warning
-##   - error
-##   - critical
-c.logging.level.console = "info"
+c.logging.level.console = "info"  ## Level for console (stdout/stderr) logs. Ignored if the `--loglevel` or `--debug` CLI flags are used. ## Valid values: vdebug debug info warning error critical
 
-## Level for in-memory logs.
-## Type: LogLevel
-## Valid values:
-##   - vdebug
-##   - debug
-##   - info
-##   - warning
-##   - error
-##   - critical
-c.logging.level.ram = "debug"
+c.logging.level.ram = "debug"  ## Level for in-memory logs. ## Valid values: vdebug debug info warning error critical
 
-## Duration (in milliseconds) to show messages in the statusbar for. Set
-## to 0 to never clear messages.
-## Type: Int
-c.messages.timeout = 3000
+c.messages.timeout = 3000  ## Duration (in milliseconds) to show messages in the statusbar for. Set to 0 to never clear messages.
 
 ## How to open links in an existing instance if a new one is launched.
 ## This happens when e.g. opening a link from a terminal. See
@@ -1201,13 +1064,9 @@ c.new_instance_open_target = "window"  # tab
 ##   - last-visible: Open new tabs in the most recently visible window.
 c.new_instance_open_target_window = "last-focused"
 
-## Show a filebrowser in download prompts.
-## Type: Bool
-c.prompt.filebrowser = True
+c.prompt.filebrowser = True  ## Show a filebrowser in download prompts.
 
-## Rounding radius (in pixels) for the edges of prompts.
-## Type: Int
-c.prompt.radius = 8
+c.prompt.radius = 8  ## Rounding radius (in pixels) for the edges of prompts.
 
 # --------------------------------------------
 #                 QT
@@ -1362,29 +1221,15 @@ c.scrolling.smooth = False
 ##   - smart: Search case-sensitively if there are capital characters.
 c.search.ignore_case = "smart"
 
-## Find text on a page incrementally, renewing the search for each typed
-## character.
-## Type: Bool
-c.search.incremental = True
+c.search.incremental = True  ## Find text on a page incrementally, renewing the search for each typed character.
 
-## Wrap around at the top and bottom of the page when advancing through
-## text matches using `:search-next` and `:search-prev`.
-## Type: Bool
-c.search.wrap = True
+c.search.wrap = True  ## Wrap around at the top and bottom of the page when advancing through ## text matches using `:search-next` and `:search-prev`.
 
-## Display messages when advancing through text matches at the top and
-## bottom of the page, e.g. `Search hit TOP`.
-## Type: Bool
-c.search.wrap_messages = True
+c.search.wrap_messages = True  ## Display messages when advancing through text matches at the top and bottom of the page, e.g. `Search hit TOP`.
 
-## Name of the session to save by default. If this is set to null, the
-## session which was last loaded is saved.
-## Type: SessionName
-c.session.default_name = None
+c.session.default_name = None  ## Name of the session to save by default. If this is set to null, the session which was last loaded is saved. ## Type: SessionName
 
-## Load a restored tab as soon as it takes focus.
-## Type: Bool
-c.session.lazy_restore = False
+c.session.lazy_restore = False  ## Load a restored tab as soon as it takes focus.
 
 ## Languages to use for spell checking. You can check for available
 ## languages and install dictionaries using scripts/dictcli.py. Run the
@@ -1440,12 +1285,9 @@ c.spellcheck.languages = ["en-US", "en-GB", "fr-FR"]
 ## Type: Padding
 c.statusbar.padding = {"top": 1, "bottom": 1, "left": 0, "right": 0}
 
-## Position of the status bar.
-## Type: VerticalPosition
-## Valid values:
-##   - top
-##   - bottom
-c.statusbar.position = "bottom"
+c.statusbar.position = (
+    "bottom"  ## Position of the status bar. ## Valid values:  - top  - bottom
+)
 
 ## When to show the statusbar.
 ## Type: String
@@ -1481,17 +1323,9 @@ c.statusbar.widgets = [
 ##--------------------------------------------
 ##                  TABS
 ##--------------------------------------------
-## Open new tabs (middleclick/ctrl+click) in the background.
-## Type: Bool
-c.tabs.background = True
+c.tabs.background = True  ## Open new tabs (middleclick/ctrl+click) in the background.
 
-## Mouse button with which to close tabs.
-## Type: String
-## Valid values:
-##   - right: Close tabs on right-click.
-##   - middle: Close tabs on middle-click.
-##   - none: Don't close tabs using the mouse.
-c.tabs.close_mouse_button = "middle"
+c.tabs.close_mouse_button = "middle"  ## Mouse button with which to close tabs. ## Valid values: ##   - right: Close tabs on right-click. ##   - middle: Close tabs on middle-click. ##   - none: Don't close tabs using the mouse.
 
 ## How to behave when the close mouse button is pressed on the tab bar.
 ## Type: String
@@ -1502,32 +1336,24 @@ c.tabs.close_mouse_button = "middle"
 ##   - ignore: Don't do anything.
 c.tabs.close_mouse_button_on_bar = "new-tab"
 
-## Scaling factor for favicons in the tab bar. The tab size is unchanged,
-## so big favicons also require extra `tabs.padding`.
-## Type: Float
-c.tabs.favicons.scale = 0.8
+c.tabs.favicons.scale = 0.8  ## Scaling factor for favicons in the tab bar. The tab size is unchanged, so big favicons also require extra `tabs.padding`.
 
-## When to show favicons in the tab bar. When switching this from never
-## to always/pinned, note that favicons might not be loaded yet, thus
-## tabs might require a reload to display them.
-## Type: String
-## Valid values:
-##   - always: Always show favicons.
-##   - never: Always hide favicons.
-##   - pinned: Show favicons only on pinned tabs.
-c.tabs.favicons.show = "always"
+c.tabs.favicons.show = "always"  ## Valid values: ##   - always: Always show favicons. ##   - never: Always hide favicons. ##   - pinned: Show favicons only on pinned tabs.
 
-## Maximum stack size to remember for tab switches (-1 for no maximum).
-## Type: Int
-c.tabs.focus_stack_size = 10
+c.tabs.focus_stack_size = (
+    10  ## Maximum stack size to remember for tab switches (-1 for no maximum).
+)
 
-## Padding (in pixels) for tab indicators.
-## Type: Padding
-c.tabs.indicator.padding = {"top": 2, "bottom": 2, "left": 0, "right": 4}
+c.tabs.indicator.padding = {
+    "top": 2,
+    "bottom": 2,
+    "left": 0,
+    "right": 4,
+}  ## Padding (in pixels) for tab indicators.
 
-## Width (in pixels) of the progress indicator (0 to disable).
-## Type: Int
-c.tabs.indicator.width = 3
+c.tabs.indicator.width = (
+    3  ## Width (in pixels) of the progress indicator (0 to disable).
+)
 
 ## How to behave when the last tab is closed. If the
 ## `tabs.tabs_are_windows` setting is set, this is ignored and the
@@ -1564,9 +1390,7 @@ c.tabs.min_width = -1
 ##   - normal: Always revert to normal mode.
 c.tabs.mode_on_change = "normal"
 
-## Switch between tabs using the mouse wheel.
-## Type: Bool
-c.tabs.mousewheel_switching = True
+c.tabs.mousewheel_switching = True  ## Switch between tabs using the mouse wheel.
 
 ## Position of new tabs opened from another tab. See
 ## `tabs.new_position.stacking` for controlling stacking behavior.
@@ -1586,26 +1410,18 @@ c.tabs.new_position.stacking = True
 ## Valid values: prev: Before the current tab. next: After the current tab. first: At the beginning. last: At the end.
 c.tabs.new_position.unrelated = "last"
 
-## Padding (in pixels) around text for tabs.
-## Type: Padding
-c.tabs.padding = {"top": 0, "bottom": 0, "left": 5, "right": 5}
+c.tabs.padding = {
+    "top": 0,
+    "bottom": 0,
+    "left": 5,
+    "right": 5,
+}  ## Padding (in pixels) around text for tabs.
 
-## Force pinned tabs to stay at fixed URL.
-## Type: Bool
-c.tabs.pinned.frozen = True
+c.tabs.pinned.frozen = True  ## Force pinned tabs to stay at fixed URL.
 
-## Shrink pinned tabs down to their contents.
-## Type: Bool
-c.tabs.pinned.shrink = True
+c.tabs.pinned.shrink = True  ## Shrink pinned tabs down to their contents.
 
-## Position of the tab bar.
-## Type: Position
-## Valid values:
-##   - top
-##   - bottom
-##   - left
-##   - right
-c.tabs.position = "top"
+c.tabs.position = "top"  ## Position of the tab bar. ## Valid values: ##   - top ##   - bottom ##   - left ##   - right
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1624,24 +1440,15 @@ c.tabs.select_on_remove = "next"
 ##   - switching: Show the tab bar when switching tabs.
 c.tabs.show = "always"
 
-## Duration (in milliseconds) to show the tab bar before hiding it when
-## tabs.show is set to 'switching'.
-## Type: Int
-c.tabs.show_switching_delay = 800
+c.tabs.show_switching_delay = 800  ## Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'.
 
-## Open a new window for every tab.
-## Type: Bool
-c.tabs.tabs_are_windows = False
+c.tabs.tabs_are_windows = False  ## Open a new window for every tab.
 
-## Alignment of the text inside of tabs.
-## Type: TextAlignment
-## Valid values: left right center
-c.tabs.title.alignment = "left"
+c.tabs.title.alignment = (
+    "left"  ## Alignment of the text inside of tabs. Valid values: left right center
+)
 
-## Position of ellipsis in truncated title of tabs.
-## Type: ElidePosition
-## Valid values: left right middle none
-c.tabs.title.elide = "right"
+c.tabs.title.elide = "right"  ## Position of ellipsis in truncated title of tabs. ## Valid values: left right middle none
 
 ## Format to use for the tab title. The following placeholders are
 ## defined:  * `{perc}`: Percentage as a string like `[10%]`. *
@@ -1664,24 +1471,15 @@ c.tabs.title.format = "{private}{audio}{index}: {current_title}"
 ## Type: FormatString
 c.tabs.title.format_pinned = "{index}"
 
-## Show tooltips on tabs. Note this setting only affects windows opened
-## after it has been set.
-## Type: Bool
-c.tabs.tooltips = True
+c.tabs.tooltips = True  ## Show tooltips on tabs. Note this setting only affects windows opened# after it has been set.
 
-## Number of closed tabs (per window) and closed windows to remember for
-## :undo (-1 for no maximum).
-## Type: Int
-c.tabs.undo_stack_size = -1
+c.tabs.undo_stack_size = (
+    -1
+)  ## Number of closed tabs (per window) and closed windows to remember for :undo (-1 for no maximum).
 
-## Width (in pixels or as percentage of the window) of the tab bar if
-## it's vertical.
-## Type: PercOrInt
-c.tabs.width = "15%"
+c.tabs.width = "15%"  ## Width (in pixels or as percentage of the window) of the tab bar if it's vertical. ## Type: PercOrInt
 
-## Wrap when changing tabs.
-## Type: Bool
-c.tabs.wrap = True
+c.tabs.wrap = True  ## Wrap when changing tabs.
 #
 
 ## What search to start when something else than a URL is entered.
@@ -1735,10 +1533,10 @@ c.url.open_base_url = True
 ## Type: Dict
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-    "@g": "https://google.com/search?q={}",
-    "@p": "https://docs.python.org/3/search.html?q={}",
-    "@d": "https://dx.doi.org/{}",
-    "@a": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "=g": "https://google.com/search?q={}",
+    "=p": "https://docs.python.org/3/search.html?q={}",
+    "=d": "https://dx.doi.org/{}",
+    "=a": "https://wiki.archlinux.org/title/Special:Search/{}",
 }
 
 ## Page(s) to open at the start.
@@ -1776,9 +1574,7 @@ c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
 ## Type: Bool
 c.window.transparent = True
 
-## Default zoom level.
-## Type: Perc
-c.zoom.default = "100%"
+c.zoom.default = "100%"  ## Default zoom level.
 
 ## Available zoom levels.
 ## Type: List of Perc
@@ -1801,10 +1597,10 @@ c.zoom.levels = [
     "500%",
 ]
 
-## Number of zoom increments to divide the mouse wheel movements to.
-## Type: Int
-c.zoom.mouse_divider = 512
+c.zoom.mouse_divider = (
+    512  ## Number of zoom increments to divide the mouse wheel movements to.
+)
 
-## Apply the zoom factor on a frame only to the text or to all content.
-## Type: Bool
-c.zoom.text_only = False
+c.zoom.text_only = (
+    False  ## Apply the zoom factor on a frame only to the text or to all content.
+)
