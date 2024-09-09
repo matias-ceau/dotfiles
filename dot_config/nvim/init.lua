@@ -128,7 +128,7 @@ vim.opt.hlsearch = true -- highlight on search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
 
 -- Remove this standard mapping for mini surround to work (cl works similarly)
-vim.keymap.set({ "n", "x" }, "s", "<Nop>")
+-- vim.keymap.set({ "n", "x" }, "s", "<Nop>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -157,8 +157,8 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-vim.keymap.set("n", "<localleader>cb", ":ColorizerAttachToBuffer<CR>", { desc = "[C]olorizer attach to [B]uffer" })
-vim.keymap.set("n", "<localleader>cc", ":ColorizerToggle<CR>", { desc = "[c]olorizer toggle" })
+vim.keymap.set("n", "<localleader>cb", "<cmd>ColorizerAttachToBuffer<CR>", { desc = "[C]olorizer attach to [B]uffer" })
+vim.keymap.set("n", "<localleader>cc", "<cmd>ColorizerToggle<CR>", { desc = "[c]olorizer toggle" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -225,40 +225,39 @@ require("lazy").setup({
 
 	{
 		"folke/which-key.nvim",
-		event = "VimEnter",
+		event = "VeryLazy",
 		opts = {},
 		keys = {
 			{
-				"<localleader>kl",
+				"<localleader>wk",
 				function()
 					require("which-key").show({ global = false })
 				end,
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 			{
-				"<localleader>kg",
+				"<localleader>wK",
 				function()
 					require("which-key").show({ global = true })
 				end,
 				desc = "Global Keymaps (which-key)",
 			},
 		},
-		spec = {
-			{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
-			{ "<leader>d", group = "[D]ocument" },
-			{ "<leader>r", group = "[R]ename" },
-			{ "<leader>s", group = "[S]earch" },
-			{ "<leader>w", group = "[W]orkspace" },
-			{ "<leader>t", group = "[T]oggle" },
-			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
-		},
+		-- spec = {
+		-- 	{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
+		-- 	{ "<leader>d", group = "[D]ocument" },
+		-- 	{ "<leader>r", group = "[R]ename" },
+		-- 	{ "<leader>s", group = "[S]earch" },
+		-- 	{ "<leader>w", group = "[W]orkspace" },
+		-- 	{ "<leader>t", group = "[T]oggle" },
+		-- 	{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+		-- },
 	},
 
 	-- NOTE: Plugins can specify dependencies.
 	--
 	-- The dependencies are proper plugin specifications as well - anything
 	-- you do for a plugin at the top level, you can do for a dependency.
-	--
 	-- Use the `dependencies` key to specify the dependencies of a particular plugin
 
 	{ -- Fuzzy Finder (files, lsp, etc)
@@ -336,21 +335,21 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "[F]iles" })
 			vim.keymap.set("n", "<leader><leader>", builtin.builtin, { desc = "Telescope builtins" })
 			vim.keymap.set("n", "<leader>w", builtin.grep_string, { desc = "Current [W]ord" })
-			vim.keymap.set("n", "<leader>gb", builtin.live_grep, { desc = "[G]rep in current [B]uffer" })
+			-- vim.keymap.set("n", "<leader>gb", builtin.live_grep, { desc = "[G]rep in current [B]uffer" })
 			vim.keymap.set("n", "<leader>D", builtin.diagnostics, { desc = "[D]iagnostics" })
-			vim.keymap.set("n", "<leader>a", builtin.resume, { desc = "[A]gain" })
-			vim.keymap.set("n", "<leader>.", builtin.oldfiles, { desc = 'Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<leader>c", builtin.commands, { desc = "[C]ommands" })
+			vim.keymap.set("n", "<leader>.", builtin.resume, { desc = "Repeat ([.] repeat)" })
+			vim.keymap.set("n", "<leader>H", builtin.oldfiles, { desc = "Recent Files ([H]istory)" })
+			vim.keymap.set("n", "<leader>C", builtin.commands, { desc = "[C]ommands" })
 			vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "[R]egisters" })
-			vim.keymap.set("n", "<leader>m", builtin.man_pages, { desc = "[M]an" })
+			vim.keymap.set("n", "<leader>M", builtin.man_pages, { desc = "[M]an" })
+			vim.keymap.set("n", "<leader>`", builtin.marks, { desc = "Marks ([`])" })
 			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "[B]uffers" })
-			vim.keymap.set("n", "<leader>Gc", builtin.git_commits, { desc = "[G]it [c]ommits" })
+			vim.keymap.set("n", "<leader>Gc", builtin.git_commits, { desc = "[G]it [c]ommits" }) -- TODO: wk group
 			vim.keymap.set("n", "<leader>Gs", builtin.git_status, { desc = "[G]it [s]tatus" })
-			vim.keymap.set("n", "<leader>ts", builtin.git_status, { desc = "[G]it [s]tatus" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 
-			-- Slightly advanced example of overriding default behavior and theme
-			vim.keymap.set("n", "<leader>/", function()
+			-- Slightly advanced example of overriding default behavior and theme TODO: add wk group
+			vim.keymap.set("n", "<leader>//", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
@@ -360,17 +359,17 @@ require("lazy").setup({
 
 			-- It's also possible to pass additional configuration options.
 			--  See `:help telescope.builtin.live_grep()` for information about particular keys
-			vim.keymap.set("n", "<leader>gd", function()
+			vim.keymap.set("n", "<leader>/d", function()
 				builtin.live_grep({
 					grep_open_files = false,
 					prompt_title = "Live [g]rep in buffer [d]ir",
 				})
-			end, { desc = "Search [?] in Open Files" })
+			end, { desc = "Search [/] in buffer [d]ir" })
 
-			-- Shortcut for searching your Neovim configuration files
-			vim.keymap.set("n", "<leader>n", function()
+			-- Shortcut for searching your Neovim configuration files TODO: add wh k
+			vim.keymap.set("n", "<leader>cn", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
-			end, { desc = "Search [N]eovim files" })
+			end, { desc = "[c]onfig [n]eovim files" })
 		end,
 	},
 
@@ -458,29 +457,29 @@ require("lazy").setup({
 					-- Jump to the type of the word under your cursor.
 					--  Useful when you're not sure what type a variable is and you want to see
 					--  the definition of its *type*, not where it was *defined*.
-					map("<localleader>td", require("telescope.builtin").lsp_type_definitions, "[T]ype [D]efinition")
+					map("<localleader>Lt", require("telescope.builtin").lsp_type_definitions, "[t]ype Definition")
 
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
-					map("<localleader>ls", require("telescope.builtin").lsp_document_symbols, "[d]ocument [s]ymbols")
+					map("<localleader>Ls", require("telescope.builtin").lsp_document_symbols, "document [s]ymbols")
 					-- was leader ds
 
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
-						"<localleader>ws",
+						"<localleader>LS",
 						-- was leader ws
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"[w]orkspace [s]ymbols"
+						"workspace [S]ymbols"
 					)
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
-					map("<localleader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+					map("<localleader>Lr", vim.lsp.buf.rename, "[r]ename")
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
-					map("<localleader>la", vim.lsp.buf.code_action, "Code [a]ction", { "n", "x" })
+					map("<localleader>La", vim.lsp.buf.code_action, "Code [a]ction", { "n", "x" })
 
 					-- Opens a popup that displays documentation about the word under your cursor
 					--  See `:help K` for why this keymap.
@@ -525,9 +524,9 @@ require("lazy").setup({
 					--
 					-- This may be unwanted, since they displace some of your code
 					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-						map("<localleader>th", function()
+						map("<localleader>Lh", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-						end, "[t]oggle Inlay [h]ints")
+						end, "LSP: toggle Inlay [h]ints")
 					end
 				end,
 			})
@@ -808,12 +807,12 @@ require("lazy").setup({
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 				TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 				colors = {
-					error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-					warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
-					info = { "DiagnosticInfo", "#2563EB" },
-					hint = { "DiagnosticHint", "#10B981" },
-					default = { "Identifier", "#7C3AED" },
-					test = { "Identifier", "#FF00FF" },
+					error = { "DiagnosticError", "ErrorMsg", "#d14d41" },
+					warning = { "DiagnosticWarn", "WarningMsg", "#d0a215" },
+					info = { "DiagnosticInfo", "#205ea6" },
+					hint = { "DiagnosticHint", "#3aa99f" },
+					default = { "Identifier", "#5e409d" },
+					test = { "Identifier", "#a02f6f" },
 				},
 			},
 		},
@@ -900,7 +899,6 @@ require("lazy").setup({
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	{ import = "custom.plugins" },
-}, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
