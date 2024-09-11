@@ -9,10 +9,14 @@ return {
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
 	},
+	opts = {
+	filesystem = {
+		hijack_netrw_behavior = "open_default",
+	},
+},
 	-- cmd = 'Neotree',
-	-- keys = { { "<leader>T", ":Neotree toggle<CR>", desc = "NeoTree reveal", silent = true }, },
 	config = function()
-		vim.keymap.set("n", "-", function()
+		vim.keymap.set({"n","i"}, "<M-e>", function()
 			local reveal_file = vim.fn.expand("%:p")
 			if reveal_file == "" then
 				reveal_file = vim.fn.getcwd()
@@ -30,7 +34,8 @@ return {
 				position = "left", -- OPTIONAL, this is the default value
 				reveal_file = reveal_file, -- path to file or folder to reveal
 				reveal_force_cwd = true, -- change cwd without asking if needed
+				toggle = true,
 			})
-		end, { desc = "Open neo-tree at current file or working directory" })
+		end, { desc = "Toggle neo-tree at current file or working directory" })
 	end,
 }

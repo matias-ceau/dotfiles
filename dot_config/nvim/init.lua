@@ -1,109 +1,10 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
-========         `"")----------------(""`   ___________      ========
-========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-========       /:::========|  |==hjkl==:::\  \ required \    ========
-========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-========                                                     ========
-=====================================================================
-=====================================================================
-
-What is Kickstart?
-
-  Kickstart.nvim is *not* a distribution.
-
-  Kskstart.nvim is a starting point for your own configuration.
-    The goal is that you can read every line of code, top-to-bottom, understand
-    what your configuration is doing, and modify it to suit your needs.
-
-    Once you've done that, you can start exploring, configuring and tinkering to
-    make Neovim your own! That might mean leaving Kickstart just the way it is for a while
-    or immediately breaking it into modular pieces. It's up to you!
-
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
-      - https://learnxinyminutes.com/docs/lua/
-
-    After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
---]]
-
--- ==========================================
--- CLAUDE'S HELP WITH ENSURING XDG COMPLIANCY
--- ==========================================
-
--- Use XDG Base Directory Specification
-local home = os.getenv("HOME")
-local xdg_config_home = os.getenv("XDG_CONFIG_HOME") or home .. "/.config"
-local xdg_data_home = os.getenv("XDG_DATA_HOME") or home .. "/.local/share"
-local xdg_state_home = os.getenv("XDG_STATE_HOME") or home .. "/.local/state"
-local xdg_cache_home = os.getenv("XDG_CACHE_HOME") or home .. "/.cache"
-
--- Set Neovim-specific directories
-local nvim_config = xdg_config_home .. "/nvim"
-local nvim_data = xdg_data_home .. "/nvim"
-local nvim_state = xdg_state_home .. "/nvim"
-local nvim_cache = xdg_cache_home .. "/nvim"
-
--- Ensure directories exist
-local function ensure_directory(path)
-	vim.fn.mkdir(path, "p")
-end
-
-ensure_directory(nvim_data)
-ensure_directory(nvim_state)
-ensure_directory(nvim_cache)
-
--- Set Neovim options
-vim.opt.runtimepath:remove(home .. "/.config/nvim")
-vim.opt.runtimepath:remove(home .. "/.local/share/nvim/site")
-vim.opt.runtimepath:prepend(nvim_config)
-vim.opt.runtimepath:append(nvim_data .. "/site")
-
-vim.opt.packpath:remove(home .. "/.local/share/nvim/site")
-vim.opt.packpath:prepend(nvim_data .. "/site")
-
--- Set data/state/cache directories
-vim.opt.viewdir = nvim_data .. "/view"
-vim.opt.backupdir = nvim_state .. "/backup"
-vim.opt.directory = nvim_state .. "/swap"
-vim.opt.undodir = nvim_state .. "/undo"
-
--- Set shada file location (Neovim's equivalent of viminfo)
-vim.opt.shada = "!,'1000,<50,s10,h"
-vim.opt.shadafile = nvim_state .. "/shada/main.shada"
-
--- Spellfile settings
-vim.opt.spellfile = nvim_data .. "/spell/en.utf-8.add"
-
--- Set spelllang to include both English and French
-vim.opt.spelllang = { "en_us", "en_uk", "fr", "med" }
-
--- ==========================================
---          END OF CLAUDE CONFIG
--- ==========================================
-
--- See `:help mapleader`
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- See `:help mapleader` Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
+vim.opt.shada = "!,'1000,<50,s10,h"
 vim.opt.number = true
 vim.opt.relativenumber = false -- true
 vim.opt.mouse = "a"
@@ -122,13 +23,11 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split" -- or "nosplit"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+vim.opt.hlsearch = true -- highlight on search
 
 -- [[ Basic Keymaps ]] See `:help vim.keymap.set()`
-vim.opt.hlsearch = true -- highlight on search
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- clear highlight on <Esc>
-
--- Remove this standard mapping for mini surround to work (cl works similarly)
--- vim.keymap.set({ "n", "x" }, "s", "<Nop>")
+vim.keymap.set({ "n", "i" }, "<F2>", "<cmd>update<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -153,10 +52,15 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set({ "t", "i" }, "<M-h>", "<C-\\><C-n><C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set({ "t", "i" }, "<M-j>", "<C-\\><C-n><C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set({ "t", "i" }, "<M-k>", "<C-\\><C-n><C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set({ "t", "i" }, "<M-l>", "<C-\\><C-n><C-w><C-k>", { desc = "Move focus to the upper window" })
+
 vim.keymap.set("n", "<localleader>cb", "<cmd>ColorizerAttachToBuffer<CR>", { desc = "[C]olorizer attach to [B]uffer" })
 vim.keymap.set("n", "<localleader>cc", "<cmd>ColorizerToggle<CR>", { desc = "[c]olorizer toggle" })
 
@@ -832,6 +736,22 @@ require("lazy").setup({
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
+			require("mini.move").setup({
+				-- Module mappings. Use `''` (empty string) to disable one.
+				mappings = {
+					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+					left = "<M>-<left>",
+					right = "<M>-<right>",
+					down = "<M>-<down>",
+					up = "<M>-<up>",
+
+					-- Move current line in Normal mode
+					line_left = "<M>-<left>",
+					line_right = "<M>-<right>",
+					line_down = "<M>-<down>",
+					line_up = "<M>-<up>",
+				},
+			})
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
@@ -892,7 +812,7 @@ require("lazy").setup({
 	require("kickstart.plugins.debug"),
 	require("kickstart.plugins.indent_line"),
 	require("kickstart.plugins.lint"),
-	require("kickstart.plugins.autopairs"),
+	-- require("kickstart.plugins.autopairs"),
 	require("kickstart.plugins.neo-tree"),
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -929,6 +849,49 @@ require("lazy").setup({
 		},
 	},
 })
+
+--[[
+
+=====================================================================
+==================== READ THIS BEFORE CONTINUING ====================
+=====================================================================
+========                                    .-----.          ========
+========         .----------------------.   | === |          ========
+========         |.-""""""""""""""""""-.|   |-----|          ========
+========         ||                    ||   | === |          ========
+========         ||   KICKSTART.NVIM   ||   |-----|          ========
+========         ||                    ||   | === |          ========
+========         ||                    ||   |-----|          ========
+========         ||:Tutor              ||   |:::::|          ========
+========         |'-..................-'|   |____o|          ========
+========         `"")----------------(""`   ___________      ========
+========        /::::::::::|  |::::::::::\  \ no mouse \     ========
+========       /:::========|  |==hjkl==:::\  \ required \    ========
+========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
+========                                                     ========
+=====================================================================
+=====================================================================
+What is Kickstart?
+
+  Kickstart.nvim is *not* a distribution.
+
+  Kskstart.nvim is a starting point for your own configuration.
+    The goal is that you can read every line of code, top-to-bottom, understand
+    what your configuration is doing, and modify it to suit your needs.
+
+    Once you've done that, you can start exploring, configuring and tinkering to
+    make Neovim your own! That might mean leaving Kickstart just the way it is for a while
+    or immediately breaking it into modular pieces. It's up to you!
+
+    If you don't know anything about Lua, I recommend taking some time to read through
+    a guide. One possible example which will only take 10-15 minutes:
+      - https://learnxinyminutes.com/docs/lua/
+
+    After understanding a bit more about Lua, you can use `:help lua-guide` as a
+    reference for how Neovim integrates Lua.
+    - :help lua-guide
+    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
+--]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

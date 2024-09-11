@@ -181,7 +181,7 @@ c.confirm_quit = ["never"]
 # --------------------------------------------
 ## Automatically start playing `<video>` elements.
 ## Type: Bool
-c.content.autoplay = True
+c.content.autoplay = False
 
 ## List of URLs to ABP-style adblocking rulesets.  Only used when Brave's
 ## ABP-style adblocker is used (see `content.blocking.method`).  You can
@@ -260,7 +260,7 @@ c.content.cache.appcache = True
 ## to _n_ pages. For more information about the feature, please refer to:
 ## https://webkit.org/blog/427/webkit-page-cache-i-the-basics/
 ## Type: Int
-c.content.cache.maximum_pages = 10
+c.content.cache.maximum_pages = 30
 
 ## Size (in bytes) of the HTTP network cache. Null to use the default
 ## value. With QtWebEngine, the maximum supported value is 2147483647 (~2
@@ -476,7 +476,7 @@ c.content.local_storage = True  ## Enable support for HTML 5 local storage and W
 
 c.content.media.audio_capture = "ask"  ## Allow websites to record audio.
 
-c.content.media.audio_video_capture = "ask"  ## Allow websites to record audio and video. ## Type: BoolAsk ## Valid values: true false ask
+c.content.media.audio_video_capture = "ask"  ## Allow websites to record audio and video. Type: BoolAsk Valid values: true false ask
 
 c.content.media.video_capture = (
     "ask"  ## Allow websites to record video. ## Type: BoolAsk
@@ -635,7 +635,7 @@ c.downloads.location.remember = True  ## Remember the last used download directo
 ##   - path: Show only the download path.
 ##   - filename: Show only download filename.
 ##   - both: Show download path and filename.
-c.downloads.location.suggestion = "filename"
+c.downloads.location.suggestion = "both"
 
 ## Default program used to open downloads. If null, the default internal
 ## handler is used. Any `{}` in the string will be expanded to the
@@ -687,7 +687,13 @@ c.editor.remove_file = True  ## Delete the temporary file upon closing the edito
 ## Filename of the file to be written to. If not contained in any
 ## argument, the   standard output of the command is read instead.
 ## Type: ShellCommand
-c.fileselect.folder.command = ["urxvt", "-e", "ranger", "--choosedir={}"]
+c.fileselect.folder.command = [
+    "alacritty",
+    "-e",
+    "ranger",
+    "--show-only-dirs",
+    "--choosedir={}",
+]
 
 ## Handler for selecting file(s) in forms. If `external`, then the
 ## commands specified by `fileselect.single_file.command`,
@@ -707,7 +713,7 @@ c.fileselect.handler = "external"
 ## contained in any argument, the   standard output of the command is
 ## read instead.
 ## Type: ShellCommand
-c.fileselect.multiple_files.command = ["urxvt", "-e", "ranger", "--choosefiles={}"]
+c.fileselect.multiple_files.command = ["alacritty", "-e", "ranger", "--choosefiles={}"]
 
 ## Command (and arguments) to use for selecting a single file in forms.
 ## The command should write the selected file path to the specified file
@@ -715,7 +721,7 @@ c.fileselect.multiple_files.command = ["urxvt", "-e", "ranger", "--choosefiles={
 ## the file to be written to. If not contained in any argument, the
 ## standard output of the command is read instead.
 ## Type: ShellCommand
-c.fileselect.single_file.command = ["xterm", "-e", "ranger", "--choosefile={}"]
+c.fileselect.single_file.command = ["alacritty", "-e", "ranger", "--choosefile={}"]
 
 # --------------------------------------------
 #                    FONTS
@@ -1227,7 +1233,7 @@ c.search.wrap = True  ## Wrap around at the top and bottom of the page when adva
 
 c.search.wrap_messages = True  ## Display messages when advancing through text matches at the top and bottom of the page, e.g. `Search hit TOP`.
 
-c.session.default_name = None  ## Name of the session to save by default. If this is set to null, the session which was last loaded is saved. ## Type: SessionName
+c.session.default_name = "default"  ## Name of the session to save by default. If this is set to null, the session which was last loaded is saved. ## Type: SessionName
 
 c.session.lazy_restore = False  ## Load a restored tab as soon as it takes focus.
 
@@ -1346,7 +1352,7 @@ c.tabs.focus_stack_size = (
 
 c.tabs.indicator.padding = {
     "top": 2,
-    "bottom": 2,
+    "bottom": 0,
     "left": 0,
     "right": 4,
 }  ## Padding (in pixels) for tab indicators.
@@ -1464,7 +1470,7 @@ c.tabs.title.elide = "right"  ## Position of ellipsis in truncated title of tabs
 ## web page. * `{protocol}`: Protocol (http/https/...) of the current web
 ## page. * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-c.tabs.title.format = "{private}{audio}{index}: {current_title}"
+c.tabs.title.format = "{private}{audio}{index}: {current_title} {title_sep} {host}"
 
 ## Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.

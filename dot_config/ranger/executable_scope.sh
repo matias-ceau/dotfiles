@@ -49,6 +49,11 @@ OPENSCAD_COLORSCHEME=${RNGR_OPENSCAD_COLORSCHEME:-Tomorrow Night}
 
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
+        # use bat if pssible
+        sh|py|lua|vim|yaml|yml|log|lisp|css|bib|csv|tsv|c|cpp|go|cfg|md|\
+        tex|pyx|xsh|r|txt|rs|sql|toml|tml|ts|xml|zig|htm|html)
+            bat --color=always --theme=ansi -pp "${FILE_PATH}" && exit 5
+            ;;
         ## Archive
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
         rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
