@@ -15,11 +15,10 @@ dropbox https://www.dropbox.com/home
 git https://github.com/
 nd https://neuronaldynamics.epfl.ch/online/index.html
 tvb https://training.incf.org/course/virtual-brain-node10-workshop-personalized-multi-scale-brain-simulation
-qutebrowser_shortcuts https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/img/cheatsheet-big.png
 dropbox_sdk https://github.com/dropbox/dropbox-sdk-python/blob/master/example/updown.py
 papers_with_code https://paperswithcode.com/sota
-qkbd qute://bindings/
 claude https://claude.ai/new
 chatgpt https://chatgpt.com/
 nerdfonts https://www.nerdfonts.com/font-downloads
 LazyKeymaps http://www.lazyvim.org/keymaps
+qutebrowser_scripts https://github.com/qutebrowser/qutebrowser/blob/main/doc/userscripts.asciidoc

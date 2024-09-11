@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+URL="$QUTE_URL"
+
+if [[ "$1" == '-s' ]]; then
+	arg='-i'
+	dest=' to selection'
+else
+	arg='-ib'
+	dest=' to clipboard'
+fi
+
+
+if echo "$URL" | rg -q 'github\.com/.+/.+'; then
+	REPO="$(echo "$URL" |
+		sed -E \
+		's#.*github.com/([^/]+)/([^/]+)[/]*.*#\1/\2#')"
+	echo "$REPO" | xsel $arg
+	echo "message-info 'Yanked $REPO$dest'" >> "$QUTE_FIFO"
+else
+	echo "message-error 'Not a GitHub repo!'" >> "$QUTE_FIFO"
+fi
