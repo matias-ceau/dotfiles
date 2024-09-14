@@ -88,6 +88,12 @@ export FZF_DEFAULT_OPTS="
 --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700
 --color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW"
 
+export FZF_CTRL_T_OPTS="
+--preview 'bat -n --color=always {}'
+--bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+export FZF_ALT_C_OPTS="
+--preview 'tree -C {}'"
 #gtk
 #___both can be useful on old screens
 #export GSK_RENDERER='gl'
