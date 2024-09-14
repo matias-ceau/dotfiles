@@ -86,7 +86,8 @@ export FZF_DEFAULT_OPTS="
 --color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_900,hl+:$FLEXOKI_MAGENTA
 --color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK
 --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700
---color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW"
+--color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW
+--highlight-line"
 
 export FZF_CTRL_T_OPTS="
 --preview 'bat -n --color=always {}'
