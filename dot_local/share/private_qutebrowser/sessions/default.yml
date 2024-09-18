@@ -1,0 +1,80 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - active: true
+    history:
+    - last_visited: '2024-09-17T12:16:16'
+      pinned: false
+      title: fzf/bin/fzf-preview.sh at master · junegunn/fzf
+      url: https://github.com/junegunn/fzf/blob/master/bin/fzf-preview.sh
+    - last_visited: '2024-09-17T12:16:32'
+      pinned: false
+      title: graphml extension at DuckDuckGo
+      url: https://duckduckgo.com/?q=graphml+extension&ia=web
+    - last_visited: '2024-09-17T12:16:32'
+      pinned: false
+      title: GraphML - Wikipedia
+      url: https://en.wikipedia.org/wiki/GraphML
+    - active: true
+      last_visited: '2024-09-17T12:17:06'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 680
+      title: Graph Modelling Language - Wikipedia
+      url: https://en.wikipedia.org/wiki/Graph_Modelling_Language
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-17T12:46:00'
+      pinned: false
+      title: what library does obsidian use for graph at DuckDuckGo
+      url: https://duckduckgo.com/?q=what+library+does+obsidian+use+for+graph&ia=web
+    - last_visited: '2024-09-17T12:46:01'
+      pinned: false
+      title: Graph view - Obsidian Help
+      url: https://help.obsidian.md/Plugins/Graph+view
+    - last_visited: '2024-09-17T12:49:11'
+      pinned: false
+      title: networkx graph visualization at DuckDuckGo
+      url: https://duckduckgo.com/?q=networkx+graph+visualization&ia=web
+    - active: true
+      last_visited: '2024-09-17T12:49:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6992
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-17T12:50:06'
+      original-url: http://pygraphviz.github.io/
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: PyGraphviz — PyGraphviz documentation
+      url: https://pygraphviz.github.io/
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-17T12:50:10'
+      pinned: false
+      title: Graphviz
+      url: https://www.graphviz.org/
+    - last_visited: '2024-09-17T12:50:56'
+      pinned: false
+      title: Command Line | Graphviz
+      url: https://www.graphviz.org/doc/info/command.html
+    - active: true
+      last_visited: '2024-09-17T12:51:30'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: DOT Language | Graphviz
+      url: https://www.graphviz.org/doc/info/lang.html
+      zoom: 1.0

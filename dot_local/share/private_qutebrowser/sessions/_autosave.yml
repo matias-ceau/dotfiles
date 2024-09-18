@@ -1,0 +1,46 @@
+windows:
+- geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-09-17T23:41:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Graph Modelling Language - Wikipedia
+      url: https://en.wikipedia.org/wiki/Graph_Modelling_Language
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-17T23:41:10'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-17T23:41:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: PyGraphviz — PyGraphviz documentation
+      url: https://pygraphviz.github.io/
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-09-17T23:41:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: DOT Language | Graphviz
+      url: https://www.graphviz.org/doc/info/lang.html
+      zoom: 1.0

@@ -1,0 +1,131 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - last_visited: '2024-09-11T09:33:25'
+      pinned: false
+      title: Spell - Neovim docs
+      url: https://neovim.io/doc/user/spell.html#spell-load
+    - active: true
+      last_visited: '2024-09-11T12:19:44'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3868
+      title: Help - Neovim docs
+      url: https://neovim.io/doc/user/index.html
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-09-11T12:20:57'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1021
+      title: Quickref - Neovim docs
+      url: https://neovim.io/doc/user/quickref.html#quickref
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:20:59'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Usr_toc - Neovim docs
+      url: https://neovim.io/doc/user/usr_toc.html#user-manual
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:21:00'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Faq - Neovim docs
+      url: https://neovim.io/doc/user/faq.html#faq
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:21:43'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Lsp - Neovim docs
+      url: https://neovim.io/doc/user/lsp.html#lsp
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:21:47'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Treesitter - Neovim docs
+      url: https://neovim.io/doc/user/treesitter.html#treesitter
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:21:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Filetype - Neovim docs
+      url: https://neovim.io/doc/user/filetype.html#filetype
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:22:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Gui - Neovim docs
+      url: https://neovim.io/doc/user/gui.html#gui
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:22:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Digraph - Neovim docs
+      url: https://neovim.io/doc/user/digraph.html#digraph
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:22:13'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: If_pyth - Neovim docs
+      url: https://neovim.io/doc/user/if_pyth.html#if_pyth
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:22:18'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 76
+      title: Deprecated - Neovim docs
+      url: https://neovim.io/doc/user/deprecated.html#deprecated
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T12:23:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 95
+      title: Pi_netrw - Neovim docs
+      url: https://neovim.io/doc/user/pi_netrw.html#pi_netrw.txt
+      zoom: 1.0
