@@ -1,0 +1,291 @@
+windows:
+- geometry: !!binary |
+    AdnQywADAAD////8AAAAEgAAB3sAAAhrAAAAAQAAABwAAA7+AAAIbgAAAAAABAAADwAAAAAAAAAA
+    FgAAB3cAAAhn
+  tabs:
+  - history:
+    - last_visited: '2024-09-15T13:20:56'
+      pinned: false
+      title: History
+      url: qute://history/
+    - last_visited: '2024-09-15T13:21:52'
+      pinned: false
+      title: openai api docs at DuckDuckGo
+      url: https://duckduckgo.com/?q=openai+api+docs&ia=web
+    - active: true
+      last_visited: '2024-09-15T13:21:53'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: API platform | OpenAI
+      url: https://openai.com/api/
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-15T13:22:16'
+      pinned: false
+      title: OpenAI Platform
+      url: https://platform.openai.com/login?launch
+    - last_visited: '2024-09-15T13:22:22'
+      pinned: false
+      title: Just a moment...
+      url: https://auth.openai.com/authorize?issuer=auth0.openai.com&client_id=DRivsnm2Mu42T3KOpqdtwB3NYviHYzwD&audience=https%3A%2F%2Fapi.openai.com%2Fv1&redirect_uri=https%3A%2F%2Fplatform.openai.com%2Fauth%2Fcallback&device_id=edbc748f-ca89-454e-846d-b7f5fd7fd967&scope=openid+profile+email+offline_access&response_type=code&response_mode=query&state=ZjVGZmRHd09%2BV3d6UG5nM2pMbHA3OXJSdVAuR3l6bzQwdmxQcHVNRW1zaQ%3D%3D&nonce=X3Z0OFlNMXkyQ29OcnZseVhHR243TWp5VFRTZS5vaDYybERxNFBFNS0wVQ%3D%3D&code_challenge=i7RsMyw6Gizx2e4BZasVNlEaOD4Lf0Wtl0WKnDUSUdw&code_challenge_method=S256&auth0Client=eyJuYW1lIjoiYXV0aDAtc3BhLWpzIiwidmVyc2lvbiI6IjEuMjEuMCJ9&flow=control&__cf_chl_tk=j.AC.gCWFaelGx_s0thM955XaaadJJvrUnwJGm7jK6s-1726399337-0.0.1.1-7721
+    - last_visited: '2024-09-15T13:22:23'
+      pinned: false
+      title: Login - OpenAI
+      url: https://auth.openai.com/authorize?issuer=auth0.openai.com&client_id=DRivsnm2Mu42T3KOpqdtwB3NYviHYzwD&audience=https%3A%2F%2Fapi.openai.com%2Fv1&redirect_uri=https%3A%2F%2Fplatform.openai.com%2Fauth%2Fcallback&device_id=edbc748f-ca89-454e-846d-b7f5fd7fd967&scope=openid+profile+email+offline_access&response_type=code&response_mode=query&state=ZjVGZmRHd09%2BV3d6UG5nM2pMbHA3OXJSdVAuR3l6bzQwdmxQcHVNRW1zaQ%3D%3D&nonce=X3Z0OFlNMXkyQ29OcnZseVhHR243TWp5VFRTZS5vaDYybERxNFBFNS0wVQ%3D%3D&code_challenge=i7RsMyw6Gizx2e4BZasVNlEaOD4Lf0Wtl0WKnDUSUdw&code_challenge_method=S256&auth0Client=eyJuYW1lIjoiYXV0aDAtc3BhLWpzIiwidmVyc2lvbiI6IjEuMjEuMCJ9&flow=control
+    - last_visited: '2024-09-15T13:22:27'
+      original-url: https://auth0.openai.com/authorize?issuer=auth0.openai.com&client_id=DRivsnm2Mu42T3KOpqdtwB3NYviHYzwD&audience=https%3A%2F%2Fapi.openai.com%2Fv1&redirect_uri=https%3A%2F%2Fplatform.openai.com%2Fauth%2Fcallback&device_id=edbc748f-ca89-454e-846d-b7f5fd7fd967&scope=openid+profile+email+offline_access&response_type=code&response_mode=query&state=ZjVGZmRHd09%2BV3d6UG5nM2pMbHA3OXJSdVAuR3l6bzQwdmxQcHVNRW1zaQ%3D%3D&nonce=X3Z0OFlNMXkyQ29OcnZseVhHR243TWp5VFRTZS5vaDYybERxNFBFNS0wVQ%3D%3D&code_challenge=i7RsMyw6Gizx2e4BZasVNlEaOD4Lf0Wtl0WKnDUSUdw&code_challenge_method=S256&auth0Client=eyJuYW1lIjoiYXV0aDAtc3BhLWpzIiwidmVyc2lvbiI6IjEuMjEuMCJ9&flow=control&max_age=0&connection=google-oauth2
+      pinned: false
+      title: https://auth0.openai.com/u/mfa-otp-challenge?state=hKFo2SB5cFZ1UER1X3VRdDdoeFBrU2Q3V0dGamdaUzZmak84ZqFusG1mYS1hdXRoZW50aWNhdGWjdGlk2SBheGEwMUpUYkNtcVAxU2VQaUlqOTJFaVpaSVZUVXNZTqNjaWTZIERSaXZzbm0yTXU0MlQzS09wcWR0d0IzTll2aUhZendE
+      url: https://auth0.openai.com/u/mfa-otp-challenge?state=hKFo2SB5cFZ1UER1X3VRdDdoeFBrU2Q3V0dGamdaUzZmak84ZqFusG1mYS1hdXRoZW50aWNhdGWjdGlk2SBheGEwMUpUYkNtcVAxU2VQaUlqOTJFaVpaSVZUVXNZTqNjaWTZIERSaXZzbm0yTXU0MlQzS09wcWR0d0IzTll2aUhZendE
+    - last_visited: '2024-09-15T13:23:05'
+      pinned: false
+      title: OpenAI Platform
+      url: https://platform.openai.com/apps
+    - last_visited: '2024-09-15T13:23:08'
+      pinned: false
+      title: Overview - OpenAI API
+      url: https://platform.openai.com/docs/overview
+    - last_visited: '2024-09-15T13:23:20'
+      pinned: false
+      title: Web Q&A - OpenAI API
+      url: https://platform.openai.com/docs/tutorials/web-qa-embeddings
+    - last_visited: '2024-09-15T13:24:48'
+      pinned: false
+      title: Models - OpenAI API
+      url: https://platform.openai.com/docs/models/tts
+    - last_visited: '2024-09-15T13:26:22'
+      pinned: false
+      title: Models - OpenAI API
+      url: https://platform.openai.com/docs/models
+    - last_visited: '2024-09-15T13:26:27'
+      pinned: false
+      title: Models - OpenAI API
+      url: https://platform.openai.com/docs/models/whisper
+    - active: true
+      last_visited: '2024-09-15T18:13:42'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Speech to text - OpenAI API
+      url: https://platform.openai.com/docs/guides/speech-to-text/prompting
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-15T13:51:37'
+      pinned: false
+      title: live recording audio with python at DuckDuckGo
+      url: https://duckduckgo.com/?q=live+recording+audio+with+python&ia=web
+    - active: true
+      last_visited: '2024-09-15T14:11:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 12420
+      title: Playing and Recording Sound in Python – Real Python
+      url: https://realpython.com/playing-and-recording-sound-python/
+      zoom: 1.0
+    - last_visited: '2024-09-15T14:10:47'
+      original-url: https://pypi.org/project/SoundFile/
+      pinned: false
+      title: soundfile · PyPI
+      url: https://pypi.org/project/soundfile/
+  - history:
+    - last_visited: '2024-09-15T13:52:37'
+      pinned: false
+      title: Play and Record Sound with Python — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/
+    - last_visited: '2024-09-15T13:55:55'
+      pinned: false
+      title: Example Programs — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/examples.html
+    - last_visited: '2024-09-15T13:56:15'
+      pinned: false
+      title: Example Programs — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/examples.html#plot-microphone-signal-s-in-real-time
+    - last_visited: '2024-09-15T13:56:55'
+      pinned: false
+      title: Usage — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/usage.html
+    - last_visited: '2024-09-15T14:09:23'
+      pinned: false
+      title: Installation — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/installation.html
+    - last_visited: '2024-09-15T14:09:25'
+      pinned: false
+      title: Usage — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/usage.html
+    - last_visited: '2024-09-15T14:42:21'
+      pinned: false
+      title: Streams using NumPy Arrays — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/streams.html#sounddevice.InputStream
+    - last_visited: '2024-09-15T14:57:49'
+      pinned: false
+      title: Raw Streams — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/raw-streams.html
+    - last_visited: '2024-09-15T14:58:30'
+      pinned: false
+      title: Usage — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/usage.html
+    - last_visited: '2024-09-15T14:59:26'
+      pinned: false
+      title: API Documentation — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/index.html
+    - last_visited: '2024-09-15T14:59:33'
+      pinned: false
+      title: Convenience Functions using NumPy Arrays — python-sounddevice, version
+        0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html#sounddevice.stop
+    - last_visited: '2024-09-15T15:00:33'
+      pinned: false
+      title: Convenience Functions using NumPy Arrays — python-sounddevice, version
+        0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html#sounddevice.get_status
+    - last_visited: '2024-09-15T15:00:46'
+      pinned: false
+      title: Convenience Functions using NumPy Arrays — python-sounddevice, version
+        0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html#sounddevice.wait
+    - last_visited: '2024-09-15T15:11:21'
+      pinned: false
+      title: Miscellaneous — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/misc.html
+    - last_visited: '2024-09-15T15:11:55'
+      pinned: false
+      title: Expert Mode — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/expert-mode.html
+    - last_visited: '2024-09-15T15:12:09'
+      pinned: false
+      title: API Documentation — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/index.html
+    - last_visited: '2024-09-15T15:12:46'
+      pinned: false
+      title: Checking Available Hardware — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/checking-hardware.html#sounddevice.check_input_settings
+    - last_visited: '2024-09-15T15:33:06'
+      pinned: false
+      title: Convenience Functions using NumPy Arrays — python-sounddevice, version
+        0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html
+    - last_visited: '2024-09-15T15:38:35'
+      pinned: false
+      title: Convenience Functions using NumPy Arrays — python-sounddevice, version
+        0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/convenience-functions.html#sounddevice.rec
+    - last_visited: '2024-09-15T15:39:04'
+      pinned: false
+      title: Streams using NumPy Arrays — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/api/streams.html#sounddevice.InputStream
+    - active: true
+      last_visited: '2024-09-15T16:13:24'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 13210
+      title: Example Programs — python-sounddevice, version 0.5.0-1-ga1b4fbc
+      url: https://python-sounddevice.readthedocs.io/en/latest/examples.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-15T16:18:38'
+      pinned: false
+      title: python-sounddevice/examples/rec_unlimited.py at a1b4fbc3aff659e3063b228e355b1e6ebbeec656
+        · spatialaudio/python-sounddevice
+      url: https://github.com/spatialaudio/python-sounddevice/blob/0.5.0-1-ga1b4fbc/examples/rec_unlimited.py
+    - last_visited: '2024-09-15T16:18:47'
+      pinned: false
+      title: python-sounddevice/examples/rec_gui.py at a1b4fbc3aff659e3063b228e355b1e6ebbeec656
+        · spatialaudio/python-sounddevice
+      url: https://github.com/spatialaudio/python-sounddevice/blob/a1b4fbc3aff659e3063b228e355b1e6ebbeec656/examples/rec_gui.py
+    - last_visited: '2024-09-15T16:19:21'
+      pinned: false
+      title: python-sounddevice/examples/priming_output.py at a1b4fbc3aff659e3063b228e355b1e6ebbeec656
+        · spatialaudio/python-sounddevice
+      url: https://github.com/spatialaudio/python-sounddevice/blob/a1b4fbc3aff659e3063b228e355b1e6ebbeec656/examples/priming_output.py
+    - last_visited: '2024-09-15T16:19:26'
+      pinned: false
+      title: python-sounddevice/examples/wire.py at a1b4fbc3aff659e3063b228e355b1e6ebbeec656
+        · spatialaudio/python-sounddevice
+      url: https://github.com/spatialaudio/python-sounddevice/blob/a1b4fbc3aff659e3063b228e355b1e6ebbeec656/examples/wire.py
+    - active: true
+      last_visited: '2024-09-15T16:20:02'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 467
+      title: python-sounddevice/examples/spectrogram.py at a1b4fbc3aff659e3063b228e355b1e6ebbeec656
+        · spatialaudio/python-sounddevice
+      url: https://github.com/spatialaudio/python-sounddevice/blob/a1b4fbc3aff659e3063b228e355b1e6ebbeec656/examples/spectrogram.py
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-15T15:12:17'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Play and Record Sound with Python — python-sounddevice, version 0.5.0
+      url: https://python-sounddevice.readthedocs.io/en/0.5.0/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-15T15:40:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 42164
+      title: 3. Data model — Python 3.12.6 documentation
+      url: https://docs.python.org/3/reference/datamodel.html#context-managers
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-15T14:12:28'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2024-09-15T14:12:57'
+      pinned: false
+      title: ChatGPT
+      url: https://chatgpt.com/?model=auto
+    - active: true
+      last_visited: '2024-09-15T14:16:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: ChatGPT
+      url: https://chatgpt.com/c/66e6d019-1170-800e-ab03-f03ef547a754
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-15T14:54:18'
+      pinned: false
+      title: speach to text cli python whisper at DuckDuckGo
+      url: https://duckduckgo.com/?q=speach+to+text+cli+python+whisper&ia=web
+    - last_visited: '2024-09-15T14:54:52'
+      pinned: false
+      title: record audio cli python at DuckDuckGo
+      url: https://duckduckgo.com/?q=record+audio+cli+python&ia=web
+    - active: true
+      last_visited: '2024-09-15T14:54:53'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 660
+      title: Create a Voice Recorder using Python - GeeksforGeeks
+      url: https://www.geeksforgeeks.org/create-a-voice-recorder-using-python/
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2024-09-15T18:38:02'
+      pinned: false
+      title: pricing openai-whisper at DuckDuckGo
+      url: https://duckduckgo.com/?q=pricing+openai-whisper&ia=web
+    - active: true
+      last_visited: '2024-09-15T18:38:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Is Whisper API really 10x more expensive than self hosted? - API - OpenAI
+        Developer Forum
+      url: https://community.openai.com/t/is-whisper-api-really-10x-more-expensive-than-self-hosted/576427
+      zoom: 1.0

@@ -1,0 +1,65 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAKnAAAAGAAABVEAAAL7AAACqwAAABwAAAVNAAAC9wAAAAAAAAAABVYAAAKrAAAA
+    HAAABU0AAAL3
+  tabs:
+  - history:
+    - last_visited: '2024-06-24T03:04:56'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2024-06-24T03:05:14'
+      pinned: false
+      title: music brainz api at DuckDuckGo
+      url: https://duckduckgo.com/?t=h_&hps=1&start=1&q=music+brainz+api&ia=web
+    - last_visited: '2024-06-24T03:05:14'
+      pinned: false
+      title: MusicBrainz API - MusicBrainz
+      url: https://musicbrainz.org/doc/MusicBrainz_API
+    - active: true
+      last_visited: '2024-06-24T03:08:09'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Log in - MusicBrainz
+      url: https://musicbrainz.org/login?returnto=%2Fdoc%2FMusicBrainz_API
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-06-24T03:07:55'
+      original-url: http://python-musicbrainzngs.readthedocs.org/
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: musicbrainzngs 0.7.1 — musicbrainzngs 0.7.1 documentation
+      url: https://python-musicbrainzngs.readthedocs.io/en/v0.7.1/
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-06-24T03:08:56'
+      pinned: false
+      title: qutebrowser remember login passwords at DuckDuckGo
+      url: https://duckduckgo.com/?q=qutebrowser+remember+login+passwords&ia=web
+    - active: true
+      last_visited: '2024-06-24T03:08:56'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 206
+      title: 'How to manage passwords? : r/qutebrowser'
+      url: https://www.reddit.com/r/qutebrowser/comments/16hx4c9/how_to_manage_passwords/
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-06-24T03:09:26'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: qutebrowser/misc/userscripts/qute-keepassxc at main · qutebrowser/qutebrowser
+        · GitHub
+      url: https://github.com/qutebrowser/qutebrowser/blob/main/misc/userscripts/qute-keepassxc
+      zoom: 1.0
