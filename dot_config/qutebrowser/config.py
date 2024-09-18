@@ -38,7 +38,8 @@ c.auto_save.interval = 15000
 ## session which was last loaded. This behavior can be customized via the
 ## `session.default_name` setting.
 ## Type: Bool
-c.auto_save.session = True
+c.auto_save.session = False
+c.session.default_name = "base_session"
 
 ## /!\ already defined
 ## Backend to use to display websites. qutebrowser supports two different
@@ -108,10 +109,10 @@ c.completion.min_chars = 1
 ##   - history
 ##   - filesystem
 c.completion.open_categories = [
-    "searchengines",
     "quickmarks",
     "bookmarks",
     "history",
+    "searchengines",
     "filesystem",
 ]
 
@@ -1540,9 +1541,17 @@ c.url.open_base_url = True
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
     "=g": "https://google.com/search?q={}",
-    "=p": "https://docs.python.org/3/search.html?q={}",
-    "=d": "https://dx.doi.org/{}",
-    "=a": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "=w": "https://en.wikipedia.org/w/index.php?search={}",
+    "=py": "https://docs.python.org/3/search.html?q={}",
+    "=doi": "https://dx.doi.org/{}",
+    "=arch": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "=entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
+    "=chem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
+    "=pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
+    "=mesh": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
+    "=trials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
+    "=github": "https://github.com/search?q={}&type=repositories",
+    "=readthedocs": "https://{}.readthedocs.io/en/latest/index.html",
 }
 
 ## Page(s) to open at the start.
