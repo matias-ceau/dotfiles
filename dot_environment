@@ -8,8 +8,9 @@ export BROWSER="qutebrowser"
 
 # PATHS ####################################
 # PATH
-export PATH="$PATH:$HOME/.local/bin"
-export PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+PATH="$PATH:$HOME/.local/bin"
+PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+export PATH
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share
@@ -20,8 +21,9 @@ export XDG_DATA_DIRS=/usr/local/share/:/usr/share/
 export XDG_CONFIG_DIRS=/etc/xdg/
 
 # PYTHONPATH
-export PYTHONPATH="/usr/bin/python:$PYTHONPATH"
-export PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+PYTHONPATH="/usr/bin/python:$PYTHONPATH"
+PYTHONPATH=$(printf %s "$PYTHONPATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+export PYTHONPATH
 
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
@@ -29,17 +31,17 @@ export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 ####################################################
-export CHEZMOI="$(chezmoi source-path)"
+CHEZMOI="$(chezmoi source-path)"
+export CHEZMOI
 export LOCALDATA="$HOME/.localdata"
 export SCRIPTS="$HOME/.scripts"
 export GIT_REPOS="$HOME/git"
 export D="$HOME/Desktop"
 
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
-export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
+# export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
 #PASSWORD_STORE_GPG_OPTS
 #####################################################
-
 
 # MAKE VIM XDG COMPLIANT
 mkdir -p "$XDG_CONFIG_HOME/vim"
