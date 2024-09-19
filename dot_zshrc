@@ -1,5 +1,4 @@
-# Source profile and aliases
-#
+# ~/.zshrc
 #---------------------------
 [ -f $HOME/.environment ] && source ~/.environment
 [ -f $HOME/.aliases ] && source ~/.aliases
@@ -31,7 +30,7 @@ _comp_options+=(globdots)
 # Edit command line with vim
 autoload edit-command-line
 zle -N edit-command-line
-bindkey -v
+# bindkey -v
 bindkey '\ee' edit-command-line
 
 # Appearance
@@ -59,4 +58,4 @@ if [ -f "$aichat/scripts/completions/aichat.zsh" ]; then
     source "$aichat/scripts/completions/aichat.zsh"
 fi
 
-# vim: set ft=zsh expandtab shiftwidth=2 :
+# vim: set ft=zsh expandtab shiftwidth=2:

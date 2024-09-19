@@ -1,7 +1,4 @@
-#
-# ~/.environment
-#
-# vim: set filetype=bash
+#~/.environment
 #
 export EDITOR="nvim"
 export BROWSER="qutebrowser"
@@ -143,3 +140,5 @@ if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
     clear
     fastfetch
 fi
+
+# vim: set ft=sh
