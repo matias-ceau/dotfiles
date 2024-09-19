@@ -24,8 +24,8 @@ hooks.location=~/.config/task/hooks
 # Color theme (uncomment one to use)
 #include light-16.theme
 #include light-256.theme
-#include dark-16.theme
-include dark-256.theme
+include dark-16.theme
+#include dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
 #include dark-blue-256.theme
@@ -43,3 +43,87 @@ alias.deadline=(due < eom)
 
 #projects
 #alias.instr=pro:instr
+
+#yellow  #AD8301 bright #D0A215
+#red     #AF3029 bright #D14D41
+#magenta #A02F6F bright #CE5D97
+#blue    #205EA6 bright #4385BE
+#cyan    #24837B bright #3AA99F
+#green   #66800B bright #879A39
+#white   #FFFCF0 bright #F2F0E5
+#black   #100F0F bright #1C1B1A
+
+rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,tagged,uda.
+
+# General decoration
+color.label=bold yellow
+color.label.sort=bold black on yellow
+color.alternate=on black
+color.header=cyan
+color.footnote=cyan
+color.warning=bold red
+color.error=white on red
+color.debug=blue
+
+# Task state
+color.active=bold white on magenta
+color.blocked=cyan
+color.blocking=cyan
+color.scheduled=bold magenta
+color.recurring=blue
+color.completed=
+color.deleted=bright black
+color.until=
+
+# Project
+color.project.none=
+
+# Priority
+color.uda.priority.H=bold white
+color.uda.priority.M=white
+color.uda.priority.L=bright white
+
+# Tags
+color.tag.next=bold yellow
+color.tag.none=
+color.tagged=
+
+# Due
+color.due=red
+color.due.today=red
+color.overdue=bold red
+
+# UDA
+#color.uda.X=
+
+# Report: burndown
+color.burndown.done=on green
+color.burndown.pending=on red
+color.burndown.started=on yellow
+
+# Report: history
+color.history.add=black on red
+color.history.delete=black on yellow
+color.history.done=black on green
+
+# Report: summary
+color.summary.background=white on black
+color.summary.bar=black on green
+
+# Command: calendar
+color.calendar.due=white on red
+color.calendar.due.today=bold white on red
+color.calendar.holiday=black on bright yellow
+color.calendar.overdue=black on bright red
+color.calendar.today=bold white on bright blue
+color.calendar.weekend=white on bright black
+color.calendar.weeknumber=bold blue
+
+# Command: sync
+color.sync.added=green
+color.sync.changed=yellow
+color.sync.rejected=red
+
+# Command: undo
+color.undo.after=green
+color.undo.before=red
