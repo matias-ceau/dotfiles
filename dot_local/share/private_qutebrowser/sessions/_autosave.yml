@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 windows:
 - geometry: !!binary |
     AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
@@ -304,4 +302,3 @@ windows:
       title: qutebrowser/scripts/open_url_in_instance.sh at main · qutebrowser/qutebrowser
       url: https://github.com/qutebrowser/qutebrowser/blob/main/scripts/open_url_in_instance.sh
       zoom: 1.8
->>>>>>> Stashed changes
