@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream
-=======
 windows:
-- geometry: !!binary |
+- active: true
+  geometry: !!binary |
     AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
     FgAADv8AAAhv
   tabs:
@@ -138,8 +137,7 @@ windows:
       title: Commands API — Qtile 0.1.dev257+g6a4dba6.d20220320 documentation
       url: https://qtile-elp-fork.readthedocs.io/en/latest/manual/commands/index.html
       zoom: 1.8
-- active: true
-  geometry: !!binary |
+- geometry: !!binary |
     AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
     FgAADv8AAAhv
   tabs:
@@ -304,4 +302,3 @@ windows:
       title: qutebrowser/scripts/open_url_in_instance.sh at main · qutebrowser/qutebrowser
       url: https://github.com/qutebrowser/qutebrowser/blob/main/scripts/open_url_in_instance.sh
       zoom: 1.8
->>>>>>> Stashed changes
