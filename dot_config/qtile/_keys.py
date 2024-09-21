@@ -167,7 +167,7 @@ keys = [
         desc=f"Switch to last group",
     ),
     ## Media keys / function keys (other than scratchpads)
-    Key([], brightnessup, L.spawn("light -a 10"), desc="increase brightness"),
+    Key([], brightnessup, L.spawn("light -A 10"), desc="increase brightness"),
     Key(
         [],
         brightnessdown,
