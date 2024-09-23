@@ -1,7 +1,8 @@
+# vim: set foldmethod=marker foldmethod=<===,===>
 # pylint: disable=C0111
 c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
-##
+##--------------------------------------------------
 ##                   BINDINGS
 ##--------------------------------------------------
 ##
@@ -35,24 +36,23 @@ c.bindings.key_mappings = {
 config.bind("u", "undo")
 config.bind("v", "mode-enter caret")
 config.bind("wB", "cmd-set-text -s :bookmark-load -w")
-config.bind("wIf", "devtools-focus")
-config.bind("wIh", "devtools left")
-config.bind("wIj", "devtools bottom")
-config.bind("wIk", "devtools top")
-config.bind("wIl", "devtools right")
-config.bind("wIw", "devtools window")
+config.bind("If", "devtools-focus")
+config.bind("Ih", "devtools left")
+config.bind("II", "devtools")
+config.bind("Ij", "devtools bottom")
+config.bind("Ik", "devtools top")
+config.bind("Il", "devtools right")
+config.bind("Iw", "devtools window")
 config.bind("wO", "cmd-set-text :open -w {url:pretty}")
 config.bind("wP", "open -w -- {primary}")
 config.bind("wb", "cmd-set-text -s :quickmark-load -w")
 config.bind("wf", "hint all window")
 config.bind("wh", "back -w")
-config.bind("wi", "devtools")
 config.bind("wl", "forward -w")
 config.bind("wo", "cmd-set-text -s :open -w")
 config.bind("wp", "open -w -- {clipboard}")
 config.bind("xO", "cmd-set-text :open -b -r {url:pretty}")
 config.bind("xo", "cmd-set-text -s :open -b")
-# yank
 config.bind("yd", "yank domain")
 config.bind("yD", "yank domain -s")
 config.bind("ym", "yank inline [{title}]({url})")
@@ -68,6 +68,7 @@ config.bind("yG", "spawn --userscript yank-git-repo -s")
 config.bind("'", "mode-enter jump_mark")
 config.bind("+", "zoom-in")
 config.bind("-", "zoom-out")
+config.bind("=", "zoom")
 config.bind(".", "cmd-repeat-last")
 config.bind("/", "cmd-set-text /")
 config.bind(":", "cmd-set-text :")
@@ -120,14 +121,18 @@ config.bind("<Ctrl-h>", "home")
 config.bind("<Ctrl-`>", "tab-pin")
 config.bind("<Ctrl-s>", "stop")
 config.bind("<Escape>", "clear-keychain ;; search ;; fullscreen --leave")
-config.bind("<F11>", "fullscreen")
-config.bind("<F5>", "reload")
+# config.bind("<F11>", "fullscreen")
+# config.bind("<F5>", "reload")
 config.bind("<Return>", "selection-follow")
 config.bind("<back>", "back")
 config.bind("<forward>", "forward")
-config.bind("=", "zoom")
 config.bind("?", "cmd-set-text ?")
 config.bind("@", "macro-run")
+config.bind("B", "cmd-set-text -s :quickmark-load -t")
+config.bind("b", "cmd-set-text -s :quickmark-load")
+config.bind("CB", "cmd-set-text -s :bind")
+config.bind("CL", "cmd-set-text -s :set -t")
+config.bind("CS", "cmd-set-text -s :set")
 config.bind("D", "tab-close -o")
 config.bind("F", "hint all tab")
 config.bind("G", "scroll-to-perc")
@@ -139,8 +144,6 @@ config.bind("[", "tab-prev")  # added
 config.bind("L", "forward")
 config.bind("M", "bookmark-add ;; spawn qutebrowser-modify-source-bookmarks.sh")
 config.bind("m", "quickmark-save ;; spawn qutebrowser-modify-source-bookmarks.sh")
-config.bind("B", "cmd-set-text -s :quickmark-load -t")
-config.bind("b", "cmd-set-text -s :quickmark-load")
 config.bind("N", "search-prev")
 config.bind("O", "cmd-set-text -s :open -t")
 config.bind("PP", "open -t -- {primary}")
@@ -196,10 +199,18 @@ config.bind("pP", "open -- {primary}")
 config.bind("pp", "open -- {clipboard}")
 config.bind("q", "macro-record")
 config.bind("r", "reload")
-config.bind("sf", "save")
-config.bind("sk", "cmd-set-text -s :bind")
-config.bind("sl", "cmd-set-text -s :set -t")
-config.bind("ss", "cmd-set-text -s :set")
+# config.bind("sf", "save")
+config.bind(
+    "ss", "session-save --current ;; spawn qutebrowser-modify-source-bookmarks.sh"
+)  # save current to cursession
+config.bind(
+    "sn",
+    "cmd-set-text -s :session-save ;; spawn qutebrowser-modify-source-bookmarks.sh",
+)  # save to new
+config.bind("so", "cmd-set-text -s :session-load")  # open session
+config.bind("sc", "cmd-set-text -s :session-load --clear")  # open session
+config.bind("st", "session-load --temp")  # open temp session
+config.bind("sd", "cmd-set-text -s :session-delete")  # open temp session
 config.bind(
     "tCH",
     "config-cycle -p -u *://*.{url:host}/* content.cookies.accept all no-3rdparty never ;; reload",
@@ -285,7 +296,6 @@ config.bind("w", "move-to-next-word", mode="caret")
 config.bind("y", "yank selection", mode="caret")
 config.bind("{", "move-to-end-of-prev-block", mode="caret")
 config.bind("}", "move-to-end-of-next-block", mode="caret")
-#
 
 ## Bindings for command mode
 # config.bind("<Tab>", "completion-item-focus next", mode="command")
@@ -329,7 +339,6 @@ config.bind("<Ctrl-Shift-C>", "completion-item-yank --sel", mode="command")
 config.bind("<Ctrl-Shift-W>", "rl-filename-rubout", mode="command")
 config.bind("<Ctrl-U>", "rl-unix-line-discard", mode="command")
 config.bind("<Ctrl-W>", 'rl-rubout " "', mode="command")
-#
 
 ## Bindings for hint mode
 config.bind("<Ctrl-B>", "hint all tab-bg", mode="hint")
@@ -337,18 +346,15 @@ config.bind("<Ctrl-F>", "hint links", mode="hint")
 config.bind("<Ctrl-R>", "hint --rapid links tab-bg", mode="hint")
 config.bind("<Escape>", "mode-leave", mode="hint")
 config.bind("<Return>", "hint-follow", mode="hint")
-#
 
 ## Bindings for insert mode
 config.bind("<Alt-E>", "edit-text", mode="insert")
 config.bind("<Escape>", "mode-leave", mode="insert")
 config.bind("<Shift-Escape>", "fake-key <Escape>", mode="insert")
 config.bind("<Shift-Ins>", "insert-text -- {primary}", mode="insert")
-#
 
 ## Bindings for passthrough mode
 config.bind("<Shift-Escape>", "mode-leave", mode="passthrough")
-#
 
 ## Bindings for prompt mode
 config.bind("<Alt-B>", "rl-backward-word", mode="prompt")
@@ -377,11 +383,9 @@ config.bind("<Return>", "prompt-accept", mode="prompt")
 config.bind("<Shift-Tab>", "prompt-item-focus prev", mode="prompt")
 config.bind("<Tab>", "prompt-item-focus next", mode="prompt")
 config.bind("<Up>", "prompt-item-focus prev", mode="prompt")
-#
 
 ## Bindings for register mode
 config.bind("<Escape>", "mode-leave", mode="register")
-#
 
 ## Bindings for yesno mode
 config.bind("<Alt-Shift-Y>", "prompt-yank --sel", mode="yesno")
@@ -392,5 +396,3 @@ config.bind("N", "prompt-accept --save no", mode="yesno")
 config.bind("Y", "prompt-accept --save yes", mode="yesno")
 config.bind("n", "prompt-accept no", mode="yesno")
 config.bind("y", "prompt-accept yes", mode="yesno")
-#
-#
