@@ -61,5 +61,5 @@ lx() {
 eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
-
+eval "$(pandoc --bash-completion)"
 # vim: set ft=bash

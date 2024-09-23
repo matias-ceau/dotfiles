@@ -1,7 +1,10 @@
-# ~/.zshrc
+# Source profile and aliases
+#
 #---------------------------
-[ -f $HOME/.environment ] && source ~/.environment
-[ -f $HOME/.aliases ] && source ~/.aliases
+#
+[[ -f ~/.environment ]] && source ~/.environment
+[[ -f ~/.aliases ]] && source ~/.aliases
+#---------------------------
 
 # History settings
 mkdir -p "$XDG_STATE_HOME"/zsh
@@ -26,11 +29,13 @@ zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
+eval "$(register-python-argcomplete pipx)"
+bindkey -v
 
 # Edit command line with vim
 autoload edit-command-line
 zle -N edit-command-line
-# bindkey -v
+bindkey -v
 bindkey '\ee' edit-command-line
 
 # Appearance
@@ -40,13 +45,9 @@ PROMPT='%F{red}@%f%F{yellow}%m%F{cyan} %~ %F{green}%%%f '
 
 #---------------------------
 #
-#  OPTIONAL
+#  OPTIONAL PLUGINS
 #
 #---------------------------
-eval "$(register-python-argcomplete pipx)"
-eval "$(zoxide init zsh)"
-source <(fzf --zsh)
-
 # Plugin: zsh-autosuggestions
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -58,4 +59,4 @@ if [ -f "$aichat/scripts/completions/aichat.zsh" ]; then
     source "$aichat/scripts/completions/aichat.zsh"
 fi
 
-# vim: set ft=zsh expandtab shiftwidth=2:
+# vim: set ft=zsh expandtab shiftwidth=2 :
