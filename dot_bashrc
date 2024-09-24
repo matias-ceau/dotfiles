@@ -36,9 +36,6 @@ PROMPT_COMMAND="history -a; history -n" # Share history between concurrent sessi
 PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # FUNCTIONS
-ns() {
-    "$SCRIPTS/new_script_creator.sh" "$1"
-}
 m() {
     link=$(xsel -b)
     mpv -fs "$link"
@@ -62,4 +59,5 @@ eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
+eval "$(batman --export-env)"
 # vim: set ft=bash
