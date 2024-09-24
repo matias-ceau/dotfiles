@@ -29,6 +29,8 @@ floating_layout = layout.Floating(
         Match(title="floating"),
         Match(title="wallpaper_select"),
         Match(wm_class="keepassxc"),
+        Match(wm_class="Alert"),
+        Match(wm_class="Progress"),
         Match(wm_class=re.compile(r".*floating.*")),
         Match(title=re.compile(r".*floating.*")),
     ]
