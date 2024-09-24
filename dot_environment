@@ -29,8 +29,7 @@ export PYTHONDOCS=/usr/share/doc/python/html/library
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 ####################################################
-CHEZMOI="$(chezmoi source-path)"
-export CHEZMOI
+CHEZMOI="$(chezmoi source-path)" ; export CHEZMOI
 export LOCALDATA="$HOME/.localdata"
 export SCRIPTS="$HOME/.scripts"
 export GIT_REPOS="$HOME/git"
@@ -38,8 +37,7 @@ export D="$HOME/Desktop"
 
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
 # export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
-#PASSWORD_STORE_GPG_OPTS
-#####################################################
+# PASSWORD_STORE_GPG_OPTS
 
 # MAKE VIM XDG COMPLIANT
 mkdir -p "$XDG_CONFIG_HOME/vim"
@@ -81,24 +79,29 @@ export FLEXOKI_MAGENTA_2='#CE5D97'
 
 export QT_QPA_PLATFORMTHEME=qt6ct
 
+# FZF
 export FZF_DEFAULT_OPTS="
 --color=fg:$FLEXOKI_BASE_200,bg:$FLEXOKI_BLACK,hl:$FLEXOKI_MAGENTA
 --color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_900,hl+:$FLEXOKI_MAGENTA
 --color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK
 --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700
 --color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW
+--color=label:$FLEXOKI_YELLOW
 --highlight-line"
-
 export FZF_CTRL_T_OPTS="
 --preview 'bat -n --color=always {}'
 --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-
 export FZF_ALT_C_OPTS="
 --preview 'tree -C {}'"
-#gtk
-#___both can be useful on old screens
-#export GSK_RENDERER='gl'
-#export GSK_DEBUG='gl-no-fractional'
+
+# EZA
+export EZA_ICONS_AUTO=1
+export EZA_ICON_SPACING=2
+
+# GTK
+# ___both can be useful on old screens
+# export GSK_RENDERER='gl'
+# export GSK_DEBUG='gl-no-fractional'
 
 # ZOXIDE
 export _ZO_ECHO=1
