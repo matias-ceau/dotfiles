@@ -278,7 +278,7 @@ c.content.blocking.whitelist = []
 ## network.
 ## Type: Bool
 # ===>
-c.content.cache.appcache = True
+# c.content.cache.appcache = True #unavailable?
 
 # <===  Maximum number of pages to hold in the global memory page cache. The
 ## page cache allows for a nicer user experience when navigating forth or
@@ -287,7 +287,7 @@ c.content.cache.appcache = True
 ## https://webkit.org/blog/427/webkit-page-cache-i-the-basics/
 ## Type: Int
 # ===>
-c.content.cache.maximum_pages = 30
+# c.content.cache.maximum_pages = 30 #unavailable?
 
 # <===  Size (in bytes) of the HTTP network cache. Null to use the default
 ## value. With QtWebEngine, the maximum supported value is 2147483647 (~2
@@ -355,7 +355,7 @@ c.content.dns_prefetch = True
 ## to become one scrollable page.
 ## Type: Bool
 # ===>
-c.content.frame_flattening = False
+# c.content.frame_flattening = False #unavailable?
 
 # <===  Set fullscreen notification overlay timeout in milliseconds. If set to
 ## 0, no overlay will be displayed.
@@ -428,7 +428,7 @@ c.content.headers.user_agent = "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_vers
 c.content.hyperlink_auditing = False  ## Enable hyperlink auditing (`<a ping>`).
 c.content.images = True  ## Load images automatically in web pages.
 c.content.javascript.alert = True  ## Show javascript alerts.
-c.content.javascript.can_close_tabs = False  ## Allow JavaScript to close tabs.
+# c.content.javascript.can_close_tabs = False  ## Allow JavaScript to close tabs. #unavailable?
 c.content.javascript.can_open_tabs_automatically = (
     False  ## Allow JavaScript to open new tabs without user interaction.
 )
@@ -598,7 +598,7 @@ c.content.private_browsing = False  ## Open new windows in private browsing mode
 ##   - none: Don't use any proxy
 # ===>
 c.content.proxy = "system"
-c.content.proxy_dns_requests = True  ## Send DNS requests over the configured proxy.
+# c.content.proxy_dns_requests = True  ## Send DNS requests over the configured proxy. #unavailable?
 c.content.register_protocol_handler = "ask"  ## Allow websites to register protocol handlers via `navigator.registerProtocolHandler`. Type: BoolAsk
 c.content.site_specific_quirks.enabled = True  ## Enable quirks (such as faked user agent headers) needed to get specific sites to work properly.
 
@@ -926,7 +926,7 @@ c.hints.dictionary = "/usr/share/dict/words"
 ##   - javascript: Better but slower
 ##   - python: Slightly worse but faster
 # ===>
-c.hints.find_implementation = "python"
+# c.hints.find_implementation = "python" #unavailable?
 
 # <===  Hide unmatched hints in rapid mode.
 ## Type: Bool
@@ -1701,6 +1701,6 @@ c.zoom.levels = [
 c.zoom.mouse_divider = (
     512  ## Number of zoom increments to divide the mouse wheel movements to.
 )
-c.zoom.text_only = (
-    False  ## Apply the zoom factor on a frame only to the text or to all content.
-)
+# c.zoom.text_only = ( #unavailable?
+# False  ## Apply the zoom factor on a frame only to the text or to all content.
+# )
