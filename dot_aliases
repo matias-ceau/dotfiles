@@ -2,18 +2,14 @@
 
 # ~/.aliases
 #
-# COMMON ALIASES FOR ALL SHELLS
+# COMMON ALIASES AND FUNCTIONS FOR ALL SHELLS
 
 # Switching shells
 #alias _xsh="sudo chsh -s $(which xonsh) $(whoami)"
 #alias _zsh="sudo chsh -s $(which zsh) $(whoami)"
 #alias _bsh="sudo chsh -s $(which bash) $(whoami)"
 
-alias cfg="edit_chezmoi_cfg_files.sh"
-alias cð="cd $HOME/Desktop/"
-alias ð="$HOME/Desktop"
 #alias local_data_stow="stow --dir=$HOME/Dropbox/local_appdata --target=$HOME"
-
 alias pipe-restart='systemctl --user restart pipewire.service'
 alias qtile-reload='qtile cmd-obj -o cmd -f reload_config'
 alias qtile-restart='qtile cmd-obj -o cmd -f restart'
@@ -24,17 +20,20 @@ alias p44='pw-metadata -n settings 0 clock.force-rate 44100'
 alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
-alias gsync='sync-repo.sh'
-alias gsC="cd $CHEZMOI && git status" 
-alias syncC="sync-repo.sh $CHEZMOI && git status" 
-alias gsS="cd $SCRIPTS && git status" 
-alias syncS="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh" 
-alias gsL="cd $LOCALDATA && git status" 
-alias syncL="sync-repo.sh $LOCALDATA && chezmoi apply && sudo keyd reload" 
-alias gclone='git_clone_by_author-repo.sh'
-
-#alias f=fzf
+# alias gsync='sync-repo.sh'
+alias s="script_launcher.sh --embedded"
+alias cfg="edit_chezmoi_cfg_files.sh"
+alias Ð="cd $HOME/Desktop/"
+alias s©="cd $CHEZMOI && git status -vv"
+alias sß="cd $SCRIPTS && git status -vv"
+alias sð="cd $LOCALDATA && git status -vv"
+alias ©="sync-repo.sh $CHEZMOI && chezmoi apply && sudo keyd reload && chezmoi status -vv"
+alias ß="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh"
+alias ð="sync-repo.sh $LOCALDATA"
+alias ¶="pacman-fuzzy-search.sh"
+alias f='fzf-file-manager.sh'
 alias l=eza
+alias li='eza --oneline'
 alias ll='eza -l --icons=auto'
 alias la='eza -la --icons=auto'
 alias e='editor.sh'
@@ -52,8 +51,6 @@ alias tl='tmux ls'
 
 alias serv='echo "script: list_process.sh"; list_process.sh'
 
-alias s='eza -l $HOME/.scripts'
-
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
 #aliases['cpu-min'] = 'tuned-adm profile laptop-battery-powersave'
@@ -68,15 +65,15 @@ alias ip_livebox="curl -4 -s ifconfig.me"
 # FUNCTIONS
 
 _sgpt() {
-	last_cmd="$(fc -ln -1)"
-	echo "$last_cmd" | sgpt "$@"
+    last_cmd="$(fc -ln -1)"
+    echo "$last_cmd" | sgpt "$@"
 }
 
 ooo() {
-	source "$(fd 'activate$' -I | fzf --select-1)"
+    source "$(fd 'activate$' -I | fzf --select-1)"
 }
 xxx() {
-	deactivate
+    deactivate
 }
 ##      shopt -s expand_aliases
 ##

@@ -3,3 +3,9 @@
 	email = matias@ceau.net
 [init]
 	defaultBranch = main
+[alias]
+	repo = !git_clone_by_author-repo.sh
+	cd   = !source git_cd.sh
+	sync = !source git_cd.sh
+
+# vim: set ft=gitconfig
