@@ -48,7 +48,7 @@ alias ts='tmux new -s'
 alias tl='tmux ls'
 alias tf='tmux_fzf'
 tmux_fzf() {
-    tmux attach -t "$(tmux ls | cut -d: -f1 | fzf --select=1 --height=~100%)"
+    tmux attach -t "$(tmux ls | cut -d: -f1 | fzf --select-1 --height=~100%)"
 }
 
 alias serv="bat $(which list_process.sh); list_process.sh"
@@ -65,7 +65,7 @@ alias ip_livebox="curl -4 -s ifconfig.me"
 
 # FUNCTIONS
 shell_change() {
-    eval "$(chsh -l | fzf --select=1 --height=~100% -q "$1")"
+    eval "$(chsh -l | fzf --select-1 --height=~100% -q "$1")"
 }
 
 _() {
