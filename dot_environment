@@ -5,7 +5,7 @@ export BROWSER="qutebrowser"
 
 # PATHS ####################################
 # PATH
-PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/edirect"
 PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PATH
 
