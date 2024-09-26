@@ -7,16 +7,15 @@ layouts = [
     layout.Matrix(),  # equally spaced +
     layout.MonadTall(),  # 1 big, other small / flip RL / shuffle up down
     layout.MonadThreeCol(),  # same but 3 col (good for widescreen)
-    layout.Zoomy(),  #
-    #{{{
+    # {{{
+    #   layout.Zoomy(),  #
     #   layout.Stack(num_stacks=2),                                                # like columns but only 2 stacks (toggle with W-S-Ret)
     #    layout.Bsp(),                                                              # default same direction auto, change d manually
     #    layout.MonadWide(),                                                        # up down
     #    layout.RatioTile(),                                                        # can be useful instead of matrix
     #    layout.Tile(),                                                             #
     #    layout.VerticalTile(),                                                     #
-    #}}}
+    # }}}
 ]
 
 # ScreenSplit() to think about for big monitor
-
