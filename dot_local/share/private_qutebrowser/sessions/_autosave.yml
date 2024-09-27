@@ -1,0 +1,38 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - active: true
+    history:
+    - last_visited: '2024-09-27T13:52:37'
+      pinned: false
+      title: s2-folks/examples at main · allenai/s2-folks
+      url: https://github.com/allenai/s2-folks/tree/main/examples
+    - last_visited: '2024-09-27T13:52:38'
+      pinned: false
+      title: s2-folks/examples/python at main · allenai/s2-folks
+      url: https://github.com/allenai/s2-folks/tree/main/examples/python
+    - last_visited: '2024-09-27T13:52:44'
+      pinned: false
+      title: s2-folks/examples/python/get_open_access_pdf at main · allenai/s2-folks
+      url: https://github.com/allenai/s2-folks/tree/main/examples/python/get_open_access_pdf
+    - last_visited: '2024-09-27T13:52:52'
+      pinned: false
+      title: s2-folks/examples/python/get_open_access_pdf/simple.py at main · allenai/s2-folks
+      url: https://github.com/allenai/s2-folks/blob/main/examples/python/get_open_access_pdf/simple.py
+    - last_visited: '2024-09-27T13:53:43'
+      pinned: false
+      title: s2-folks/examples/python/get_open_access_pdf at main · allenai/s2-folks
+      url: https://github.com/allenai/s2-folks/tree/main/examples/python/get_open_access_pdf
+    - active: true
+      last_visited: '2024-09-27T13:53:43'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'allenai/s2-folks: Public space for the user community of Semantic Scholar
+        APIs to share scripts, report issues, and make suggestions.'
+      url: https://github.com/allenai/s2-folks/tree/main
+      zoom: 1.0
