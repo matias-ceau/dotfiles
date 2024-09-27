@@ -147,6 +147,9 @@ require("lazy").setup({
 				desc = "Global Keymaps (which-key)",
 			},
 		},
+		-- local wk = require("which-key")
+		-- wk.add({
+		--   { "<leader>f", group = "file" }, -- group
 		-- spec = {
 		-- 	{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
 		-- 	{ "<leader>d", group = "[D]ocument" },
@@ -234,20 +237,20 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>hh", builtin.help_tags, { desc = "Help: [H]elp tags" })
+			vim.keymap.set("n", "<leader>hh", builtin.help_tags, { desc = "[H]elp: [H]elp tags" })
 			vim.keymap.set("n", "<leader>hk", builtin.keymaps, { desc = "Help: [K]eymaps" })
 			vim.keymap.set("n", "<leader>hm", builtin.man_pages, { desc = "Help: [M]an" })
-			vim.keymap.set("n", "<leader>fc", builtin.find_files, { desc = "[F]iles in [C]wd" })
-			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "[R]ecent [Files" })
-			vim.keymap.set("n", "<leader>b", builtin.builtin, { desc = "Telescope [b]uiltins" })
-			vim.keymap.set("n", "<leader>sc", builtin.grep_string, { desc = "[S]earch [C]urrent [W]ord" })
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]ind [f]iles (cwd)" })
+			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "[F]ind [R]ecent Files" })
+			vim.keymap.set("n", "<leader>t", builtin.builtin, { desc = "[T]elescope builtins" })
+			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sb", builtin.live_grep, { desc = "[S]earch (rg) in current [B]uffer" })
 			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
 			vim.keymap.set("n", "<leader>.", builtin.resume, { desc = "Repeat last telescope search" })
 			vim.keymap.set("n", "<leader>:", builtin.commands, { desc = "Commands" })
 			vim.keymap.set("n", "<leader>`", builtin.marks, { desc = "Marks ([`])" })
-			vim.keymap.set("n", "<leader>r", builtin.registers, { desc = "[R]egisters" })
-			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[B]uffers" })
+			vim.keymap.set("n", '<leader>"', builtin.registers, { desc = "Registers" })
+			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Buffers" })
 			vim.keymap.set("n", "<leader>Gc", builtin.git_commits, { desc = "[G]it [c]ommits" }) -- TODO: wk group
 			vim.keymap.set("n", "<leader>Gs", builtin.git_status, { desc = "[G]it [s]tatus" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
@@ -268,17 +271,17 @@ require("lazy").setup({
 					grep_open_files = false,
 					prompt_title = "Live grep in buffer dir",
 				})
-			end, { desc = "Search [/] in buffer [d]ir" })
+			end, { desc = "Search in buffer dir" })
 
 			-- Shortcut for searching your configuration files TODO: add wh k
 			vim.keymap.set("n", "<leader>fc", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI") })
-			end, { desc = "[c]onfig [f]iles" })
+			end, { desc = "[f]ind [c]onfig files" })
 
 			-- Shortcut for searching your Neovim configuration files TODO: add wh k
 			vim.keymap.set("n", "<leader>fn", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
-			end, { desc = "[n]eovim config [f]iles" })
+			end, { desc = "[f]ind [n]eovim config files" })
 		end,
 	},
 
@@ -384,7 +387,7 @@ require("lazy").setup({
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
-					map("r", vim.lsp.buf.rename, "[r]ename variable")
+					map("<leader>r", vim.lsp.buf.rename, "[r]ename variable")
 
 					-- Execute a code action, usually your cursor needs to be on top of an error
 					-- or a suggestion from your LSP for this to activate.
@@ -433,7 +436,7 @@ require("lazy").setup({
 					--
 					-- This may be unwanted, since they displace some of your code
 					if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-						map("<leader>lh", function()
+						map("<leader>ch", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 						end, "LSP: toggle Inlay [h]ints")
 					end
