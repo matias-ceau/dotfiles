@@ -35,22 +35,13 @@ zle -N edit-command-line
 bindkey -e
 bindkey '\ee' edit-command-line
 
-eval "$(register-python-argcomplete pipx)"
-eval "$(zoxide init zsh)"
-eval "$(fzf --zsh)"
-# eval "$(pandoc --bash-completion)"
-eval "$(batman --export-env)"
-
 # Appearance
 autoload -U colors && colors
 #PROMPT='%F{cyan}%n@%m %F{yellow}%~ %F{green}%#%f '
 PROMPT='%F{red}@%f%F{yellow}%m%F{cyan} %~ %F{green}%%%f '
 
-#---------------------------
-#
 #  OPTIONAL PLUGINS
-#
-#---------------------------
+
 # Plugin: zsh-autosuggestions
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -61,5 +52,12 @@ aichat="$GIT_REPOS/sigoden/aichat"
 if [ -f "$aichat/scripts/completions/aichat.zsh" ]; then
     source "$aichat/scripts/completions/aichat.zsh"
 fi
+
+eval "$(register-python-argcomplete pipx)"
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+# eval "$(pandoc --bash-completion)"
+eval "$(batman --export-env)"
+command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # vim: set ft=zsh expandtab shiftwidth=2 :

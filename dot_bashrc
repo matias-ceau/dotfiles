@@ -1,4 +1,4 @@
-# ~/.bashrc
+# vim: set ft=bash
 # Source profile and aliases
 #
 #---------------------------
@@ -47,17 +47,12 @@ epoch_hexadecimal() {
 }
 
 lx() {
-    pdflatex --interaction=batchmode $1 2>&1 >/dev/null
+    pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
 }
-
-#VENV
-##     on() { source $HOME/.virtualenv/"$1"/bin/activate ; }
-##     new() { python -m venv $HOME/.virtualenv/"$1" ; }
-##     del() { rm -rf $HOME/.virtualenv/"$1" ; }
 
 eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
 eval "$(batman --export-env)"
-# vim: set ft=bash
+command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
