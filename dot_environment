@@ -116,32 +116,20 @@ if [ "$(hostnamectl hostname)" = "karjala" ]; then
 fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
-#TODO: Move everything related to aichat to the .env file in config (as per 0.20)
-export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat" #Customize the location of the config dir. Defaults to <user_config_dir>/aichat.
-
-export AICHAT_CONFIG_FILE="$AICHAT_CONFIG_DIR/config.yaml" #Customize the location of the config.yaml file.
-export AICHAT_FUNCTIONS_DIR="$AICHAT_CONFIG_DIR/functions" #Customize the location of the functions dir.
-export AICHAT_ROLES_FILE="$AICHAT_CONFIG_DIR/roles.yaml" #Customize the location of the roles.yaml file.
-export AICHAT_AGENTS_FUNCTIONS_DIR="$AICHAT_CONFIG_DIR/functions/agents" #Customize the location of the functions/agents dir.
-export AICHAT_AGENTS_CONFIG_DIR="$AICHAT_CONFIG_DIR/agents" #Customize the location of the agents dir.
-
-mkdir -p "$XDG_DATA_HOME/aichat"
+export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat"
+mkdir -p "$AICHAT_CONFIG_DIR/functions"
+mkdir -p "$AICHAT_CONFIG_DIR/roles"
 mkdir -p "$XDG_DATA_HOME/aichat/rags"
 mkdir -p "$XDG_DATA_HOME/aichat/sessions"
-export AICHAT_MESSAGES_FILE="$XDG_DATA_HOME/aichat/messages.md" #Customize the location of the messages.md file.
-export AICHAT_SESSIONS_DIR="$XDG_DATA_HOME/aichat/sessions" #Customize the location of the sessions dir.
-export AICHAT_RAGS_DIR="$XDG_DATA_HOME/aichat/rags" #Customize the location of the rags dir.
-#end of TODO:
+
 
 if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
+    SPOTIFY_CLIENT_SECRET="$(pass api/spotify)" && ANTHROPIC_API_KEY="$(pass api/anthropic)" && \
+    GEMINI_API_KEY="$(pass api/gemini)" && OPENAI_API_KEY="$(pass api/openai)" && \
+    PERPLEXITY_API_KEY="$(pass api/perplexity)" &&  MISTRAL_API_KEY="$(pass api/mistral)" && \
+    export OPENAI_API_KEY && export SPOTIFY_CLIENT_SECRET && export ANTHROPIC_API_KEY && export GEMINI_API_KEY && \
+    export PERPLEXITY_API_KEY && export MISTRAL_API_KEY && export CLAUDE_API_KEY="$ANTHROPIC_API_KEY" && \
     export LOADED_PASS_SECRET_ENV=1
-    export SPOTIFY_CLIENT_SECRET="$(pass ENV/SPOTIFY_CLIENT_SECRET)"
-    export ANTHROPIC_API_KEY="$(pass ENV/ANTHROPIC_API_KEY)"
-    export GEMINI_API_KEY="$(pass ENV/GEMINI_API_KEY)"
-    export OPENAI_API_KEY="$(pass ENV/OPENAI_API_KEY)"
-    export PERPLEXITY_API_KEY="$(pass ENV/PERPLEXITY_API_KEY)"
-    export MISTRAL_API_KEY="$(pass ENV/MISTRAL_API_KEY)"
-    export CLAUDE_API_KEY="$(pass ENV/CLAUDE_API_KEY)"
     clear
     fastfetch
 fi

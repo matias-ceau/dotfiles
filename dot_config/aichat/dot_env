@@ -1,0 +1,5 @@
+AICHAT_ROLES_DIR=/home/matias/.config/aichat/roles
+AICHAT_SESSIONS_DIR=/home/matias/.local/share/aichat/sessions
+AICHAT_RAGS_DIR=/home/matias/.local/share/aichat/rags
+AICHAT_FUNCTIONS_DIR=/home/matias/.config/aichat/functions
+AICHAT_MESSAGES_FILE=/home/matias/.local/share/aichat/messages.md
