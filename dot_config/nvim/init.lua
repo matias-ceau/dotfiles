@@ -130,17 +130,31 @@ require("lazy").setup({
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		opts = {},
+		opts = {
+			spec = {
+				{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
+				{ "<leader>h", group = "[H]elp" },
+				-- { "<leader>r", group = "[R]ename" },
+				{ "<leader>s", group = "[S]earch" },
+				{ "<leader>o", group = "[O]pen files" },
+				{ "<leader>t", group = "[T]oggle" },
+				{ "<leader>g", group = "[G]it" },
+				{ "<leader>D", group = "[D]iagnostics" },
+				{ "<leader>D", group = "[D]iagnostics" },
+				{ "<localleader>g", group = "[G]it hunk" },
+				{ "<localleader>c", group = "[c]olorizer" },
+			},
+		},
 		keys = {
 			{
-				"<localleader>wk",
+				"<localleader>?",
 				function()
 					require("which-key").show({ global = false })
 				end,
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 			{
-				"<localleader>wK",
+				"<leader>?",
 				function()
 					require("which-key").show({ global = true })
 				end,
@@ -150,15 +164,6 @@ require("lazy").setup({
 		-- local wk = require("which-key")
 		-- wk.add({
 		--   { "<leader>f", group = "file" }, -- group
-		-- spec = {
-		-- 	{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
-		-- 	{ "<leader>d", group = "[D]ocument" },
-		-- 	{ "<leader>r", group = "[R]ename" },
-		-- 	{ "<leader>s", group = "[S]earch" },
-		-- 	{ "<leader>w", group = "[W]orkspace" },
-		-- 	{ "<leader>t", group = "[T]oggle" },
-		-- 	{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
-		-- },
 	},
 
 	-- NOTE: Plugins can specify dependencies.
@@ -237,22 +242,24 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>hh", builtin.help_tags, { desc = "[H]elp: [H]elp tags" })
+			vim.keymap.set("n", "<leader>=f", builtin.filetypes, { desc = "Settings: [f]iletypes" })
+			vim.keymap.set("n", "<leader>=o", builtin.vim_options, { desc = "Settings: [o]ptions" })
+			vim.keymap.set("n", "<leader>hh", builtin.help_tags, { desc = "Help: [H]elp tags" })
 			vim.keymap.set("n", "<leader>hk", builtin.keymaps, { desc = "Help: [K]eymaps" })
 			vim.keymap.set("n", "<leader>hm", builtin.man_pages, { desc = "Help: [M]an" })
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]ind [f]iles (cwd)" })
-			vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "[F]ind [R]ecent Files" })
+			vim.keymap.set("n", "<leader>oo", builtin.find_files, { desc = "[O]pen file (cwd)" })
+			vim.keymap.set("n", "<leader>or", builtin.oldfiles, { desc = "[O]pen [R]ecent File" })
 			vim.keymap.set("n", "<leader>t", builtin.builtin, { desc = "[T]elescope builtins" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sb", builtin.live_grep, { desc = "[S]earch (rg) in current [B]uffer" })
 			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
 			vim.keymap.set("n", "<leader>.", builtin.resume, { desc = "Repeat last telescope search" })
 			vim.keymap.set("n", "<leader>:", builtin.commands, { desc = "Commands" })
-			vim.keymap.set("n", "<leader>`", builtin.marks, { desc = "Marks ([`])" })
+			vim.keymap.set("n", "<leader>`", builtin.marks, { desc = "Marks" })
 			vim.keymap.set("n", '<leader>"', builtin.registers, { desc = "Registers" })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "Buffers" })
-			vim.keymap.set("n", "<leader>Gc", builtin.git_commits, { desc = "[G]it [c]ommits" }) -- TODO: wk group
-			vim.keymap.set("n", "<leader>Gs", builtin.git_status, { desc = "[G]it [s]tatus" })
+			vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "[G]it [c]ommits" }) -- TODO: wk group
+			vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "[G]it [s]tatus" })
 			-- TODO: add lsp config https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 
 			-- Slightly advanced example of overriding default behavior and theme TODO: add wk group
@@ -274,14 +281,14 @@ require("lazy").setup({
 			end, { desc = "Search in buffer dir" })
 
 			-- Shortcut for searching your configuration files TODO: add wh k
-			vim.keymap.set("n", "<leader>fc", function()
+			vim.keymap.set("n", "<leader>oc", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI") })
-			end, { desc = "[f]ind [c]onfig files" })
+			end, { desc = "[o]pen [c]onfig files" })
 
 			-- Shortcut for searching your Neovim configuration files TODO: add wh k
-			vim.keymap.set("n", "<leader>fn", function()
+			vim.keymap.set("n", "<leader>on", function()
 				builtin.find_files({ cwd = vim.fs.normalize("$CHEZMOI/dot_config/nvim") })
-			end, { desc = "[f]ind [n]eovim config files" })
+			end, { desc = "[o]pen [n]vim config files" })
 		end,
 	},
 
