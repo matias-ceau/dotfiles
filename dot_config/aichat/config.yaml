@@ -1,16 +1,23 @@
 
 # ---- llm ----
-#model: openai:gpt-4o             # Specify the LLM to use
-model: claude:claude-3-5-sonnet-20240620             # Specify the LLM to use
+model: openai:gpt-4o-2024-08-06         # Specify the LLM to use
 temperature: null                # Set default temperature parameter
 top_p: null                      # Set default top-p parameter, range (0, 1)
 
 # ---- behavior ----
+stream: true                     # Controls whether to use the stream-style API.
 save: true                       # Indicates whether to persist the message
 keybindings: vi                  # Choose keybinding style (emacs, vi)
 buffer_editor: vim               # Command used to edit the current input with ctrl+o, env: EDITOR
 wrap: no                         # Controls text wrapping (no, auto, <max-width>)
 wrap_code: false                 # Enables or disables wrapping of code blocks
+
+# ---- function-calling ----
+# Visit https://github.com/sigoden/llm-functions for setup instructions
+function_calling: true           # Enables or disables function calling (Globally).
+mapping_tools:                   # Alias for a tool or toolset
+  fs: 'fs_cat,fs_ls,fs_mkdir,fs_rm,fs_write'
+use_tools: null                  # Which tools to use by default. (e.g. 'fs,web_search')
 
 # ---- prelude ----
 prelude: null                    # Set a default role or session to start with (e.g. role:<name>, session:<name>)
@@ -27,33 +34,8 @@ summarize_prompt: 'Summarize the discussion briefly in 200 words or less to use 
 # Text prompt used for including the summary of the entire session
 summary_prompt: 'This is a summary of the chat history as a recap: '
 
-# Define document loaders to control how RAG and `.file`/`--file` load files of specific formats.
-document_loaders:
-  # You can add custom loaders using the following syntax:
-  #   <file-extension>: <command-to-load-the-file>
-  # Note: Use `$1` for input file and `$2` for output file. If `$2` is omitted, use stdout as output.
-  pdf: 'pdftotext $1 -'                         # Load .pdf file, see https://poppler.freedesktop.org
-  docx: 'pandoc --to plain $1'                  # Load .docx file
-  xlsx: 'ssconvert $1 $2'                     # Load .xlsx file
-  html: 'pandoc --to plain $1'                # Load .html file
-  recursive_url: 'rag-crawler $1 $2'            # Load websites, see https://github.com/sigoden/rag-crawler
-
-# ---- function-calling & agent ----
-# Visit https://github.com/sigoden/llm-functions for setup instructions
-function_calling: true           # Enables or disables function calling (Globally).
-# Regex for seletecting dangerous functions
-# User confirmation is required when executing these functions
-# e.g. 'execute_command|execute_js_code' 'execute_.*'
-dangerously_functions_filter: null
-# Per-Agent configuration
-agents:
-  - name: todo-sh
-    model: null
-    temperature: null
-    top_p: null
-    dangerously_functions_filter: null
-
 # ---- RAG ----
+# See [RAG-Guide](https://github.com/sigoden/aichat/wiki/RAG-Guide) for more details.
 rag_embedding_model: null                   # Specifies the embedding model to use
 rag_reranker_model: null                    # Specifies the rerank model to use
 rag_top_k: 4                                # Specifies the number of documents to retrieve
@@ -61,7 +43,6 @@ rag_chunk_size: null                        # Specifies the chunk size
 rag_chunk_overlap: null                     # Specifies the chunk overlap
 rag_min_score_vector_search: 0              # Specifies the minimum relevance score for vector-based searching
 rag_min_score_keyword_search: 0             # Specifies the minimum relevance score for keyword-based searching
-rag_min_score_rerank: 0                     # Specifies the minimum relevance score for reranking
 # Defines the query structure using variables like __CONTEXT__ and __INPUT__ to tailor searches to specific needs
 rag_template: |
   Use the following context as your learned knowledge, inside <context></context> XML tags.
@@ -77,15 +58,25 @@ rag_template: |
 
   Given the context information, answer the query.
   Query: __INPUT__
+# Define document loaders to control how RAG and `.file`/`--file` load files of specific formats.
+document_loaders:
+  # You can add custom loaders using the following syntax:
+  #   <file-extension>: <command-to-load-the-file>
+  # Note: Use `$1` for input file and `$2` for output file. If `$2` is omitted, use stdout as output.
+  pdf: 'pdftotext $1 -'                         # Load .pdf file, see https://poppler.freedesktop.org to set up pdftotext
+  docx: 'pandoc --to plain $1'                  # Load .docx file, see https://pandoc.org to set up pandoc
 
 # ---- apperence ----
 highlight: true                  # Controls syntax highlighting
 light_theme: false               # Activates a light color theme when true. env: AICHAT_LIGHT_THEME
-# Custom REPL prompt, see https://github.com/sigoden/aichat/wiki/Custom-REPL-Prompt for more details
+# Custom REPL left/right prompts, see https://github.com/sigoden/aichat/wiki/Custom-REPL-Prompt for more details
 left_prompt:
   '{color.green}{?session {?agent {agent}>}{session}{?role /}}{!session {?agent {agent}>}}{role}{?rag @{rag}}{color.cyan}{?session )}{!session >}{color.reset} '
 right_prompt:
   '{color.purple}{?session {?consume_tokens {consume_tokens}({consume_percent}%)}{!consume_tokens {consume_tokens}}}{color.reset}'
+
+# ---- misc ----
+serve_addr: 127.0.0.1:8000                  # Default serve listening address 
 
 # ---- clients ----
 clients:
@@ -99,17 +90,23 @@ clients:
   #       supports_function_calling: true
   #     - name: xxxx                                  # Embedding model
   #       type: embedding
-  #       max_input_tokens: 2048
+  #       max_input_tokens: 200000
+  #       max_tokens_per_chunk: 2000
   #       default_chunk_size: 1500                        
   #       max_batch_size: 100
   #     - name: xxxx                                  # Reranker model
   #       type: reranker 
   #       max_input_tokens: 2048
-  #   patches: 
-  #     <regex>:                                      # The regex to match model names, e.g. '.*' 'gpt-4o' 'gpt-4o|gpt-4-.*'
-  #       chat_completions_body:                      # The JSON to be merged with the chat completions request body.
+  #   patch:                                          # Patch api
+  #     chat_completions:                             # Api type, possible values: chat_completions, embeddings, and rerank
+  #       <regex>:                                    # The regex to match model names, e.g. '.*' 'gpt-4o' 'gpt-4o|gpt-4-.*'
+  #         url: ''                                   # Patch request url
+  #         body:                                     # Patch request body
+  #           <json>
+  #         headers:                                  # Patch request headers
+  #           <key>: <value>
   #   extra:
-  #     proxy: socks5://127.0.0.1:1080                # Set https/socks5 proxy. ENV: HTTPS_PROXY/https_proxy/ALL_PROXY/all_proxy
+  #     proxy: socks5://127.0.0.1:1080                # Set proxy
   #     connect_timeout: 10                           # Set timeout in seconds for connect to api
 
   # See https://platform.openai.com/docs/quickstart
@@ -120,34 +117,53 @@ clients:
   # For any platform compatible with OpenAI's API
   - type: openai-compatible
     name: local
-    api_base: http://localhost:8080/v1                # ENV: {client}_API_BASE
-    chat_endpoint: /chat/completions                  # Optional
+    api_base: http://localhost:8080/v1
+    # api_key: xxx                                      # Optional
     models:
-      - name: llama3
-        max_input_tokens: 8192
+      - name: llama3.1
+        max_input_tokens: 128000
+        supports_function_calling: true
+      - name: jina-embeddings-v2-base-en
+        type: embedding
+        default_chunk_size: 1500
+        max_batch_size: 100
+      - name: jina-reranker-v2-base-multilingual
+        type: reranker
 
   # See https://ai.google.dev/docs
   - type: gemini
-    patches:
-      '.*':                                           
-        chat_completions_body:
-          safetySettings:
-            - category: HARM_CATEGORY_HARASSMENT
-              threshold: BLOCK_NONE
-            - category: HARM_CATEGORY_HATE_SPEECH
-              threshold: BLOCK_NONE
-            - category: HARM_CATEGORY_SEXUALLY_EXPLICIT
-              threshold: BLOCK_NONE
-            - category: HARM_CATEGORY_DANGEROUS_CONTENT
-              threshold: BLOCK_NONE
+    api_base: https://generativelanguage.googleapis.com/v1beta
+    # api_key: xxx
+    patch:
+      chat_completions:
+        '.*':
+          body:
+            safetySettings:
+              - category: HARM_CATEGORY_HARASSMENT
+                threshold: BLOCK_NONE
+              - category: HARM_CATEGORY_HATE_SPEECH
+                threshold: BLOCK_NONE
+              - category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+                threshold: BLOCK_NONE
+              - category: HARM_CATEGORY_DANGEROUS_CONTENT
+                threshold: BLOCK_NONE
 
   # See https://docs.anthropic.com/claude/reference/getting-started-with-the-api
   - type: claude
+    api_base: https://api.anthropic.com/v1            # Optional
+    # api_key: xxx
 
   # See https://docs.mistral.ai/
   - type: openai-compatible
     name: mistral
     api_base: https://api.mistral.ai/v1
+    # api_key: xxx
+
+  # See https://docs.ai21.com/docs/quickstart
+  # - type: openai-compatible
+    # name: ai12
+    # api_base: https://api.ai21.com/studio/v1
+    # api_key: xxx
 
   # See https://docs.cohere.com/docs/the-cohere-platform
   - type: cohere
@@ -163,18 +179,12 @@ clients:
     api_base: https://api.groq.com/openai/v1
 
   # See https://github.com/jmorganca/ollama
-  - type: ollama
-    api_base: http://localhost:11434                  # ENV: {client}_API_BASE
-    api_auth: Basic xxx                               #TODO: ENV: {client}_API_AUTH
-    models:                                           # Required
-      - name: llama3.1
-        max_input_tokens: 8192
-      - name: all-minilm:l6-v2
-        type: embedding
-        max_chunk_size: 1000
+  - type: openai-compatible
+    name: ollama
+    api_base: http://localhost:11434/v1
 
   # See https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart
-  - type: azure-openai
+  # - type: azure-openai
     api_base: https://{RESOURCE}.openai.azure.com     # ENV: {client}_API_BASE
     models:                                           # Required
       - name: gpt-35-turbo                            # Model deployment name
@@ -208,7 +218,7 @@ clients:
     # Specifies a application-default-credentials (adc) file, Optional field
     # Run `gcloud auth application-default login` to init the adc file
     # see https://cloud.google.com/docs/authentication/external/set-up-adc
-    adc_file: <path-to/gcloud/application_default_credentials.json> 
+    # adc_file: <path-to/gcloud/application_default_credentials.json> 
 
   # See https://docs.aws.amazon.com/bedrock/latest/userguide/
   - type: bedrock
@@ -217,9 +227,16 @@ clients:
     region: xxx                                       # ENV: {client}_REGION
 
   # See https://developers.cloudflare.com/workers-ai/
-  - type: cloudflare
-    account_id: xxx                                   # ENV: {client}_ACCOUNT_ID
-#    api_key: xxx                                      # ENV: {client}_API_KEY
+  # - type: openai-compatible
+  #   name: cloudflare
+  #   api_base: https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/v1
+  #   api_key: xxx
+
+  # See https://huggingface.co/inference-api/serverless
+  - type: openai-compatible
+    name: huggingface
+    api_base: https://api-inference.huggingface.co/v1
+    # api_key: xxx
 
   # See https://replicate.com/docs
   - type: replicate
@@ -289,16 +306,18 @@ clients:
   - type: openai-compatible
     name: together
     api_base: https://api.together.xyz/v1
-#    api_key: xxx                                      # ENV: {client}_API_KEY
+    # api_key: xxx
+
+  # ----- RAG dedicated -----
 
   # See https://jina.ai
-  - type: rag-dedicated
+  - type: openai-compatible
     name: jina
     api_base: https://api.jina.ai/v1
 #    api_key: xxx                                      # ENV: {client}_API_KEY
 
   # See https://docs.voyageai.com/docs/introduction
-  - type: rag-dedicated
+  - type: openai-compatible
     name: voyageai
     api_base: https://api.voyageai.ai/v1
 #    api_key: xxx                                      # ENV: {client}_API_KEY
