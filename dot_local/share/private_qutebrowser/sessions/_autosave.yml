@@ -1,0 +1,702 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
+    FgAADv8AAAhv
+  tabs:
+  - active: true
+    history:
+    - last_visited: '2024-09-28T13:41:11'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/
+    - last_visited: '2024-09-28T13:41:12'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/auth
+    - last_visited: '2024-09-28T13:42:22'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/
+    - last_visited: '2024-09-28T13:49:37'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin/settings
+    - last_visited: '2024-09-28T13:59:03'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin
+    - last_visited: '2024-09-28T13:59:14'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin/settings
+    - last_visited: '2024-09-28T14:01:17'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin
+    - last_visited: '2024-09-28T14:01:18'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin/settings
+    - last_visited: '2024-09-28T14:01:20'
+      pinned: true
+      title: Workspace | Open WebUI
+      url: http://0.0.0.0:8080/workspace
+    - last_visited: '2024-09-28T14:01:20'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T14:01:28'
+      pinned: true
+      title: Prompts | Open WebUI
+      url: http://0.0.0.0:8080/workspace/prompts
+    - last_visited: '2024-09-28T14:32:47'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T14:49:50'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace
+    - last_visited: '2024-09-28T14:49:50'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T14:49:54'
+      pinned: true
+      title: Prompts | Open WebUI
+      url: http://0.0.0.0:8080/workspace/prompts
+    - last_visited: '2024-09-28T14:49:54'
+      pinned: true
+      title: Documents | Open WebUI
+      url: http://0.0.0.0:8080/workspace/documents
+    - last_visited: '2024-09-28T14:50:03'
+      pinned: true
+      title: Tools | Open WebUI
+      url: http://0.0.0.0:8080/workspace/tools
+    - last_visited: '2024-09-28T14:50:11'
+      pinned: true
+      title: Functions | Open WebUI
+      url: http://0.0.0.0:8080/workspace/functions
+    - last_visited: '2024-09-28T14:50:59'
+      pinned: true
+      title: Functions | Open WebUI
+      url: http://0.0.0.0:8080/workspace/functions/create
+    - last_visited: '2024-09-28T14:52:30'
+      pinned: true
+      title: Tools | Open WebUI
+      url: http://0.0.0.0:8080/workspace/tools
+    - last_visited: '2024-09-28T14:52:32'
+      pinned: true
+      title: Tools | Open WebUI
+      url: http://0.0.0.0:8080/workspace/tools/create
+    - last_visited: '2024-09-28T14:53:00'
+      pinned: true
+      title: Documents | Open WebUI
+      url: http://0.0.0.0:8080/workspace/documents
+    - last_visited: '2024-09-28T14:53:17'
+      pinned: true
+      title: Prompts | Open WebUI
+      url: http://0.0.0.0:8080/workspace/prompts
+    - last_visited: '2024-09-28T14:53:19'
+      pinned: true
+      title: Prompts | Open WebUI
+      url: http://0.0.0.0:8080/workspace/prompts/create
+    - last_visited: '2024-09-28T14:53:29'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T14:53:50'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace
+    - last_visited: '2024-09-28T14:53:50'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T14:53:51'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/
+    - last_visited: '2024-09-28T14:53:58'
+      pinned: true
+      title: Playground | Open WebUI
+      url: http://0.0.0.0:8080/playground
+    - last_visited: '2024-09-28T14:56:37'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin/settings
+    - last_visited: '2024-09-28T15:06:30'
+      pinned: true
+      title: Admin Panel | Open WebUI
+      url: http://0.0.0.0:8080/admin
+    - last_visited: '2024-09-28T15:06:36'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/
+    - last_visited: '2024-09-28T15:07:36'
+      pinned: true
+      title: Workspace | Open WebUI
+      url: http://0.0.0.0:8080/workspace
+    - last_visited: '2024-09-28T15:07:36'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T15:07:46'
+      pinned: true
+      title: Prompts | Open WebUI
+      url: http://0.0.0.0:8080/workspace/prompts
+    - last_visited: '2024-09-28T15:07:51'
+      pinned: true
+      title: Documents | Open WebUI
+      url: http://0.0.0.0:8080/workspace/documents
+    - last_visited: '2024-09-28T15:07:52'
+      pinned: true
+      title: Tools | Open WebUI
+      url: http://0.0.0.0:8080/workspace/tools
+    - last_visited: '2024-09-28T15:07:53'
+      pinned: true
+      title: Functions | Open WebUI
+      url: http://0.0.0.0:8080/workspace/functions
+    - last_visited: '2024-09-28T15:07:53'
+      pinned: true
+      title: Models | Open WebUI
+      url: http://0.0.0.0:8080/workspace/models
+    - last_visited: '2024-09-28T15:07:58'
+      pinned: true
+      title: Playground | Open WebUI
+      url: http://0.0.0.0:8080/playground
+    - last_visited: '2024-09-28T16:16:28'
+      pinned: true
+      title: "\U0001F5E3️ Text-to-Speech Bot Buildin... | Open WebUI"
+      url: http://0.0.0.0:8080/c/1ec61740-afca-4a9b-95ae-85b1bc4447df
+    - last_visited: '2024-09-28T16:52:23'
+      pinned: true
+      title: Open WebUI
+      url: http://0.0.0.0:8080/
+    - active: true
+      last_visited: '2024-09-28T17:34:14'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Open WebUI
+      url: http://0.0.0.0:8080/admin/settings
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-27T17:22:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: graph visualisation in python at DuckDuckGo
+      url: https://duckduckgo.com/?q=graph+visualisation+in+python&ia=web
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-27T17:22:20'
+      pinned: false
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+    - active: true
+      last_visited: '2024-09-28T04:36:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 2568
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html#module-networkx.drawing.nx_pydot
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T04:36:39'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4424
+      title: 'pydot/pydot: Python interface to Graphviz''s Dot language'
+      url: https://github.com/pydot/pydot
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T04:35:09'
+      original-url: http://www.cytoscape.org/
+      pinned: false
+      title: 'Cytoscape: An Open Source Platform for Complex Network Analysis and
+        Visualization'
+      url: https://cytoscape.org/
+    - last_visited: '2024-09-28T04:35:16'
+      pinned: false
+      title: Cytoscape 3.10.2 User Manual — Cytoscape User Manual 3.10.2 documentation
+      url: https://manual.cytoscape.org/en/stable/
+    - active: true
+      last_visited: '2024-09-28T04:35:28'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 2294
+      title: 5. Creating Networks — Cytoscape User Manual 3.10.2 documentation
+      url: https://manual.cytoscape.org/en/stable/Creating_Networks.html#import-fixed-format-network-files
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-27T17:22:20'
+      pinned: false
+      title: Knuth Miles — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_miles.html#sphx-glr-auto-examples-plot-miles-py
+    - last_visited: '2024-09-28T04:34:06'
+      pinned: false
+      title: Subgraph — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_subgraph.html
+    - last_visited: '2024-09-28T04:34:10'
+      pinned: false
+      title: Attributes — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_attributes.html
+    - last_visited: '2024-09-28T04:34:13'
+      pinned: false
+      title: Basic — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_simple.html
+    - last_visited: '2024-09-28T04:34:26'
+      pinned: false
+      title: Star — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_star.html
+    - active: true
+      last_visited: '2024-09-28T04:34:39'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1800
+      title: Install — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/install.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-27T17:22:20'
+      pinned: false
+      title: Command Line | Graphviz
+      url: https://www.graphviz.org/doc/info/command.html
+    - last_visited: '2024-09-27T21:51:42'
+      pinned: false
+      title: vimdot | Graphviz
+      url: https://www.graphviz.org/docs/cli/vimdot/
+    - last_visited: '2024-09-27T21:51:58'
+      pinned: false
+      title: Layout Engines | Graphviz
+      url: https://www.graphviz.org/docs/layouts/
+    - last_visited: '2024-09-27T21:52:11'
+      pinned: false
+      title: Library Usage | Graphviz
+      url: https://www.graphviz.org/docs/library/
+    - last_visited: '2024-09-27T21:52:26'
+      pinned: false
+      title: Source Code | Graphviz
+      url: https://www.graphviz.org/download/source/
+    - last_visited: '2024-09-27T21:52:35'
+      pinned: false
+      title: DOT Language | Graphviz
+      url: https://www.graphviz.org/doc/info/lang.html
+    - last_visited: '2024-09-27T21:52:44'
+      pinned: false
+      title: Theory/Publications | Graphviz
+      url: https://www.graphviz.org/theory/
+    - last_visited: '2024-09-27T21:52:54'
+      pinned: false
+      title: Library Usage | Graphviz
+      url: https://www.graphviz.org/docs/library/
+    - last_visited: '2024-09-27T21:52:57'
+      pinned: false
+      title: Character Entities | Graphviz
+      url: https://www.graphviz.org/doc/char.html
+    - last_visited: '2024-09-27T21:53:29'
+      pinned: false
+      title: Color Names | Graphviz
+      url: https://www.graphviz.org/doc/info/colors.html
+    - last_visited: '2024-09-27T21:54:14'
+      pinned: false
+      title: Color Names | Graphviz
+      url: https://www.graphviz.org/doc/info/colors.html#brewer
+    - last_visited: '2024-09-27T21:54:52'
+      pinned: false
+      title: Command Line | Graphviz
+      url: https://www.graphviz.org/doc/info/command.html
+    - last_visited: '2024-09-27T21:56:10'
+      pinned: false
+      title: acyclic | Graphviz
+      url: https://www.graphviz.org/docs/cli/acyclic/
+    - last_visited: '2024-09-27T21:56:59'
+      pinned: false
+      title: About | Graphviz
+      url: https://www.graphviz.org/about/
+    - active: true
+      last_visited: '2024-09-27T21:57:10'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: DOT Language | Graphviz
+      url: https://www.graphviz.org/doc/info/lang.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T14:05:58'
+      pinned: false
+      title: github prompt repo at DuckDuckGo
+      url: https://duckduckgo.com/?q=github+prompt+repo&ia=web
+    - last_visited: '2024-09-28T14:07:12'
+      pinned: false
+      title: Models - OpenAI API
+      url: https://platform.openai.com/docs/models/moderation
+    - last_visited: '2024-09-28T14:35:03'
+      pinned: false
+      title: Prompt engineering - OpenAI API
+      url: https://platform.openai.com/docs/guides/prompt-engineering/strategy-test-changes-systematically
+    - last_visited: '2024-09-28T14:35:24'
+      pinned: false
+      title: Examples - OpenAI API
+      url: https://platform.openai.com/docs/examples
+    - last_visited: '2024-09-28T14:35:47'
+      pinned: false
+      title: Examples - OpenAI API
+      url: https://platform.openai.com/docs/examples/default-function-from-spec
+    - active: true
+      last_visited: '2024-09-28T14:36:06'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Examples - OpenAI API
+      url: https://platform.openai.com/docs/examples
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T16:13:25'
+      pinned: false
+      title: qutebrowser microphone acces denied at DuckDuckGo
+      url: https://duckduckgo.com/?q=qutebrowser+microphone+acces+denied&ia=web
+    - active: true
+      last_visited: '2024-09-28T16:13:26'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'About the microphone issues in QtWebengine · qutebrowser/qutebrowser
+        · Discussion #7737'
+      url: https://github.com/qutebrowser/qutebrowser/discussions/7737
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T16:33:35'
+      pinned: false
+      title: anything llm at DuckDuckGo
+      url: https://duckduckgo.com/?q=anything+llm&ia=web
+    - last_visited: '2024-09-28T16:33:37'
+      pinned: false
+      title: anything llm at DuckDuckGo
+      url: https://duckduckgo.com/?q=anything+llm&iax=images&ia=images
+    - last_visited: '2024-09-28T16:33:50'
+      pinned: false
+      title: anything llm at DuckDuckGo
+      url: https://duckduckgo.com/?q=anything+llm&ia=web
+    - last_visited: '2024-09-28T16:33:52'
+      pinned: false
+      title: 'Mintplex-Labs/anything-llm: The all-in-one Desktop & Docker AI application
+        with built-in RAG, AI agents, and more.'
+      url: https://github.com/Mintplex-Labs/anything-llm
+    - last_visited: '2024-09-28T16:34:58'
+      pinned: false
+      title: streamlit assistant structure at DuckDuckGo
+      url: https://duckduckgo.com/?q=streamlit+assistant+structure&ia=web
+    - last_visited: '2024-09-28T16:40:48'
+      pinned: false
+      title: textual python llm assistant structure at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual+python+llm+assistant+structure&ia=web
+    - last_visited: '2024-09-28T16:40:58'
+      pinned: false
+      title: textual python llm assistant template at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual+python+llm+assistant+template&ia=web
+    - last_visited: '2024-09-28T16:41:25'
+      pinned: false
+      title: textual chatbot assistant template at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual++chatbot+assistant+template&ia=web
+    - last_visited: '2024-09-28T16:41:41'
+      pinned: false
+      title: streamlit chatbot assistant template at DuckDuckGo
+      url: https://duckduckgo.com/?q=streamlit+chatbot+assistant+template&ia=web
+    - last_visited: '2024-09-28T16:41:51'
+      pinned: false
+      title: streamlit chatbot assistant template at DuckDuckGo
+      url: https://duckduckgo.com/?q=streamlit+chatbot+assistant+template
+    - active: true
+      last_visited: '2024-09-28T16:41:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 240
+      title: streamlit chatbot assistant template at DuckDuckGo
+      url: https://duckduckgo.com/?q=streamlit+chatbot+assistant+template&df=y&ia=web
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T16:55:28'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Creating an Assistant with OpenAI Assistant API and Streamlit | by Shuyang
+        Xiang | Towards Data Science
+      url: https://towardsdatascience.com/creating-an-assistant-with-openai-assistant-api-and-streamlit-282d9be9f03e
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T16:55:39'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Building a Streamlit Chatbot to chat with your coding project with LlamaIndex
+        and OpenAI | by Aniruddha Bera | Medium
+      url: https://medium.com/@pritubera/building-a-streamlit-chatbot-for-technical-questions-with-llamaindex-and-openai-26808c841dab
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T17:11:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: carolinedlu/llamaindex-chat-with-streamlit-docs
+      url: https://github.com/carolinedlu/llamaindex-chat-with-streamlit-docs/tree/main
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T17:11:04'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Build a chatbot with custom data sources, powered by LlamaIndex
+      url: https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T16:41:55'
+      pinned: false
+      title: 'Building an Advanced Streamlit Chatbot with OpenAI Integration: A Comprehensive
+        Guide - Part 3 - DEV Community'
+      url: https://dev.to/jamesbmour/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-3-59d6
+    - last_visited: '2024-09-28T16:42:07'
+      pinned: false
+      title: Welcome! - DEV Community
+      url: https://dev.to/enter?state=new-user&bb=126495
+    - last_visited: '2024-09-28T16:42:12'
+      pinned: false
+      title: Authorize application
+      url: https://github.com/login/oauth/authorize?client_id=d7251d40ac9298bdd9fe&redirect_uri=https%3A%2F%2Fdev.to%2Fusers%2Fauth%2Fgithub%2Fcallback&response_type=code&scope=user%3Aemail&state=097c4fa6cdf41311b8ed08c6fdd1cbd34b5afec534288efc
+    - last_visited: '2024-09-28T16:42:21'
+      original-url: https://github.com/login/oauth/authorize
+      pinned: false
+      title: Welcome to DEV Community
+      url: https://dev.to/onboarding?referrer=https%3A%2F%2Fdev.to%2Fenter%3Fstate%3Dnew-user%26bb%3D126495
+    - last_visited: '2024-09-28T16:43:22'
+      pinned: false
+      title: 'Building an Advanced Streamlit Chatbot with OpenAI Integration: A Comprehensive
+        Guide - Part 3 - DEV Community'
+      url: https://dev.to/jamesbmour/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-3-59d6
+    - last_visited: '2024-09-28T16:45:39'
+      pinned: false
+      title: 'Building an Interactive Streamlit Chatbot: A Step-by-Step Guide - DEV
+        Community'
+      url: https://dev.to/jimdb77/building-an-interactive-streamlit-chatbot-a-step-by-step-guide-4c68
+    - last_visited: '2024-09-28T16:45:53'
+      pinned: false
+      title: 'Building an Advanced Streamlit Chatbot with OpenAI Integration: A Comprehensive
+        Guide - Part 2 - DEV Community'
+      url: https://dev.to/jimdb77/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-2-3670
+    - active: true
+      last_visited: '2024-09-28T16:46:32'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 13680
+      title: 'Building an Advanced Streamlit Chatbot with OpenAI Integration: A Comprehensive
+        Guide - Part 3 - DEV Community'
+      url: https://dev.to/jimdb77/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-3-59d6
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T16:42:00'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4800
+      title: 'Building an Advanced Streamlit Chatbot with OpenAI Integration: A Comprehensive
+        Guide — Part 2 | by James | Medium'
+      url: https://medium.com/@jamesbmour/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-2-07af6e1a8345
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T16:35:04'
+      pinned: false
+      title: Build a basic LLM chat app - Streamlit Docs
+      url: https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps
+    - last_visited: '2024-09-28T16:37:47'
+      pinned: false
+      title: Build an LLM app using LangChain - Streamlit Docs
+      url: https://docs.streamlit.io/develop/tutorials/llms/llm-quickstart
+    - active: true
+      last_visited: '2024-09-28T16:38:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Quick reference - Streamlit Docs
+      url: https://docs.streamlit.io/develop/quick-reference
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-28T16:59:44'
+      pinned: false
+      title: open webui pipelines at DuckDuckGo
+      url: https://duckduckgo.com/?q=open+webui+pipelines&ia=web
+    - last_visited: '2024-09-28T17:00:01'
+      pinned: false
+      title: 'open-webui/pipelines: Pipelines: Versatile, UI-Agnostic OpenAI-Compatible
+        Plugin Framework'
+      url: https://github.com/open-webui/pipelines?tab=readme-ov-file
+    - last_visited: '2024-09-28T17:00:01'
+      pinned: false
+      title: pipelines/docs/images/workflow.png at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/docs/images/workflow.png
+    - last_visited: '2024-09-28T17:00:38'
+      pinned: false
+      title: pipelines/docs at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/docs
+    - last_visited: '2024-09-28T17:00:41'
+      pinned: false
+      title: pipelines/examples at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples
+    - last_visited: '2024-09-28T17:00:43'
+      pinned: false
+      title: pipelines/examples/filters at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/filters
+    - last_visited: '2024-09-28T17:00:52'
+      pinned: false
+      title: pipelines/examples/filters/rate_limit_filter_pipeline.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/filters/rate_limit_filter_pipeline.py
+    - last_visited: '2024-09-28T17:01:00'
+      pinned: false
+      title: pipelines/examples/filters/home_assistant_filter.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/filters/home_assistant_filter.py
+    - last_visited: '2024-09-28T17:01:17'
+      pinned: false
+      title: pipelines/examples/filters/dynamic_ollama_vision_filter_pipeline.py at
+        main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/filters/dynamic_ollama_vision_filter_pipeline.py
+    - last_visited: '2024-09-28T17:01:33'
+      pinned: false
+      title: pipelines/examples/pipelines at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/pipelines
+    - last_visited: '2024-09-28T17:01:39'
+      pinned: false
+      title: pipelines/examples/pipelines/integrations/python_code_pipeline.py at
+        main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/pipelines/integrations/python_code_pipeline.py
+    - last_visited: '2024-09-28T17:03:44'
+      pinned: false
+      title: pipelines/examples/pipelines/integrations/wikipedia_pipeline.py at main
+        · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/pipelines/integrations/wikipedia_pipeline.py
+    - last_visited: '2024-09-28T17:04:37'
+      pinned: false
+      title: pipelines/examples/pipelines/providers/anthropic_manifold_pipeline.py
+        at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/pipelines/providers/anthropic_manifold_pipeline.py
+    - last_visited: '2024-09-28T17:04:52'
+      pinned: false
+      title: pipelines/examples/pipelines/rag at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/pipelines/rag
+    - last_visited: '2024-09-28T17:04:55'
+      pinned: false
+      title: pipelines/examples/pipelines/rag/haystack_pipeline.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/pipelines/rag/haystack_pipeline.py
+    - last_visited: '2024-09-28T17:05:08'
+      pinned: false
+      title: pipelines/examples/scaffolds at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/scaffolds
+    - last_visited: '2024-09-28T17:05:10'
+      pinned: false
+      title: pipelines/examples/scaffolds/example_pipeline_scaffold.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/example_pipeline_scaffold.py
+    - last_visited: '2024-09-28T17:05:25'
+      pinned: false
+      title: pipelines/examples/scaffolds/filter_pipeline_scaffold.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/filter_pipeline_scaffold.py
+    - last_visited: '2024-09-28T17:05:42'
+      pinned: false
+      title: pipelines/examples/scaffolds/function_calling_scaffold.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/function_calling_scaffold.py
+    - last_visited: '2024-09-28T17:05:44'
+      pinned: false
+      title: pipelines/examples/scaffolds/filter_pipeline_scaffold.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/filter_pipeline_scaffold.py
+    - last_visited: '2024-09-28T17:06:21'
+      pinned: false
+      title: pipelines/examples/scaffolds/function_calling_scaffold.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/function_calling_scaffold.py
+    - last_visited: '2024-09-28T17:06:29'
+      pinned: false
+      title: pipelines/examples/scaffolds/manifold_pipeline_scaffold.py at main ·
+        open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/scaffolds/manifold_pipeline_scaffold.py
+    - last_visited: '2024-09-28T17:06:33'
+      pinned: false
+      title: pipelines/pipelines at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/pipelines
+    - last_visited: '2024-09-28T17:06:37'
+      pinned: false
+      title: pipelines/utils at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/utils
+    - last_visited: '2024-09-28T17:06:40'
+      pinned: false
+      title: pipelines/utils/pipelines at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/utils/pipelines
+    - last_visited: '2024-09-28T17:06:43'
+      pinned: false
+      title: pipelines/utils/pipelines/main.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/utils/pipelines/main.py
+    - last_visited: '2024-09-28T17:06:55'
+      pinned: false
+      title: pipelines/blueprints at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/blueprints
+    - last_visited: '2024-09-28T17:06:57'
+      pinned: false
+      title: pipelines/blueprints/function_calling_blueprint.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/blueprints/function_calling_blueprint.py
+    - last_visited: '2024-09-28T17:08:37'
+      pinned: false
+      title: pipelines/blueprints at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/blueprints
+    - last_visited: '2024-09-28T17:08:43'
+      pinned: false
+      title: pipelines/README.md at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/README.md
+    - last_visited: '2024-09-28T17:26:11'
+      pinned: false
+      title: pipelines/examples/pipelines at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/pipelines
+    - last_visited: '2024-09-28T17:26:19'
+      pinned: false
+      title: pipelines/examples at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples
+    - last_visited: '2024-09-28T17:26:25'
+      pinned: false
+      title: pipelines/examples/filters at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/tree/main/examples/filters
+    - last_visited: '2024-09-28T17:26:35'
+      pinned: false
+      title: pipelines/examples/filters/langfuse_filter_pipeline.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/examples/filters/langfuse_filter_pipeline.py
+    - last_visited: '2024-09-28T17:26:50'
+      pinned: false
+      title: pipelines/config.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/main/config.py
+    - active: true
+      last_visited: '2024-09-28T17:27:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 104
+      title: pipelines/config.py at main · open-webui/pipelines
+      url: https://github.com/open-webui/pipelines/blob/c1dd8987d4d538d27d46f747f7f6c138f73937ae/config.py
+      zoom: 1.0

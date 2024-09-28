@@ -26,3 +26,4 @@ scripts https://github.com/matias-ceau/scripts
 hendrikmi_dotfiles https://github.com/hendrikmi/dotfiles/blob/main/kitty/custom.conf
 fzf_fileexporer https://thevaluable.dev/practical-guide-fzf-example/
 gemini https://gemini.google.com/app
+llm.prompt https://cookbook.openai.com/articles/related_resources
