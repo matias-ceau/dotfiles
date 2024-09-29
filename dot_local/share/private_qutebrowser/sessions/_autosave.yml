@@ -1,0 +1,428 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAD////8AAAAEgAAB3sAAAhrAAAAAAAAABYAAAd3AAAIZwAAAAAAAAAADwAAAAAAAAAA
+    FgAAB3cAAAhn
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-09-27T17:22:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 449
+      title: graph visualisation in python at DuckDuckGo
+      url: https://duckduckgo.com/?q=graph+visualisation+in+python&ia=web
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-27T17:22:20'
+      pinned: false
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+    - active: true
+      last_visited: '2024-09-28T04:36:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html#module-networkx.drawing.nx_pydot
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-28T04:36:39'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1004
+      title: 'pydot/pydot: Python interface to Graphviz''s Dot language'
+      url: https://github.com/pydot/pydot
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-27T17:22:20'
+      pinned: false
+      title: Knuth Miles — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_miles.html#sphx-glr-auto-examples-plot-miles-py
+    - last_visited: '2024-09-28T04:34:06'
+      pinned: false
+      title: Subgraph — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_subgraph.html
+    - last_visited: '2024-09-28T04:34:10'
+      pinned: false
+      title: Attributes — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_attributes.html
+    - last_visited: '2024-09-28T04:34:13'
+      pinned: false
+      title: Basic — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_simple.html
+    - last_visited: '2024-09-28T04:34:26'
+      pinned: false
+      title: Star — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_star.html
+    - active: true
+      last_visited: '2024-09-28T04:34:39'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1800
+      title: Install — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/install.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T03:15:20'
+      pinned: false
+      title: python textual tui markdown editor at DuckDuckGo
+      url: https://duckduckgo.com/?q=python+textual+tui+markdown+editor&ia=web
+    - last_visited: '2024-09-29T03:15:32'
+      pinned: false
+      title: python textual tui markdown editor at DuckDuckGo
+      url: https://duckduckgo.com/?q=python+textual+tui+markdown+editor&iax=images&ia=images
+    - last_visited: '2024-09-29T03:15:45'
+      pinned: false
+      title: python textual tui markdown editor at DuckDuckGo
+      url: https://duckduckgo.com/?q=python+textual+tui+markdown+editor&iax=videos&ia=videos&iai=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dk0Sc-R8oWps
+    - last_visited: '2024-09-29T03:15:49'
+      pinned: false
+      title: How to create a Markdown editor with live-preview in Textual - YouTube
+      url: https://www.youtube.com/watch?v=k0Sc-R8oWps
+    - last_visited: '2024-09-29T05:40:11'
+      pinned: false
+      title: textual chat at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual+chat&ia=web
+    - last_visited: '2024-09-29T06:19:45'
+      pinned: false
+      title: textual chat python at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual+chat+python&ia=web
+    - active: true
+      last_visited: '2024-09-29T06:19:45'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 9240
+      title: 'Textual: The Definitive Guide - Part 1. - DEV Community'
+      url: https://dev.to/wiseai/textual-the-definitive-guide-part-1-1i0p
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T05:42:36'
+      pinned: false
+      title: Widgets - Textual
+      url: https://textual.textualize.io/guide/widgets/
+    - last_visited: '2024-09-29T05:42:42'
+      pinned: false
+      title: Animation - Textual
+      url: https://textual.textualize.io/guide/animation/
+    - last_visited: '2024-09-29T05:43:42'
+      pinned: false
+      title: Workers - Textual
+      url: https://textual.textualize.io/guide/workers/#__tabbed_1_1
+    - last_visited: '2024-09-29T05:45:25'
+      pinned: false
+      title: Command Palette - Textual
+      url: https://textual.textualize.io/guide/command_palette/#__tabbed_1_1
+    - last_visited: '2024-09-29T05:46:04'
+      pinned: false
+      title: DOM Queries - Textual
+      url: https://textual.textualize.io/guide/queries/
+    - last_visited: '2024-09-29T05:46:40'
+      pinned: false
+      title: Events and Messages - Textual
+      url: https://textual.textualize.io/guide/events/
+    - last_visited: '2024-09-29T05:47:08'
+      pinned: false
+      title: Devtools - Textual
+      url: https://textual.textualize.io/guide/devtools/
+    - last_visited: '2024-09-29T05:47:14'
+      pinned: false
+      title: App Basics - Textual
+      url: https://textual.textualize.io/guide/app/
+    - last_visited: '2024-09-29T05:49:05'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/
+    - last_visited: '2024-09-29T05:50:04'
+      pinned: false
+      title: Textual CSS - Textual
+      url: https://textual.textualize.io/guide/CSS/#__tabbed_4_1
+    - last_visited: '2024-09-29T05:50:12'
+      pinned: false
+      title: Textual CSS - Textual
+      url: https://textual.textualize.io/guide/CSS/#stylesheets
+    - last_visited: '2024-09-29T05:50:18'
+      pinned: false
+      title: Styles - Textual
+      url: https://textual.textualize.io/guide/styles/
+    - last_visited: '2024-09-29T05:52:35'
+      pinned: false
+      title: Styles - Textual
+      url: https://textual.textualize.io/guide/styles/#colors
+    - last_visited: '2024-09-29T05:52:40'
+      pinned: false
+      title: Styles - Textual
+      url: https://textual.textualize.io/guide/styles/#styles-object
+    - last_visited: '2024-09-29T05:52:56'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/
+    - last_visited: '2024-09-29T05:53:01'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/#theme-reference
+    - last_visited: '2024-09-29T05:53:19'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/#color-preview
+    - last_visited: '2024-09-29T05:53:41'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/#theming
+    - last_visited: '2024-09-29T05:54:10'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/#theme-reference
+    - last_visited: '2024-09-29T05:54:20'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/#text-color
+    - last_visited: '2024-09-29T05:54:25'
+      pinned: false
+      title: Color - Textual
+      url: https://textual.textualize.io/styles/color/
+    - last_visited: '2024-09-29T05:54:47'
+      pinned: false
+      title: Color - Textual
+      url: https://textual.textualize.io/styles/color/#css
+    - last_visited: '2024-09-29T05:56:12'
+      pinned: false
+      title: Box-sizing - Textual
+      url: https://textual.textualize.io/styles/box_sizing/
+    - last_visited: '2024-09-29T05:56:15'
+      pinned: false
+      title: Align - Textual
+      url: https://textual.textualize.io/styles/align/
+    - last_visited: '2024-09-29T05:56:18'
+      pinned: false
+      title: Styles - Textual
+      url: https://textual.textualize.io/styles/
+    - last_visited: '2024-09-29T05:56:19'
+      pinned: false
+      title: Events - Textual
+      url: https://textual.textualize.io/events/
+    - last_visited: '2024-09-29T05:56:22'
+      pinned: false
+      title: Widgets - Textual
+      url: https://textual.textualize.io/widget_gallery/
+    - last_visited: '2024-09-29T05:56:31'
+      pinned: false
+      title: Widgets - Textual
+      url: https://textual.textualize.io/widget_gallery/#datatable
+    - last_visited: '2024-09-29T06:00:36'
+      pinned: false
+      title: Widgets - Textual
+      url: https://textual.textualize.io/widget_gallery/#loadingindicator
+    - last_visited: '2024-09-29T06:00:41'
+      pinned: false
+      title: Roadmap - Textual
+      url: https://textual.textualize.io/roadmap/
+    - last_visited: '2024-09-29T06:01:23'
+      pinned: false
+      title: Guide - Textual
+      url: https://textual.textualize.io/guide/
+    - last_visited: '2024-09-29T06:01:30'
+      pinned: false
+      title: Screens - Textual
+      url: https://textual.textualize.io/guide/screens/
+    - last_visited: '2024-09-29T06:02:23'
+      pinned: false
+      title: Reactivity - Textual
+      url: https://textual.textualize.io/guide/reactivity/
+    - last_visited: '2024-09-29T06:02:57'
+      pinned: false
+      title: Design System - Textual
+      url: https://textual.textualize.io/guide/design/
+    - last_visited: '2024-09-29T06:04:22'
+      pinned: false
+      title: Layout - Textual
+      url: https://textual.textualize.io/guide/layout/#__tabbed_14_2
+    - last_visited: '2024-09-29T06:04:38'
+      pinned: false
+      title: Textual
+      url: https://textual.textualize.io/
+    - last_visited: '2024-09-29T06:05:05'
+      pinned: false
+      title: Reference - Textual
+      url: https://textual.textualize.io/reference/
+    - last_visited: '2024-09-29T06:05:09'
+      pinned: false
+      title: Roadmap - Textual
+      url: https://textual.textualize.io/roadmap/
+    - last_visited: '2024-09-29T06:05:11'
+      pinned: false
+      title: Textual Blog - Textual
+      url: https://textual.textualize.io/blog/
+    - last_visited: '2024-09-29T06:06:38'
+      pinned: false
+      title: Guide - Textual
+      url: https://textual.textualize.io/guide/
+    - last_visited: '2024-09-29T06:06:51'
+      pinned: false
+      title: Devtools - Textual
+      url: https://textual.textualize.io/guide/devtools/
+    - last_visited: '2024-09-29T06:07:40'
+      pinned: false
+      title: Tutorial - Textual
+      url: https://textual.textualize.io/tutorial/
+    - last_visited: '2024-09-29T06:07:45'
+      pinned: false
+      title: Tutorial - Textual
+      url: https://textual.textualize.io/tutorial/#writing-textual-css
+    - last_visited: '2024-09-29T06:08:29'
+      pinned: false
+      title: Textual Blog - Textual
+      url: https://textual.textualize.io/blog/
+    - last_visited: '2024-09-29T06:08:31'
+      pinned: false
+      title: Anatomy of a Textual User Interface - Textual
+      url: https://textual.textualize.io/blog/2024/09/15/anatomy-of-a-textual-user-interface/
+    - last_visited: '2024-09-29T06:58:47'
+      pinned: false
+      title: Anatomy of a Textual User Interface - Textual
+      url: https://textual.textualize.io/blog/2024/09/15/anatomy-of-a-textual-user-interface/#you-know-we-manufacture-those-by-the-way
+    - last_visited: '2024-09-29T07:03:01'
+      pinned: false
+      title: Aliens AI
+      url: https://gist.github.com/willmcgugan/648a537c9d47dafa59cb8ece281d8c2c
+    - last_visited: '2024-09-29T07:15:45'
+      pinned: false
+      title: openai async at DuckDuckGo
+      url: https://duckduckgo.com/?q=openai+async&ia=web
+    - last_visited: '2024-09-29T07:15:52'
+      pinned: false
+      title: openai stream at DuckDuckGo
+      url: https://duckduckgo.com/?q=openai+stream&ia=web
+    - active: true
+      last_visited: '2024-09-29T07:15:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 960
+      title: How to stream completions | OpenAI Cookbook
+      url: https://cookbook.openai.com/examples/how_to_stream_completions
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2024-09-29T07:24:07'
+      pinned: false
+      title: textual.color - Textual
+      url: https://textual.textualize.io/api/color/#textual.color--named-colors
+    - last_visited: '2024-09-29T07:24:16'
+      pinned: false
+      title: textual.cache - Textual
+      url: https://textual.textualize.io/api/cache/
+    - last_visited: '2024-09-29T07:24:22'
+      pinned: false
+      title: textual.binding - Textual
+      url: https://textual.textualize.io/api/binding/
+    - last_visited: '2024-09-29T07:24:36'
+      pinned: false
+      title: textual.coordinate - Textual
+      url: https://textual.textualize.io/api/coordinate/
+    - last_visited: '2024-09-29T07:24:42'
+      pinned: false
+      title: textual.containers - Textual
+      url: https://textual.textualize.io/api/containers/
+    - last_visited: '2024-09-29T07:24:45'
+      pinned: false
+      title: textual.command - Textual
+      url: https://textual.textualize.io/api/command/
+    - active: true
+      last_visited: '2024-09-29T07:31:10'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6720
+      title: textual.app - Textual
+      url: https://textual.textualize.io/api/app/
+      zoom: 1.0
+    - last_visited: '2024-09-29T07:30:14'
+      pinned: false
+      title: textual.reactive - Textual
+      url: https://textual.textualize.io/api/reactive/
+  - history:
+    - active: true
+      last_visited: '2024-09-29T06:06:09'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: plotext/readme/environments.md at master · piccolomo/plotext
+      url: https://github.com/piccolomo/plotext/blob/master/readme/environments.md#rich
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T06:13:48'
+      pinned: false
+      title: 'darrenburns/elia: A snappy, keyboard-centric terminal user interface
+        for interacting with large language models. Chat with ChatGPT, Claude, Llama
+        3, Phi 3, Mistral, Gemma and more.'
+      url: https://github.com/darrenburns/elia
+    - last_visited: '2024-09-29T06:13:48'
+      pinned: false
+      title: elia/elia_chat at main · darrenburns/elia
+      url: https://github.com/darrenburns/elia/tree/main/elia_chat
+    - last_visited: '2024-09-29T06:13:54'
+      pinned: false
+      title: elia/elia_chat/database at main · darrenburns/elia
+      url: https://github.com/darrenburns/elia/tree/main/elia_chat/database
+    - last_visited: '2024-09-29T06:14:02'
+      pinned: false
+      title: elia/elia_chat at main · darrenburns/elia
+      url: https://github.com/darrenburns/elia/tree/main/elia_chat
+    - active: true
+      last_visited: '2024-09-29T06:14:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3035
+      title: 'darrenburns/elia: A snappy, keyboard-centric terminal user interface
+        for interacting with large language models. Chat with ChatGPT, Claude, Llama
+        3, Phi 3, Mistral, Gemma and more.'
+      url: https://github.com/darrenburns/elia/tree/main
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T06:10:19'
+      pinned: false
+      title: 'LLM: A CLI utility and Python library for interacting with Large Language
+        Models'
+      url: https://llm.datasette.io/en/stable/
+    - last_visited: '2024-09-29T06:14:45'
+      pinned: false
+      title: Embeddings - LLM
+      url: https://llm.datasette.io/en/stable/embeddings/index.html
+    - active: true
+      last_visited: '2024-09-29T06:14:48'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Embedding with the CLI - LLM
+      url: https://llm.datasette.io/en/stable/embeddings/cli.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T06:52:45'
+      pinned: false
+      title: textual terminal at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual+terminal&ia=web
+    - last_visited: '2024-09-29T06:53:11'
+      pinned: false
+      title: textual_terminal at DuckDuckGo
+      url: https://duckduckgo.com/?q=textual_terminal&ia=web
+    - active: true
+      last_visited: '2024-09-29T06:53:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 2100
+      title: 'Textualize/textual: The lean application framework for Python. Build
+        sophisticated user interfaces with a simple Python API. Run your apps in the
+        terminal and a web browser.'
+      url: https://github.com/Textualize/textual
+      zoom: 1.0

@@ -1,0 +1,117 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAHAAABVUAAAL/AAAAAAAAABwAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    HAAABVUAAAL/
+  tabs:
+  - history:
+    - last_visited: '2024-06-26T11:08:32'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2024-06-26T11:10:46'
+      pinned: false
+      title: "GitHub - epwalsh/obsidian.nvim: Obsidian \U0001F91D Neovim"
+      url: https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file
+    - active: true
+      last_visited: '2024-06-26T11:10:46'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 5169
+      title: "GitHub - epwalsh/obsidian.nvim: Obsidian \U0001F91D Neovim"
+      url: https://github.com/epwalsh/obsidian.nvim?tab=readme-ov-file#configuration-options
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2024-06-26T11:12:14'
+      pinned: false
+      title: neovim modular set up at DuckDuckGo
+      url: https://duckduckgo.com/?q=neovim+modular+set+up&ia=web
+    - last_visited: '2024-06-26T11:14:33'
+      pinned: false
+      title: neovim modular set up lazy at DuckDuckGo
+      url: https://duckduckgo.com/?q=neovim+modular+set+up+lazy&ia=web
+    - active: true
+      last_visited: '2024-06-26T11:14:33'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 8136
+      title: LazyVim - A beautiful neovim config for the lazy | Barbarian Meets Coding
+      url: https://www.barbarianmeetscoding.com/notes/neovim-lazyvim/
+      zoom: 0.994140625
+  - history:
+    - last_visited: '2024-06-26T11:18:11'
+      pinned: false
+      title: leader key vim at DuckDuckGo
+      url: https://duckduckgo.com/?q=leader+key+vim&ia=web
+    - last_visited: '2024-06-26T11:18:12'
+      pinned: false
+      title: vim - What is the <leader> in a .vimrc file? - Stack Overflow
+      url: https://stackoverflow.com/questions/1764263/what-is-the-leader-in-a-vimrc-file
+    - active: true
+      last_visited: '2024-06-26T11:19:44'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 606
+      title: 'Vim 101: What is the Leader Key? | by Alex R. Young | usevim | Medium'
+      url: https://medium.com/usevim/vim-101-what-is-the-leader-key-f2f5c1fa610f
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-06-26T11:20:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 704
+      title: comma key vim at DuckDuckGo
+      url: https://duckduckgo.com/?q=comma+key+vim&ia=web
+      zoom: 1.0
+- geometry: !!binary |
+    AdnQywADAAAAAAKnAAAAGAAABVEAAAL7AAACqwAAABwAAAVNAAAC9wAAAAAAAAAABVYAAAKrAAAA
+    HAAABU0AAAL3
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-06-26T11:08:56'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Log in - MusicBrainz
+      url: https://musicbrainz.org/login?returnto=%2Fdoc%2FMusicBrainz_API
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-06-26T11:08:55'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: musicbrainzngs 0.7.1 — musicbrainzngs 0.7.1 documentation
+      url: https://python-musicbrainzngs.readthedocs.io/en/v0.7.1/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-06-26T11:08:56'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'How to manage passwords? : r/qutebrowser'
+      url: https://www.reddit.com/r/qutebrowser/comments/16hx4c9/how_to_manage_passwords/
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-06-26T11:08:59'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: qutebrowser/misc/userscripts/qute-keepassxc at main · qutebrowser/qutebrowser
+        · GitHub
+      url: https://github.com/qutebrowser/qutebrowser/blob/main/misc/userscripts/qute-keepassxc
+      zoom: 1.0

@@ -1,0 +1,87 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Spell - Neovim docs
+      url: https://neovim.io/doc/user/spell.html#spell-load
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:26'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'mini.move - Move any selection in any direction : r/neovim'
+      url: https://www.reddit.com/r/neovim/comments/10cigze/minimove_move_any_selection_in_any_direction/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Editor | LazyVim
+      url: https://www.lazyvim.org/plugins/editor
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-09-11T09:33:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 152
+      title: "\U0001F4E6 Migration Guide | lazy.nvim"
+      url: https://lazy.folke.io/usage/migration#packernvim
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: kepano (Steph Ango)
+      url: https://github.com/kepano
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: .tmTheme Color Schemes – Sublime Text Documentation
+      url: https://www.sublimetext.com/docs/color_schemes_tmtheme.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:30'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: ranger/examples/rifle_different_file_opener.conf at master · ranger/ranger
+      url: https://github.com/ranger/ranger/blob/master/examples/rifle_different_file_opener.conf
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-11T09:33:30'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: kickstart.nvim/lua/kickstart/plugins/neo-tree.lua at master · nvim-lua/kickstart.nvim
+      url: https://github.com/nvim-lua/kickstart.nvim/blob/master/lua/kickstart/plugins/neo-tree.lua
+      zoom: 1.0

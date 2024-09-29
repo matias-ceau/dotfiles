@@ -1,0 +1,57 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-09-18T23:53:04'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: graph visualisation in python at DuckDuckGo
+      url: https://duckduckgo.com/?q=graph+visualisation+in+python&ia=web
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-18T23:53:02'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-18T23:53:02'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Knuth Miles — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_miles.html#sphx-glr-auto-examples-plot-miles-py
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-18T23:52:59'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Command Line | Graphviz
+      url: https://www.graphviz.org/doc/info/command.html
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-09-18T23:53:01'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'GNU/Linux Crypto: Passwords | Arabesque'
+      url: https://web.archive.org/web/20230527122558/https://blog.sanctum.geek.nz/gnu-linux-crypto-passwords/
+      zoom: 1.0
