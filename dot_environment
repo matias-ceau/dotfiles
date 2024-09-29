@@ -37,8 +37,6 @@ export D="$HOME/Desktop"
 export PSYRIS="$GIT_REPOS/matias-ceau/psyris"
 
 export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
-# export PASSWORD_STORE_KEY="$LOCALDATA/password-store/.gpg-id"
-# PASSWORD_STORE_GPG_OPTS
 
 # MAKE VIM XDG COMPLIANT
 mkdir -p "$XDG_CONFIG_HOME/vim"

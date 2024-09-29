@@ -17,15 +17,17 @@ alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
 
-alias Ð="cd $HOME/Desktop/"
-alias ©="cd $CHEZMOI && git status -vv"
-alias ß="cd $SCRIPTS && git status -vv"
-alias ð="cd $LOCALDATA && git status -vv"
-alias þ="cd $PSYRIS && git status -vv"
-alias s©="sync-repo.sh $CHEZMOI && chezmoi apply && sudo keyd reload && chezmoi status -vv"
-alias sß="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh"
-alias sð="sync-repo.sh $LOCALDATA"
-alias sþ="sync-repo.sh $PSYRIS"
+alias sÐ="cd $HOME/Desktop/"
+alias s©="cd $CHEZMOI && git status -vv"
+alias sß="cd $SCRIPTS && git status -vv"
+alias sð="cd $LOCALDATA && git status -vv"
+alias sþ="cd $PSYRIS && git status -vv"
+alias sø="cd $GIT_REPOS/matias-ceau/ondansetron && git status -vv"
+alias ©="sync-repo.sh $CHEZMOI && chezmoi apply && sudo keyd reload && chezmoi status -vv"
+alias ß="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh"
+alias ð="sync-repo.sh $LOCALDATA"
+alias þ="sync-repo.sh $PSYRIS"
+alias ø="sync-repo.sh $GIT_REPOS/matias-ceau/ondansetron"
 
 alias s="script_launcher.sh --embedded"
 alias cfg="edit_chezmoi_cfg_files.sh"
