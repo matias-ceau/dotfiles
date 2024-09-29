@@ -1,0 +1,267 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - last_visited: '2024-09-28T08:28:58'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2024-09-29T09:41:59'
+      pinned: false
+      title: tiling managers windows as vim buffers at DuckDuckGo
+      url: https://duckduckgo.com/?q=tiling+managers+windows+as+vim+buffers&ia=web
+    - last_visited: '2024-09-29T09:42:34'
+      pinned: false
+      title: tiling managers windows linux buffers at DuckDuckGo
+      url: https://duckduckgo.com/?q=tiling+managers+windows+linux+buffers&ia=web
+    - last_visited: '2024-09-29T09:42:35'
+      pinned: false
+      title: Comparison of tiling window managers - ArchWiki
+      url: https://wiki.archlinux.org/title/Comparison_of_tiling_window_managers
+    - last_visited: '2024-09-29T09:44:44'
+      pinned: false
+      title: Wayland - ArchWiki
+      url: https://wiki.archlinux.org/title/Wayland#Tiling
+    - active: true
+      last_visited: '2024-09-29T09:46:18'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4475
+      title: Qtile - ArchWiki
+      url: https://wiki.archlinux.org/title/Qtile
+      zoom: 0.91015625
+  - history:
+    - last_visited: '2024-09-29T09:45:38'
+      pinned: false
+      title: Wayland (protocol) - Wikipedia
+      url: https://en.wikipedia.org/wiki/Wayland_(protocol)#Differences_between_Wayland_and_X
+    - last_visited: '2024-09-29T09:53:21'
+      pinned: false
+      title: arch wayland at DuckDuckGo
+      url: https://duckduckgo.com/?q=arch+wayland&ia=web
+    - last_visited: '2024-09-29T09:53:21'
+      pinned: false
+      title: 'NVIDIA + Wayland on Arch: A Comprehensive Setup Guide'
+      url: https://linuxiac.com/nvidia-with-wayland-on-arch-setup-guide/
+    - last_visited: '2024-09-29T09:54:06'
+      pinned: false
+      title: switch from x11 to wayland at DuckDuckGo
+      url: https://duckduckgo.com/?q=switch+from+x11+to+wayland&ia=web
+    - last_visited: '2024-09-29T09:54:34'
+      pinned: false
+      title: switch from x11 to wayland arch at DuckDuckGo
+      url: https://duckduckgo.com/?q=switch+from+x11+to+wayland+arch&ia=web
+    - last_visited: '2024-09-29T09:54:34'
+      pinned: false
+      title: 'Switching from X11 to Wayland : r/archlinux'
+      url: https://www.reddit.com/r/archlinux/comments/v8ntqo/switching_from_x11_to_wayland/
+    - last_visited: '2024-09-29T09:56:50'
+      pinned: false
+      title: qtile 2 simultaneous views same window at DuckDuckGo
+      url: https://duckduckgo.com/?q=qtile+2+simultaneous+views+same+window&ia=web
+    - last_visited: '2024-09-29T09:57:38'
+      pinned: false
+      title: qtile 2 simultaneous view the same window at DuckDuckGo
+      url: https://duckduckgo.com/?q=qtile+2+simultaneous+view+the+same+window&ia=web
+    - active: true
+      last_visited: '2024-09-29T09:57:38'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 9845
+      title: Screens - Qtile
+      url: https://pawamoy.github.io/qtile/manual/config/screens/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-29T09:50:09'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: qtile/scripts/xephyr at master · qtile/qtile
+      url: https://github.com/qtile/qtile/blob/master/scripts/xephyr
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T10:05:30'
+      pinned: false
+      title: pyenv vs uv at DuckDuckGo
+      url: https://duckduckgo.com/?q=pyenv+vs+uv&ia=web
+    - last_visited: '2024-09-29T10:06:28'
+      pinned: false
+      title: Home - Perplexity
+      url: https://docs.perplexity.ai/home
+    - last_visited: '2024-09-29T10:07:15'
+      pinned: false
+      title: Chat Completions - Perplexity
+      url: https://docs.perplexity.ai/api-reference/chat-completions
+    - last_visited: '2024-09-29T10:08:05'
+      pinned: false
+      title: Frequently Asked Questions - Perplexity
+      url: https://docs.perplexity.ai/faq/faq
+    - last_visited: '2024-09-29T10:08:11'
+      pinned: false
+      title: Frequently Asked Questions - Perplexity
+      url: https://docs.perplexity.ai/faq/faq#what-are-the-limitations-to-the-number-of-api-calls
+    - last_visited: '2024-09-29T10:08:13'
+      pinned: false
+      title: Frequently Asked Questions - Perplexity
+      url: https://docs.perplexity.ai/faq/faq#whats-the-best-way-to-stay-up-to-date-with-api-updates
+    - last_visited: '2024-09-29T10:08:22'
+      pinned: false
+      title: Frequently Asked Questions - Perplexity
+      url: https://docs.perplexity.ai/faq/faq#is-there-any-way-to-get-a-token-rate-limit-increase
+    - last_visited: '2024-09-29T10:08:26'
+      pinned: false
+      title: Forum - Perplexity
+      url: https://docs.perplexity.ai/discussions/discussions
+    - last_visited: '2024-09-29T10:08:28'
+      pinned: false
+      title: Changelog - Perplexity
+      url: https://docs.perplexity.ai/changelog/changelog
+    - last_visited: '2024-09-29T10:08:31'
+      pinned: false
+      title: Changelog - Perplexity
+      url: https://docs.perplexity.ai/changelog/changelog#introducing-new-and-improved-sonar-models
+    - last_visited: '2024-09-29T10:08:57'
+      pinned: false
+      title: Changelog - Perplexity
+      url: https://docs.perplexity.ai/changelog/changelog
+    - active: true
+      last_visited: '2024-09-29T10:08:58'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Home - Perplexity
+      url: https://docs.perplexity.ai/home
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-29T10:09:02'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Chat Completions - Perplexity
+      url: https://perplexity.mintlify.app/api-reference/chat-completions
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-29T10:09:22'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Perplexity Labs
+      url: https://labs.perplexity.ai/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-29T10:09:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Introducing PPLX Online LLMs
+      url: https://www.perplexity.ai/hub/blog/introducing-pplx-online-llms?utm_source=labs&utm_medium=labs&utm_campaign=online-llms
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T10:09:36'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/
+    - last_visited: '2024-09-29T10:09:43'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/?login-source=oneTapHome
+    - last_visited: '2024-09-29T10:10:03'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/settings/account
+    - last_visited: '2024-09-29T10:10:22'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/discover
+    - last_visited: '2024-09-29T10:10:25'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/
+    - last_visited: '2024-09-29T10:10:28'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/library
+    - last_visited: '2024-09-29T10:11:36'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/search/pyenv-vs-uv-51MO8UGNS9KF6TOUHC7uPg
+    - last_visited: '2024-09-29T14:00:43'
+      pinned: false
+      title: openwebui no login at DuckDuckGo
+      url: https://duckduckgo.com/?q=openwebui+no+login&ia=web
+    - last_visited: '2024-09-29T14:00:52'
+      pinned: false
+      title: 'Completely remove user signup & login? I.e. use without login? · open-webui/open-webui
+        · Discussion #1677'
+      url: https://github.com/open-webui/open-webui/discussions/1677
+    - last_visited: '2024-09-29T14:00:53'
+      pinned: false
+      title: 'feat: allow login without authentication · Issue #929 · open-webui/open-webui'
+      url: https://github.com/open-webui/open-webui/issues/929
+    - active: true
+      last_visited: '2024-09-29T16:37:42'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 27066
+      title: "\U0001F30D Environment Variable Configuration | Open WebUI"
+      url: https://docs.openwebui.com/getting-started/env-configuration/#webui_auth
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-09-29T14:13:49'
+      original-url: https://docs.openwebui.com/getting-started/logging#appbackend
+      pinned: false
+      title: "\U0001F4DC Open WebUI Logging | Open WebUI"
+      url: https://docs.openwebui.com/getting-started/logging/#appbackend
+    - last_visited: '2024-09-29T15:51:09'
+      pinned: false
+      title: python extensions at DuckDuckGo
+      url: https://duckduckgo.com/?q=python+extensions&ia=web
+    - last_visited: '2024-09-29T15:51:16'
+      pinned: false
+      title: ipython extensions at DuckDuckGo
+      url: https://duckduckgo.com/?q=ipython+extensions&ia=web
+    - active: true
+      last_visited: '2024-09-29T15:51:17'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1270
+      title: IPython extensions — IPython 8.27.0 documentation
+      url: https://ipython.readthedocs.io/en/stable/config/extensions/index.html
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2024-09-29T16:58:41'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1173
+      title: yfiles-jupyter-graphs-for-neo4j · PyPI
+      url: https://pypi.org/project/yfiles-jupyter-graphs-for-neo4j/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-09-29T16:59:11'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: jupyter-tikz · PyPI
+      url: https://pypi.org/project/jupyter-tikz/
+      zoom: 1.0

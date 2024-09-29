@@ -1,0 +1,304 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
+    FgAADv8AAAhv
+  tabs:
+  - history:
+    - last_visited: '2024-09-18T03:52:09'
+      pinned: false
+      title: Graph Modelling Language - Wikipedia
+      url: https://en.wikipedia.org/wiki/Graph_Modelling_Language
+    - last_visited: '2024-09-18T04:23:35'
+      pinned: false
+      title: GraphML - Wikipedia
+      url: https://en.wikipedia.org/wiki/GraphML
+    - last_visited: '2024-09-18T04:23:53'
+      pinned: false
+      title: DOT (graph description language) - Wikipedia
+      url: https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+    - last_visited: '2024-09-18T04:24:33'
+      pinned: false
+      title: neo4j at DuckDuckGo
+      url: https://duckduckgo.com/?q=neo4j&ia=web
+    - last_visited: '2024-09-18T04:24:33'
+      pinned: false
+      title: Neo4j Graph Database & Analytics | Graph Database Management System
+      url: https://neo4j.com/
+    - last_visited: '2024-09-18T04:24:36'
+      pinned: false
+      title: Fully Managed Graph Database Service | Neo4j AuraDB
+      url: https://neo4j.com/product/auradb/?ref=neo4j-home-hero
+    - last_visited: '2024-09-18T04:24:48'
+      pinned: false
+      title: memgraph at DuckDuckGo
+      url: https://duckduckgo.com/?q=memgraph&ia=web
+    - last_visited: '2024-09-18T04:24:49'
+      pinned: false
+      title: Memgraph
+      url: https://memgraph.com/
+    - last_visited: '2024-09-18T04:25:02'
+      pinned: false
+      title: Pricing
+      url: https://memgraph.com/pricing
+    - last_visited: '2024-09-18T04:25:08'
+      pinned: false
+      title: Memgraph for Neo4j developers
+      url: https://memgraph.com/memgraph-for-neo4j-developers
+    - last_visited: '2024-09-18T04:25:16'
+      pinned: false
+      title: Memgraph database
+      url: https://memgraph.com/memgraphdb
+    - active: true
+      last_visited: '2024-09-18T04:25:35'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 2040
+      title: graph visualisation in python at DuckDuckGo
+      url: https://duckduckgo.com/?q=graph+visualisation+in+python&ia=web
+      zoom: 1.8
+  - history:
+    - active: true
+      last_visited: '2024-09-18T03:52:10'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Drawing — NetworkX 3.3 documentation
+      url: https://networkx.org/documentation/stable/reference/drawing.html
+      zoom: 1.8
+  - history:
+    - last_visited: '2024-09-18T03:52:09'
+      pinned: false
+      title: PyGraphviz — PyGraphviz documentation
+      url: https://pygraphviz.github.io/
+    - last_visited: '2024-09-18T04:22:18'
+      pinned: false
+      title: Python interface to Graphviz — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/
+    - last_visited: '2024-09-18T04:22:54'
+      pinned: false
+      title: Gallery — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/index.html
+    - active: true
+      last_visited: '2024-09-18T04:22:58'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Knuth Miles — PyGraphviz 1.13 documentation
+      url: https://pygraphviz.github.io/documentation/stable/auto_examples/plot_miles.html#sphx-glr-auto-examples-plot-miles-py
+      zoom: 1.8
+  - history:
+    - last_visited: '2024-09-18T03:52:09'
+      pinned: false
+      title: DOT Language | Graphviz
+      url: https://www.graphviz.org/doc/info/lang.html
+    - active: true
+      last_visited: '2024-09-18T04:21:50'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 8400
+      title: Command Line | Graphviz
+      url: https://www.graphviz.org/doc/info/command.html
+      zoom: 1.8
+  - history:
+    - last_visited: '2024-09-18T04:49:33'
+      pinned: false
+      title: pass .gpg-id at DuckDuckGo
+      url: https://duckduckgo.com/?q=pass+.gpg-id&ia=web
+    - last_visited: '2024-09-18T04:49:33'
+      pinned: false
+      title: pass - ArchWiki
+      url: https://wiki.archlinux.org/title/Pass
+    - active: true
+      last_visited: '2024-09-18T04:51:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6835
+      title: 'GNU/Linux Crypto: Passwords | Arabesque'
+      url: https://web.archive.org/web/20230527122558/https://blog.sanctum.geek.nz/gnu-linux-crypto-passwords/
+      zoom: 1.8
+  - active: true
+    history:
+    - last_visited: '2024-09-20T17:41:19'
+      pinned: false
+      title: qtile interactive client at DuckDuckGo
+      url: https://duckduckgo.com/?q=qtile+interactive+client&ia=web
+    - active: true
+      last_visited: '2024-09-20T17:41:19'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3420
+      title: Commands API — Qtile 0.1.dev257+g6a4dba6.d20220320 documentation
+      url: https://qtile-elp-fork.readthedocs.io/en/latest/manual/commands/index.html
+      zoom: 1.8
+- geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
+    FgAADv8AAAhv
+  tabs:
+  - history:
+    - last_visited: '2024-09-18T05:23:08'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2024-09-18T05:27:36'
+      pinned: false
+      title: keepassxc no password prompt cli at DuckDuckGo
+      url: https://duckduckgo.com/?q=keepassxc+no+password+prompt+cli&ia=web
+    - last_visited: '2024-09-18T05:39:20'
+      pinned: false
+      title: keepassx password from stdin prompt cli at DuckDuckGo
+      url: https://duckduckgo.com/?q=keepassx+password+from+stdin+prompt+cli&ia=web
+    - active: true
+      last_visited: '2024-09-18T05:39:21'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 5529
+      title: 'keepassxc-cli passwords as parameters · Issue #6752 · keepassxreboot/keepassxc'
+      url: https://github.com/keepassxreboot/keepassxc/issues/6752
+      zoom: 1.8
+  - history:
+    - last_visited: '2024-09-18T16:24:48'
+      original-url: https://account.proton.me/apps
+      pinned: false
+      title: Inbox | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/inbox
+    - last_visited: '2024-09-18T16:25:12'
+      original-url: https://mail.proton.me/u/0/inbox
+      pinned: false
+      title: notifications | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/nCYntB-TjPKNSd7eJBknFdDPvaey7Fy-KZozvKZucYbSCTz-JHsV3eUshPcoT2LCpRVlLFRCcJK-yvKb3hykDw==
+    - last_visited: '2024-09-18T16:25:13'
+      original-url: https://mail.proton.me/u/0/nCYntB-TjPKNSd7eJBknFdDPvaey7Fy-KZozvKZucYbSCTz-JHsV3eUshPcoT2LCpRVlLFRCcJK-yvKb3hykDw==
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+    - last_visited: '2024-09-18T16:25:17'
+      original-url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==/m5F51YfzpMs4EpvBlvQwm6JPHx_Dy7KmHntx3qD8RwoV8t9H8-UmhHc3hcJPF98mc1QDJfnZXziU50b-8lfXKw==
+    - last_visited: '2024-09-18T16:49:05'
+      original-url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==/m5F51YfzpMs4EpvBlvQwm6JPHx_Dy7KmHntx3qD8RwoV8t9H8-UmhHc3hcJPF98mc1QDJfnZXziU50b-8lfXKw==
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+    - last_visited: '2024-09-18T16:49:07'
+      original-url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==/m5F51YfzpMs4EpvBlvQwm6JPHx_Dy7KmHntx3qD8RwoV8t9H8-UmhHc3hcJPF98mc1QDJfnZXziU50b-8lfXKw==
+    - last_visited: '2024-09-18T16:56:06'
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+    - last_visited: '2024-09-18T16:56:10'
+      original-url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==
+      pinned: false
+      title: notes | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/KnmNbEhamko5PxpeJAV44MYI8nuNktSQjw4uHcwJP8qUwdxUcU_F2Jk1YzXVpsDjAfymU9DYoYAp4afg7v2nhg==/m5F51YfzpMs4EpvBlvQwm6JPHx_Dy7KmHntx3qD8RwoV8t9H8-UmhHc3hcJPF98mc1QDJfnZXziU50b-8lfXKw==
+    - last_visited: '2024-09-18T17:45:18'
+      pinned: false
+      title: qutezotero at DuckDuckGo
+      url: https://duckduckgo.com/?q=qutezotero&ia=web
+    - last_visited: '2024-09-18T17:45:29'
+      pinned: false
+      title: qutezotero qutebrowser at DuckDuckGo
+      url: https://duckduckgo.com/?q=qutezotero+qutebrowser&ia=web
+    - last_visited: '2024-09-18T17:45:29'
+      pinned: false
+      title: qutebrowser | qutebrowser
+      url: https://qutebrowser.org/
+    - last_visited: '2024-09-18T17:45:37'
+      pinned: false
+      title: 'qutebrowser/qutebrowser: A keyboard-driven, vim-like browser based on
+        Python and Qt.'
+      url: https://github.com/qutebrowser/qutebrowser
+    - last_visited: '2024-09-18T17:45:37'
+      pinned: false
+      title: qutebrowser/scripts at main · qutebrowser/qutebrowser
+      url: https://github.com/qutebrowser/qutebrowser/tree/main/scripts
+    - last_visited: '2024-09-18T17:45:42'
+      pinned: false
+      title: qutebrowser/scripts/dictcli.py at main · qutebrowser/qutebrowser
+      url: https://github.com/qutebrowser/qutebrowser/blob/main/scripts/dictcli.py
+    - last_visited: '2024-09-18T17:45:54'
+      pinned: false
+      title: qutebrowser/scripts/hist_importer.py at main · qutebrowser/qutebrowser
+      url: https://github.com/qutebrowser/qutebrowser/blob/main/scripts/hist_importer.py
+    - last_visited: '2024-09-18T18:34:39'
+      pinned: false
+      title: History
+      url: qute://history/
+    - last_visited: '2024-09-18T18:35:11'
+      pinned: false
+      title: bing at DuckDuckGo
+      url: https://duckduckgo.com/?q=bing&ia=web
+    - last_visited: '2024-09-18T18:39:22'
+      pinned: false
+      title: AI Chat
+      url: https://duckduckgo.com/?q=bing&ia=chat
+    - last_visited: '2024-09-18T18:39:57'
+      original-url: https://wiki.archlinux.org/title/Special:Search/dd
+      pinned: false
+      title: dd - ArchWiki
+      url: https://wiki.archlinux.org/title/Dd
+    - last_visited: '2024-09-18T18:42:06'
+      pinned: false
+      title: qute://
+      url: qute://
+    - last_visited: '2024-09-18T18:43:36'
+      pinned: false
+      title: qutebrowser help
+      url: qute://help/
+    - active: true
+      last_visited: '2024-09-18T18:47:35'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Writing qutebrowser userscripts
+      url: qute://help/userscripts.html
+      zoom: 1.8
+  - active: true
+    history:
+    - last_visited: '2024-09-18T19:01:28'
+      pinned: false
+      title: open_url_in instance qutebrowser at DuckDuckGo
+      url: https://duckduckgo.com/?q=open_url_in+instance+qutebrowser&ia=web
+    - last_visited: '2024-09-18T19:01:28'
+      pinned: false
+      title: Frequently asked questions | qutebrowser
+      url: https://qutebrowser.org/FAQ.html
+    - last_visited: '2024-09-18T19:02:28'
+      pinned: false
+      title: GitHub
+      url: https://github.com/
+    - last_visited: '2024-09-18T19:02:50'
+      pinned: false
+      title: qutebrowser
+      url: https://github.com/qutebrowser
+    - last_visited: '2024-09-18T19:02:54'
+      pinned: false
+      title: 'qutebrowser/qutebrowser: A keyboard-driven, vim-like browser based on
+        Python and Qt.'
+      url: https://github.com/qutebrowser/qutebrowser
+    - last_visited: '2024-09-18T19:02:55'
+      pinned: false
+      title: qutebrowser/scripts at main · qutebrowser/qutebrowser
+      url: https://github.com/qutebrowser/qutebrowser/tree/main/scripts
+    - active: true
+      last_visited: '2024-09-18T19:03:00'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 7
+      title: qutebrowser/scripts/open_url_in_instance.sh at main · qutebrowser/qutebrowser
+      url: https://github.com/qutebrowser/qutebrowser/blob/main/scripts/open_url_in_instance.sh
+      zoom: 1.8

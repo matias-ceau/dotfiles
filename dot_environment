@@ -122,11 +122,12 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 
 if [ -z "${LOADED_PASS_SECRET_ENV}" ]; then
-    SPOTIFY_CLIENT_SECRET="$(pass api/spotify)" && ANTHROPIC_API_KEY="$(pass api/anthropic)" && \
-    GEMINI_API_KEY="$(pass api/gemini)" && OPENAI_API_KEY="$(pass api/openai)" && \
-    PERPLEXITY_API_KEY="$(pass api/perplexity)" &&  MISTRAL_API_KEY="$(pass api/mistral)" && \
-    export OPENAI_API_KEY && export SPOTIFY_CLIENT_SECRET && export ANTHROPIC_API_KEY && export GEMINI_API_KEY && \
-    export PERPLEXITY_API_KEY && export MISTRAL_API_KEY && export CLAUDE_API_KEY="$ANTHROPIC_API_KEY" && \
+    SPOTIFY_CLIENT_SECRET="$(pass api/spotify)" && export SPOTIFY_CLIENT_SECRET
+    ANTHROPIC_API_KEY="$(pass api/anthropic)" && export ANTHROPIC_API_KEY && export CLAUDE_API_KEY="$ANTHROPIC_API_KEY"
+    GEMINI_API_KEY="$(pass api/gemini)" && export GEMINI_API_KEY
+    OPENAI_API_KEY="$(pass api/openai)" && export OPENAI_API_KEY
+    PERPLEXITY_API_KEY="$(pass api/perplexity)" && export PERPLEXITY_API_KEY
+    MISTRAL_API_KEY="$(pass api/mistral)" && export MISTRAL_API_KEY
     export LOADED_PASS_SECRET_ENV=1
     clear
     fastfetch
