@@ -1,7 +1,6 @@
 from _custom import NOTEBOOKS, scripts, show_power_menu
 from libqtile import extension
 from libqtile.config import Click, Drag, Key, KeyChord
-<<<<<<< Updated upstream
 from libqtile.lazy import lazy as L
 
 M = ["mod4"]
@@ -15,9 +14,6 @@ volumedown, volumeup, mute = (
     "XF86AudioMute",
 )
 forward, back = "XF86Forward", "XF86Back"
-=======
-from libqtile.lazy import lazy
->>>>>>> Stashed changes
 
 keys = [
     ## Windows
@@ -164,7 +160,6 @@ keys = [
         desc="Toggle fullscreen",
     ),
     Key(
-<<<<<<< Updated upstream
         M,
         "Down",
         L.spawn("qtile_dice_group.py"),
@@ -354,30 +349,6 @@ keys = [
         L.spawn("flameshot gui"),
         desc="Take screenshot of selected area",
     ),
-=======
-        ['mod4'], "F1", lazy.spawn("jgmenu_run"), desc="Jgmenu",),
-    Key(['mod4'], "F2", lazy.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
-    Key(['mod4', 'shift'], "F2", lazy.spawn("wallpaper.sh --previous"), desc="Wallpaper previous"),
-    Key(['mod4', 'control'], "F2", lazy.spawn("wallpaper.sh --gui"), desc="Wallpaper select"),
-    Key(['mod4', 'mod1'], "F2", lazy.spawn("wallpaper.sh --select"), desc="Wallpaper select"),
- #}}}
-## Commands
- #{{{
-### General
-  #{{{
-    Key(['mod4'], "d", lazy.run_extension(
-        extension.DmenuRun(dmenu_lines=30)),
-        desc="Dmenu run"),
-    Key(['mod4', "shift"], "d", lazy.spawn("dmenu_run -l 30"), desc="Run app with dmenu"),
-    Key(['mod4'], "space", lazy.spawn("fzfmenu_run.sh"), desc="Run app with fzfmenu"),
-    Key(['mod4', "shift"], "space", lazy.spawn("rofi -show drun"), desc="Run app with rofi (desktop apps)"),
-  Key(['mod4'], "b", lazy.spawn('notify-send "Hello" "hihi"'), desc="bookmarks"),  # TODO: (also add, auto format, copy/paste)
-    Key(['mod4'], "Return", lazy.spawn(["kitty", "-1"]), desc="Launch terminal"),
-    Key(['mod4'], "dollar", lazy.spawn(["alacritty", "-T", "dis_term"]), desc="Launch terminal",),
-    Key(['mod4'], "asterisk", lazy.spawn(["alacritty", "-T", "floating"]), desc="Launch terminal",),
-    Key(['mod4'], "o", lazy.spawn("obsidian-vault-selector.sh"), desc="Open obsidian vault"),
-    Key(['mod4'], "Print", lazy.spawn("flameshot gui")),
->>>>>>> Stashed changes
     # quicklaunch
     KeyChord(
         M,
