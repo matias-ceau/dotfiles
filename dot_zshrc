@@ -58,6 +58,6 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 # eval "$(pandoc --bash-completion)"
 eval "$(batman --export-env)"
-command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
+eval "$(uv generate-shell-completion zsh)"
 
 # vim: set ft=zsh expandtab shiftwidth=2 :

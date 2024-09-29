@@ -55,4 +55,5 @@ eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
 eval "$(batman --export-env)"
-command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
+eval "$(uv generate-shell-completion bash)"
+
