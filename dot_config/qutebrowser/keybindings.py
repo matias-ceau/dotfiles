@@ -118,7 +118,7 @@ config.bind("<Ctrl-Q>", "tab-close")
 config.bind("<Ctrl-X>", "navigate decrement")
 config.bind("<Ctrl-^>", "tab-focus last")
 config.bind("<Ctrl-h>", "home")
-config.bind("<Ctrl-`>", "tab-pin")
+config.bind("<Ctrl-`>", "tab-pin ;; tab-move")
 config.bind("<Ctrl-s>", "stop")
 config.bind("<Escape>", "clear-keychain ;; search ;; fullscreen --leave")
 # config.bind("<F11>", "fullscreen")
@@ -142,8 +142,14 @@ config.bind("]", "tab-next")  # added
 config.bind("K", "tab-prev")
 config.bind("[", "tab-prev")  # added
 config.bind("L", "forward")
-config.bind("M", "bookmark-add ;; spawn qutebrowser-modify-source-bookmarks.sh")
-config.bind("m", "quickmark-save ;; spawn qutebrowser-modify-source-bookmarks.sh")
+config.bind(
+    "M",
+    "bookmark-add ;; spawn /home/matias/.local/bin/qutebrowser-modify-source-bookmarks.sh",
+)
+config.bind(
+    "m",
+    "quickmark-save ;; spawn /home/matias/.local/bin/qutebrowser-modify-source-bookmarks.sh",
+)
 config.bind("N", "search-prev")
 config.bind("O", "cmd-set-text -s :open -t")
 config.bind("PP", "open -t -- {primary}")
@@ -181,7 +187,8 @@ config.bind("gU", "navigate up -t")
 config.bind("ga", "open -t")
 config.bind("gb", "cmd-set-text -s :bookmark-load")
 config.bind("gd", "download")
-config.bind("gi", "view-source")
+config.bind("gs", "view-source")
+config.bind("gi", "devtools")
 config.bind("gg", "scroll-to-perc 0")
 config.bind("gf", "hint inputs --first")
 config.bind("gm", "tab-move")
@@ -201,11 +208,12 @@ config.bind("q", "macro-record")
 config.bind("r", "reload")
 # config.bind("sf", "save")
 config.bind(
-    "ss", "session-save --current ;; spawn qutebrowser-modify-source-bookmarks.sh"
+    "ss",
+    "session-save --current ;; /home/matias/.local/bin/spawn qutebrowser-modify-source-bookmarks.sh",
 )  # save current to cursession
 config.bind(
     "sn",
-    "cmd-set-text -s :session-save ;; spawn qutebrowser-modify-source-bookmarks.sh",
+    "cmd-set-text -s :session-save ;; /home/matias/.local/bin/spawn qutebrowser-modify-source-bookmarks.sh",
 )  # save to new
 config.bind("so", "cmd-set-text -s :session-load")  # open session
 config.bind("sc", "cmd-set-text -s :session-load --clear")  # open session

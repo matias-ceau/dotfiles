@@ -1,4 +1,4 @@
-# vim :set foldmethod=marker foldmarker=<===,===> :
+# vim :set foldmethod=marker ; foldmarker=<===,===> :
 # pylint: disable=C0111
 c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
@@ -25,9 +25,8 @@ config.source("colors.py")
 c.aliases = {
     "w": "session-save",
     "q": "close",
-    "qa": "quit",
     "wq": "quit --save",
-    "wqa": "quit --save",
+    "dark": "set colors.webpage.darkmode.enabled",
     "zotero": "spawn --userscript qute-zotero",
 }
 
@@ -46,7 +45,7 @@ c.auto_save.interval = 15000
 ## Type: Bool
 # ===>
 c.auto_save.session = False
-c.session.default_name = "base_session"
+c.session.default_name = "default"
 
 # <===  Backend to use to display websites. qutebrowser supports two different
 ## web rendering engines / backends, QtWebEngine and QtWebKit (not
@@ -121,8 +120,8 @@ c.completion.open_categories = [
     "quickmarks",
     "bookmarks",
     "history",
-    "searchengines",
     "filesystem",
+    "searchengines",
 ]
 
 # <===  Move on to the next part when there's only one possible completion
@@ -1621,18 +1620,18 @@ c.url.open_base_url = True
 # ===>
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-    "=g": "https://google.com/search?q={}",
-    "=w": "https://en.wikipedia.org/w/index.php?search={}",
-    "=py": "https://docs.python.org/3/search.html?q={}",
-    "=doi": "https://dx.doi.org/{}",
-    "=arch": "https://wiki.archlinux.org/title/Special:Search/{}",
-    "=entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
-    "=chem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
-    "=pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
-    "=mesh": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
-    "=trials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
-    "=github": "https://github.com/search?q={}&type=repositories",
-    "=readthedocs": "https://{}.readthedocs.io/en/latest/index.html",
+    "¿g": "https://google.com/search?q={}",
+    "¿w": "https://en.wikipedia.org/w/index.php?search={}",
+    "¿py": "https://docs.python.org/3/search.html?q={}",
+    "¿doi": "https://dx.doi.org/{}",
+    "¿arch": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "¿ð": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
+    "¿ðc": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
+    "¿ðp": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
+    "¿ðm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
+    "¿trials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
+    "¿gh": "https://github.com/search?q={}&type=repositories",
+    "¿docs": "https://{}.readthedocs.io/en/latest/index.html",
 }
 
 # <===  Page(s) to open at the start.

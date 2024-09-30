@@ -188,17 +188,27 @@ c.colors.statusbar.url.success.https.fg = f_green
 ## Background color of the tab bar. ## Type: QssColor
 c.colors.tabs.bar.bg = f_black
 
-## Background color of unselected even tabs. ## Type: QtColor
+## Tab foreground color
 c.colors.tabs.odd.fg = f_white
 c.colors.tabs.even.fg = f_white
-c.colors.tabs.odd.bg = base900
-c.colors.tabs.even.bg = base900
+c.colors.tabs.selected.odd.fg = f_white
+c.colors.tabs.selected.even.fg = f_white
+c.colors.tabs.pinned.selected.even.fg = f_white
+c.colors.tabs.pinned.selected.odd.fg = f_white
+c.colors.tabs.pinned.even.fg = f_white
+c.colors.tabs.pinned.odd.fg = f_white
 
-## Background color of selected even tabs. ## Type: QtColor
-c.colors.tabs.selected.even.fg = f_yellow
-c.colors.tabs.selected.odd.fg = f_yellow
-c.colors.tabs.selected.even.bg = "#000000"
-c.colors.tabs.selected.odd.bg = "#000000"
+## Color of unselected tabs. ## Type: QtColor
+c.colors.tabs.odd.bg = f_black
+c.colors.tabs.even.bg = "#000000"
+c.colors.tabs.pinned.odd.bg = base900
+c.colors.tabs.pinned.even.bg = base850
+
+## Color of selected tabs. ## Type: QtColor
+c.colors.tabs.selected.even.bg = f_yellow_2
+c.colors.tabs.selected.odd.bg = f_yellow_2
+c.colors.tabs.pinned.selected.odd.bg = f_yellow_2
+c.colors.tabs.pinned.selected.even.bg = f_yellow_2
 
 ## Color for the tab indicator on errors. ## Type: QtColor
 c.colors.tabs.indicator.error = f_red_2
@@ -212,15 +222,7 @@ c.colors.tabs.indicator.stop = f_magenta_2
 c.colors.tabs.indicator.system = "rgb"
 
 ## Background color of pinned unselected even tabs. ## Type: QtColor
-c.colors.tabs.pinned.even.fg = f_white
-c.colors.tabs.pinned.odd.fg = f_white
-c.colors.tabs.pinned.selected.even.fg = f_yellow
-c.colors.tabs.pinned.selected.odd.fg = f_yellow
 # background
-c.colors.tabs.pinned.odd.bg = f_magenta_2
-c.colors.tabs.pinned.even.bg = f_magenta_2
-c.colors.tabs.pinned.selected.odd.bg = f_black
-c.colors.tabs.pinned.selected.even.bg = f_black
 
 
 ## Background color of tooltips. If set to null, the Qt default is used. ## Type: QssColor
@@ -228,7 +230,7 @@ c.colors.tooltip.fg = None
 c.colors.tooltip.bg = None
 
 ## Background color for webpages if unset (or empty to use the theme's color). ## Type: QtColor
-c.colors.webpage.bg = None
+c.colors.webpage.bg = f_white
 
 ## Which algorithm to use for modifying how colors are rendered with dark mode. The `lightness-cielab` value was added with QtWebEngine 5.14 and is treated like `lightness-hsl` with older QtWebEngine versions. ## Type: String
 ## Valid values:
@@ -250,13 +252,7 @@ c.colors.webpage.darkmode.enabled = False
 # True
 
 ## Which images to apply dark mode to.
-## Type: String
-## Valid values:
-##   - always: Apply dark mode filter to all images.
-##   - never: Never apply dark mode filter to any images.
-##   - smart: Apply dark mode based on image content. Not available with Qt 5.15.0.
-##   - smart-simple: On QtWebEngine 6.6, use a simpler algorithm for smart mode (based on numbers of colors and transparency), rather than an ML-based model. Same as 'smart' on older QtWebEnigne versions.
-c.colors.webpage.darkmode.policy.images = "smart"
+c.colors.webpage.darkmode.policy.images = "never"
 
 ## Which pages to apply dark mode to. The underlying Chromium setting has
 ## been removed in QtWebEngine 5.15.3, thus this setting is ignored
