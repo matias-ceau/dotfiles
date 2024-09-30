@@ -191,12 +191,12 @@ c.colors.tabs.bar.bg = f_black
 ## Tab foreground color
 c.colors.tabs.odd.fg = f_white
 c.colors.tabs.even.fg = f_white
-c.colors.tabs.selected.odd.fg = f_white
-c.colors.tabs.selected.even.fg = f_white
-c.colors.tabs.pinned.selected.even.fg = f_white
-c.colors.tabs.pinned.selected.odd.fg = f_white
 c.colors.tabs.pinned.even.fg = f_white
 c.colors.tabs.pinned.odd.fg = f_white
+c.colors.tabs.selected.odd.fg = f_black
+c.colors.tabs.selected.even.fg = f_black
+c.colors.tabs.pinned.selected.even.fg = f_black
+c.colors.tabs.pinned.selected.odd.fg = f_black
 
 ## Color of unselected tabs. ## Type: QtColor
 c.colors.tabs.odd.bg = f_black
