@@ -17,18 +17,8 @@ alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
 
-alias sÐ="cd $HOME/Desktop/"
-alias s©="cd $CHEZMOI && git status -vv"
-alias sß="cd $SCRIPTS && git status -vv"
-alias sð="cd $LOCALDATA && git status -vv"
-alias sþ="cd $PSYRIS && git status -vv"
-alias sø="cd $GIT_REPOS/matias-ceau/ondansetron && git status -vv"
-alias ©="sync-repo.sh $CHEZMOI && chezmoi apply && sudo keyd reload && chezmoi status -vv"
-alias ß="sync-repo.sh $SCRIPTS && utils_update_symlinks.sh"
-alias ð="sync-repo.sh $LOCALDATA"
-alias þ="sync-repo.sh $PSYRIS"
-alias ø="sync-repo.sh $GIT_REPOS/matias-ceau/ondansetron"
-
+alias cÐ="cd $HOME/Desktop/"
+alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
 alias cfg="edit_chezmoi_cfg_files.sh"
 alias ¶="pacman-fuzzy-search.sh"
@@ -72,15 +62,16 @@ shell_change() {
     eval "$(chsh -l | fzf --select-1 --height=~100% -q "$1")"
 }
 
-_() {
-    last_cmd="$(fc -ln -1)"
-    if [ -z "$1" ]; then
-        echo "$last_cmd" | "$@"
-    else
-        echo "$last_cmd"
-    fi
-
-}
+# _last_cmd() {
+#     last_cmd="$(fc -ln $1 | head -n 1)"
+#     shift
+#     if [ -n "$1" ]; then
+#         echo "$last_cmd" | "$@"
+#     else
+#         echo "$last_cmd"
+#     fi
+#
+# }
 
 O() {
     source "$(fd 'activate$' -I | fzf --select-1 --height=~100%)"
