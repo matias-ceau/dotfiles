@@ -26,7 +26,7 @@ c.aliases = {
     "w": "session-save",
     "q": "close",
     "wq": "quit --save",
-    "dark": "set colors.webpage.darkmode.enabled",
+    "dark": "config-cycle colors.webpage.darkmode.enabled",
     "zotero": "spawn --userscript qute-zotero",
 }
 
