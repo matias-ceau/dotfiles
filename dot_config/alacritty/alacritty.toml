@@ -4,8 +4,8 @@ opacity = 1
 blur = false
 
   [window.padding]
-  x = 0
-  y = 0
+  x = 3
+  y = 3
 
 [font]
 size = 14
