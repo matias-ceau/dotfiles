@@ -5,14 +5,21 @@
 # TAB cycles forward and Shift-TAB cycles backward through completion choices.
 TAB: menu-complete
 "\e[Z": menu-complete-backward
+"\C-n": complete
+"\C-p": complete-backward
 
 # Substring history search using UP and DOWN arrow keys.
 "\e[A": history-substring-search-backward
 "\e[B": history-substring-search-forward
 
+"\C-j": next-history
+"\C-k": previous-history
+
 # Launch $EDITOR on the current command and execute when finished editing.
 "\ee": edit-and-execute-command
 
+# This will suffix each returned file completion with a character denoting its type, in a similar way to ls(1) with -F or --classify.
+set visible-stats on
 # Enable completion coloring.
 set colored-completion-prefix on
 set colored-stats on
@@ -44,4 +51,4 @@ set page-completions off
 set show-all-if-ambiguous on
 
 # Smartly complete items when the cursor is not at the end of the line.
-set skip-completed-text on
+# set skip-completed-text on

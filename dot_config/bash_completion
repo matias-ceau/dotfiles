@@ -1,0 +1,8 @@
+# vim: set ft=bash
+# see https://github.com/scop/bash-completion/blob/main/doc/configuration.md
+# BASH_COMPLETION_FILEDIR_FALLBACK
+export BASH_COMPLETION_KNOWN_HOSTS_WITH_AVAHI=1
+export BASH_COMPLETION_KNOWN_HOSTS_WITH_HOSTFILE=1
+export BASH_COMPLETION_COMPAT_IGNORE='@(acroread.sh|redefine_filedir)'
+export BASH_COMPLETION_CMD_CONFIGURE_HINTS=1
+export BASH_COMPLETION_CMD_IWCONFIG_SCAN=1 #def 0

@@ -1,0 +1,2 @@
+# vim: set ft=bash
+# Sourced late by bash_completion, pretty much after everything else. Use this file for example to load additional completions, and to remove and override ones installed by bash_completion. Defaults to ~/.bash_completion if unset or null.

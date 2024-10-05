@@ -1,12 +1,10 @@
 # vim: set ft=bash
-# Source profile and aliases
-#
 #---------------------------
+# Source profile and aliases
 #---------------------------
 [ -f "$HOME/.environment" ] && source "$HOME/.environment"
 [ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 #---------------------------
-export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash-completion/bash_completion"
 
 shopt -s autocd                  # change directory without entering the 'cd' command
 shopt -s cdspell                 # automatically fix directory typos when changing directory
@@ -16,7 +14,7 @@ shopt -s globstar                # ** recursive glob
 shopt -s histappend              # append to history, don't overwrite
 shopt -s histverify              # expand, but don't automatically execute, history expansions
 shopt -s nocaseglob              # case-insensitive globbing
-shopt -s no_empty_cmd_completion # do not TAB expand empty lines
+# shopt -s no_empty_cmd_completion # do not TAB expand empty lines
 shopt -s expand_aliases
 
 # HISTORY XDG
@@ -49,6 +47,11 @@ PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 # lx() {
 #     pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
 # }
+export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion_user"
+# [[ ! -f "$XDG_CONFIG_HOME/bash_completion" ]] && touch "$XDG_CONFIG_HOME/bash_completion"
+
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
@@ -56,3 +59,5 @@ eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
 eval "$(batman --export-env)"
 eval "$(uv generate-shell-completion bash)"
+
+#NOTE: complete -W 'google.com cyberciti.biz nixcraft.com' host
