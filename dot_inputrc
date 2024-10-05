@@ -1,22 +1,32 @@
 # ---------
 # .inputrc
 # ---------
+set editing-mode emacs
 
 # TAB cycles forward and Shift-TAB cycles backward through completion choices.
 TAB: menu-complete
 "\e[Z": menu-complete-backward
-"\C-n": complete
-"\C-p": complete-backward
+"\C-n": menu-complete
+"\C-p": menu-complete-backward
+"\M-n": complete
+"\M-p": complete-backward
+
+# set completion-display-width 0 1 2
 
 # Substring history search using UP and DOWN arrow keys.
-"\e[A": history-substring-search-backward
-"\e[B": history-substring-search-forward
-
+"\M-k": history-substring-search-backward
+"\M-j": history-substring-search-forward
+"\M[A": history-substring-search-backward
+"\M[B": history-substring-search-forward
 "\C-j": next-history
 "\C-k": previous-history
 
+# alias-expand-line
+"\C-o": history-and-alias-expand-line 
+"\C-y": shell-expand-line
+
 # Launch $EDITOR on the current command and execute when finished editing.
-"\ee": edit-and-execute-command
+"\M-e": edit-and-execute-command
 
 # This will suffix each returned file completion with a character denoting its type, in a similar way to ls(1) with -F or --classify.
 set visible-stats on
@@ -38,7 +48,7 @@ set completion-query-items 200
 set mark-symlinked-directories on
 
 # Don't automatically match files beginning with dot.
-set match-hidden-files on
+set match-hidden-files off
 
 # Display the common prefix choices on the first completion then cycle the
 # available choices on the next completion.
@@ -49,6 +59,12 @@ set page-completions off
 
 # Immediately display completion matches.
 set show-all-if-ambiguous on
+# set show-all-if-unmodified on
 
 # Smartly complete items when the cursor is not at the end of the line.
-# set skip-completed-text on
+set skip-completed-text on
+
+# Test
+# set show-mode-in-prompt on
+vi-cmd-mode-string ((N))
+vi-ins-mode-string ((I))
