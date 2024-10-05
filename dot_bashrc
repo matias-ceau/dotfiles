@@ -20,8 +20,8 @@ shopt -s no_empty_cmd_completion # do not TAB expand empty lines
 shopt -s expand_aliases
 
 # HISTORY XDG
-mkdir -p "$XDG_STATE_HOME"/bash
-HISTFILE="$XDG_STATE_HOME"/bash/history
+mkdir -p "$XDG_STATE_HOME/bash"
+HISTFILE="$XDG_STATE_HOME/bash/history"
 HISTCONTROL=ignoreboth:erasedups        # Ignore and erase duplicates
 # HISTIGNORE=?:??                         # Ignore one and two letter commands
 HISTFILESIZE=99999                      # Max size of history file
@@ -29,31 +29,30 @@ HISTSIZE=99999                          # Amount of history to preserve
 PROMPT_COMMAND="history -a; history -n" # Share history between concurrent sessions
 
 # VIM
-# set -o vi
+set -o vi
 #bind '"\C-e": "\ev"'
 
 #PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
 PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
-# FUNCTIONS
-m() {
-    link=$(xsel -b)
-    mpv -fs "$link"
-}
-epoch_hexadecimal() {
-    D=$(date --date="$1" +"%s")
-    SD=$((D * 1000))
-    printf "%X" "$SD"
-}
+# # FUNCTIONS
+# m() {
+#     link=$(xsel -b)
+#     mpv -fs "$link"
+# }
+# epoch_hexadecimal() {
+#     D=$(date --date="$1" +"%s")
+#     SD=$((D * 1000))
+#     printf "%X" "$SD"
+# }
+#
+# lx() {
+#     pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
+# }
 
-lx() {
-    pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
-}
-
-eval "$(register-python-argcomplete pipx)"
+# eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
 eval "$(batman --export-env)"
 eval "$(uv generate-shell-completion bash)"
-
