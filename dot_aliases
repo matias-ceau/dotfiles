@@ -5,7 +5,6 @@
 # COMMON ALIASES AND FUNCTIONS FOR ALL SHELLS
 
 # Switching shells
-alias »="shell_change"
 alias r-pipewire='systemctl --user restart pipewire.service'
 alias r-load-qtile='qtile cmd-obj -o cmd -f reload_config'
 alias r-start-qtile='qtile cmd-obj -o cmd -f restart'
@@ -17,7 +16,6 @@ alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
 
-alias cÐ="cd $HOME/Desktop/"
 alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
 alias cfg="edit_chezmoi_cfg_files.sh"
@@ -45,7 +43,7 @@ tmux_fzf() {
     tmux attach -t "$(tmux ls | cut -d: -f1 | fzf --select-1 --height=~100%)"
 }
 
-alias serv="bat $(which list_process.sh); list_process.sh"
+alias serv="list_process.sh"
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
@@ -57,47 +55,9 @@ alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
 
-# FUNCTIONS
-shell_change() {
-    eval "$(chsh -l | fzf --select-1 --height=~100% -q "$1")"
-}
-
-# _last_cmd() {
-#     last_cmd="$(fc -ln $1 | head -n 1)"
-#     shift
-#     if [ -n "$1" ]; then
-#         echo "$last_cmd" | "$@"
-#     else
-#         echo "$last_cmd"
-#     fi
-#
-# }
-
 O() {
     source "$(fd 'activate$' -I | fzf --select-1 --height=~100%)"
 }
 X() {
     deactivate
 }
-##      shopt -s expand_aliases
-##
-##      # ALIASES ####################################################################
-##
-##      alias ls='ls --color=auto'
-##      alias grep='grep --color=auto'
-##      alias fgrep='fgrep --color=auto'
-##      alias egrep='egrep --color=auto'
-##
-##
-##      # own apps
-##      # alias biovector='cd /home/matias/code/biovector/biovector && python3 main.py'
-##      # alias bv='biovector'
-##
-##      # apps
-##      alias p=python3
-##
-##      # two letter app
-##
-##      # bib files
-##      alias bib='vim ~/data/bib/standard.bib'
-##      alias bbb='vim ~/data/bib/bibliotheque.bib'

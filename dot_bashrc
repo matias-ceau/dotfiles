@@ -2,8 +2,9 @@
 #---------------------------
 # Source profile and aliases
 #---------------------------
+export SHELL=/usr/bin/bash
+
 [ -f "$HOME/.environment" ] && source "$HOME/.environment"
-eval "$(batman --export-env)"
 [ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 #---------------------------
 
