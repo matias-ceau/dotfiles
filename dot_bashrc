@@ -50,14 +50,14 @@ PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion_user"
 # [[ ! -f "$XDG_CONFIG_HOME/bash_completion" ]] && touch "$XDG_CONFIG_HOME/bash_completion"
 
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
+# [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&  . /usr/share/bash-completion/bash_completion
 
 # eval "$(register-python-argcomplete pipx)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 eval "$(pandoc --bash-completion)"
+#TODO: move to other file
 eval "$(batman --export-env)"
-eval "$(uv generate-shell-completion bash)"
+# eval "$(uv generate-shell-completion bash)"
 
 #NOTE: complete -W 'google.com cyberciti.biz nixcraft.com' host
