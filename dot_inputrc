@@ -65,6 +65,6 @@ set show-all-if-ambiguous on
 set skip-completed-text on
 
 # Test
-# set show-mode-in-prompt on
-vi-cmd-mode-string ((N))
-vi-ins-mode-string ((I))
+set show-mode-in-prompt on
+set vi-cmd-mode-string ((N))
+set vi-ins-mode-string ((I))
