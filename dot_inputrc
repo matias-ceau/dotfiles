@@ -66,5 +66,5 @@ set skip-completed-text on
 
 # Test
 set show-mode-in-prompt on
-set vi-cmd-mode-string '\1\e[43m\2N\1\e[0m\2 '
-set vi-ins-mode-string '\1\e[46m\2I\1\e[0m\2 '
+set vi-cmd-mode-string \1\e[30;43m\2 N \1\e[0m\2
+set vi-ins-mode-string \1\e[30;46m\2 I \1\e[0m\2
