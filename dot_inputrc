@@ -10,9 +10,6 @@ TAB: menu-complete
 "\C-p": menu-complete-backward
 "\M-n": complete
 "\M-p": complete-backward
-
-# set completion-display-width 0 1 2
-
 # Substring history search using UP and DOWN arrow keys.
 "\M-k": history-substring-search-backward
 "\M-j": history-substring-search-forward
@@ -21,12 +18,15 @@ TAB: menu-complete
 "\C-j": next-history
 "\C-k": previous-history
 
+
+# set completion-display-width 0 1 2
+
 # alias-expand-line
 "\C-o": history-and-alias-expand-line 
 "\C-y": shell-expand-line
 
 # Launch $EDITOR on the current command and execute when finished editing.
-"\M-e": edit-and-execute-command
+# "\C-e": edit-and-execute-command
 # progcomp_alias
 # This will suffix each returned file completion with a character denoting its type, in a similar way to ls(1) with -F or --classify.
 set visible-stats on
@@ -64,7 +64,9 @@ set show-all-if-ambiguous on
 # Smartly complete items when the cursor is not at the end of the line.
 set skip-completed-text on
 
+set blink-matching-paren on
+
 # Test
 set show-mode-in-prompt on
-set vi-cmd-mode-string \1\e[30;43m\2 N \1\e[0m\2
-set vi-ins-mode-string \1\e[30;46m\2 I \1\e[0m\2
+set vi-cmd-mode-string \1\e[30;43m\2 N \1\e[0m\2\s
+set vi-ins-mode-string \1\e[30;46m\2 I \1\e[0m\2\s
