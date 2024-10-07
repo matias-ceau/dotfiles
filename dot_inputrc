@@ -68,5 +68,5 @@ set blink-matching-paren on
 
 # Test
 set show-mode-in-prompt on
-set vi-cmd-mode-string \1\e[30;43m\2 N \1\e[0m\2\s
-set vi-ins-mode-string \1\e[30;46m\2 I \1\e[0m\2\s
+set vi-cmd-mode-string \1\e[1;30;33m\2 N \1\e[0m\2
+set vi-ins-mode-string \1\e[1;30;36m\2 I \1\e[0m\2
