@@ -54,7 +54,7 @@ PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 # [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&  . /usr/share/bash-completion/bash_completion
 
 # eval "$(register-python-argcomplete pipx)"
-# eval "$(zoxide init bash)"
+eval "$(zoxide init bash)"
 # eval "$(uv generate-shell-completion bash)"
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion_user"
 ! ( rg -q 'fzf' $BASH_COMPLETION_USER_FILE ) && fzf --bash > $BASH_COMPLETION_USER_FILE
