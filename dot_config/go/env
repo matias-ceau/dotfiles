@@ -1,0 +1,3 @@
+GOCACHE=/home/matias/.cache/go-build
+GOMODCACHE=/home/matias/.local/opt/go/pkg/mod
+GOTELEMETRYDIR=/home/matias/.local/state/go/telemetry
