@@ -27,7 +27,7 @@ xontrib load coreutils
 #xontrib load pipeline (not installeDOLD?)
 #xontrib load (fzf-completions NOT INSTALLED)
 #xontrib load mpl
-#xontrib load kitty
+xontrib load kitty
 #xontrib load jupyter
 #xontrib load jedi??
 #xontrib load sh
@@ -46,8 +46,8 @@ $XONSH_AUTO_PAIR = True
 $HISTCONTROL = 'ignoreerr,ignoredups'
 $XONSH_HISTORY_SIZE = (9999, 'commands')
 #PIPEWIRE_LATENCY="128/48000"
-$XONSH_SYS_CONFIG_DIR=/etc/xonsh
-$XONSH_COMPLETER_DIRS=/home/matias/.config/xonsh/completions:/etc/xonsh/completions:/home/matias/.local/share/xonsh/generated_completions:/usr/local/share/xonsh/vendor_completions:/usr/share/xonsh/vendor_completions
+$XONSH_SYS_CONFIG_DIR="/etc/xonsh"
+$XONSH_COMPLETER_DIRS="/home/matias/.config/xonsh/completions:/etc/xonsh/completions:/home/matias/.local/share/xonsh/generated_completions:/usr/local/share/xonsh/vendor_completions:/usr/share/xonsh/vendor_completions"
 
 $PROMPT_FIELDS['prompt_end'] = '@'
 #$PROMPT = '{BOLD_RED}{user}{RESET}@{BOLD_BLUE}{hostname}{RESET}: {BOLD_YELLOW}{cwd}{RESET} {env_name}{BOLD_GREEN}{prompt_end}{RESET} '
