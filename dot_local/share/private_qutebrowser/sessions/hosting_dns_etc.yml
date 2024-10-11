@@ -1,0 +1,575 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAADv8AAAhvAAAAAAAAABYAAA7/AAAIbwAAAAAAAAAADwAAAAAAAAAA
+    FgAADv8AAAhv
+  tabs:
+  - history:
+    - last_visited: '2024-10-09T15:30:14'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2024-10-09T15:30:54'
+      pinned: false
+      title: what are git tags at DuckDuckGo
+      url: https://duckduckgo.com/?q=what+are+git+tags&ia=web
+    - last_visited: '2024-10-09T15:30:54'
+      pinned: false
+      title: Git - Tagging
+      url: https://git-scm.com/book/en/v2/Git-Basics-Tagging
+    - last_visited: '2024-10-09T15:32:00'
+      pinned: false
+      title: duckdns at DuckDuckGo
+      url: https://duckduckgo.com/?q=duckdns&ia=web
+    - active: true
+      last_visited: '2024-10-09T15:32:01'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: What is Duck DNS and how to use this dynamic DNS on your router | ITIGIC
+      url: https://itigic.com/what-is-duck-dns-and-how-to-use-this-dynamic-dns/
+      zoom: 1.7
+  - history:
+    - last_visited: '2024-10-09T15:33:32'
+      pinned: false
+      title: duckdns at DuckDuckGo
+      url: https://duckduckgo.com/?q=duckdns&ia=web
+    - last_visited: '2024-10-09T15:51:11'
+      pinned: false
+      title: duck dns at DuckDuckGo
+      url: https://duckduckgo.com/?q=duck+dns&ia=web
+    - active: true
+      last_visited: '2024-10-09T15:51:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 7760
+      title: Get a DDNS up and running with DuckDNS - Step by Step
+      url: https://gist.github.com/taichikuji/6f4183c0af1f4a29e345b60910666468
+      zoom: 1.7
+  - history:
+    - active: true
+      last_visited: '2024-10-09T15:35:21'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'Nom de domaine : Choisir, Acheter un nom de domaine | OVHcloud France'
+      url: https://www.ovhcloud.com/fr/domains/
+      zoom: 1.7
+    - last_visited: '2024-10-09T15:35:12'
+      pinned: false
+      title: Control panel - OVHcloud
+      url: https://www.ovh.com/auth/?onsuccess=https%3A//www.ovh.com/manager&ovhSubsidiary=FR
+  - history:
+    - last_visited: '2024-10-09T15:35:41'
+      original-url: https://account.proton.me/apps
+      pinned: false
+      title: Inbox | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/inbox
+    - last_visited: '2024-10-09T15:35:49'
+      original-url: https://mail.proton.me/u/0/inbox
+      pinned: false
+      title: Inbox | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/inbox/rZVHXBZ0SFWYFoE9V1DvQvA8V8QYfYM7Sv51Zzq6FbnwpXp5FJchOAobwO6PhLABkJNT2GDdG-XFCB94YVmyBQ==
+    - last_visited: '2024-10-09T15:35:55'
+      original-url: https://mail.proton.me/u/0/inbox/rZVHXBZ0SFWYFoE9V1DvQvA8V8QYfYM7Sv51Zzq6FbnwpXp5FJchOAobwO6PhLABkJNT2GDdG-XFCB94YVmyBQ==
+      pinned: false
+      title: Inbox | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/inbox/zHrtWmfLBI4kvSGhNfHiDyzViCkuqArTxBoEb8-a3IHDWOuqrbqs-0be4RHdiU-vuwJ6BAINLbtk4hrcyld7rA==
+    - last_visited: '2024-10-09T15:36:25'
+      original-url: https://mail.proton.me/u/0/inbox/zHrtWmfLBI4kvSGhNfHiDyzViCkuqArTxBoEb8-a3IHDWOuqrbqs-0be4RHdiU-vuwJ6BAINLbtk4hrcyld7rA==
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail#keyword=domain
+    - last_visited: '2024-10-09T15:36:29'
+      original-url: https://mail.proton.me/u/0/almost-all-mail#keyword=domain
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/1_10UxnWzPXuDqQJLySv9FPg7hPp2yRrOelFGamzGhDnNH0raec9rUu9BrKI9_Yr43BtrIb26I7Oc4268RQq2g==#keyword=domain
+    - last_visited: '2024-10-09T15:36:40'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/1_10UxnWzPXuDqQJLySv9FPg7hPp2yRrOelFGamzGhDnNH0raec9rUu9BrKI9_Yr43BtrIb26I7Oc4268RQq2g==#keyword=domain
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail#keyword=ovh
+    - last_visited: '2024-10-09T15:36:42'
+      original-url: https://mail.proton.me/u/0/almost-all-mail#keyword=ovh
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+    - last_visited: '2024-10-09T15:37:03'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/nooALwfT9pdn6KSp271u0hXfnBdjOFxos0nRxXRIII0MPYzoVKj6bq32es7ReeohDs6Gm_kPIcInsN7ebYmIXQ==#keyword=ovh
+    - last_visited: '2024-10-09T15:37:06'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/nooALwfT9pdn6KSp271u0hXfnBdjOFxos0nRxXRIII0MPYzoVKj6bq32es7ReeohDs6Gm_kPIcInsN7ebYmIXQ==#keyword=ovh
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+    - last_visited: '2024-10-09T15:37:46'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/nooALwfT9pdn6KSp271u0hXfnBdjOFxos0nRxXRIII0MPYzoVKj6bq32es7ReeohDs6Gm_kPIcInsN7ebYmIXQ==#keyword=ovh
+    - last_visited: '2024-10-09T15:37:56'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/nooALwfT9pdn6KSp271u0hXfnBdjOFxos0nRxXRIII0MPYzoVKj6bq32es7ReeohDs6Gm_kPIcInsN7ebYmIXQ==#keyword=ovh
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+    - last_visited: '2024-10-09T15:38:01'
+      pinned: false
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+    - active: true
+      last_visited: '2024-10-09T15:38:02'
+      original-url: https://mail.proton.me/u/0/almost-all-mail/WHHM4rM5cMhS7LAG1T-_iDM9lID0yZvyJ7txo-sE4rIU0IUzXKIeRntykyqpalP-CqgFhegYvd8k2Ds2xPjHSg==#keyword=ovh
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: All mail | matias@ceau.net | Proton Mail
+      url: https://mail.proton.me/u/0/almost-all-mail/nooALwfT9pdn6KSp271u0hXfnBdjOFxos0nRxXRIII0MPYzoVKj6bq32es7ReeohDs6Gm_kPIcInsN7ebYmIXQ==#keyword=ovh
+      zoom: 1.7
+  - history:
+    - last_visited: '2024-10-09T15:36:59'
+      original-url: https://www.ovh.com/
+      pinned: false
+      title: Cloud Computing & Hébergement Web | OVHcloud France
+      url: https://www.ovhcloud.com/fr/
+    - last_visited: '2024-10-09T15:37:21'
+      pinned: false
+      title: 'OVHcloud Canada : Cloud Computing & Hébergement Web | OVHcloud Canada'
+      url: https://www.ovhcloud.com/fr-ca/
+    - last_visited: '2024-10-09T15:37:25'
+      pinned: false
+      title: Control panel - OVHcloud
+      url: https://ca.ovh.com/auth/?onsuccess=https%3A//ca.ovh.com/manager&ovhSubsidiary=QC
+    - last_visited: '2024-10-09T15:38:29'
+      pinned: false
+      title: Control panel - OVH
+      url: https://ca.ovh.com/auth/?onsuccess=https%3A//ca.ovh.com/manager&ovhSubsidiary=QC
+    - last_visited: '2024-10-09T15:38:42'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/hub
+    - last_visited: '2024-10-09T15:39:21'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew
+    - last_visited: '2024-10-09T15:39:33'
+      original-url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew/agreements
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew
+    - last_visited: '2024-10-09T15:39:34'
+      original-url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew/ssh
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew
+    - last_visited: '2024-10-09T15:39:44'
+      original-url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew/agreements
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew
+    - last_visited: '2024-10-09T15:39:45'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/autorenew
+    - last_visited: '2024-10-09T15:39:53'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/contacts
+    - last_visited: '2024-10-09T15:39:54'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/carbon-calculator/dashboard/
+    - last_visited: '2024-10-09T15:40:01'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/contacts
+    - last_visited: '2024-10-09T15:40:05'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/dedicated/billing/orders/orders
+    - last_visited: '2024-10-09T15:40:09'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/hub/
+    - last_visited: '2024-10-09T15:40:16'
+      original-url: https://ca.ovh.com/manager/#/web/zone
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:40:24'
+      original-url: https://ca.ovh.com/manager/#/web/zone?sort=hasDnsAnycast&columns=%5B%22name%22,%22hasDnsAnycast%22,%22dnssecSupported%22%5D
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:40:30'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:41:43'
+      original-url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com/redirection
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:41:58'
+      original-url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com/tasks
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:41:59'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/zone/lavomatyc.com
+    - last_visited: '2024-10-09T15:42:13'
+      original-url: https://ca.ovh.com/manager/#/web/configuration/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:42:13'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:42:28'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/optin
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:42:34'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:42:35'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/dns
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:43:31'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:43:40'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/glue
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:43:44'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/dnssec
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:43:46'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/tasks
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:43:47'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:45:44'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:46:07'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/webhosting/order
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:46:30'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:46:31'
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:46:44'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:46:45'
+      original-url: https://ca.ovh.com/manager/#/web/domain
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:54:55'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/information
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:56:47'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:03'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone-history
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:08'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone-history/view
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:16'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone-history
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:18'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone-history/view
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:26'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone-history
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:34'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/diff-tool-viewer
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:45'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/zone
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - last_visited: '2024-10-09T15:57:51'
+      original-url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/dns
+      pinned: false
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+    - active: true
+      last_visited: '2024-10-09T15:57:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: OVHcloud
+      url: https://ca.ovh.com/manager/#/web/domain/matias-ceau.fr/redirection
+      zoom: 1.7
+  - history:
+    - last_visited: '2024-10-09T15:58:09'
+      pinned: false
+      title: Rediriger un nom de domaine géré par OVHcloud - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0051768
+    - last_visited: '2024-10-09T15:58:09'
+      pinned: false
+      title: Rediriger un nom de domaine géré par OVHcloud - OVHcloud
+      url: https://help.ovhcloud.com/csm/fr-domain-names-redirect-domain-name?id=kb_article_view&sysparm_article=KB0051768
+    - last_visited: '2024-10-09T15:58:50'
+      pinned: false
+      title: Phone and Fax - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=98441955f49801102d4ca4d466a7fdc0&spa=1
+    - last_visited: '2024-10-09T15:58:50'
+      pinned: false
+      title: Phone and Fax - Service clientèle
+      url: https://help.ovhcloud.com/csm/fr-documentation-web-cloud-phone-and-fax?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=98441955f49801102d4ca4d466a7fdc0&spa=1
+    - last_visited: '2024-10-09T15:59:08'
+      pinned: false
+      title: Phone and Fax - Service clientèle
+      url: https://help.ovhcloud.com/csm/fr-documentation-web-cloud-messaging-sms?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=63441d55f49801102d4ca4d466a7fdc6&spa=1
+    - last_visited: '2024-10-09T15:59:20'
+      pinned: false
+      title: Envoyer des SMS depuis une URL - http2sms - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0051397
+    - last_visited: '2024-10-09T15:59:20'
+      pinned: false
+      title: Envoyer des SMS depuis une URL - http2sms - OVHcloud
+      url: https://help.ovhcloud.com/csm/fr-sms-sending-via-url-http2sms?id=kb_article_view&sysparm_article=KB0051397
+    - last_visited: '2024-10-09T15:59:50'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Premiers pas - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=b5e33d24b4d681902d4cf1f95804f4bb&spa=1
+    - last_visited: '2024-10-09T15:59:51'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Premiers pas - Service clientèle
+      url: https://help.ovhcloud.com/csm/fr-documentation-web-cloud-web-paas-powered-by-platformsh-getting-started?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=b5e33d24b4d681902d4cf1f95804f4bb&spa=1
+    - last_visited: '2024-10-09T15:59:56'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0054415
+    - last_visited: '2024-10-09T15:59:56'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - OVHcloud
+      url: https://help.ovhcloud.com/csm/fr-web-paas-only-in-english?id=kb_article_view&sysparm_article=KB0054415
+    - last_visited: '2024-10-09T16:00:02'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=dc441955f49801102d4ca4d466a7fdb2
+    - last_visited: '2024-10-09T16:00:03'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=dc441955f49801102d4ca4d466a7fdb2
+    - last_visited: '2024-10-09T16:00:14'
+      pinned: false
+      title: Python - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0054407
+    - last_visited: '2024-10-09T16:00:14'
+      pinned: false
+      title: Python - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-gb-web-paas-languages-python?id=kb_article_view&sysparm_article=KB0054407
+    - last_visited: '2024-10-09T16:01:00'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=7c445955f49801102d4ca4d466a7fd43&spa=1
+    - last_visited: '2024-10-09T16:01:00'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh-overview?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=7c445955f49801102d4ca4d466a7fd43&spa=1
+    - last_visited: '2024-10-09T16:01:04'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh-getting-started?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=b5e33d24b4d681902d4cf1f95804f4bb&spa=1
+    - last_visited: '2024-10-09T16:01:07'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=dc441955f49801102d4ca4d466a7fdb2&spa=1
+    - last_visited: '2024-10-09T16:01:19'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-ssl-gateway?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=3ecfb01759286110f078155c0c16be51&spa=1
+    - last_visited: '2024-10-09T16:01:23'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-hosting?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=98441955f49801102d4ca4d466a7fdb2&spa=1
+    - last_visited: '2024-10-09T16:01:44'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh-domains?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=0d445955f49801102d4ca4d466a7fd7d&spa=1
+    - last_visited: '2024-10-09T16:02:02'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-web-paas-powered-by-platformsh-domains-custom-domains?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=2f933164b4d681902d4cf1f95804f450&spa=1
+    - last_visited: '2024-10-09T16:02:06'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-internet?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=58441955f49801102d4ca4d466a7fdb3&spa=1
+    - last_visited: '2024-10-09T16:02:11'
+      pinned: false
+      title: Web PaaS powered by Platform.sh - Overview - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-hosting?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=98441955f49801102d4ca4d466a7fdb2&spa=1
+    - last_visited: '2024-10-09T16:02:26'
+      pinned: false
+      title: Configuring IPv6 for your website - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0052517
+    - last_visited: '2024-10-09T16:02:26'
+      pinned: false
+      title: Configuring IPv6 for your website - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-gb-web-hosting-configure-ipv6?id=kb_article_view&sysparm_article=KB0052517
+    - last_visited: '2024-10-09T16:02:53'
+      pinned: false
+      title: Web Hosting - Automating tasks (cron) - Service clientèle
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=c6cf7cdf3c246110476b6e7ab95cae13&spa=1
+    - last_visited: '2024-10-09T16:02:53'
+      pinned: false
+      title: Web Hosting - Automating tasks (cron) - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-hosting-automating-tasks-cron?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=c6cf7cdf3c246110476b6e7ab95cae13&spa=1
+    - active: true
+      last_visited: '2024-10-09T16:03:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Web Hosting - Automating tasks (cron) - Service clientèle
+      url: https://help.ovhcloud.com/csm/en-gb-documentation-web-cloud-hosting-redirection-and-authentication?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=96cfb01759286110f078155c0c16be3e&spa=1
+      zoom: 1.7
+  - active: true
+    history:
+    - last_visited: '2024-10-09T15:40:52'
+      pinned: false
+      title: Editing an OVHcloud DNS zone - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0051675
+    - last_visited: '2024-10-09T15:40:53'
+      pinned: false
+      title: Editing an OVHcloud DNS zone - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ca-dns-edit-dns-zone?id=kb_article_view&sysparm_article=KB0051675
+    - last_visited: '2024-10-09T15:47:26'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=5e9684d888e282541e11471ae8e64574&spa=1
+    - last_visited: '2024-10-09T15:47:26'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-domains-dns-dns-records?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=5e9684d888e282541e11471ae8e64574&spa=1
+    - last_visited: '2024-10-09T15:47:32'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-domains-dns-dns-tools?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=b29684d888e282541e11471ae8e645ae&spa=1
+    - last_visited: '2024-10-09T15:47:34'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-domains-dns-dns-options?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=ae9684d888e282541e11471ae8e64595&spa=1
+    - last_visited: '2024-10-09T15:47:40'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-ssl-gateway-getting-started?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=72cf38534d2c6110476b63efdd75bf33&spa=1
+    - last_visited: '2024-10-09T15:47:47'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-hosting-ftp-and-ssh?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=78cff41f91e86110f078811c7bad9403&spa=1
+    - last_visited: '2024-10-09T15:48:00'
+      pinned: false
+      title: DNS (Domain Name System) - Enregistrements DNS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-hosting-ssl?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=4dcff41f91e86110f078811c7bad941b&spa=1
+    - last_visited: '2024-10-09T15:48:06'
+      pinned: false
+      title: Web Hosting - Switching your website to HTTPS - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0053153
+    - last_visited: '2024-10-09T15:48:06'
+      pinned: false
+      title: Web Hosting - Switching your website to HTTPS - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-web-hosting-activate-https-website-ssl?id=kb_article_view&sysparm_article=KB0053153
+    - last_visited: '2024-10-09T15:49:19'
+      pinned: false
+      title: SSL Gateway - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=3ecfb01759286110f078155c0c16be51&spa=1
+    - last_visited: '2024-10-09T15:49:19'
+      pinned: false
+      title: SSL Gateway - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-documentation-web-cloud-ssl-gateway?id=kb_browse_cat&kb_id=e17b4f25551974502d4c6e78b7421955&kb_category=3ecfb01759286110f078155c0c16be51&spa=1
+    - last_visited: '2024-10-09T15:49:25'
+      pinned: false
+      title: How to order an SSL Gateway - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0064845
+    - last_visited: '2024-10-09T15:49:57'
+      pinned: false
+      title: How to order an SSL Gateway - OVHcloud
+      url: https://help.ovhcloud.com/csm?id=kb_article_view&sysparm_article=KB0064845
+    - active: true
+      last_visited: '2024-10-09T15:49:58'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: How to order an SSL Gateway - OVHcloud
+      url: https://help.ovhcloud.com/csm/en-ie-ssl-gateway-order?id=kb_article_view&sysparm_article=KB0064845
+      zoom: 1.7
+  - history:
+    - last_visited: '2024-10-09T15:55:15'
+      pinned: false
+      title: DNSSEC at DuckDuckGo
+      url: https://duckduckgo.com/?q=DNSSEC&ia=web
+    - active: true
+      last_visited: '2024-10-09T15:55:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 7380
+      title: Domain Name System Security Extensions - Wikipedia
+      url: https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions
+      zoom: 1.7
