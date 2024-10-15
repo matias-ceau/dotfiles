@@ -1,4 +1,0 @@
-fs_mkdir.sh
-fs_ls.sh
-fs_cat.sh
-web_search.sh
