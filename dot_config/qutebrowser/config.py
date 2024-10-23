@@ -913,7 +913,7 @@ c.hints.border = "1px solid #d0a215"  ## CSS border value for hints.
 
 # <===  Characters used for hint strings. ## Type: UniqueCharString
 # ===>
-c.hints.chars = "asdfghjkl"
+c.hints.chars = "jklfdsyuitre"
 
 # <===  Dictionary file to be used by the word hints. ## Type: File
 # ===>
@@ -1171,7 +1171,7 @@ c.qt.chromium.experimental_web_platform_features = "auto"
 ##   - auto: Decide automatically (uses low-end mode with < 1 GB available RAM).
 ##   - never: Never use low-end device mode.
 # ===>
-c.qt.chromium.low_end_device_mode = "auto"
+c.qt.chromium.low_end_device_mode = "never"
 
 # <===  Which Chromium process model to use. Alternative process models use
 ## less resources, but decrease security and robustness. See the
@@ -1620,18 +1620,18 @@ c.url.open_base_url = True
 # ===>
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-    "¿g": "https://google.com/search?q={}",
-    "¿w": "https://en.wikipedia.org/w/index.php?search={}",
-    "¿py": "https://docs.python.org/3/search.html?q={}",
-    "¿doi": "https://dx.doi.org/{}",
-    "¿arch": "https://wiki.archlinux.org/title/Special:Search/{}",
-    "¿ð": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
-    "¿ðc": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
-    "¿ðp": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
-    "¿ðm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
-    "¿trials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
-    "¿gh": "https://github.com/search?q={}&type=repositories",
-    "¿docs": "https://{}.readthedocs.io/en/latest/index.html",
+    "=ggl": "https://google.com/search?q={}",
+    "=gh": "https://github.com/search?q={}&type=repositories",
+    "=wiki": "https://en.wikipedia.org/w/index.php?search={}",
+    "=pydoc": "https://docs.python.org/3/search.html?q={}",
+    "=doi": "https://dx.doi.org/{}",
+    "=archwiki": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "=entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
+    "=pubchem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
+    "=pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
+    "=mesh": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
+    "=clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
+    "=readdocs": "https://{}.readthedocs.io/en/latest/index.html",
 }
 
 # <===  Page(s) to open at the start.
