@@ -1,0 +1,18 @@
+encryption = "gpg"
+progress = true
+color = "on"
+
+[diff]
+    command = "meld"
+    args = ["--diff", "{{ .Destination }}", "{{ .Target }}"]
+
+[edit]
+    apply = true
+
+[gpg]
+    command = "gpg"
+    recipient = "Matias Ceau"
+    # suffix = ".asc"
+
+[completion]
+    custom = true
