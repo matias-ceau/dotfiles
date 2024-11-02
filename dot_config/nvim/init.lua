@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
 
+vim.fn.system(vim.fn.stdpath("config") .. "/scripts/python_host_env.sh")
+vim.g.python3_host_prog = "/usr/bin/python"
+
 -- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
 vim.opt.shada = "!,'1000,<50,s10,h"
 vim.opt.number = true
@@ -44,10 +47,10 @@ vim.keymap.set("n", "<localleader>q", vim.diagnostic.setloclist, { desc = "Open 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- TIP: Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", 'gh<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set("n", "<right>", 'gl<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set("n", "<up>", 'gk<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set("n", "<down>", 'gj<cmd>echo "Use j to move!!"<CR>')
+-- vim.keymap.set("n", "<left>", "gh")
+-- vim.keymap.set("n", "<right>", "gl")
+-- vim.keygap.set("n", "<up>", "gk")
+-- vim.keymap.set("n", "<down>", "gj")
 
 -- Keybinds to make split navigation easier.
 --  Use Alt<hjkl> to switch between windows
