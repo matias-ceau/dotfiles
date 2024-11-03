@@ -209,11 +209,11 @@ config.bind("r", "reload")
 # config.bind("sf", "save")
 config.bind(
     "ss",
-    "session-save --current ;; /home/matias/.local/bin/spawn qutebrowser-modify-source-bookmarks.sh",
+    "session-save --current ;; spawn qutebrowser-modify-source-bookmarks.sh",
 )  # save current to cursession
 config.bind(
     "sn",
-    "cmd-set-text -s :session-save ;; /home/matias/.local/bin/spawn qutebrowser-modify-source-bookmarks.sh",
+    "cmd-set-text -s :session-save ;; spawn qutebrowser-modify-source-bookmarks.sh",
 )  # save to new
 config.bind("so", "cmd-set-text -s :session-load")  # open session
 config.bind("sc", "cmd-set-text -s :session-load --clear")  # open session
