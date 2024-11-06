@@ -1,0 +1,171 @@
+﻿# $HOME/.config/beets
+# convert plugins: if not enough space on phone
+# beet modify context=party artist:'beastie boys'
+
+directory: ~/music
+asciify_paths: yes
+original_date: yes
+
+include:
+  - secret-config.yaml
+
+# paths:
+#     default: $albumartist/$album%aunique{}/$track $title
+#     singleton: Non-Album/$artist/$title
+#     comp: Compilations/$album%aunique{}/$track $title
+
+# Available colors are black, darkred, darkgreen, brown (darkyellow), darkblue, purple (darkmagenta), teal (darkcyan), lightgray, darkgray, red, green, yellow, blue, fuchsia (magenta), turquoise (cyan), white
+ui:
+  color: yes
+  colors:
+    text_success: ['bold', 'green']
+    text_warning: ['bold', 'yellow']
+    text_error: ['bold', 'red']
+    text_highlight: ['bold', 'red']
+    text_highlight_minor: ['white']
+    action_default: ['bold', 'cyan']
+    action: ['bold', 'cyan']
+    # New colors after UI overhaul
+    text: ['normal']
+    text_faint: ['faint']
+    import_path: ['bold', 'blue']
+    import_path_items: ['bold', 'blue']
+    added:   ['green']
+    removed: ['red']
+    changed: ['yellow']
+    added_highlight:   ['bold', 'green']
+    removed_highlight: ['bold', 'red']
+    changed_highlight: ['bold', 'yellow']
+    text_diff_added:   ['bold', 'red']
+    text_diff_removed: ['bold', 'red']
+    text_diff_changed: ['bold', 'red']
+    action_description: ['white']
+
+import:
+  # write metadata to music files
+  write: yes
+
+  # move imported files from source to the music directory
+  move: yes
+  resume: ask
+  log: ~/.cache/beetslog.log 
+  # set_fields:
+  #   user_playlists: '0_New_imports'
+  #   collection: 'None'
+  #   status: '0'
+  incremental: yes
+  incremental_skip_later: yes
+  languages: en fr fi
+
+plugins:
+    - fetchart
+    - embedart
+    - lyrics
+    - lastgenre
+    - discogs
+    - info
+    - playlist
+    # - random
+    - export
+    # - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
+    - edit
+    - mbsync
+    # - smartplaylist
+    - bareasc
+    - duplicates
+    - mbcollection
+    # - scrub
+    - spotify
+    # - web
+    # - autobpm
+    # - importfeeds
+    # - describe # pip install beets-describe
+    #- acousticbrainz #pacman -S python-pyacoustid DEPRECATED
+    #- summarize # pip install git+git://github.com/steven-murray/beet-summarize.git
+    #- bpmanalyser # pip install beets-bpmanalyser
+    #- xtractor
+    # - fuzzy
+    #- cmus
+    #- mosaic
+
+# pip install flask (web)
+
+lyrics:
+  auto: yes
+  fallback: ''
+
+playlist:
+  auto: yes
+  relative_to: '~/music'
+  playlist_dir: '~/.localdata/playlists'
+  forward_slash: no
+
+# DEFAULTS
+# export:
+#   json:
+#     formatting:
+#     ensure_ascii: false
+    # indent: 4
+    # separators: [',' , ': ']
+    # sort_keys: true
+  # csv:
+  #   formatting:
+  #     delimiter: ','
+  #     dialect: excel
+
+# fuzzy:
+#   treshold: 0.7
+#   prefix: '~'
+
+edit:
+  itemfields: track title artist album genre
+  albumfields: album albumartist genre collection
+
+smartplaylist:
+  relative_to: ~/music
+  playlist_dir: ~/.localdata/playlists
+  playlists:
+    - name: all.m3u
+      query: ''
+
+spotify:
+  mode: open
+  region_filter: FR
+  show_failures: on
+  tiebreak: popularity
+
+lastgenre:
+  auto: yes
+  canonical: ~/.config/beets/lastgenre/genres-tree.yaml
+  whitelist: ~/.config/beets/lastgenre/genres.txt
+  count: 3
+  force: yes
+  min_weight: 10
+  prefer_specific: yes
+  source: album
+  title_case: yes
+  separator: ;
+
+chroma:
+  auto: yes
+
+acousticbrainz:
+  auto: yes
+
+embedart:
+  auto: yes
+
+# autobpm:
+#   auto: yes      #default
+#   overwrite: no  #default
+
+#bpmanalyser:
+#  auto: no
+#  dry-run: no
+#  write: yes
+#  threads: "AUTO" 
+#  force: yes #no
+#  quiet: no
+
+scrub:
+  auto: yes
