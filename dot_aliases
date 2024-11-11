@@ -50,7 +50,7 @@ alias serv="list_process.sh"
 #aliases['cpu-min'] = 'tuned-adm profile laptop-battery-powersave'
 #aliases['lobechat'] = 'docker run -p 3210:3210 f7e1581b25a3'
 
-alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 150 --save /etc/pacman.d/mirrorlist'
+alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 30 --save /etc/pacman.d/mirrorlist'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias ip_livebox="curl -4 -s ifconfig.me"
