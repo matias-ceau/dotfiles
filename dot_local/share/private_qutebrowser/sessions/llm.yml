@@ -1,0 +1,133 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - last_visited: '2024-11-10T17:56:03'
+      pinned: true
+      title: oooooooooooooooo at DuckDuckGo
+      url: https://duckduckgo.com/?q=oooooooooooooooo&ia=web
+    - last_visited: '2024-11-10T17:56:54'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/settings/cost
+    - last_visited: '2024-11-10T17:56:55'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/login?selectAccount=true&returnTo=%2Fsettings%2Fcost%3F
+    - last_visited: '2024-11-10T17:57:08'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/settings/cost
+    - last_visited: '2024-11-10T17:57:18'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/settings/organization
+    - last_visited: '2024-11-10T17:57:22'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/settings/logs
+    - last_visited: '2024-11-11T03:29:07'
+      pinned: true
+      title: Anthropic Console
+      url: https://console.anthropic.com/workbench/bc32438e-2958-4ff5-9d70-2ba52ebdb81e
+    - active: true
+      last_visited: '2024-11-11T05:01:51'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Anthropic Console
+      url: https://console.anthropic.com/workbench/bc32438e-2958-4ff5-9d70-2ba52ebdb81e
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2024-11-10T17:59:46'
+      pinned: true
+      title: OpenAI Platform
+      url: https://platform.openai.com/auth/callback?code=cBtUSXtYJd4fsH2R0zPiJyEmlM37Ez455XmaH9jvRbyWD&state=QkhvRURzMWlUTGNmR1dUc2MyMVpBTkplanplNlpjSTNpfnZBc1JoSExVOA%3D%3D
+    - last_visited: '2024-11-10T18:00:08'
+      pinned: true
+      title: Completions API - OpenAI API
+      url: https://platform.openai.com/docs/guides/completions
+    - active: true
+      last_visited: '2024-11-10T18:00:14'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Chat Playground - OpenAI API
+      url: https://platform.openai.com/playground/chat?models=gpt-4o
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-11-10T18:00:28'
+      pinned: true
+      title: gemini gems at DuckDuckGo
+      url: https://duckduckgo.com/?q=gemini+gems&ia=web
+    - last_visited: '2024-11-10T18:00:41'
+      pinned: true
+      title: gemini ai at DuckDuckGo
+      url: https://duckduckgo.com/?q=gemini+ai&ia=web
+    - last_visited: '2024-11-10T18:00:44'
+      pinned: true
+      title: Gemini
+      url: https://gemini.google.com/app
+    - active: true
+      last_visited: '2024-11-10T18:01:50'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Gemini
+      url: https://gemini.google.com/gems/view
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-11-10T18:01:42'
+      pinned: true
+      title: ChatGPT
+      url: https://chatgpt.com/
+    - last_visited: '2024-11-10T18:02:06'
+      pinned: true
+      title: ChatGPT
+      url: https://chatgpt.com/?model=gpt-4o-canmore
+    - last_visited: '2024-11-10T18:02:09'
+      pinned: true
+      title: ChatGPT
+      url: https://chatgpt.com/?model=gpt-4o
+    - active: true
+      last_visited: '2024-11-10T18:02:18'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: ChatGPT
+      url: https://chatgpt.com/?model=gpt-4o-canmore
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-11-11T04:31:58'
+      pinned: false
+      title: litellm at DuckDuckGo
+      url: https://duckduckgo.com/?q=litellm&ia=web
+    - last_visited: '2024-11-11T04:31:58'
+      pinned: false
+      title: LiteLLM - Getting Started | liteLLM
+      url: https://docs.litellm.ai/docs/
+    - last_visited: '2024-11-11T04:32:02'
+      pinned: false
+      title: "\U0001F4A5 LiteLLM Proxy Server (LLM Gateway) | liteLLM"
+      url: https://docs.litellm.ai/docs/simple_proxy
+    - last_visited: '2024-11-11T04:32:03'
+      pinned: false
+      title: LiteLLM - Getting Started | liteLLM
+      url: https://docs.litellm.ai/docs/
+    - active: true
+      last_visited: '2024-11-11T04:32:24'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: LiteLLM - Getting Started | liteLLM
+      url: https://docs.litellm.ai/docs/#basic-usage
+      zoom: 1.0
