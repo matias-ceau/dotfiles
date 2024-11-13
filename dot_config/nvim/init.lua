@@ -135,16 +135,15 @@ require("lazy").setup({
 		event = "VeryLazy",
 		opts = {
 			spec = {
-				{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
-				{ "<leader>h", group = "[H]elp" },
+				{ "<leader>c", group = "[c]ode", mode = { "n", "x" } },
+				{ "<leader>h", group = "[h]elp" },
 				-- { "<leader>r", group = "[R]ename" },
-				{ "<leader>s", group = "[S]earch" },
-				{ "<leader>o", group = "[O]pen files" },
-				{ "<leader>t", group = "[T]oggle" },
-				{ "<leader>g", group = "[G]it" },
+				{ "<leader>s", group = "[s]earch" },
+				{ "<leader>o", group = "[o]pen files" },
+				{ "<leader>t", group = "[t]oggle" },
+				{ "<leader>g", group = "[g]it" },
 				{ "<leader>D", group = "[D]iagnostics" },
-				{ "<leader>D", group = "[D]iagnostics" },
-				{ "<localleader>g", group = "[G]it hunk" },
+				{ "<localleader>G", group = "[G]it hunk" },
 				{ "<localleader>c", group = "[c]olorizer" },
 			},
 		},
@@ -204,20 +203,15 @@ require("lazy").setup({
 			-- it can fuzzy find! It's more than just a "file finder", it can search
 			-- many different aspects of Neovim, your workspace, LSP, and more!
 			--
-			-- The easiest way to use Telescope, is to start by doing something like:
-			--  :Telescope help_tags
+			-- The easiest way to use Telescope, is to start by doing something like: :Telescope help_tags
 			--
-			-- After running this command, a window will open up and you're able to
-			-- type in the prompt window. You'll see a list of `help_tags` options and
-			-- a corresponding preview of the help.
+			-- After running this command, a window will open up and you're able to type in the prompt window. You'll see a list of `help_tags` options and a corresponding preview of the help.
 			--
 			-- Two important keymaps to use while in Telescope are:
 			--  - Insert mode: <c-/>
 			--  - Normal mode: ?
 			--
-			-- This opens a window that shows you all of the keymaps for the current
-			-- Telescope picker. This is really useful to discover what Telescope can
-			-- do as well as how to actually do it!
+			-- This opens a window that shows you all of the keymaps for the current Telescope picker. This is really useful to discover what Telescope can do as well as how to actually do it!
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
@@ -245,14 +239,14 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>=f", builtin.filetypes, { desc = "Settings: [f]iletypes" })
-			vim.keymap.set("n", "<leader>=o", builtin.vim_options, { desc = "Settings: [o]ptions" })
+			vim.keymap.set("n", "<leader>vf", builtin.filetypes, { desc = "Settings: [f]iletypes" })
+			vim.keymap.set("n", "<leader>vo", builtin.vim_options, { desc = "Settings: [o]ptions" })
 			vim.keymap.set("n", "<leader>hh", builtin.help_tags, { desc = "Help: [H]elp tags" })
 			vim.keymap.set("n", "<leader>hk", builtin.keymaps, { desc = "Help: [K]eymaps" })
-			vim.keymap.set("n", "<leader>hm", builtin.man_pages, { desc = "Help: [M]an" })
+			vim.keymap.set("n", "<leader>M", builtin.man_pages, { desc = "Help: [M]an" })
 			vim.keymap.set("n", "<leader>oo", builtin.find_files, { desc = "[O]pen file (cwd)" })
 			vim.keymap.set("n", "<leader>or", builtin.oldfiles, { desc = "[O]pen [R]ecent File" })
-			vim.keymap.set("n", "<leader>t", builtin.builtin, { desc = "[T]elescope builtins" })
+			vim.keymap.set("n", "<leader>T", builtin.builtin, { desc = "[T]elescope builtins" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sb", builtin.live_grep, { desc = "[S]earch (rg) in current [B]uffer" })
 			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
@@ -526,7 +520,7 @@ require("lazy").setup({
 				bash = { "beautysh" },
 				zsh = { "beautysh" },
 				sh = { "beautysh" },
-				--
+				json = { "jq" },
 				-- You can use a sub-list to tell conform to run *until* a formatter is found.
 				-- javascript = { { "prettierd", "prettier", stop_after_first = true } },
 			},
@@ -687,16 +681,16 @@ require("lazy").setup({
 				-- Module mappings. Use `''` (empty string) to disable one.
 				mappings = {
 					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-					left = "<M>-<left>",
-					right = "<M>-<right>",
-					down = "<M>-<down>",
-					up = "<M>-<up>",
+					left = "<M-left>",
+					right = "<M-right>",
+					down = "<M-down>",
+					up = "<M-up>",
 
 					-- Move current line in Normal mode
-					line_left = "<M>-<left>",
-					line_right = "<M>-<right>",
-					line_down = "<M>-<down>",
-					line_up = "<M>-<up>",
+					line_left = "<M-left>",
+					line_right = "<M-right>",
+					line_down = "<M-down>",
+					line_up = "<M-up>",
 				},
 			})
 
