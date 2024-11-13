@@ -56,7 +56,7 @@ alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --
 alias ip_livebox="curl -4 -s ifconfig.me"
 
 O() {
-    source "$(fd 'activate$' -I | fzf --select-1 --height=~100%)"
+    source "$(fd 'activate$' -I -H | fzf --select-1 --height=~100%)"
 }
 X() {
     deactivate
