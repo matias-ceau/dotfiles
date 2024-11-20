@@ -246,7 +246,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>M", builtin.man_pages, { desc = "Help: [M]an" })
 			vim.keymap.set("n", "<leader>oo", builtin.find_files, { desc = "[O]pen file (cwd)" })
 			vim.keymap.set("n", "<leader>or", builtin.oldfiles, { desc = "[O]pen [R]ecent File" })
-			vim.keymap.set("n", "<leader>T", builtin.builtin, { desc = "[T]elescope builtins" })
+			vim.keymap.set("n", "<leader>hb", builtin.builtin, { desc = "Telescope [b]uiltins" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sb", builtin.live_grep, { desc = "[S]earch (rg) in current [B]uffer" })
 			vim.keymap.set("n", "<leader>d", builtin.diagnostics, { desc = "[D]iagnostics" })
