@@ -16,8 +16,9 @@ shopt -s globstar                # ** recursive glob
 shopt -s histappend              # append to history, don't overwrite
 shopt -s histverify              # expand, but don't automatically execute, history expansions
 shopt -s nocaseglob              # case-insensitive globbing
-# shopt -s no_empty_cmd_completion # do not TAB expand empty lines
+shopt -s no_empty_cmd_completion # do not TAB expand empty lines
 shopt -s expand_aliases
+shopt -s progcomp_alias
 
 # HISTORY XDG
 mkdir -p "$XDG_STATE_HOME/bash"
