@@ -11,9 +11,8 @@
 [protocol]
 	file = allow
 
-# vim: set ft=gitconfig
-[core]
 [tag]
 	gpgsign = true
 [gpg "openpgp"]
 	program = /bin/gpg
+# vim: set ft=gitconfig
