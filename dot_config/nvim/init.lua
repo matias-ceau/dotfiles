@@ -4,7 +4,7 @@ vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
 
 vim.fn.system(vim.fn.stdpath("config") .. "/scripts/python_host_env.sh")
-vim.g.python3_host_prog = vim.fn.stdpath("data") .. "/python-host-venv/python/bin/python3"
+vim.g.python3_host_prog = vim.fn.stdpath("data") .. "/python-host-venv/bin/python3"
 
 -- [[ Setting options ]] :see `:help vim.opt` and `:help option-list`
 vim.opt.shada = "!,'1000,<50,s10,h"
