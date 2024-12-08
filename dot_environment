@@ -5,7 +5,8 @@ export BROWSER="qutebrowser"
 
 # PATHS ####################################
 # PATH
-PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/edirect"
+export LOCALBIN="$HOME/.local/bin/edirect"
+PATH="$PATH:$LOCALBIN:$LOCALBIN/cargo/bin"
 PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PATH
 
@@ -25,6 +26,7 @@ export PYTHONDOCS=/usr/share/doc/python/html/library
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$HOME/.local/opt/go"
 ####################################################
 export CHEZMOI="$HOME/.local/share/chezmoi"
