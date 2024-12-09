@@ -5,8 +5,9 @@ export BROWSER="qutebrowser"
 
 # PATHS ####################################
 # PATH
-export LOCALBIN="$HOME/.local/bin/edirect"
-PATH="$PATH:$LOCALBIN:$LOCALBIN/cargo/bin"
+export LOCALBIN="$HOME/.local/bin"
+export LOCALOPT="$HOME/.local/opt"
+PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$LOCALOPT/cargo/bin"
 PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PATH
 
