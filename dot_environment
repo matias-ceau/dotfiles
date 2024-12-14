@@ -117,4 +117,6 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
 
+env | rg -vq 'DISPLAY=' && clear && fastfetch
+
 # vim: set ft=sh
