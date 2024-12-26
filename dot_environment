@@ -117,6 +117,10 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
 
-env | rg -vq 'DISPLAY=' && clear && fastfetch
+if env | rg -vq 'DISPLAY='; then
+    echo -e "\e[33m${TERM}\t\e[34m${SHELL}\e[0m"
+else
+    fastfetch
+fi
 
 # vim: set ft=sh
