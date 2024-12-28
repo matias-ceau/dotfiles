@@ -1,0 +1,365 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:19'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Anthropic Console
+      url: https://console.anthropic.com/workbench/bc32438e-2958-4ff5-9d70-2ba52ebdb81e
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:15'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Chat Playground - OpenAI API
+      url: https://platform.openai.com/playground/chat?models=gpt-4o
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:22'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Gemini
+      url: https://gemini.google.com/app/a632a7cfbfe8d3cd
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T20:09:23'
+      pinned: true
+      scroll-pos:
+        x: 0
+        y: 0
+      title: ChatGPT
+      url: https://chatgpt.com/
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2024-12-27T15:26:23'
+      pinned: false
+      title: Google Gen AI SDKs  |  Gemini API  |  Google AI for Developers
+      url: https://ai.google.dev/gemini-api/docs/sdks
+    - active: true
+      last_visited: '2024-12-27T15:26:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 5312
+      title: google-genai · PyPI
+      url: https://pypi.org/project/google-genai/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-27T15:26:48'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Google Gen AI SDK documentation
+      url: https://googleapis.github.io/python-genai/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:15'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Developer quickstart - OpenAI API
+      url: https://platform.openai.com/docs/quickstart?context=python
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:21'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Client SDKs - Anthropic
+      url: https://docs.anthropic.com/en/api/client-sdks
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-26T10:53:21'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Initial Setup - Perplexity
+      url: https://docs.perplexity.ai/guides/getting-started
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-26T14:36:31'
+      pinned: false
+      title: oooooooooooooooooooooooo at DuckDuckGo
+      url: https://duckduckgo.com/?q=oooooooooooooooooooooooo&ia=web
+    - last_visited: '2024-12-26T14:37:32'
+      pinned: false
+      title: qtile open url in instance in different window at DuckDuckGo
+      url: https://duckduckgo.com/?q=qtile+open+url+in+instance+in+different+window&ia=web
+    - last_visited: '2024-12-26T18:40:43'
+      pinned: false
+      title: qutebrowser open url in instance in different window at DuckDuckGo
+      url: https://duckduckgo.com/?q=qutebrowser+open+url+in+instance+in+different+window&ia=web
+    - active: true
+      last_visited: '2024-12-26T18:40:43'
+      pinned: false
+      scroll-pos:
+        x: 43
+        y: 30090
+      title: '| qutebrowser'
+      url: https://qutebrowser.org/doc/help/commands.html
+      zoom: 0.9
+  - history:
+    - last_visited: '2024-12-26T17:43:37'
+      pinned: false
+      title: langchain numpy 2 at DuckDuckGo
+      url: https://duckduckgo.com/?q=langchain+numpy+2&ia=web
+    - last_visited: '2024-12-26T17:44:12'
+      pinned: false
+      title: 'Python 3.13 needs Numpy > 2.0 · Issue #26026 · langchain-ai/langchain
+        · GitHub'
+      url: https://github.com/langchain-ai/langchain/issues/26026
+    - last_visited: '2024-12-26T17:44:22'
+      pinned: false
+      title: 'langchain[patch]: support numpy 2 by ghinch · Pull Request #28183 ·
+        langchain-ai/langchain · GitHub'
+      url: https://github.com/langchain-ai/langchain/pull/28183
+    - last_visited: '2024-12-26T18:06:39'
+      pinned: false
+      title: "GitHub - langchain-ai/langchain: \U0001F99C\U0001F517 Build context-aware
+        reasoning applications"
+      url: https://github.com/langchain-ai/langchain
+    - last_visited: '2024-12-26T18:07:24'
+      pinned: false
+      title: Releases · langchain-ai/langchain · GitHub
+      url: https://github.com/langchain-ai/langchain/releases
+    - last_visited: '2024-12-26T18:07:33'
+      pinned: false
+      title: Issues · langchain-ai/langchain · GitHub
+      url: https://github.com/langchain-ai/langchain/issues
+    - last_visited: '2024-12-26T18:07:48'
+      pinned: false
+      title: LangChain · GitHub
+      url: https://github.com/langchain-ai
+    - last_visited: '2024-12-26T18:08:28'
+      pinned: false
+      title: "GitHub - langchain-ai/open-canvas: \U0001F4C3 A better UX for chat,
+        writing content, and coding with LLMs."
+      url: https://github.com/langchain-ai/open-canvas
+    - last_visited: '2024-12-26T18:09:29'
+      pinned: false
+      title: LangChain · GitHub
+      url: https://github.com/langchain-ai
+    - last_visited: '2024-12-26T18:10:05'
+      pinned: false
+      title: "GitHub - langchain-ai/langchain: \U0001F99C\U0001F517 Build context-aware
+        reasoning applications"
+      url: https://github.com/langchain-ai/langchain?tab=readme-ov-file
+    - last_visited: '2024-12-26T18:10:06'
+      original-url: https://python.langchain.com/
+      pinned: false
+      title: "Introduction | \U0001F99C️\U0001F517 LangChain"
+      url: https://python.langchain.com/docs/introduction/
+    - active: true
+      last_visited: '2024-12-26T18:19:48'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3298
+      title: "Introduction | \U0001F99C️\U0001F517 LangChain"
+      url: https://python.langchain.com/docs/introduction/#api-reference
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-26T18:19:54'
+      pinned: false
+      title: "Get started with LangSmith | \U0001F99C️\U0001F6E0️ LangSmith"
+      url: https://docs.smith.langchain.com/
+    - last_visited: '2024-12-26T18:20:26'
+      pinned: false
+      title: "Prompt engineering tutorials | \U0001F99C️\U0001F6E0️ LangSmith"
+      url: https://docs.smith.langchain.com/prompt_engineering/tutorials
+    - active: true
+      last_visited: '2024-12-26T18:20:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4710
+      title: "Pricing | \U0001F99C️\U0001F6E0️ LangSmith"
+      url: https://docs.smith.langchain.com/administration/pricing
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-26T19:00:18'
+      pinned: false
+      title: convolution at DuckDuckGo
+      url: https://duckduckgo.com/?q=convolution&ia=web
+    - last_visited: '2024-12-26T19:00:24'
+      pinned: false
+      title: convolution numpy at DuckDuckGo
+      url: https://duckduckgo.com/?q=convolution+numpy&ia=web
+    - last_visited: '2024-12-26T19:00:25'
+      pinned: false
+      title: numpy.convolve — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.convolve.html
+    - last_visited: '2024-12-26T19:01:43'
+      pinned: false
+      title: numpy.bitwise_count — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.bitwise_count.html
+    - last_visited: '2024-12-26T19:01:56'
+      pinned: false
+      title: numpy.convolve — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.convolve.html
+    - last_visited: '2024-12-26T19:02:54'
+      pinned: false
+      title: numpy.spacing — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.spacing.html
+    - last_visited: '2024-12-26T19:03:05'
+      pinned: false
+      title: numpy.lcm — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.lcm.html
+    - last_visited: '2024-12-26T19:03:14'
+      pinned: false
+      title: numpy.signbit — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.signbit.html
+    - last_visited: '2024-12-26T19:03:18'
+      pinned: false
+      title: numpy.nextafter — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.nextafter.html
+    - last_visited: '2024-12-26T19:03:31'
+      pinned: false
+      title: numpy.cumsum — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html
+    - last_visited: '2024-12-26T19:04:37'
+      pinned: false
+      title: numpy.gradient — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.gradient.html
+    - last_visited: '2024-12-26T19:05:04'
+      pinned: false
+      title: numpy.cumulative_sum — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.cumulative_sum.html
+    - last_visited: '2024-12-26T19:05:52'
+      pinned: false
+      title: numpy.cross — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.cross.html
+    - last_visited: '2024-12-26T19:06:06'
+      pinned: false
+      title: numpy.log2 — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.log2.html
+    - active: true
+      last_visited: '2024-12-26T19:06:30'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: numpy.spacing — NumPy v2.2 Manual
+      url: https://numpy.org/doc/stable/reference/generated/numpy.spacing.html
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-27T15:17:30'
+      pinned: false
+      title: AutoModelForCausalLM at DuckDuckGo
+      url: https://duckduckgo.com/?q=AutoModelForCausalLM&ia=web
+    - last_visited: '2024-12-27T15:17:31'
+      pinned: false
+      title: Causal language modeling
+      url: https://huggingface.co/docs/transformers/tasks/language_modeling
+    - last_visited: '2024-12-27T15:17:39'
+      pinned: false
+      title: Causal language modeling
+      url: https://huggingface.co/docs/transformers/main/en/tasks/language_modeling
+    - last_visited: '2024-12-27T15:17:45'
+      pinned: false
+      title: Token classification
+      url: https://huggingface.co/docs/transformers/main/en/tasks/sequence_classification
+    - active: true
+      last_visited: '2024-12-27T15:18:32'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6853
+      title: Token classification
+      url: https://huggingface.co/docs/transformers/main/en/tasks/token_classification
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-27T15:17:00'
+      pinned: false
+      title: "\U0001F917 Hub client library"
+      url: https://huggingface.co/docs/huggingface_hub/index
+    - last_visited: '2024-12-27T15:20:37'
+      pinned: false
+      title: "\U0001F917 Hub client library"
+      url: https://huggingface.co/docs/huggingface_hub/concepts/git_vs_http
+    - active: true
+      last_visited: '2024-12-27T15:22:13'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1132
+      title: Quickstart
+      url: https://huggingface.co/docs/huggingface_hub/quick-start
+      zoom: 1.0
+  - history:
+    - last_visited: '2024-12-27T15:24:06'
+      pinned: false
+      title: User access tokens
+      url: https://huggingface.co/docs/hub/security-tokens
+    - active: true
+      last_visited: '2024-12-27T15:24:33'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 162
+      title: Hugging Face – The AI community building the future.
+      url: https://huggingface.co/subscribe/pro
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-27T15:17:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Gradio Documentation
+      url: https://www.gradio.app/docs
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-27T15:17:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Hugging Face Hub documentation
+      url: https://huggingface.co/docs/hub/index
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-27T15:17:17'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: AutoTrain
+      url: https://huggingface.co/docs/autotrain/index
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2024-12-27T15:20:29'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 923
+      title: Trainer
+      url: https://huggingface.co/docs/transformers/main/en/main_classes/trainer#transformers.Trainer
+      zoom: 1.0

@@ -82,7 +82,7 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 
 # FZF
 export FZF_DEFAULT_OPTS=" --color=fg:$FLEXOKI_BASE_200,bg:$FLEXOKI_BLACK,hl:$FLEXOKI_MAGENTA --color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_900,hl+:$FLEXOKI_MAGENTA --color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700 --color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW --color=label:$FLEXOKI_YELLOW --highlight-line"
-export FZF_CTRL_T_OPTS=" --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_CTRL_T_OPTS="--walker file,dir,follow,hidden --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS=" --preview 'tree -C {}'"
 
 # EZA
@@ -117,10 +117,6 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
 
-if env | rg -vq 'DISPLAY='; then
-    echo -e "\e[33m${TERM}\t\e[34m${SHELL}\e[0m"
-else
-    fastfetch
-fi
+[[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\e[33m${TERM}\t\e[34m${SHELL}\e[0m"
 
 # vim: set ft=sh
