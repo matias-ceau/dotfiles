@@ -69,7 +69,7 @@ urxvt*foreground:       #cccccc
 urxvt*scrollBar:        false
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  default,matcher,resize-font
-urxvt*urlLauncher:      /usr/bin/jumanji
+urxvt*urlLauncher:      /usr/bin/qutebrowser
 urxvt*matcher.button:   1
 
 !urxvt*background:       rgba:0000/0000/0000/cccc
