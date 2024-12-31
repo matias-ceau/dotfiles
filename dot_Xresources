@@ -14,52 +14,42 @@
 #define green        #66800B
 #define white        #FFFCF0
 #define black        #100F0F
-
-
-#define bryellow     #D0A215
+#define bright_yellow     #D0A215
 #define brorange     #DA702C
-#define brred        #D14D41
-#define brmagenta    #CE5D97
+#define bright_red        #D14D41
+#define bright_magenta    #CE5D97
 #define brviolet     #8B7EC8
-#define brblue       #4385BE
-#define brcyan       #3AA99F
-#define brgreen      #879A39
-#define brwhite      #F2F0E5 
-#define brblack      #1C1B1A 
+#define bright_blue       #4385BE
+#define bright_cyan       #3AA99F
+#define bright_green      #879A39
+#define bright_white      #F2F0E5 
+#define bright_black      #1C1B1A 
 
 *background:              black
-*foreground:              brwhite
+*foreground:              bright_white
 *fading:                  40
 *fadeColor:               black
-*cursorColor:             brwhite
-*pointerColorBackground:  brblack
+*cursorColor:             bright_white
+*pointerColorBackground:  bright_black
 *pointerColorForeground:  black
 
 
-!black
-*color0:     black
-*color8:     brblack
-!red
-*color1:     red
-*color9:     brred
-!green
-*color2:     green
-*color10:    brgreen
-!yellow
-*color3:     yellow
-*color11:    bryellow
-!blue
-*color4:     blue
-*color12:    brblue
-!magenta
-*color5:     magenta
-*color13:    brmagenta
-!cyan
-*color6:     cyan
-*color14:    brcyan
-!white
-*color7:     white
-*color15:    brwhite
+*.color0:     black
+*.color8:     bright_black
+*.color1:     red
+*.color9:     bright_red
+*.color2:     green
+*.color10:    bright_green
+*.color3:     yellow
+*.color11:    bright_yellow
+*.color4:     blue
+*.color12:    bright_blue
+*.color5:     magenta
+*.color13:    bright_magenta
+*.color6:     cyan
+*.color14:    bright_cyan
+*.color7:     white
+*.color15:    bright_white
 
 
 !urxvt*font:            xft:monospace:size=15

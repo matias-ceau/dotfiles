@@ -8,6 +8,8 @@
 	repo = !git_clone_by_author-repo.sh
 	cd   = !source git_cd.sh
 	sync = !sync-repo.sh
+	update = !git_update_all_other_repos.sh
+
 [protocol]
 	file = allow
 
@@ -16,3 +18,5 @@
 [gpg "openpgp"]
 	program = /bin/gpg
 # vim: set ft=gitconfig
+[commit]
+	gpgsign = true

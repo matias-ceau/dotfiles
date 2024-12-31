@@ -63,12 +63,7 @@ keys = [
     Key(M + C, "r", L.reload_config(), desc="Reload the config"),
     Key(M + C + S, "r", L.restart(), desc="Restart qtile"),
     Key(M + A, "q", L.shutown(), desc="Shutdown qtile"),
-    Key(
-        M + C,
-        "q",
-        L.function(show_power_menu),
-        desc="Qtile-extras pop up menu",  # TODO: modify the popup menu
-    ),
+    # Key( M + C, "q", L.function(show_power_menu), desc="Qtile-extras pop up menu",), # TODO: modify the popup menu
     Key(
         M,
         "w",

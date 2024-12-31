@@ -1,0 +1,18 @@
+class Colors:
+    black = "#100f0f"
+    base_950 = "#1c1b1a"
+    base_950 = "#1c1b1a"
+    base_900 = "#282726"
+    base_300 = "#979592"
+    base_300 = "#979592"
+    base_300 = "#979592"
+    green_400 = "#879a39"
+    base_300 = "#979592"
+    yellow_400 = "#d0a215"
+    magenta_400 = "#ce5d97"
+    yellow_400 = "#d0a215"
+    yellow_100 = "#fceeb8"
+    yellow_400 = "#d0a215"
+    red_400 = "#d14d41"
+    orange_400 = "#da702c"
+    pass
