@@ -32,9 +32,12 @@ alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
 alias ×='chmod +x'
-alias kd='sudo keyd reload'
+alias cx='chmod +x'
+alias kdr='sudo keyd reload'
 
 # TMUX
+alias T='tmux_manager.py'
+alias t='tmux attach -t DEFAULT'
 alias ta='tmux attach'
 alias ts='tmux new -s'
 alias tl='tmux ls'

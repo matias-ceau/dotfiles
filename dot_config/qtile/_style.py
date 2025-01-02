@@ -1,4 +1,88 @@
-from _colors import Colors as c
+from dataclasses import dataclass
+
+
+@dataclass
+class Colors:
+    BASE_100 = "#dad8ce"
+    BASE_150 = "#cecdc3"
+    BASE_200 = "#b7b5ac"
+    BASE_300 = "#979592"
+    BASE_50 = "#e6e4d9"
+    BASE_500 = "#878580"
+    BASE_600 = "#6f6e69"
+    BASE_700 = "#575653"
+    BASE_800 = "#403e3c"
+    BASE_850 = "#343331"
+    BASE_900 = "#282726"
+    BASE_950 = "#1c1b1a"
+    BLACK = "#100f0f"
+    BLUE_400 = "#4385be"
+    BLUE_600 = "#205ea6"
+    CYAN_400 = "#3aa99f"
+    CYAN_50 = "#ebf2e7"
+    CYAN_600 = "#24837b"
+    CYAN_950 = "#142625"
+    GREEN_400 = "#879a39"
+    GREEN_600 = "#66800b"
+    MAGENTA_400 = "#ce5d97"
+    MAGENTA_600 = "#a02f6f"
+    ORANGE_400 = "#da702c"
+    ORANGE_600 = "#bc5215"
+    PURPLE_400 = "#8b7ec8"
+    PURPLE_600 = "#5e409d"
+    RED_400 = "#d14d41"
+    RED_600 = "#af3029"
+    TRUEBLACK = "#ffffff"
+    YELLOW_100 = "#fceeb8"
+    YELLOW_400 = "#d0a215"
+    YELLOW_600 = "#ad8301"
+    YELLOW_900 = "#4d3a0b"
+
+
+@dataclass
+class UIColors:
+    accent = [Colors.YELLOW_400]
+    black = [Colors.BASE_950]
+    groupbox_inactive = [Colors.BASE_300]
+    groupbox_block = [Colors.BLACK]
+    chord_quick = [Colors.GREEN_400, Colors.BASE_900]
+    chord_cmus = [Colors.YELLOW_400, Colors.BASE_900]
+    cmus_noplay = [Colors.BASE_300]
+    cmus_play = [
+        Colors.YELLOW_400,
+    ]
+    window_name = [
+        Colors.BASE_950,
+    ]
+    net = [
+        Colors.BASE_300,
+    ]
+    volume = [
+        Colors.MAGENTA_400,
+    ]
+    cameleon = [
+        Colors.YELLOW_400,
+    ]
+    cpu_temp = [
+        Colors.RED_400,
+    ]
+    cpu_load = [
+        Colors.ORANGE_400,
+    ]
+    RAM = [
+        Colors.BASE_300,
+    ]
+    systray = [
+        Colors.BASE_900,
+    ]
+    clock = [
+        Colors.YELLOW_100,
+        Colors.BASE_900,
+    ]
+    bar_background = [
+        Colors.BASE_950,
+    ]
+
 
 widget_defaults = dict(
     font="Iosevka Nerd Font",
@@ -7,25 +91,3 @@ widget_defaults = dict(
 )
 
 extension_defaults = widget_defaults.copy()
-
-colors = dict(
-    accent=c.yellow_400,  # Muted yellow for accent, similar to highlighted text
-    black=c.base_950,  # Very dark gray, almost black for background
-    groupbox_inactive=c.base_300,  # Dark grayish-brown for inactive elements
-    # groupbox_decoration = c.base_300,  # Slightly darker shade for decorations
-    groupbox_block=c.black,
-    chord_quick=(c.green_400, c.base_900),  # Muted green on dark background
-    chord_cmus=(c.yellow_400, c.base_900),  # Muted yellow on dark background
-    cmus_noplay=c.base_300,  # Light grayish-brown for inactive elements
-    cmus_play=c.yellow_400,  # Brighter green for active elements
-    window_name=c.base_950,  # Muted blue for window names
-    net=c.base_300,  # Muted aqua for network info
-    volume=c.magenta_400,  # Muted purple for volume
-    cameleon=c.yellow_400,  # Brighter yellow for dynamic elements
-    cpu_temp=c.red_400,  # Muted red for temperature
-    cpu_load=c.orange_400,  # Muted orange for CPU load
-    RAM=c.base_300,  # Muted aqua for RAM (same as net)
-    systray=c.base_900,  # Dark background for system tray
-    clock=(c.yellow_100, c.base_900),  # Light text on dark background for clock
-    bar_background=c.base_950,  # Slightly darker than main background for bar
-)

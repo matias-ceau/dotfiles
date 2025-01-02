@@ -1,5 +1,6 @@
 from _custom import Cameleon, custom_args, scale, system_clock_args
-from _style import colors
+from _style import Colors as C
+from _style import UIColors as UI
 from libqtile import bar
 from libqtile.config import Screen
 from libqtile.lazy import lazy
@@ -19,17 +20,17 @@ screens = [
                 widget.GroupBox(
                     highlight_method="block",
                     disable_drag=True,
-                    inactive=colors["groupbox_inactive"],
-                    this_current_screen_border=colors["groupbox_block"],
-                    this_screen_border=colors["groupbox_block"],
+                    inactive=UI.groupbox_inactive,
+                    this_current_screen_border=UI.groupbox_block,
+                    this_screen_border=UI.groupbox_block,
                 ),
                 # Current Layout icon
                 widget.CurrentLayoutIcon(use_mask=True, scale=0.9),
                 # Chords
                 widget.Chord(
                     chords_colors={
-                        "quicklaunch": colors["chord_quick"],
-                        "cmus": colors["chord_cmus"],
+                        "quicklaunch": UI.chord_quick,
+                        "cmus": UI.chord_cmus,
                     },
                     name_transform=lambda name: name.upper(),
                 ),
@@ -40,8 +41,8 @@ screens = [
                 # CMUS (inactive)
                 widget.Cmus(
                     format="{play_icon}{artist} - {title} {album}",
-                    noplay_color=colors["cmus_noplay"],
-                    play_colour=colors["cmus_play"],
+                    noplay_color=UI.cmus_noplay,
+                    play_colour=UI.cmus_play,
                     dpi=96,
                     width=int(400 * scale),
                     scroll=True,
@@ -53,7 +54,7 @@ screens = [
                     width=90,
                     scroll=True,
                     scroll_fixed_width=True,
-                    foreground=colors["net"],
+                    foreground=UI.net,
                 ),
                 # Volume
                 widget.Volume(
@@ -62,17 +63,17 @@ screens = [
                     mouse_callbacks={
                         "Button3": lazy.spawn("amixer -q set Master toggle")
                     },
-                    foreground=colors["volume"],
+                    foreground=UI.volume,
                 ),
                 # Cameleon
-                Cameleon(foreground=colors["cameleon"], **custom_args),
+                Cameleon(foreground=UI.cameleon, **custom_args),
                 # Thermal Sensor CPU
                 widget.ThermalSensor(
                     format="\u2102\u3014 {temp:.0f}\u2103 ",
                     tag_sensor="Package id 0",
                     width=55,
                     padding=0,
-                    foreground=colors["cpu_temp"],
+                    foreground=UI.cpu_temp,
                 ),
                 # CPU load
                 widget.CPU(
@@ -81,7 +82,7 @@ screens = [
                     scroll_fixed_width=True,
                     width=85,
                     padding=0,
-                    foreground=colors["cpu_temp"],
+                    foreground=UI.cpu_temp,
                 ),
                 # Storage (DF)
                 widget.DF(
@@ -89,27 +90,27 @@ screens = [
                     visible_on_warn=False,
                     partition="/",
                 ),
-                widget.Memory(measure_mem="G", foreground=colors["RAM"]),
+                widget.Memory(measure_mem="G", foreground=UI.RAM),
                 widget.Systray(
-                    foreground=colors["systray"],
+                    foreground=UI.systray,
                 ),
                 widget.Clock(
                     **system_clock_args,
                     fmt="<b>\u3014 {} \u3015</b>",
-                    foreground=colors["clock"][0],
-                    background=colors["clock"][1],
+                    foreground=UI.clock[0],
+                    background=UI.clock[1],
                 ),
                 widget.QuickExit(default_text="\u23cf"),
             ],
             20,  # ?
-            border_width=[1, 0, 1, 0],  # Draw top and bottom borders
+            border_width=[0, 0, 2, 0],  # Draw top and bottom borders
             border_color=[
-                colors["accent"],
-                colors["black"],
-                colors["accent"],
-                colors["black"],
-            ],  # Borders are magenta
-            background=colors["bar_background"],
+                C.BLACK,
+                C.BLACK,
+                C.ORANGE_400,
+                C.BLACK,
+            ],
+            background=UI.bar_background,
         ),
     )
 ]

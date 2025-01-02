@@ -2,6 +2,7 @@ import os
 
 # import csv
 import socket
+import subprocess
 
 from libqtile.lazy import lazy
 from qtile_extras import widget
@@ -17,15 +18,18 @@ scale = 1.0
 if hostname == "karhu":
     scale = 0.5
 
-
 # ----- CMD DICTS / SPECIAL -----(to be modified)----------------------------------------
 
 # QUICKLAUNCHES
 # jupyter
-notebooks = [n[:-6] for n in os.listdir(f"{home}/projects") if n[-6:] == ".ipynb"]
-nb_commands = [
-    f"jupyter-notebook --browser=chromium {home}/projects/{n}.ipynb" for n in notebooks
-]
+
+# notebooks = [n[:-6] for n in os.listdir(f"{home}/projects") if n[-6:] == ".ipynb"]
+notebooks = (
+    subprocess.run(["fd", "-tf", r"\.ipynb", home], capture_output=True)
+    .stdout.decode()
+    .splitlines()
+)
+nb_commands = [f"jupyter-notebook --browser=chromium {n}" for n in notebooks]
 NOTEBOOKS = {k: v for k, v in zip(notebooks, nb_commands)}
 
 ## Cameleon widget

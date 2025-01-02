@@ -1,7 +1,10 @@
+from _style import Colors as C
 from libqtile import layout
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),  # BASIC
+    layout.Columns(
+        border_focus_stack=[C.ORANGE_400, C.ORANGE_600], border_width=4
+    ),  # BASIC
     layout.TreeTab(),  # TODO : add auto add_section/sort_sections | section_up/down
     layout.Max(),  # simple full screen
     layout.Matrix(),  # equally spaced +
