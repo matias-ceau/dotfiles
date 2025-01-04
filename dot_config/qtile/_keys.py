@@ -256,33 +256,17 @@ keys = [
     Key(
         [],
         forward,
-        L.spawn("xdotool click  5"),
+        L.spawn("xdotool click 5"),
         desc="Scroll down",
     ),
     Key(
         [],
         back,
-        L.spawn("xdotool click  4"),
+        L.spawn("xdotool click 4"),
         desc="Scroll up",
     ),
     Key(M, "F2", L.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
-    Key(
-        M + S,
-        "F2",
-        L.spawn("wallpaper.sh --previous"),
-        desc="Wallpaper previous",
-    ),
-    Key(
-        M + C,
-        "F2",
-        L.spawn("wallpaper.sh --gui"),
-        desc="Wallpaper select with GUI (WIP)",
-    ),
-    Key(
-        M + A,
-        "F2",
-        L.spawn("wallpaper.sh --select"),
-        desc="Wallpaper select with fzf",
+    Key( M + S, "F2", L.spawn("wallpaper.sh --select"), desc="Wallpaper select with fzf",
     ),
     ## Commands
     ### General
@@ -306,7 +290,6 @@ keys = [
         L.spawn('notify-send "Hello" "hihi"'),
         desc="Bookmarks menu (WIP)",
     ),  # TODO: (also add, auto format, copy/paste)
-    # scripts
     Key(
         M,
         "semicolon",
@@ -394,7 +377,7 @@ keys = [
             Key(
                 C,
                 "Right",
-                L.spawn(f"{scripts}/next_album.xsh"),
+                L.spawn("next_album.xsh"),
                 desc="Next album",
             ),
             Key([], "Left", L.spawn("cmus-remote -r"), desc="previous song"),
@@ -403,32 +386,32 @@ keys = [
                 [],
                 "s",
                 L.spawn(
-                    ["xterm", "-T", "floating", "-e", f"{scripts}/fzf_songlauncher.sh"]
+                    ["xterm", "-T", "floating", "-e", "fzf_songlauncher.sh"]
                 ),
                 desc="select song",
             ),
             Key(
                 [],
                 "a",
-                L.spawn(f"xterm -T floating -e {scripts}/fzf_albumlauncher.xsh"),
+                L.spawn(f"xterm -T floating -e fzf_albumlauncher.xsh"),
                 desc="select song",
             ),
             Key(
                 [],
                 "r",
-                L.spawn(f"{scripts}/random_album.xsh"),
+                L.spawn("random_album.xsh"),
                 desc="select random album",
             ),
             Key(
                 [],
                 "p",
-                L.spawn(f"{scripts}/playlist_player.xsh"),
+                L.spawn("playlist_player.xsh"),
                 desc="play playlist",
             ),
             Key(
                 A,
                 "p",
-                L.spawn(f"{scripts}/playlist_randomizer.xsh"),
+                L.spawn("playlist_randomizer.xsh"),
                 desc="play playlist in random order",
             ),
         ],
@@ -448,7 +431,7 @@ keys = [
             Key(
                 [],
                 "k",
-                L.spawn(f"{scripts}/keyboard-help.sh"),
+                L.spawn("keyboard-help.sh"),
                 desc="show keymap",
             ),
             Key(

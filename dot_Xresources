@@ -25,7 +25,7 @@
 #define bright_white      #F2F0E5 
 #define bright_black      #1C1B1A 
 
-*background:              black
+*background:              #000000
 *foreground:              bright_white
 *fading:                  40
 *fadeColor:               black
@@ -53,9 +53,9 @@
 
 
 !urxvt*font:            xft:monospace:size=15
-URxvt.font:            xft:Iosevka Nerd Font:size=12:antialias=true
+URxvt.font:            xft:Iosevka Nerd Font:size=13:antialias=true
 urxvt*termName:         rxvt
-urxvt*foreground:       #cccccc
+urxvt*foreground:       white
 urxvt*scrollBar:        false
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  default,matcher,resize-font
