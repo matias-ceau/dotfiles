@@ -122,4 +122,5 @@ source <(pass show api_keys)
 
 . "$XDG_DATA_HOME/cargo/env"
 
+source "$XDG_CONFIG_HOME/broot/launcher/bash/br" 
 # vim: set ft=sh
