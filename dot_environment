@@ -1,6 +1,7 @@
 #~/.environment
 #
 export EDITOR="nvim"
+export VISUAL="alacritty --class floating -e nvim"
 export BROWSER="qutebrowser"
 
 # PATHS ####################################
@@ -118,7 +119,8 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
 
-[[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}\t\e[34m${SHELL}\e[0m"
+[[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
+# \t\e[34m${SHELL}\e[0m"
 
 . "$XDG_DATA_HOME/cargo/env"
 

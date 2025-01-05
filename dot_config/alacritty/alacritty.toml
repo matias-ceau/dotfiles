@@ -1,14 +1,16 @@
+[general]
+ipc_socket = true
+
 [window]
 decorations = "None"
 opacity = 1
 blur = false
-
-  [window.padding]
-  x = 3
-  y = 3
+padding = { x = 3, y = 3 }
 
 [font]
 size = 14
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
 builtin_box_drawing = false #true #false
 normal = { family = "Iosevka NF", style = "Regular" }
 bold = { family = "Iosevka NF", style = "Bold" }
@@ -17,81 +19,60 @@ bold_italic = { family = "Iosevka NF", style = "Bold Italic" }
 
 [colors]
 transparent_background_colors = true
-line_indicator = { foreground = "None", background = "None" } #unmodif
-#    Color used for the indicator displaying the position in history during search and vi mode.
-#    Setting this to "None" will use the opposing primary color.
-footer_bar = { foreground = "#181818", background = "#d8d8d8" }
-# TODO:
-#    Color used for the footer bar on the bottom, used by search regex input, hyperlink URI preview, etc.
-selection = { text = "CellBackground", background = "CellForeground" }
-#    Colors used for drawing selections.
-#    Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
+line_indicator = { foreground = "#fefefe", background = "#1c1b1c" } #unmodif
+footer_bar = { foreground = "#1c1b1c", background = "#a02f6f" }
+selection = { text = "CellBackground", background = "#343331" }
 draw_bold_text_with_bright_colors = true
+cursor = { text = "#100f0f", cursor = "#ffffff" }
+vi_mode_cursor = { text = "#100f0f", cursor = "#daac1f" }
+
+[colors.primary]
+background = "#000000"
+foreground = "#e6e4d9"
+bright_foreground = "#fffcf0"
+dim_foreground = "#b7b5ac"
 
 [colors.search]
-#    Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    matches = { foreground = "#181818", background = "#ac4242" }
-# TODO:
-    focused_match = { foreground = "#181818", background = "#f4bf75" }
-# TODO:
+    matches = { foreground = "#100f0f", background = "#5e409d" }
+    focused_match = { foreground = "#000000", background = "#8b7ec8" }
 
 [colors.hints]
-    start = { foreground = "#181818", background = "#f4bf75" }
-# TODO:
-#        First character in the hint label.
-#        Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-    end = { foreground = "#181818", background = "#ac4242" }
-# TODO:
-#        All characters after the first one in the hint label.
-#        Allowed values are hexadecimal colors like #ff00ff, or CellForeground/CellBackground, which references the affected cell.
-
-  [colors.primary]
-  background = "#000000" #flexoki betrayal :(   "#1C1B1A"
-  foreground = "#FFFCF0"
-  bright_foreground = "#FFFCF0"
-  dim_foreground = "#FFFCF0"
+    start = { foreground = "#100f0f", background = "#879a39" }
+    end = { foreground = "#100f0f", background = "#66800b" }
 
 
-  [colors.cursor]
-  text = "#FFFCF0"
-  cursor = "#FFFCF0"
+[colors.normal]
+black = "#100F0F"
+red = "#AF3029"
+green = "#66800B"
+yellow = "#AD8301"
+blue = "#205EA6"
+magenta = "#A02F6F"
+cyan = "#24837B"
+white = "#FFFCF0"
 
-  [colors.vi_mode_cursor]
-  text = "CellBackground"
-  cursor = "CellForeground"
+[colors.bright]
+black = "#282726"
+red = "#fF2029"
+green = "#96f02B"
+yellow = "#fDf301"
+blue = "#205Ef6"
+magenta = "#f82FfF"
+cyan = "#34e3fB"
+white = "#FFFCF0"
 
-  [colors.normal]
-  black = "#100F0F"
-  red = "#AF3029"
-  green = "#66800B"
-  yellow = "#AD8301"
-  blue = "#205EA6"
-  magenta = "#A02F6F"
-  cyan = "#24837B"
-  white = "#FFFCF0"
-
-  [colors.bright]
-  black = "#403E3C"
-  red = "#D14D41"
-  green = "#879A39"
-  yellow = "#D0A215"
-  blue = "#4385BE"
-  magenta = "#CE5D97"
-  cyan = "#3AA99F"
-  white = "#FFFCF0"
-
-  [colors.dim]
-  black = "#282726"
-  red = "#AF3029"
-  green = "#66800B"
-  yellow = "#AD8301"
-  blue = "#205EA6"
-  magenta = "#A02F6F"
-  cyan = "#24837B"
-  white = "#FFFCF0"
+[colors.dim]
+black = "#504E4C"
+red = "#d14d41"
+green = "#879A39"
+yellow = "#D0A215"
+blue = "#4385BE"
+magenta = "#CE5D97"
+cyan = "#3AA99F"
+white = "#cecdc3"
 
 [scrolling]
-history = 10_000
+history = 10000
 multiplier = 3
 
 [mouse]
@@ -99,3 +80,8 @@ hide_when_typing = false
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}"
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+vi_mode_style = { shape = "Beam", blinking = "Always" }
+thickness = 1
