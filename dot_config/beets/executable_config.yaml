@@ -84,7 +84,7 @@ plugins:
     #- acousticbrainz #pacman -S python-pyacoustid DEPRECATED
     #- summarize # pip install git+git://github.com/steven-murray/beet-summarize.git
     #- bpmanalyser # pip install beets-bpmanalyser
-    - xtractor
+    # - xtractor
     # - fuzzy
     #- cmus
     #- mosaic
