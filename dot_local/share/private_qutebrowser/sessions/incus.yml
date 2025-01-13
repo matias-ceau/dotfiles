@@ -1,0 +1,99 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAD////8AAAAEgAAAqYAAAL7AAAAAAAAABYAAAKiAAAC9wAAAAAAAAAABVYAAAAAAAAA
+    FgAAAqIAAAL3
+  tabs:
+  - active: true
+    history:
+    - active: true
+      last_visited: '2025-01-04T21:31:01'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'GitHub - lxc/incus: Powerful system container and virtual machine manager'
+      url: https://github.com/lxc/incus
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-04T21:39:45'
+      original-url: https://linuxcontainers.org/incus
+      pinned: false
+      title: Linux Containers - Incus - Introduction
+      url: https://linuxcontainers.org/incus/
+    - last_visited: '2025-01-04T21:40:07'
+      pinned: false
+      title: About containers and VMs - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/explanation/containers_and_vms/
+    - last_visited: '2025-01-04T21:40:34'
+      pinned: false
+      title: About instances - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/explanation/instances/#expl-instances
+    - last_visited: '2025-01-04T21:40:42'
+      pinned: false
+      title: How to create instances - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/howto/instances_create/
+    - last_visited: '2025-01-04T21:41:23'
+      pinned: false
+      title: Images - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/images/#images
+    - last_visited: '2025-01-04T21:41:25'
+      pinned: false
+      title: How to use remote images - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/howto/images_remote/
+    - active: true
+      last_visited: '2025-01-04T21:47:47'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: First steps with Incus - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/tutorial/first_steps/
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-04T21:53:57'
+      pinned: false
+      title: Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/
+    - last_visited: '2025-01-04T21:54:11'
+      pinned: false
+      title: General - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/general/
+    - active: true
+      last_visited: '2025-01-04T21:54:14'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 180
+      title: About containers and VMs - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/explanation/containers_and_vms/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-01-04T21:51:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 698
+      title: How to initialize Incus - Incus documentation
+      url: https://linuxcontainers.org/incus/docs/main/howto/initialize/#initialize
+      zoom: 1.0
+    - last_visited: '2025-01-04T21:51:11'
+      pinned: false
+      title: https://linuxcontainers.org/incus/docs/main/_sources/howto/initialize.md.txt
+      url: https://linuxcontainers.org/incus/docs/main/_sources/howto/initialize.md.txt
+  - history:
+    - last_visited: '2025-01-04T21:57:29'
+      pinned: false
+      title: what is a looped back storage at DuckDuckGo
+      url: https://duckduckgo.com/?q=what+is+a+looped+back+storage&ia=web
+    - active: true
+      last_visited: '2025-01-04T21:57:30'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1474
+      title: filesystems - Why does one need a loop device at all? - Unix & Linux
+        Stack Exchange
+      url: https://unix.stackexchange.com/questions/476048/why-does-one-need-a-loop-device-at-all
+      zoom: 1.0

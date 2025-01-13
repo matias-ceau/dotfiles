@@ -60,23 +60,26 @@ import:
 plugins:
     - fetchart
     - embedart
-    - lyrics
     - lastgenre
     - discogs
     - info
-    - playlist
-    - random
     - export
     - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
     - edit
     - mbsync
-    - smartplaylist
     - bareasc
     - duplicates
     - mbcollection
     - scrub
-    - mbsync
     - spotify
+    - mpdstats
+    - mpdupdate
+    - xtractor
+    - listenbrainz
+    # - playlist
+    # - random
+    # - smartplaylist
+    # - lyrics
     # - web
     # - autobpm
     # - importfeeds
@@ -84,7 +87,6 @@ plugins:
     #- acousticbrainz #pacman -S python-pyacoustid DEPRECATED
     #- summarize # pip install git+git://github.com/steven-murray/beet-summarize.git
     #- bpmanalyser # pip install beets-bpmanalyser
-    # - xtractor
     # - fuzzy
     #- cmus
     #- mosaic
