@@ -64,3 +64,4 @@ O() {
 X() {
     deactivate
 }
+alias skb="setxkbmap us altgr-intl"
