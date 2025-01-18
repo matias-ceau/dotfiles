@@ -1,0 +1,192 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAFgAABVUAAAL/AAAAAAAAABYAAAVVAAAC/wAAAAAAAAAABVYAAAAAAAAA
+    FgAABVUAAAL/
+  tabs:
+  - history:
+    - last_visited: '2025-01-16T16:11:40'
+      pinned: false
+      title: SuperNatural 3.0—a database of natural products and natural product-based
+        derivatives | Nucleic Acids Research | Oxford Academic
+      url: https://academic.oup.com/nar/article/51/D1/D654/6833249?login=false
+    - active: true
+      last_visited: '2025-01-17T19:30:19'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 9855
+      title: SuperNatural 3.0—a database of natural products and natural product-based
+        derivatives | Nucleic Acids Research | Oxford Academic
+      url: https://academic.oup.com/nar/article/51/D1/D654/6833249?login=false#389810954
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-17T19:30:26'
+      original-url: http://bioinf-applied.charite.de/supernatural_3
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/
+      url: https://bioinf-applied.charite.de/supernatural_3/
+    - last_visited: '2025-01-17T19:30:39'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/statistics.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/statistics.php
+    - last_visited: '2025-01-17T19:30:48'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/contact.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/contact.php
+    - active: true
+      last_visited: '2025-01-17T19:33:01'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4745
+      title: bioinf-applied.charite.de/supernatural_3/subpages/faq.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/faq.php
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-16T16:13:21'
+      original-url: http://bioinf-applied.charite.de/supernatural_3
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/
+      url: https://bioinf-applied.charite.de/supernatural_3/
+    - last_visited: '2025-01-16T16:13:39'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+    - last_visited: '2025-01-16T16:13:53'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/moa.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/moa.php
+    - last_visited: '2025-01-16T16:14:03'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+    - last_visited: '2025-01-17T19:31:18'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/faq.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/faq.php
+    - last_visited: '2025-01-17T19:31:22'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/compounds.php
+    - last_visited: '2025-01-17T19:31:45'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/compound_result.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/compound_result.php
+    - last_visited: '2025-01-17T19:32:47'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/pathways.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/pathways.php
+    - last_visited: '2025-01-17T19:33:15'
+      pinned: false
+      title: https://bioinf-applied.charite.de/supernatural_3/subpages/pathway_compound_result.php
+      url: https://bioinf-applied.charite.de/supernatural_3/subpages/pathway_compound_result.php
+    - active: true
+      last_visited: '2025-01-17T19:33:38'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6093
+      title: 'Compound: MIDOMAFETAMINE (CHEMBL43048) - ChEMBL'
+      url: https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL43048
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-16T16:11:46'
+      pinned: false
+      title: 'Open-Access Metabolomics Databases for Natural Product Research: Present
+        Capabilities and Future Potential - PMC'
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4349186/
+    - last_visited: '2025-01-16T16:14:36'
+      pinned: false
+      title: 'Open-Access Metabolomics Databases for Natural Product Research: Present
+        Capabilities and Future Potential - PMC'
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4349186/#S2
+    - last_visited: '2025-01-16T16:17:22'
+      pinned: false
+      title: 'Open-Access Metabolomics Databases for Natural Product Research: Present
+        Capabilities and Future Potential - PMC'
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4349186/#S7
+    - active: true
+      last_visited: '2025-01-17T19:34:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 15875
+      title: 'Open-Access Metabolomics Databases for Natural Product Research: Present
+        Capabilities and Future Potential - PMC'
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4349186/#S6
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2025-01-16T16:12:00'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: 'PubChem: a public information system for analyzing bioactivities of
+        small molecules | Nucleic Acids Research | Oxford Academic'
+      url: https://academic.oup.com/nar/article/37/suppl_2/W623/1155303?login=false
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-16T17:27:03'
+      pinned: false
+      title: Claude
+      url: https://claude.ai/
+    - last_visited: '2025-01-16T17:27:04'
+      pinned: false
+      title: Claude
+      url: https://claude.ai/login?returnTo=%2F%3F
+    - last_visited: '2025-01-16T17:27:18'
+      pinned: false
+      title: Claude
+      url: https://claude.ai/
+    - last_visited: '2025-01-16T17:27:19'
+      pinned: false
+      title: Claude
+      url: https://claude.ai/new
+    - active: true
+      last_visited: '2025-01-17T19:30:09'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Convert Markdown links with URL-encoded spaces - Claude
+      url: https://claude.ai/chat/648ee995-f266-45bc-9da7-786cbdc0c96f
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-17T13:32:08'
+      pinned: false
+      title: Natural Products Magnetic Resonance Database vs pubchem or other
+      url: https://www.perplexity.ai/search/natural-products-magnetic-reso-J8zxeenIT.K.UAzUko1s.A
+    - last_visited: '2025-01-17T13:32:33'
+      pinned: false
+      title: Perplexity
+      url: https://www.perplexity.ai/page/new?newFrontendContextUUID=61a61986-6511-46d5-a6c0-2253c0596ab6&existingResultsCacheUUID=d9910dbe-f686-4f65-aaa9-c0800012ab88&existingContextBackendUUID=505169c5-602e-4b6d-b0e0-21342727a37e&collectionSlug=thesis-bEGROrYRR4iolX0BbzCB7g
+    - active: true
+      last_visited: '2025-01-17T19:28:54'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1218
+      title: Psychoactive chemical and substance databases
+      url: https://www.perplexity.ai/page/psychoactive-chemical-and-subs-R2CZouYuQ.Oa9OmO8sZO0w
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-01-17T19:34:47'
+      pinned: false
+      title: MassBank at DuckDuckGo
+      url: https://duckduckgo.com/?q=MassBank&ia=web
+    - last_visited: '2025-01-17T19:34:58'
+      pinned: false
+      title: MassBank database at DuckDuckGo
+      url: https://duckduckgo.com/?q=MassBank+database&ia=web
+    - active: true
+      last_visited: '2025-01-17T19:34:58'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: MassBank | MassBank Europe Mass Spectral DataBase
+      url: https://massbank.eu/MassBank/
+      zoom: 1.0
