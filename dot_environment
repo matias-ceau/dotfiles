@@ -1,7 +1,7 @@
 #~/.environment
 #
 export EDITOR="nvim"
-export VISUAL="alacritty --class floating -e nvim"
+# export VISUAL="alacritty --class floating -e nvim"
 export BROWSER="qutebrowser"
 
 # PATHS ####################################
