@@ -150,3 +150,8 @@ clients:
   - type: openai-compatible
     name: voyageai
     api_base: https://api.voyageai.ai/v1
+
+
+  - type: openai-compatible
+    name: deepseekai
+    api_base: https://api.deepseek.com
