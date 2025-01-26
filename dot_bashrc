@@ -1,3 +1,4 @@
+
 # vim: set ft=bash
 #---------------------------
 # Source profile and aliases
@@ -62,4 +63,11 @@ export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion_user"
 ! ( rg -q 'pandoc' $BASH_COMPLETION_USER_FILE ) && pandoc --bash-completion >> $BASH_COMPLETION_USER_FILE
 function _ai() { aichat "$@" ; }
 complete -F aichat _ai
+
 #NOTE: complete -W 'google.com cyberciti.biz nixcraft.com' host
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/matias/google-cloud-sdk/path.bash.inc' ]; then . '/home/matias/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/matias/google-cloud-sdk/completion.bash.inc' ]; then . '/home/matias/google-cloud-sdk/completion.bash.inc'; fi
