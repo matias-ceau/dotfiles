@@ -266,7 +266,11 @@ keys = [
         desc="Scroll up",
     ),
     Key(M, "F2", L.spawn("wallpaper.sh --random"), desc="Wallpaper random"),
-    Key( M + S, "F2", L.spawn("wallpaper.sh --select"), desc="Wallpaper select with fzf",
+    Key(
+        M + S,
+        "F2",
+        L.spawn("wallpaper.sh --select"),
+        desc="Wallpaper select with fzf",
     ),
     ## Commands
     ### General
@@ -327,6 +331,12 @@ keys = [
         L.spawn("flameshot gui"),
         desc="Take screenshot of selected area",
     ),
+    Key(
+        M + A,
+        "Print",
+        L.spawn("ocrdesktop"),
+        desc="Take screenshot of selected area",
+    ),
     # quicklaunch
     KeyChord(
         M,
@@ -385,9 +395,7 @@ keys = [
             Key(
                 [],
                 "s",
-                L.spawn(
-                    ["xterm", "-T", "floating", "-e", "fzf_songlauncher.sh"]
-                ),
+                L.spawn(["xterm", "-T", "floating", "-e", "fzf_songlauncher.sh"]),
                 desc="select song",
             ),
             Key(

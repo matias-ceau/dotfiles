@@ -1,3 +1,4 @@
+# vim: set ft=gitconfig
 [user]
 	name = Matias Ceau
 	email = matias@ceau.net
@@ -17,6 +18,5 @@
 	gpgsign = true
 [gpg "openpgp"]
 	program = /bin/gpg
-# vim: set ft=gitconfig
 [commit]
 	gpgsign = true
