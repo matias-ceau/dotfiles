@@ -1,4 +1,4 @@
-from _custom import NOTEBOOKS, scripts, show_power_menu
+from _custom import NOTEBOOKS
 from libqtile import extension
 from libqtile.config import Click, Drag, Key, KeyChord
 from libqtile.lazy import lazy as L
@@ -252,7 +252,6 @@ keys = [
         L.spawn("xdotool click --clearmodifiers 3"),
         desc="Right click",
     ),
-    # Key( M, "a", L.spawn("jgmenu_run"), desc="Jgmenu app list",),
     Key(
         [],
         forward,

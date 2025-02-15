@@ -69,7 +69,7 @@ screens = [
                 Cameleon(foreground=UI.cameleon, **custom_args),
                 # Thermal Sensor CPU
                 widget.ThermalSensor(
-                    format="\u2102\u3014 {temp:.0f}\u2103 ",
+                    format="{temp:.0f}\u2103 ",
                     tag_sensor="Package id 0",
                     width=55,
                     padding=0,
@@ -86,7 +86,7 @@ screens = [
                 ),
                 # Storage (DF)
                 widget.DF(
-                    format="\u3014 {uf:3} \u3015",
+                    format=" {uf:3} ",
                     visible_on_warn=False,
                     partition="/",
                 ),

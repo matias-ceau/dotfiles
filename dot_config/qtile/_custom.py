@@ -21,9 +21,6 @@ if hostname == "karhu":
 # ----- CMD DICTS / SPECIAL -----(to be modified)----------------------------------------
 
 # QUICKLAUNCHES
-# jupyter
-
-# notebooks = [n[:-6] for n in os.listdir(f"{home}/projects") if n[-6:] == ".ipynb"]
 notebooks = (
     subprocess.run(["fd", "-tf", r"\.ipynb", home], capture_output=True)
     .stdout.decode()
@@ -43,7 +40,11 @@ elif (hostname == "karjala") or (hostname == "kukko"):
     Cameleon = type(
         "Cameleon", widget.NvidiaSensors.__bases__, dict(widget.NvidiaSensors.__dict__)
     )
-    custom_args = dict(format="GPU {temp}°C", width=60, dpi=96)
+    custom_args = dict(
+        format="GPU {temp}°C",
+        width=60,
+        dpi=96,
+    )
 
     system_clock_args = dict(format="%Y-%m-%d %a %H:%M")
 
