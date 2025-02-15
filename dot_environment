@@ -5,12 +5,6 @@ export EDITOR="nvim"
 export BROWSER="qutebrowser"
 
 # PATHS ####################################
-# PATH
-export LOCALBIN="$HOME/.local/bin"
-export LOCALOPT="$HOME/.local/opt"
-PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$LOCALOPT/cargo/bin"
-PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
-export PATH
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share
@@ -19,6 +13,13 @@ export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
+
+# PATH
+export LOCALBIN="$HOME/.local/bin"
+export LOCALOPT="$HOME/.local/opt"
+PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$XDG_DATA_HOME/cargo/bin"
+PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+export PATH
 
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
