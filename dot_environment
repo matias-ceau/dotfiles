@@ -8,6 +8,7 @@ export BROWSER="qutebrowser"
 
 # FREEDESKTOP
 export XDG_DATA_HOME=$HOME/.local/share
+export LOCALSHARE="$XDG_DATA_HOME"
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
@@ -17,7 +18,10 @@ export XDG_CONFIG_DIRS=/etc/xdg
 # PATH
 export LOCALBIN="$HOME/.local/bin"
 export LOCALOPT="$HOME/.local/opt"
-PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$XDG_DATA_HOME/cargo/bin"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$HOME/.local/opt/go"
+PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$CARGO_HOME/bin"
 PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
 export PATH
 
@@ -29,9 +33,6 @@ export PYTHON_GIL=1
 
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export GOPATH="$HOME/.local/opt/go"
 ####################################################
 export CHEZMOI="$HOME/.local/share/chezmoi"
 export LOCALDATA="$HOME/.localdata"
