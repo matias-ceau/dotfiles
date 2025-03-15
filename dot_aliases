@@ -22,9 +22,11 @@ alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
 alias cfg="edit_chezmoi_cfg_files.sh"
 alias ¶="pacman-fuzzy-search.sh"
+alias pacfzf="pacman-fuzzy-search.sh"
 alias f='fzf-file-manager.sh'
 alias ns="new_script_creator.sh"
 alias é='editor.sh'
+alias fe='editor.sh'
 
 alias l=eza
 alias li='eza --oneline'
