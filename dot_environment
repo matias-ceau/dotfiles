@@ -109,7 +109,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # OLLAMA
 if [ "$(hostnamectl hostname)" = "karjala" ]; then
-    export OLLAMA_MODELS="/mnt/SSD/ollama_models"
+    export OLLAMA_MODELS="/mnt/.croute/ollama_models"
 fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
