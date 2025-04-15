@@ -30,7 +30,7 @@ nb_commands = [f"jupyter-notebook --browser=chromium {n}" for n in notebooks]
 NOTEBOOKS = {k: v for k, v in zip(notebooks, nb_commands)}
 
 ## Cameleon widget
-if (hostname == "karhu") or (hostname == "korvapuusti"):
+if hostname in ["karhu", "korvapuusti", "kirjolohi"]:
     Cameleon = type("Cameleon", widget.Battery.__bases__, dict(widget.Battery.__dict__))
     custom_args = dict(format="{char} {percent:2.0%} {watt:.0f}\u1d21")
 

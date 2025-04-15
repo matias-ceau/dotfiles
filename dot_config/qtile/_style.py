@@ -86,7 +86,7 @@ class UIColors:
 
 widget_defaults = dict(
     font="Iosevka Nerd Font",
-    fontsize=12,
+    fontsize=14,
     padding=1,
 )
 
