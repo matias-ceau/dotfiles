@@ -5,6 +5,9 @@
 # COMMON ALIASES AND FUNCTIONS FOR ALL SHELLS
 
 # Switching shells
+
+alias wlqt='qtile start -b wayland'
+
 alias r-pipewire='systemctl --user restart pipewire.service'
 alias r-load-qtile='qtile cmd-obj -o cmd -f reload_config'
 alias r-start-qtile='qtile cmd-obj -o cmd -f restart'

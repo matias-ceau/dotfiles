@@ -13,9 +13,9 @@ start_if_exists() {
 #~/.fehbg &
 start_if_exists nm-applet
 #start_if_exists dropbox #already with autostart
-start_if_exists flameshot
+# start_if_exists flameshot
 start_if_exists dunst
-start_if_exists picom -b
+# start_if_exists picom -b
 start_if_exists tmux_manager.py --auto
 #start_if_exists /usr/bin/emacs --daemon
 #start_if_exists /usr/bin/xonsh ~/scripts/karjala_screen.xsh

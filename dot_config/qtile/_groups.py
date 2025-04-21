@@ -16,8 +16,8 @@ groups = [
         "dock",
         [
             DropDown(
-                "tmux",
-                "alacritty -T tmux -e tmux attach",
+                "terminal",
+                "alacritty -T terminal kitty",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -26,7 +26,7 @@ groups = [
             ),
             DropDown(
                 "nvim",
-                f"alacritty --working-directory {home} -T nvim -e nvim README.md",
+                f"alacritty --working-directory {home} -T nvim -e nvim",
                 x=0.01,
                 y=0,
                 width=0.98,

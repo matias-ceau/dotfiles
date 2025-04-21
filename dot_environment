@@ -14,10 +14,12 @@ export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
+export XKB_DEFAULT_LAYOUT="us"
+export XKB_DEFAULT_VARIANT="altgr-intl"
 
 # PATH
-export LOCALBIN="$HOME/.local/bin"
-export LOCALOPT="$HOME/.local/opt"
+export LOCALBIN="$HOME/.local/bin" ; mkdir -p $LOCALBIN
+export LOCALOPT="$HOME/.local/opt" ; mkdir -p $LOCALOPT
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$HOME/.local/opt/go"
@@ -121,10 +123,11 @@ mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
 
-[[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
+# [[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
 # \t\e[34m${SHELL}\e[0m"
 
-. "$XDG_DATA_HOME/cargo/env"
+[[ -f "$XDG_DATA_HOME/cargo/env" ]] && . "$XDG_DATA_HOME/cargo/env"
 
-source "$XDG_CONFIG_HOME/broot/launcher/bash/br" 
+[[ -f "$XDG_CONFIG_HOME/broot/launcher/bash/br" ]] && source "$XDG_CONFIG_HOME/broot/launcher/bash/br" 
+
 # vim: set ft=sh
