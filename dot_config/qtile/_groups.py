@@ -17,7 +17,7 @@ groups = [
         [
             DropDown(
                 "terminal",
-                "alacritty -T terminal kitty",
+                "alacritty -T terminal",
                 x=0.01,
                 y=0,
                 width=0.98,
@@ -44,7 +44,8 @@ groups = [
             ),
             DropDown(
                 "sysmon",
-                "xterm -fs 10 -e btop",
+                "alacritty -T sysmon -e btop",
+                # "xterm -fs 10 -e btop",
                 x=0.01,
                 y=0,
                 width=0.98,

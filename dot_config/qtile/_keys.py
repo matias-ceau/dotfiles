@@ -261,13 +261,13 @@ keys = [
     Key(
         M,
         "Print",
-        L.spawn("flameshot full"),
+        L.spawn("flameshot full"),  # TODO: change
         desc="Take screenshot of the full screen",
     ),
     Key(
         M + C,
         "Print",
-        L.spawn("flameshot gui"),
+        L.spawn("flameshot gui"),  # TODO: change
         desc="Take screenshot of selected area",
     ),
     Key(
@@ -334,13 +334,13 @@ keys = [
             Key(
                 [],
                 "s",
-                L.spawn(["xterm", "-T", "floating", "-e", "fzf_songlauncher.sh"]),
+                L.spawn(["alacritty", "-T", "floating", "-e", "fzf_songlauncher.sh"]),
                 desc="select song",
             ),
             Key(
                 [],
                 "a",
-                L.spawn(f"xterm -T floating -e fzf_albumlauncher.xsh"),
+                L.spawn(f"alacritty -T floating -e fzf_albumlauncher.xsh"),
                 desc="select song",
             ),
             Key(

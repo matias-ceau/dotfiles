@@ -14,42 +14,42 @@
 #define green        #66800B
 #define white        #FFFCF0
 #define black        #100F0F
-#define bright_yellow     #D0A215
+#define bryellow     #D0A215
 #define brorange     #DA702C
-#define bright_red        #D14D41
-#define bright_magenta    #CE5D97
+#define brred        #D14D41
+#define brmagenta    #CE5D97
 #define brviolet     #8B7EC8
-#define bright_blue       #4385BE
-#define bright_cyan       #3AA99F
-#define bright_green      #879A39
-#define bright_white      #F2F0E5 
-#define bright_black      #1C1B1A 
+#define brblue       #4385BE
+#define brcyan       #3AA99F
+#define brgreen      #879A39
+#define brwhite      #F2F0E5 
+#define brblack      #1C1B1A 
 
 *background:              #000000
-*foreground:              bright_white
+*foreground:              brwhite
 *fading:                  40
 *fadeColor:               black
-*cursorColor:             bright_white
-*pointerColorBackground:  bright_black
+*cursorColor:             brwhite
+*pointerColorBackground:  brblack
 *pointerColorForeground:  black
 
 
 URxvt.color0:     black
-URxvt.color8:     bright_black
+URxvt.color8:     brblack
 URxvt.color1:     red
-URxvt.color9:     bright_red
+URxvt.color9:     brred
 URxvt.color2:     green
-URxvt.color10:    bright_green
+URxvt.color10:    brgreen
 URxvt.color3:     yellow
-URxvt.color11:    bright_yellow
+URxvt.color11:    bryellow
 URxvt.color4:     blue
-URxvt.color12:    bright_blue
+URxvt.color12:    brblue
 URxvt.color5:     magenta
-URxvt.color13:    bright_magenta
+URxvt.color13:    brmagenta
 URxvt.color6:     cyan
-URxvt.color14:    bright_cyan
+URxvt.color14:    brcyan
 URxvt.color7:     white
-URxvt.color15:    bright_white
+URxvt.color15:    brwhite
 
 
 URxvt.font:	xft:Iosevka Nerd Font:size=13:antialias=true
