@@ -127,3 +127,9 @@ color.sync.rejected=red
 # Command: undo
 color.undo.after=green
 color.undo.before=red
+news.version=3.4.1
+context.these.read=project:Thesis
+context.these.write=project:Thesis
+context.inbox.read=project:
+context.inbox.write=project:
+context=inbox

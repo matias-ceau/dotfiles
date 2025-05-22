@@ -731,7 +731,12 @@ c.editor.remove_file = True  ## Delete the temporary file upon closing the edito
 ## Type: ShellCommand
 # ===>
 c.fileselect.folder.command = [
-    "alacritty",
+    "exec",
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "kitty",
     "-e",
     "ranger",
     "--show-only-dirs",
@@ -758,8 +763,17 @@ c.fileselect.handler = "external"
 ## read instead.
 ## Type: ShellCommand
 # ===>
-c.fileselect.multiple_files.command = ["alacritty", "-e", "ranger", "--choosefiles={}"]
-
+c.fileselect.multiple_files.command = [
+    "exec",
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "kitty",
+    "-e",
+    "ranger",
+    "--choosefiles={}",
+]
 # <===  Command (and arguments) to use for selecting a single file in forms.
 ## The command should write the selected file path to the specified file
 ## or stdout. The following placeholders are defined: * `{}`: Filename of
@@ -767,8 +781,17 @@ c.fileselect.multiple_files.command = ["alacritty", "-e", "ranger", "--choosefil
 ## standard output of the command is read instead.
 ## Type: ShellCommand
 # ===>
-c.fileselect.single_file.command = ["alacritty", "-e", "ranger", "--choosefile={}"]
-
+c.fileselect.single_file.command = [
+    "exec",
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "kitty",
+    "-e",
+    "ranger",
+    "--choosefile={}",
+]
 # --------------------------------------------
 #                    FONTS
 # --------------------------------------------
