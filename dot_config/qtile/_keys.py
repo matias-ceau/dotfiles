@@ -1,170 +1,257 @@
 from libqtile import extension
-from libqtile.config import Click, Drag, EzKey, EzKeyChord
+
+# Import standard Key and KeyChord, and modifier objects
+from libqtile.config import Click, Drag, Key, KeyChord
 from libqtile.lazy import lazy as L
 
-# M = ["mod4"]
-# A = ["mod1"]
-# S = ["shift"]
-# C = ["control"]
+# Define standard modifier lists
+M = ["mod4"]
+A = ["mod1"]
+S = ["shift"]
+C = ["control"]
+
+# Special keys (these names are already standard Xorg names)
 brightnessdown, brightnessup = "XF86MonBrightnessDown", "XF86MonBrightnessUp"
 volumedown, volumeup, mute = (
     "XF86AudioLowerVolume",
     "XF86AudioRaiseVolume",
     "XF86AudioMute",
 )
-forward, back = "XF86Forward", "XF86Back"
+forward, back = "XF86Forward", "XF86Back"  # Not used in keys, but kept
 
+# Define the keys list using standard Key and KeyChord
 keys = [
     # Navigation
-    EzKey("M-A-Home", L.next_screen(), desc="NextScr"),
-    EzKey("M-h", L.layout.left(), desc="Left"),
-    EzKey("M-l", L.layout.right(), desc="Right"),
-    EzKey("M-j", L.layout.down(), desc="Down"),
-    EzKey("M-k", L.layout.up(), desc="Up"),
-    EzKey("M-Tab", L.layout.next(), desc="NextPane"),
-    EzKey("M-A-j", L.group.next_window(), desc="NextWin"),
-    EzKey("M-A-k", L.group.prev_window(), desc="PrevWin"),
-    EzKey(
-        "M-S-bracketright",
+    Key(M + A, "Home", L.next_screen(), desc="NextScr"),  # M-A-<Home> -> M+A, "Home"
+    Key(M, "h", L.layout.left(), desc="Left"),  # M-h -> M, "h"
+    Key(M, "l", L.layout.right(), desc="Right"),  # M-l -> M, "l"
+    Key(M, "j", L.layout.down(), desc="Down"),  # M-j -> M, "j"
+    Key(M, "k", L.layout.up(), desc="Up"),  # M-k -> M, "k"
+    Key(M, "Tab", L.layout.next(), desc="NextPane"),  # M-<Tab> -> M, "Tab"
+    Key(M + A, "j", L.group.next_window(), desc="NextWin"),  # M-A-j -> M+A, "j"
+    Key(M + A, "k", L.group.prev_window(), desc="PrevWin"),  # M-A-k -> M+A, "k"
+    Key(
+        M + S,
+        "bracketright",  # M-S-<bracketright> -> M+S, "bracketright"
         L.spawn("qtile_window_to_group_and_switch.py -n"),
         desc="NextGrp",
     ),
-    EzKey(
-        "M-S-bracketleft",
+    Key(
+        M + S,
+        "bracketleft",  # M-S-<bracketleft> -> M+S, "bracketleft"
         L.spawn("qtile_window_to_group_and_switch.py -p"),
         desc="PrevGrp",
     ),
-    EzKey("M-Right", L.screen.next_group(), desc="NextGrp"),
-    EzKey("M-bracketright", L.screen.next_group(), desc="NextGrp"),
-    EzKey("M-Left", L.screen.prev_group(), desc="PrevGrp"),
-    EzKey("M-bracketleft", L.screen.prev_group(), desc="PrevGrp"),
-    EzKey("M-C-A-grave", L.next_layout(), desc="NextLay"),
-    EzKey("M-C-A-1", L.to_layout_index(0), desc="Lay1"),
-    EzKey("M-C-A-2", L.to_layout_index(1), desc="Lay2"),
-    EzKey("M-C-A-3", L.to_layout_index(2), desc="Lay3"),
-    EzKey("M-C-A-4", L.to_layout_index(3), desc="Lay4"),
-    EzKey("M-C-A-5", L.to_layout_index(4), desc="Lay5"),
-    EzKey("M-C-A-6", L.to_layout_index(5), desc="Lay6"),
-    EzKey("M-q", L.window.kill(), desc="Kill"),
-    EzKey("M-C-r", L.reload_config(), desc="Reload"),
-    EzKey("M-C-S-r", L.restart(), desc="Restart"),
-    EzKey("M-A-q", L.shutown(), desc="Shutdown"),
-    # EzKey("M-C-q", L.function(show_power_menu), desc="Power"), # Uncomment if needed
-    # EzKey("M-w", L.run_extension(extension.WindowList()), desc="WinList"),
+    # Fixed typo: M-<Righ>t -> M-<Right>
+    Key(M, "Right", L.screen.next_group(), desc="NextGrp"),  # M-<Right> -> M, "Right"
+    Key(
+        M, "bracketright", L.screen.next_group(), desc="NextGrp"
+    ),  # M-<bracketright> -> M, "bracketright"
+    Key(M, "Left", L.screen.prev_group(), desc="PrevGrp"),  # M-<Left> -> M, "Left"
+    Key(
+        M, "bracketleft", L.screen.prev_group(), desc="PrevGrp"
+    ),  # M-<bracketleft> -> M, "bracketleft"
+    Key(
+        M + C + A, "grave", L.next_layout(), desc="NextLay"
+    ),  # M-C-A-<grave> -> M+C+A, "grave"
+    Key(M + C + A, "1", L.to_layout_index(0), desc="Lay1"),  # M-C-A-1 -> M+C+A, "1"
+    Key(M + C + A, "2", L.to_layout_index(1), desc="Lay2"),  # M-C-A-2 -> M+C+A, "2"
+    Key(M + C + A, "3", L.to_layout_index(2), desc="Lay3"),  # M-C-A-3 -> M+C+A, "3"
+    Key(M + C + A, "4", L.to_layout_index(3), desc="Lay4"),  # M-C-A-4 -> M+C+A, "4"
+    Key(M + C + A, "5", L.to_layout_index(4), desc="Lay5"),  # M-C-A-5 -> M+C+A, "5"
+    Key(M + C + A, "6", L.to_layout_index(5), desc="Lay6"),  # M-C-A-6 -> M+C+A, "6"
+    Key(M, "q", L.window.kill(), desc="Kill"),  # M-q -> M, "q"
+    Key(M + C, "r", L.reload_config(), desc="Reload"),  # M-C-r -> M+C, "r"
+    Key(M + C + S, "r", L.restart(), desc="Restart"),  # M-C-S-r -> M+C+S, "r"
+    Key(
+        M + A, "q", L.shutdown(), desc="Shutdown"
+    ),  # M-A-q -> M+A, "q" (Fixed L.shutown -> L.shutdown)
+    # Key(M + C, "q", L.function(show_power_menu), desc="Power"), # M-C-q (Commented out as in original)
+    # Key(M, "w", L.run_extension(extension.WindowList()), desc="WinList"), # M-w (Commented out as in original)
     # Move
-    EzKey("M-S-h", L.layout.shuffle_left(), desc="MvLeft"),
-    EzKey("M-S-l", L.layout.shuffle_right(), desc="MvRight"),
-    EzKey("M-S-j", L.layout.shuffle_down(), desc="MvDown"),
-    EzKey("M-S-k", L.layout.shuffle_up(), desc="MvUp"),
+    Key(M + S, "h", L.layout.shuffle_left(), desc="MvLeft"),  # M-S-h -> M+S, "h"
+    Key(M + S, "l", L.layout.shuffle_right(), desc="MvRight"),  # M-S-l -> M+S, "l"
+    Key(M + S, "j", L.layout.shuffle_down(), desc="MvDown"),  # M-S-j -> M+S, "j"
+    Key(M + S, "k", L.layout.shuffle_up(), desc="MvUp"),  # M-S-k -> M+S, "k"
     # Resize
-    EzKey("M-C-h", L.layout.grow_left(), desc="GrLeft"),
-    EzKey("M-C-l", L.layout.grow_right(), desc="GrRight"),
-    EzKey("M-C-j", L.layout.grow_down(), desc="GrDown"),
-    EzKey("M-C-k", L.layout.grow_up(), desc="GrUp"),
-    EzKey("M-C-equal", L.layout.normalize(), desc="Norm"),
+    Key(M + C, "h", L.layout.grow_left(), desc="GrLeft"),  # M-C-h -> M+C, "h"
+    Key(M + C, "l", L.layout.grow_right(), desc="GrRight"),  # M-C-l -> M+C, "l"
+    Key(M + C, "j", L.layout.grow_down(), desc="GrDown"),  # M-C-j -> M+C, "j"
+    Key(M + C, "k", L.layout.grow_up(), desc="GrUp"),  # M-C-k -> M+C, "k"
+    Key(
+        M + C, "equal", L.layout.normalize(), desc="Norm"
+    ),  # M-C-<equal> -> M+C, "equal"
     # Floating
-    EzKey(
-        "M-minus",
+    Key(
+        M,
+        "minus",  # M-<minus> -> M, "minus"
         L.window.resize_floating(-60, -40).when(when_floating=True),
         L.window.center().when(when_floating=True),
         desc="Float-",
     ),
-    EzKey(
-        "M-S-minus",
+    Key(
+        M + S,
+        "minus",  # M-S-<minus> -> M+S, "minus"
         L.window.resize_floating(-15, -10).when(when_floating=True),
         L.window.center().when(when_floating=True),
         desc="Float--",
     ),
-    EzKey(
-        "M-equal",
+    Key(
+        M,
+        "equal",  # M-<equal> -> M, "equal"
         L.window.resize_floating(60, 40).when(when_floating=True),
         L.window.center().when(when_floating=True),
         desc="Float+",
     ),
-    EzKey(
-        "M-S-equal",
+    Key(
+        M + S,
+        "equal",  # M-S-<equal> -> M+S, "equal"
         L.window.resize_floating(15, 10).when(when_floating=True),
         L.window.center().when(when_floating=True),
         desc="Float++",
     ),
-    EzKey("M-Prior", L.layout.toggle_split(), desc="Split"),
-    EzKey("M-f", L.window.toggle_floating(), desc="Float"),
-    EzKey("M-m", L.window.toggle_fullscreen(), desc="Full"),
-    EzKey("M-Up", L.screen.toggle_group(), desc="LastGrp"),
+    Key(
+        M, "Prior", L.layout.toggle_split(), desc="Split"
+    ),  # M-<Prior> -> M, "Prior" (PageUp key)
+    Key(M, "f", L.window.toggle_floating(), desc="Float"),  # M-f -> M, "f"
+    Key(M, "m", L.window.toggle_fullscreen(), desc="Full"),  # M-m -> M, "m"
+    Key(M, "Up", L.screen.toggle_group(), desc="LastGrp"),  # M-<Up> -> M, "Up"
     # Media / function keys
-    EzKey("<XF86MonBrightnessUp>", L.spawn("light -A 10"), desc="Bri+"),
-    EzKey("<XF86MonBrightnessDown>", L.spawn("light -U 10"), desc="Bri-"),
-    EzKey("<XF86AudioMute>", L.spawn("amixer -q set Master toggle"), desc="Mute"),
-    EzKey("<XF86AudioLowerVolume>", L.widget["volume"].decrease_vol(), desc="Vol-"),
-    EzKey("<XF86AudioRaiseVolume>", L.widget["volume"].increase_vol(), desc="Vol+"),
-    EzKey("M-S-F2", L.spawn("wallpaper.sh --select"), desc="Wall"),
+    Key(
+        [], "XF86MonBrightnessUp", L.spawn("light -A 10"), desc="Bri+"
+    ),  # <XF86MonBrightnessUp> -> [], "XF86MonBrightnessUp"
+    Key(
+        [], "XF86MonBrightnessDown", L.spawn("light -U 10"), desc="Bri-"
+    ),  # <XF86MonBrightnessDown> -> [], "XF86MonBrightnessDown"
+    Key(
+        [], "XF86AudioMute", L.spawn("amixer -q set Master toggle"), desc="Mute"
+    ),  # <XF86AudioMute> -> [], "XF86AudioMute"
+    Key(
+        [], "XF86AudioLowerVolume", L.widget["volume"].decrease_vol(), desc="Vol-"
+    ),  # <XF86AudioLowerVolume> -> [], "XF86AudioLowerVolume"
+    Key(
+        [], "XF86AudioRaiseVolume", L.widget["volume"].increase_vol(), desc="Vol+"
+    ),  # <XF86AudioRaiseVolume> -> [], "XF86AudioRaiseVolume"
+    Key(
+        M + S, "F2", L.spawn("wallpaper.sh --select"), desc="Wall"
+    ),  # M-S-F2 -> M+S, "F2"
     # Commands
-    EzKey("M-S-d", L.spawn("dmenu_run -l 30"), desc="Dmenu"),
-    EzKey("M-space", L.spawn("fzfmenu_run.sh"), desc="Fzf"),
-    EzKey("M-S-space", L.spawn("fuzzel"), desc="Rofi"),
-    EzKey("M-semicolon", L.spawn("script_launcher.sh"), desc="Script"),
-    EzKey("M-Return", L.spawn(["kitty", "-1"]), desc="Term"),
-    EzKey("M-S-t", L.spawn(["alacritty", "-T", "dis_term"]), desc="Term2"),
-    EzKey("M-t", L.spawn(["alacritty", "-T", "floating"]), desc="Tfloat"),
-    EzKey("M-S-o", L.spawn("obsidian-vault-selector.sh"), desc="Obs"),
-    EzKey("M-o", L.spawn("qutebrowser"), desc="Qute"),
-    EzKey("M-b", L.spawn("opera"), desc="Opera"),
-    EzKey("M-Print", L.spawn("screenshot"), desc="Shot"),
-    EzKey("M-C-Print", L.spawn("screenshot --select"), desc="ShotSel"),
-    EzKey("M-A-Print", L.spawn("ocrdesktop"), desc="OCR"),
+    Key(M + S, "d", L.spawn("dmenu_run -l 30"), desc="Dmenu"),  # M-S-d -> M+S, "d"
+    Key(M, "space", L.spawn("fzfmenu_run.sh"), desc="Fzf"),  # M-<space> -> M, "space"
+    Key(M + S, "space", L.spawn("fuzzel"), desc="Rofi"),  # M-S-<space> -> M+S, "space"
+    Key(
+        M, "semicolon", L.spawn("script_launcher.sh"), desc="Script"
+    ),  # M-<semicolon> -> M, "semicolon"
+    Key(
+        M, "Return", L.spawn(["kitty", "-1"]), desc="Term"
+    ),  # M-<Return> -> M, "Return"
+    Key(
+        M + S, "t", L.spawn(["alacritty", "-T", "dis_term"]), desc="Term2"
+    ),  # M-S-t -> M+S, "t"
+    Key(
+        M, "t", L.spawn(["alacritty", "-T", "floating"]), desc="Tfloat"
+    ),  # M-t -> M, "t"
+    Key(
+        M + S, "o", L.spawn("obsidian-vault-selector.sh"), desc="Obs"
+    ),  # M-S-o -> M+S, "o"
+    Key(M, "o", L.spawn("qutebrowser"), desc="Qute"),  # M-o -> M, "o"
+    Key(M, "b", L.spawn("opera"), desc="Opera"),  # M-b -> M, "b"
+    Key(M, "Print", L.spawn("screenshot"), desc="Shot"),  # M-<Print> -> M, "Print"
+    Key(
+        M + C, "Print", L.spawn("screenshot --select"), desc="ShotSel"
+    ),  # M-C-<Print> -> M+C, "Print"
+    Key(
+        M + A, "Print", L.spawn("ocrdesktop"), desc="OCR"
+    ),  # M-A-<Print> -> M+A, "Print"
     # Scratchpads
-    EzKey("F12", L.group["dock"].dropdown_toggle("terminal"), desc="STerm"),
-    EzKey("M-F11", L.group["dock"].dropdown_toggle("nvim"), desc="SNvim"),
-    EzKey("M-F10", L.group["dock"].dropdown_toggle("ranger"), desc="SRang"),
-    EzKey("M-F9", L.group["dock"].dropdown_toggle("sysmon"), desc="SSys"),
-    EzKey("M-c", L.group["scratch"].dropdown_toggle("chatbot"), desc="Chat"),
-    EzKey("M-n", L.group["scratch"].dropdown_toggle("note"), desc="Note"),
-    EzKey("M-p", L.group["scratch"].dropdown_toggle("keepassxc"), desc="Keep"),
-    # EzKeyChord examples
-    EzKeyChord(
-        "M-x",
+    Key(
+        [], "F12", L.group["dock"].dropdown_toggle("terminal"), desc="STerm"
+    ),  # F12 -> [], "F12"
+    Key(
+        M, "F11", L.group["dock"].dropdown_toggle("nvim"), desc="SNvim"
+    ),  # M-F11 -> M, "F11"
+    Key(
+        M, "F10", L.group["dock"].dropdown_toggle("ranger"), desc="SRang"
+    ),  # M-F10 -> M, "F10"
+    Key(
+        M, "F9", L.group["dock"].dropdown_toggle("sysmon"), desc="SSys"
+    ),  # M-F9 -> M, "F9"
+    Key(
+        M, "c", L.group["scratch"].dropdown_toggle("chatbot"), desc="Chat"
+    ),  # M-c -> M, "c"
+    Key(
+        M, "n", L.group["scratch"].dropdown_toggle("note"), desc="Note"
+    ),  # M-n -> M, "n"
+    Key(
+        M, "p", L.group["scratch"].dropdown_toggle("keepassxc"), desc="Keep"
+    ),  # M-p -> M, "p"
+    # KeyChord examples
+    # EzKeyChord("M-x", [...]) -> KeyChord(M, "x", [...])
+    KeyChord(
+        M,
+        "x",
         [
-            # EzKey("S-n", L.spawn("jupyter_new_notebook.xsh"), desc="NewNb"),
+            # EzKey("S-n", ...) -> Key(S, "n", ...)
+            # Key(S, "n", L.spawn("jupyter_new_notebook.xsh"), desc="NewNb"), # Uncomment if needed
         ],
         name="quicklaunch",
         mode=True,
         desc="Quick",
     ),
-    EzKeyChord(
-        "M-s",
+    # EzKeyChord("M-s", [...]) -> KeyChord(M, "s", [...])
+    KeyChord(
+        M,
+        "s",
         [
-            EzKey(
+            # EzKey("c", ...) -> Key([], "c", ...) (no modifiers needed within chord unless specified)
+            Key(
+                [],
                 "c",
                 L.spawn("kitty -T floating -e tmux attach -t MUSIC:cmus"),
                 desc="Tmux",
             ),
-            EzKey("Right", L.spawn("cmus-remote -n"), desc="Next"),
-            EzKey("C-Right", L.spawn("next_album.xsh"), desc="NAlb"),
-            EzKey("Left", L.spawn("cmus-remote -r"), desc="Prev"),
-            EzKey("space", L.spawn("cmus-remote -u"), desc="Play"),
-            EzKey(
+            # EzKey("<Right>", ...) -> Key([], "Right", ...)
+            Key([], "Right", L.spawn("cmus-remote -n"), desc="Next"),
+            # EzKey("C-<Right>", ...) -> Key(C, "Right", ...) (modifiers within chord are needed)
+            Key(C, "Right", L.spawn("next_album.xsh"), desc="NAlb"),
+            # EzKey("Left", ...) -> Key([], "Left", ...)
+            Key([], "Left", L.spawn("cmus-remote -r"), desc="Prev"),
+            # EzKey("space", ...) -> Key([], "space", ...)
+            Key([], "space", L.spawn("cmus-remote -u"), desc="Play"),
+            # EzKey("s", ...) -> Key([], "s", ...)
+            Key(
+                [],
                 "s",
                 L.spawn(["alacritty", "-T", "floating", "-e", "fzf_songlauncher.sh"]),
                 desc="Song",
             ),
-            EzKey(
+            # EzKey("a", ...) -> Key([], "a", ...)
+            Key(
+                [],
                 "a",
                 L.spawn("alacritty -T floating -e fzf_albumlauncher.xsh"),
                 desc="Alb",
             ),
-            EzKey("r", L.spawn("random_album.xsh"), desc="Rand"),
-            EzKey("p", L.spawn("playlist_player.xsh"), desc="Plst"),
-            EzKey("A-p", L.spawn("playlist_randomizer.xsh"), desc="PlRnd"),
+            # EzKey("r", ...) -> Key([], "r", ...)
+            Key([], "r", L.spawn("random_album.xsh"), desc="Rand"),
+            # EzKey("p", ...) -> Key([], "p", ...)
+            Key([], "p", L.spawn("playlist_player.xsh"), desc="Plst"),
+            # EzKey("A-p", ...) -> Key(A, "p", ...) (modifiers within chord are needed)
+            Key(A, "p", L.spawn("playlist_randomizer.xsh"), desc="PlRnd"),
         ],
         name="cmus",
         mode=True,
         desc="Music",
     ),
-    EzKeyChord(
-        "M-F1",
+    # EzKeyChord("M-F1", [...]) -> KeyChord(M, "F1", [...])
+    KeyChord(
+        M,
+        "F1",
         [
-            EzKey("k", L.spawn("keyboard-help.sh"), desc="Keymap"),
-            EzKey("q", L.ungrab_all_chords(), desc="Exit"),
+            # EzKey("k", ...) -> Key([], "k", ...)
+            Key([], "k", L.spawn("keyboard-help.sh"), desc="Keymap"),
+            # EzKey("q", ...) -> Key([], "q", ...)
+            Key([], "q", L.ungrab_all_chords(), desc="Exit"),
         ],
         name="help",
         mode=True,
@@ -172,28 +259,30 @@ keys = [
     ),
 ]
 
-# Mouse
+# Mouse (already uses standard modifiers and format)
 mouse = [
     Drag(
-        M,
+        M,  # Uses the defined M list
         "Button1",
         L.window.set_position_floating(),
         start=L.window.get_position(),
     ),
     Drag(
-        M,
+        M,  # Uses the defined M list
         "Button3",
         L.window.set_size_floating(),
         start=L.window.get_size(),
     ),
-    Click(M, "Button2", L.window.bring_to_front()),
+    Click(M, "Button2", L.window.bring_to_front()),  # Uses the defined M list
 ]
 
-# Groups
+# Groups (Convert the loop that adds group keys)
 for g in "123456":
     keys.extend(
         [
-            EzKey(f"M-{g}", L.group[g].toscreen(toggle=True), desc=f"G{g}"),
-            EzKey(f"M-S-{g}", L.window.togroup(g), desc=f"To{g}"),
+            # EzKey(f"M-{g}", ...) -> Key(M, g, ...)
+            Key(M, g, L.group[g].toscreen(toggle=True), desc=f"G{g}"),
+            # EzKey(f"M-S-{g}", ...) -> Key(M + S, g, ...)
+            Key(M + S, g, L.window.togroup(g), desc=f"To{g}"),
         ]
     )

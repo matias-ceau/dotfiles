@@ -731,7 +731,6 @@ c.editor.remove_file = True  ## Delete the temporary file upon closing the edito
 ## Type: ShellCommand
 # ===>
 c.fileselect.folder.command = [
-    "exec",
     "systemd-run",
     "--user",
     "--scope",
@@ -764,7 +763,6 @@ c.fileselect.handler = "external"
 ## Type: ShellCommand
 # ===>
 c.fileselect.multiple_files.command = [
-    "exec",
     "systemd-run",
     "--user",
     "--scope",
@@ -782,7 +780,6 @@ c.fileselect.multiple_files.command = [
 ## Type: ShellCommand
 # ===>
 c.fileselect.single_file.command = [
-    "exec",
     "systemd-run",
     "--user",
     "--scope",
