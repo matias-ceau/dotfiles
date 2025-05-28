@@ -113,6 +113,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # OLLAMA
 if [ "$(hostnamectl hostname)" = "karjala" ]; then
     export OLLAMA_MODELS="/mnt/.croute/ollama_models"
+    export GBM_BACKEND=nvidia-drm
 fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
