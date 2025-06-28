@@ -1,10 +1,11 @@
 from _custom import Cameleon, custom_args, scale, system_clock_args
 from _style import Colors as C
 from _style import UIColors as UI
-from libqtile import bar
+from libqtile import bar, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
-from qtile_extras import widget
+
+# from qtile_extras import widget
 
 # ------ SCREEN AND BAR DEFINITION ---------------------------------------------
 screens = [
@@ -51,7 +52,7 @@ screens = [
                 # Net
                 widget.Net(
                     format="{down:>4.0f}{down_suffix:<2} ↓↑{up:>4.0f}{up_suffix:<2}",
-                    width=90,
+                    width=100,
                     scroll=True,
                     scroll_fixed_width=True,
                     foreground=UI.net,
@@ -67,20 +68,22 @@ screens = [
                 ),
                 # Cameleon
                 Cameleon(foreground=UI.cameleon, **custom_args),
+                widget.TunedManager(),
+                # genPoll
                 # Thermal Sensor CPU
                 widget.ThermalSensor(
                     format="{temp:.0f}\u2103 ",
                     tag_sensor="Package id 0",
-                    width=55,
+                    width=50,
                     padding=0,
                     foreground=UI.cpu_temp,
                 ),
                 # CPU load
                 widget.CPU(
-                    format="{freq_current}\u3393  {load_percent}% \u3015",
+                    format="{freq_current}\u3393  {load_percent}%",
                     scroll=True,
                     scroll_fixed_width=True,
-                    width=85,
+                    width=100,
                     padding=0,
                     foreground=UI.cpu_temp,
                 ),
@@ -91,9 +94,9 @@ screens = [
                     partition="/",
                 ),
                 widget.Memory(measure_mem="G", foreground=UI.RAM),
-                widget.Systray(
-                    foreground=UI.systray,
-                ),
+                # widget.Systray( foreground=UI.systray,),
+                # widget.Tuned
+                widget.StatusNotifier(),
                 widget.Clock(
                     **system_clock_args,
                     fmt="<b>\u3014 {} \u3015</b>",

@@ -43,16 +43,16 @@ ui:
 
 import:
   # write metadata to music files
-  write: yes
+  write: no #temp
 
   # move imported files from source to the music directory
-  move: yes
+  move: no #temp
   resume: ask
   log: ~/.cache/beetslog.log 
-  set_fields:
-    user_playlists: '0_New_imports'
-    collection: 'None'
-    status: '0'
+  # set_fields:
+  #   user_playlists: '0_New_imports'
+  #   collection: 'None'
+  #   status: '0'
   incremental: no
   incremental_skip_later: yes
   languages: en fr fi
@@ -73,7 +73,7 @@ plugins:
     - scrub
     - spotify
     - mpdstats
-    - mpdupdate
+    # - mpdupdate
     - xtractor
     - listenbrainz
     # - playlist
@@ -94,7 +94,7 @@ plugins:
 # pip install flask (web)
 
 lyrics:
-  auto: yes
+  auto: no
   fallback: ''
 
 playlist:
@@ -138,7 +138,7 @@ spotify:
   tiebreak: popularity
 
 lastgenre:
-  auto: yes
+  auto: no
   canonical: ~/.config/beets/lastgenre/genres-tree.yaml
   whitelist: ~/.config/beets/lastgenre/genres.txt
   count: 3

@@ -88,9 +88,9 @@ show_selection_mark: true
 #
 true_colors: true
 
-###############################################################
 # Icons
 # If you want to display icons in broot, uncomment this line
+###############################################################
 # (see https://dystroy.org/broot/icons for installation and
 # troubleshooting)
 #

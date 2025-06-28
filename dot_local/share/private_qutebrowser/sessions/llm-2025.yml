@@ -1,0 +1,234 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAAAAAB38AAAQhAAAAAAAAAAAAAAd/AAAEIQAAAAAAAAAAB4AAAAAAAAAA
+    AAAAB38AAAQh
+  tabs:
+  - history:
+    - last_visited: '2025-06-08T20:11:06'
+      pinned: false
+      title: Tavily AI
+      url: https://app.tavily.com/use-cases
+    - last_visited: '2025-06-08T20:11:08'
+      pinned: false
+      title: Tavily AI
+      url: https://app.tavily.com/use-cases
+    - active: true
+      last_visited: '2025-06-09T05:55:16'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1
+      title: Tavily AI
+      url: https://app.tavily.com/playground
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-08T20:11:07'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Get Started | Mem0
+      url: https://app.mem0.ai/dashboard/get-started?page=1
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-09T05:56:32'
+      pinned: false
+      title: Scalable Long-Term Memory for Production AI Agents | Mem0
+      url: https://mem0.ai/research
+    - last_visited: '2025-06-09T05:56:43'
+      pinned: false
+      title: mem0/evaluation at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/evaluation
+    - last_visited: '2025-06-09T05:57:05'
+      pinned: false
+      title: mem0/examples at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/examples
+    - last_visited: '2025-06-09T05:57:11'
+      pinned: false
+      title: mem0/examples/yt-assistant-chrome at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/examples/yt-assistant-chrome
+    - last_visited: '2025-06-09T05:57:27'
+      pinned: false
+      title: mem0/examples/mem0-demo at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/examples/mem0-demo
+    - last_visited: '2025-06-09T05:57:34'
+      pinned: false
+      title: mem0/mem0 at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/mem0
+    - last_visited: '2025-06-09T05:57:39'
+      pinned: false
+      title: mem0/mem0/graphs at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/mem0/graphs
+    - last_visited: '2025-06-09T05:57:47'
+      pinned: false
+      title: mem0/README.md at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/blob/main/README.md
+    - last_visited: '2025-06-09T05:58:51'
+      pinned: false
+      title: mem0/mem0/llms at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/tree/main/mem0/llms
+    - last_visited: '2025-06-09T05:59:01'
+      pinned: false
+      title: mem0/mem0/llms/openai_structured.py at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/blob/main/mem0/llms/openai_structured.py
+    - last_visited: '2025-06-09T05:59:09'
+      pinned: false
+      title: mem0/mem0/llms/sarvam.py at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/blob/main/mem0/llms/sarvam.py
+    - active: true
+      last_visited: '2025-06-09T05:59:18'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: mem0/mem0/llms/together.py at main · mem0ai/mem0
+      url: https://github.com/mem0ai/mem0/blob/main/mem0/llms/together.py
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-08T20:11:09'
+      pinned: false
+      title: Overview - Mem0
+      url: https://docs.mem0.ai/open-source/graph_memory/overview
+    - last_visited: '2025-06-09T06:02:21'
+      pinned: false
+      title: Memory Types - Mem0
+      url: https://docs.mem0.ai/core-concepts/memory-types
+    - last_visited: '2025-06-09T06:02:33'
+      pinned: false
+      title: Memory Operations - Mem0
+      url: https://docs.mem0.ai/core-concepts/memory-operations
+    - last_visited: '2025-06-09T06:02:54'
+      pinned: false
+      title: Async Memory - Mem0
+      url: https://docs.mem0.ai/open-source/features/async-memory
+    - last_visited: '2025-06-09T06:03:25'
+      pinned: false
+      title: Multimodal Support - Mem0
+      url: https://docs.mem0.ai/open-source/features/multimodal-support
+    - active: true
+      last_visited: '2025-06-09T06:03:33'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1217
+      title: Overview - Mem0
+      url: https://docs.mem0.ai/open-source/graph_memory/overview
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-09T06:04:05'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3186
+      title: Fully Managed Graph Database Service | Neo4j AuraDB
+      url: https://neo4j.com/product/auradb/
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-08T20:11:06'
+      pinned: false
+      title: Memgraph documentation
+      url: https://memgraph.com/docs
+    - last_visited: '2025-06-09T06:05:15'
+      pinned: false
+      title: Getting started with Memgraph
+      url: https://memgraph.com/docs/getting-started
+    - last_visited: '2025-06-09T06:05:17'
+      pinned: false
+      title: Install Memgraph
+      url: https://memgraph.com/docs/getting-started/install-memgraph
+    - last_visited: '2025-06-09T06:05:22'
+      pinned: false
+      title: Install Memgraph on Ubuntu
+      url: https://memgraph.com/docs/getting-started/install-memgraph/ubuntu
+    - last_visited: '2025-06-09T06:05:25'
+      pinned: false
+      title: Install Memgraph on Debian
+      url: https://memgraph.com/docs/getting-started/install-memgraph/debian
+    - last_visited: '2025-06-09T06:06:19'
+      pinned: false
+      title: Install Memgraph with Docker
+      url: https://memgraph.com/docs/getting-started/install-memgraph/docker
+    - last_visited: '2025-06-09T06:07:15'
+      pinned: false
+      title: Client libraries
+      url: https://memgraph.com/docs/client-libraries
+    - last_visited: '2025-06-09T06:07:20'
+      pinned: false
+      title: Python quick start
+      url: https://memgraph.com/docs/client-libraries/python
+    - last_visited: '2025-06-09T06:08:22'
+      pinned: false
+      title: Deployment
+      url: https://memgraph.com/docs/deployment
+    - last_visited: '2025-06-09T06:08:29'
+      pinned: false
+      title: Environments
+      url: https://memgraph.com/docs/deployment/environments
+    - active: true
+      last_visited: '2025-06-09T06:08:31'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6877
+      title: Manage Memgraph native Linux deployment
+      url: https://memgraph.com/docs/deployment/environments/linux
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-08T20:11:05'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4282
+      title: "Introduction | \U0001F99C️\U0001F517 LangChain"
+      url: https://python.langchain.com/docs/introduction/
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-08T20:11:07'
+      pinned: false
+      title: Data migration
+      url: https://memgraph.com/docs/data-migration#json-files
+    - active: true
+      last_visited: '2025-06-09T06:11:00'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 4853
+      title: Data migration
+      url: https://memgraph.com/docs/data-migration#amazon-s3
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-08T20:11:06'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 678
+      title: S3 API Support – DuckDB
+      url: https://duckdb.org/docs/stable/core_extensions/httpfs/s3api.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-08T20:11:09'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Tavily MCP Server - Tavily Docs
+      url: https://docs.tavily.com/documentation/mcp
+      zoom: 1.0
+  - active: true
+    history:
+    - active: true
+      last_visited: '2025-06-08T20:11:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 9469
+      title: 'minio/minio: MinIO is a high-performance, S3 compatible object store,
+        open sourced under GNU AGPLv3 license.'
+      url: https://github.com/minio/minio
+      zoom: 1.0

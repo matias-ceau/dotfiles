@@ -1,0 +1,283 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAAAAAB38AAAQhAAAAAAAAAAAAAAd/AAAEIQAAAAAAAAAAB4AAAAAAAAAA
+    AAAAB38AAAQh
+  tabs:
+  - history:
+    - last_visited: '2025-06-13T09:42:31'
+      pinned: false
+      title: DuckDuckGo - Protection. Privacy. Peace of mind.
+      url: https://start.duckduckgo.com/
+    - last_visited: '2025-06-13T09:51:58'
+      pinned: false
+      title: koofr at DuckDuckGo
+      url: https://duckduckgo.com/?q=koofr&ia=web
+    - last_visited: '2025-06-13T09:52:00'
+      pinned: false
+      title: Koofr - One storage for all.
+      url: https://koofr.eu/
+    - last_visited: '2025-06-13T09:52:02'
+      original-url: https://koofr.eu/login
+      pinned: false
+      title: Koofr
+      url: https://app.koofr.net/login
+    - last_visited: '2025-06-13T09:52:04'
+      pinned: false
+      title: Koofr - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c
+    - last_visited: '2025-06-13T09:53:10'
+      pinned: false
+      title: Connect your computer - Places - Koofr
+      url: https://app.koofr.net/app/admin/places/connect-computer
+    - last_visited: '2025-06-13T09:54:54'
+      pinned: false
+      title: Koofr - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c
+    - last_visited: '2025-06-13T09:55:39'
+      pinned: false
+      title: Koofr › Data transfer - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c?path=%2FData%20transfer
+    - last_visited: '2025-06-13T09:55:42'
+      pinned: false
+      title: Koofr - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c
+    - last_visited: '2025-06-13T09:55:43'
+      pinned: false
+      title: Koofr › zotero - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c?path=%2Fzotero
+    - last_visited: '2025-06-13T09:55:53'
+      pinned: false
+      title: Koofr - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c
+    - active: true
+      last_visited: '2025-06-13T15:12:45'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Jobs - Koofr
+      url: https://app.koofr.net/app/jobs
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-13T09:54:55'
+      pinned: false
+      title: Koofr Vault
+      url: https://vault.koofr.net/
+    - last_visited: '2025-06-13T09:55:05'
+      pinned: false
+      title: Loading - Koofr Vault
+      url: https://vault.koofr.net/login
+    - last_visited: '2025-06-13T09:55:05'
+      pinned: false
+      title: Authorize application - Koofr
+      url: https://app.koofr.net/oauth2/auth?state=jyIbPIKT0VtJ-QE6IDRqMw&redirect_uri=https%3A%2F%2Fvault.koofr.net%2Foauth2callback&response_type=code&scope=public&client_id=7ZEK2BNCEVYEJIZC5OR3TR6PQDUJ4NP3
+    - last_visited: '2025-06-13T09:55:09'
+      pinned: false
+      title: My safe box - Koofr Vault
+      url: https://vault.koofr.net/repos/412b5c33-af11-4faa-8713-11a92dc2cadb
+    - active: true
+      last_visited: '2025-06-13T09:55:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: My safe box - Koofr Vault
+      url: https://vault.koofr.net/repos/412b5c33-af11-4faa-8713-11a92dc2cadb?path=%2Fohod9c03f3mitk5q3sjjv13t9o
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-13T15:13:06'
+      pinned: false
+      title: Profile - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences
+    - last_visited: '2025-06-13T15:13:09'
+      pinned: false
+      title: Security - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/security
+    - last_visited: '2025-06-13T15:13:29'
+      pinned: false
+      title: Appearance - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/appearance
+    - last_visited: '2025-06-13T15:13:30'
+      pinned: false
+      title: Profile - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences
+    - last_visited: '2025-06-13T15:13:32'
+      pinned: false
+      title: Notifications - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/notifications
+    - last_visited: '2025-06-13T15:13:33'
+      pinned: false
+      title: Branding - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/branding
+    - last_visited: '2025-06-13T15:13:34'
+      pinned: false
+      title: Security - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/security
+    - last_visited: '2025-06-13T15:13:37'
+      pinned: false
+      title: Two-Factor Authentication - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/two-factor-authentication
+    - last_visited: '2025-06-13T15:13:44'
+      pinned: false
+      title: Language - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/language
+    - last_visited: '2025-06-13T15:13:55'
+      pinned: false
+      title: Download links - Links - Koofr
+      url: https://app.koofr.net/app/admin/links
+    - last_visited: '2025-06-13T15:13:57'
+      pinned: false
+      title: Overview - Account - Koofr
+      url: https://app.koofr.net/app/admin/account
+    - last_visited: '2025-06-13T15:14:14'
+      pinned: false
+      title: Profile - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences
+    - active: true
+      last_visited: '2025-06-13T15:14:17'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Password - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/password
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-13T09:53:15'
+      pinned: false
+      title: Help - How do I install the desktop client for Linux? - Koofr
+      url: https://koofr.eu/help/linking-koofr-with-desktops/how-do-i-install-the-desktop-client-for-linux/
+    - last_visited: '2025-06-13T09:53:25'
+      pinned: false
+      title: Help - Koofr tools and plugins - Koofr
+      url: https://koofr.eu/help/koofr-tools-and-plugins/
+    - active: true
+      last_visited: '2025-06-13T09:53:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 27
+      title: Help - I am trying to establish a connection to Koofr through rclone
+        and my connection does not work. Why? - Koofr
+      url: https://koofr.eu/help/koofr_with_webdav/why-does-my-rclone-connection-not-work/
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-13T09:54:02'
+      pinned: false
+      title: Help - How to generate an application-specific password in Koofr? - Koofr
+      url: https://koofr.eu/help/linking-koofr-with-desktops/how-to-generate-an-application-specific-password-in-koofr/
+    - last_visited: '2025-06-13T09:54:12'
+      original-url: https://koofr.eu/login
+      pinned: false
+      title: Koofr
+      url: https://app.koofr.net/login
+    - last_visited: '2025-06-13T09:54:14'
+      pinned: false
+      title: Koofr - Koofr
+      url: https://app.koofr.net/app/storage/60705feb-c07e-46fa-8d8b-dc82f4d7fd7c
+    - last_visited: '2025-06-13T09:54:22'
+      pinned: false
+      title: Profile - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences
+    - active: true
+      last_visited: '2025-06-13T09:54:28'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Password - Preferences - Koofr
+      url: https://app.koofr.net/app/admin/preferences/password
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2025-06-13T15:16:07'
+      pinned: false
+      title: rclone at DuckDuckGo
+      url: https://duckduckgo.com/?q=rclone&ia=web
+    - last_visited: '2025-06-13T15:16:08'
+      pinned: false
+      title: Rclone
+      url: https://rclone.org/
+    - last_visited: '2025-06-13T15:16:29'
+      pinned: false
+      title: Koofr
+      url: https://rclone.org/koofr/
+    - last_visited: '2025-06-13T15:44:11'
+      pinned: false
+      title: Memory
+      url: https://rclone.org/memory/
+    - last_visited: '2025-06-13T15:46:22'
+      pinned: false
+      title: pCloud
+      url: https://rclone.org/pcloud/
+    - last_visited: '2025-06-13T15:47:23'
+      pinned: false
+      title: Amazon S3
+      url: https://rclone.org/s3/
+    - last_visited: '2025-06-13T15:55:08'
+      pinned: false
+      title: HTTP Remote
+      url: https://rclone.org/http/
+    - last_visited: '2025-06-13T15:55:31'
+      pinned: false
+      title: Citrix ShareFile
+      url: https://rclone.org/sharefile/
+    - last_visited: '2025-06-13T15:55:58'
+      pinned: false
+      title: Proton Drive
+      url: https://rclone.org/protondrive/
+    - last_visited: '2025-06-13T15:56:48'
+      pinned: false
+      title: SFTP
+      url: https://rclone.org/sftp/
+    - active: true
+      last_visited: '2025-06-13T15:57:12'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 27419
+      title: Documentation
+      url: https://rclone.org/docs/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-13T15:54:41'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: DigitalOcean Spaces | S3-Compatible Object Storage
+      url: https://www.digitalocean.com/products/spaces
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-13T15:50:03'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 72043
+      title: Amazon S3
+      url: https://rclone.org/s3/#RackCorp
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-13T15:50:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 64169
+      title: Amazon S3
+      url: https://rclone.org/s3/#minio
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-13T15:47:44'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1889
+      title: Qiniu Cloud-Object Storage（KODO）-Safe、Highly-reliable、Easy to Expand、Low
+        in Cost、Intelligent in Data
+      url: https://www.qiniu.com/en/products/kodo
+      zoom: 1.0

@@ -64,3 +64,8 @@ if [ -f '/home/matias/google-cloud-sdk/path.bash.inc' ]; then . '/home/matias/go
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/matias/google-cloud-sdk/completion.bash.inc' ]; then . '/home/matias/google-cloud-sdk/completion.bash.inc'; fi
 # . /opt/esp-idf/export.sh
+alias claude="/home/matias/.claude/local/claude"
+
+# opencode
+export PATH=/home/matias/.opencode/bin:$PATH
+eval "$(_MARIMO_COMPLETE=bash_source marimo)"

@@ -1,0 +1,235 @@
+windows:
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAAAAAAAAAAB38AAAQhAAAAAAAAAAAAAAd/AAAEIQAAAAAAAAAAB4AAAAAAAAAA
+    AAAAB38AAAQh
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2025-06-23T16:32:14'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: The Everything App
+      url: https://download.anytype.io/
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-24T10:08:52'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: The Everything App
+      url: https://anytype.io/pricing/
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-23T16:32:14'
+      pinned: false
+      title: Self-hosting
+      url: https://tech.anytype.io/how-to/self-hosting
+    - last_visited: '2025-06-24T10:06:26'
+      pinned: false
+      title: Self-hosting
+      url: https://tech.anytype.io/how-to/self-hosting?id=steps
+    - last_visited: '2025-06-24T10:06:37'
+      pinned: false
+      title: Protocol overview
+      url: https://tech.anytype.io/any-sync/overview
+    - last_visited: '2025-06-24T10:07:57'
+      pinned: false
+      title: Configuration
+      url: https://tech.anytype.io/any-sync/configuration
+    - last_visited: '2025-06-24T10:08:10'
+      pinned: false
+      title: Glossary
+      url: https://tech.anytype.io/l10n/glossary
+    - last_visited: '2025-06-24T10:08:25'
+      pinned: false
+      title: mega at DuckDuckGo
+      url: https://duckduckgo.com/?q=mega&ia=web
+    - active: true
+      last_visited: '2025-06-24T10:08:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Support - MEGA
+      url: https://mega.nz/support
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-24T10:12:52'
+      pinned: false
+      title: 'MEGA S4 Object Storage: Scalable and S3 Compatible'
+      url: https://mega.io/objectstorage
+    - last_visited: '2025-06-24T10:13:00'
+      pinned: false
+      title: Compare Plans and Pricing - MEGA
+      url: https://mega.io/pricing#individual
+    - last_visited: '2025-06-24T10:13:16'
+      pinned: false
+      title: Login - MEGA
+      url: https://mega.nz/login
+    - last_visited: '2025-06-24T10:13:16'
+      pinned: false
+      title: MEGA
+      url: https://mega.nz/fm
+    - last_visited: '2025-06-24T10:13:57'
+      pinned: false
+      title: MEGA
+      url: https://mega.nz/fm/tfc1nbwK
+    - last_visited: '2025-06-24T10:14:26'
+      pinned: false
+      title: MEGA
+      url: https://mega.nz/fm/s4
+    - last_visited: '2025-06-24T10:15:07'
+      original-url: https://mega.nz/fm/s4
+      pinned: false
+      title: MEGA
+      url: https://mega.nz/fm/RKs1CZCD
+    - active: true
+      last_visited: '2025-06-24T10:18:35'
+      original-url: https://mega.nz/fm/RKs1CZCD
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: MEGA
+      url: https://mega.nz/fm/RKs1CZCD/IDkk2C4A
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2025-06-24T10:18:58'
+      pinned: false
+      title: How can I change bucket object URL access settings? - MEGA Help Centre
+      url: https://help.mega.io/megas4/s4-buckets/change-bucket-object-url-access
+    - last_visited: '2025-06-24T10:19:42'
+      pinned: false
+      title: What’s the difference between sharing a bucket or an object through links
+        or object URLs? - MEGA Help Centre
+      url: https://help.mega.io/megas4/s4-buckets/difference-between-links-and-objecturls-in-mega-s4
+    - last_visited: '2025-06-24T10:20:17'
+      pinned: false
+      title: Working with objects Archives - MEGA Help Centre
+      url: https://help.mega.io/megas4/s4-objects
+    - last_visited: '2025-06-24T10:20:22'
+      pinned: false
+      title: Setup guides Archives - MEGA Help Centre
+      url: https://help.mega.io/megas4/setup-guides
+    - last_visited: '2025-06-24T10:20:36'
+      pinned: false
+      title: Rclone setup guide for MEGA S4 - MEGA Help Centre
+      url: https://help.mega.io/megas4/setup-guides/rclone-setup-guide-for-mega-s4
+    - last_visited: '2025-06-24T10:20:51'
+      pinned: false
+      title: MEGA S4 and Cloud drive Archives - MEGA Help Centre
+      url: https://help.mega.io/megas4/s4-clouddrive
+    - active: true
+      last_visited: '2025-06-24T10:20:55'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 2136
+      title: What’s the difference between transfer quota and egress traffic? - MEGA
+        Help Centre
+      url: https://help.mega.io/megas4/s4-clouddrive/transfer-quota-egress-traffic
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-24T10:08:08'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Project overview
+      url: https://tech.anytype.io/l10n/overview
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-23T16:32:14'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: "ArchiveBox | \U0001F5C3 Open source self-hosted web archiving. Takes
+        URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs,
+        media, and more…"
+      url: https://archivebox.io/#Caveats
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-23T16:32:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 7
+      title: 'WorldBrain/Memex: Browser extension to curate, annotate, and discuss
+        the most valuable content and ideas on the web. As individuals, teams and
+        communities.'
+      url: https://github.com/WorldBrain/Memex/tree/develop
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-23T16:32:21'
+      pinned: false
+      title: Memex
+      url: https://memex.garden/
+    - active: true
+      last_visited: '2025-06-24T10:04:57'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Memex
+      url: https://memex.garden/pricing
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2025-06-23T16:32:23'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: equipe mobile neurologie psychiatrie perrens at DuckDuckGo
+      url: https://duckduckgo.com/?q=equipe+mobile+neurologie+psychiatrie+perrens&ia=web
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-24T09:58:55'
+      pinned: false
+      title: tailscale at DuckDuckGo
+      url: https://duckduckgo.com/?q=tailscale&ia=web
+    - last_visited: '2025-06-24T09:58:56'
+      pinned: false
+      title: Tailscale · Best VPN Service for Secure Networks
+      url: https://tailscale.com/
+    - last_visited: '2025-06-24T09:59:04'
+      pinned: false
+      title: Compare All Tailscale Plans
+      url: https://tailscale.com/pricing
+    - active: true
+      last_visited: '2025-06-24T09:59:24'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 3606
+      title: Tailscale quickstart · Tailscale Docs
+      url: https://tailscale.com/kb/1017/install
+      zoom: 1.0
+  - history:
+    - last_visited: '2025-06-24T10:10:34'
+      pinned: false
+      title: rclone serve at DuckDuckGo
+      url: https://duckduckgo.com/?q=rclone+serve&ia=web
+    - last_visited: '2025-06-24T10:10:34'
+      pinned: false
+      title: rclone serve
+      url: https://rclone.org/commands/rclone_serve/
+    - active: true
+      last_visited: '2025-06-24T10:11:25'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 6900
+      title: rclone convmv
+      url: https://rclone.org/commands/rclone_convmv/
+      zoom: 1.0

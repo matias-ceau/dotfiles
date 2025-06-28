@@ -20,8 +20,3 @@
 	program = /bin/gpg
 [commit]
 	gpgsign = true
-[credential]
-	helper = 
-	helper = /usr/bin/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true

@@ -118,7 +118,7 @@ fi
 export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
 export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat"
-mkdir -p "$AICHAT_CONFIG_DIR/functions"
+# mkdir -p "$AICHAT_CONFIG_DIR/functions"
 mkdir -p "$AICHAT_CONFIG_DIR/roles"
 mkdir -p "$XDG_DATA_HOME/aichat/rags"
 mkdir -p "$XDG_DATA_HOME/aichat/sessions"
