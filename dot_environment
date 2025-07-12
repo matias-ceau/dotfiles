@@ -16,6 +16,7 @@ export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 export XKB_DEFAULT_LAYOUT="us"
 export XKB_DEFAULT_VARIANT="altgr-intl"
+export GRIM_OUTPUT_DIR="$XDG_DATA_HOME/screenshots"
 
 # PATH
 export LOCALBIN="$HOME/.local/bin" ; mkdir -p $LOCALBIN
@@ -23,15 +24,16 @@ export LOCALOPT="$HOME/.local/opt" ; mkdir -p $LOCALOPT
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$HOME/.local/opt/go"
-PATH="$PATH:$LOCALBIN:$LOCALOPT/edirect/bin:$CARGO_HOME/bin"
-PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d:)
+PATH="$(printf %s "$PATH:$LOCALBIN:$LOCALOPT/bin:$CARGO_HOME/bin" |
+    awk -vRS=: '!a[$0]++' |
+    paste -s -d:)"
 export PATH
 
 export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 export PYTHONDOCS=/usr/share/doc/python/html/library
-export PYTHON_GIL=1
+# export PYTHON_GIL=1
 
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 
@@ -40,7 +42,7 @@ export CHEZMOI="$HOME/.local/share/chezmoi"
 export LOCALDATA="$HOME/.localdata"
 export SCRIPTS="$HOME/.scripts"
 export GIT_REPOS="$HOME/git"
-export D="$HOME/Desktop"
+export PLAYGROUND="$HOME/playground"
 export PSYRIS="$GIT_REPOS/matias-ceau/psyris"
 export ONDANSETRON="$GIT_REPOS/matias-ceau/ondansetron"
 
@@ -83,6 +85,18 @@ export FLEXOKI_CYAN_2='#3AA99F'
 export FLEXOKI_BLUE_2='#4385BE'
 export FLEXOKI_PURPLE_2='#8B7EC8'
 export FLEXOKI_MAGENTA_2='#CE5D97'
+
+## BATPIPE
+
+LESSOPEN="|/usr/bin/batpipe %s";
+export LESSOPEN;
+unset LESSCLOSE;
+
+# The following will enable colors when using batpipe with less:
+LESS="$LESS -R";
+BATPIPE="color";
+export LESS;
+export BATPIPE;
 
 export QT_QPA_PLATFORM="wayland;xcb"
 export QT_QPA_PLATFORMTHEME=qt6ct
@@ -127,9 +141,15 @@ source <(pass show api_keys)
 
 # [[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
 # \t\e[34m${SHELL}\e[0m"
+source_if_found() {
+    while read -r filepath ; do
+        [[ -f "$filepath" ]] && . "${filepath}"
+    done
+    }
 
-[[ -f "$XDG_DATA_HOME/cargo/env" ]] && . "$XDG_DATA_HOME/cargo/env"
-
-[[ -f "$XDG_CONFIG_HOME/broot/launcher/bash/br" ]] && source "$XDG_CONFIG_HOME/broot/launcher/bash/br" 
+source_if_found <<EOF
+"$XDG_DATA_HOME/cargo/env"
+"$XDG_CONFIG_HOME/broot/launcher/bash/br"
+EOF
 
 # vim: set ft=sh

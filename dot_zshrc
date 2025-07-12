@@ -61,3 +61,5 @@ eval "$(batman --export-env)"
 eval "$(uv generate-shell-completion zsh)"
 
 # vim: set ft=zsh expandtab shiftwidth=2 :
+
+source /home/matias/.config/broot/launcher/bash/br

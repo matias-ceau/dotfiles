@@ -19,7 +19,8 @@ alias p48='pw-metadata -n settings 0 clock.force-rate 48000'
 alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
 alias loadenv="source $HOME/.environment"
-alias e='NVIM_APPNAME=lazyvim nvim'
+alias v='NVIM_APPNAME=lazyvim nvim'
+alias claude="/home/matias/.claude/local/claude"
 
 alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
@@ -28,7 +29,7 @@ alias ¶="pacman-fuzzy-search.sh"
 alias pacfzf="pacman-fuzzy-search.sh"
 alias f='fzf-file-manager.sh'
 alias ns="new_script_creator.sh"
-alias é='editor.sh'
+alias e='editor.sh'
 alias fe='editor.sh'
 
 alias l=eza
@@ -53,6 +54,10 @@ tmux_fzf() {
     tmux attach -t "$(tmux ls | cut -d: -f1 | fzf --select-1 --height=~100%)"
 }
 
+espp() {
+    [[ ! -f '/opt/esp-idf/export.sh' ]] && /opt/esp-idf/install.sh
+    /opt/esp-idf/export.sh
+    }
 alias serv="list_process.sh"
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'

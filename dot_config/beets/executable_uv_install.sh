@@ -1,8 +1,11 @@
 #!/usr/bin/bash
 
+echo 'use uvx_beets instead' 
+
 uv tool install git+https://github.com/beetbox/beets \
 	-p 3.13 \
 	--with pyacoustid \
+	--with flask \
 	--with python3-discogs-client \
 	--with pylast \
 	--with requests \

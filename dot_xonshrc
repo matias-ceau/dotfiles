@@ -5,17 +5,12 @@
 from prompt_toolkit.keys import Keys
 from prompt_toolkit.filters import Condition, EmacsInsertMode, ViInsertMode
 
-try:
-    source-bash '~/.environment'
-    #source-bash '~/.secret_environment'
-    source-bash '~/.aliases'
-except Exception as e:
-    print(e)
+source-bash "$HOME/.environment"
+source-bash "$HOME/.aliases"
 
 
 @events.on_ptk_create
 def custom_keybindings(bindings, **kw):
-
     @bindings.add(Keys.ControlW)
     def say_hi(event):
         event.current_buffer.insert_text('hi')
@@ -37,7 +32,7 @@ xontrib load kitty
 $XONSH_SHOW_TRACEBACK=True
 $XONSH_STORE_STDIN = True
 $XONSH_STORE_STDOUT = True  # Store stdout in history 
-$SHELL_TYPE='best' #or 'best'
+$SHELL_TYPE='prompt_toolkit' #or 'best'
 $XONSH_HISTORY_MATCH_ANYWHERE = True
 $AUTO_SUGGEST_IN_COMPLETIONS = True
 $COMPLETION_DISPLAY = 'single'

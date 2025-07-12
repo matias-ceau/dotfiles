@@ -52,3 +52,4 @@ tavily-mcp https://github.com/tavily-ai/tavily-mcp/tree/main
 memgraph https://memgraph.com/docs/data-migration/csv
 mcp-course-hf https://huggingface.co/learn/mcp-course/unit0/introduction
 langgraph https://python.langchain.com/docs/introduction/
+mcp-course https://huggingface.co/mcp-course

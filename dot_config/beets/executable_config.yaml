@@ -58,29 +58,29 @@ import:
   languages: en fr fi
 
 plugins:
-    - fetchart
-    - embedart
+    # - fetchart
+    # - embedart
     - lastgenre
     - discogs
     - info
     - export
-    - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
+    # - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
     - edit
     - mbsync
     - bareasc
-    - duplicates
+    # - duplicates
     - mbcollection
-    - scrub
+    # - scrub
     - spotify
     - mpdstats
-    # - mpdupdate
+    - mpdupdate
     - xtractor
     - listenbrainz
     # - playlist
     # - random
-    # - smartplaylist
+    - smartplaylist
     # - lyrics
-    # - web
+    - web
     # - autobpm
     # - importfeeds
     # - describe # pip install beets-describe
@@ -155,8 +155,9 @@ chroma:
 acousticbrainz:
   auto: yes
 
-embedart:
-  auto: yes
+# embedart:
+  
+  # auto: yes
 
 # autobpm:
 #   auto: yes      #default
@@ -170,5 +171,3 @@ embedart:
 #  force: yes #no
 #  quiet: no
 
-scrub:
-  auto: yes

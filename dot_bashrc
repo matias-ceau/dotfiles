@@ -34,38 +34,35 @@ PROMPT_COMMAND="history -a; history -n" # Share history between concurrent sessi
 # set -o vi
 #bind '"\C-e": "\ev"'
 
-#PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n$ "
 PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # lx() {
 #     pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
 # }
-# [[ ! -f "$XDG_CONFIG_HOME/bash_completion" ]] && touch "$XDG_CONFIG_HOME/bash_completion"
-
-# [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&  . /usr/share/bash-completion/bash_completion
-
 # eval "$(register-python-argcomplete pipx)"
-eval "$(zoxide init bash)"
-eval "$(uv generate-shell-completion bash)"
+# eval "$(zoxide init bash)"
+# eval "$(uv generate-shell-completion bash)"
 
-export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion_user"
+export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
+export BASH_COMP_DIR=$HOME/.bash_completion.d
 
-! ( rg -q 'fzf' $BASH_COMPLETION_USER_FILE ) && fzf --bash > $BASH_COMPLETION_USER_FILE
-! ( rg -q 'pandoc' $BASH_COMPLETION_USER_FILE ) && pandoc --bash-completion >> $BASH_COMPLETION_USER_FILE
+command -v fzf --bash > $BASH_COMP_DIR/fzf
+# command -v pandoc --bash-completion > $BASH_COMP_DIR/pandoc
 
-function _ai() { aichat "$@" ; }
-complete -F aichat _ai
+# function _ai() { aichat "$@" ; }
+# complete -F aichat _ai
 
 #NOTE: complete -W 'google.com cyberciti.biz nixcraft.com' host
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/matias/google-cloud-sdk/path.bash.inc' ]; then . '/home/matias/google-cloud-sdk/path.bash.inc'; fi
+# . "$HOME/google-cloud-sdk/path.bash.inc" 2>/dev/null || :
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/matias/google-cloud-sdk/completion.bash.inc' ]; then . '/home/matias/google-cloud-sdk/completion.bash.inc'; fi
+# . "$HOME/google-cloud-sdk/completion.bash.inc" 2>/dev/null || :
+
 # . /opt/esp-idf/export.sh
-alias claude="/home/matias/.claude/local/claude"
 
 # opencode
-export PATH=/home/matias/.opencode/bin:$PATH
-eval "$(_MARIMO_COMPLETE=bash_source marimo)"
+export PATH="${PATH}:${HOME}/.opencode/bin"
+
+. "$XDG_CONFIG_HOME/broot/launcher/bash/br" 2>/dev/null || :

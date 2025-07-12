@@ -22,7 +22,7 @@ forward, back = "XF86Forward", "XF86Back"  # Not used in keys, but kept
 # Define the keys list using standard Key and KeyChord
 keys = [
     # Navigation
-    Key(M + A, "Home", L.next_screen(), desc="NextScr"),  # M-A-<Home> -> M+A, "Home"
+    Key(M, "Home", L.next_screen(), desc="NextScr"),  # M-A-<Home> -> M+A, "Home"
     Key(M, "h", L.layout.left(), desc="Left"),  # M-h -> M, "h"
     Key(M, "l", L.layout.right(), desc="Right"),  # M-l -> M, "l"
     Key(M, "j", L.layout.down(), desc="Down"),  # M-j -> M, "j"
@@ -138,7 +138,9 @@ keys = [
     # Commands
     Key(M + S, "d", L.spawn("dmenu_run -l 30"), desc="Dmenu"),  # M-S-d -> M+S, "d"
     Key(M, "space", L.spawn("fzfmenu_run.sh"), desc="Fzf"),  # M-<space> -> M, "space"
-    Key(M + S, "space", L.spawn("fuzzel"), desc="Rofi"),  # M-S-<space> -> M+S, "space"
+    Key(
+        M + S, "space", L.spawn("fuzzel"), desc="Fuzzel"
+    ),  # M-S-<space> -> M+S, "space"
     Key(
         M, "semicolon", L.spawn("script_launcher.sh"), desc="Script"
     ),  # M-<semicolon> -> M, "semicolon"
@@ -146,10 +148,16 @@ keys = [
         M, "Return", L.spawn(["kitty", "-1"]), desc="Term"
     ),  # M-<Return> -> M, "Return"
     Key(
-        M + S, "t", L.spawn(["alacritty", "-T", "dis_term"]), desc="Term2"
+        M + S,
+        "t",
+        L.spawn(["footclient"]),
+        desc="Term2",
     ),  # M-S-t -> M+S, "t"
     Key(
-        M, "t", L.spawn(["alacritty", "-T", "floating"]), desc="Tfloat"
+        M,
+        "t",
+        L.spawn("footclient --title=floating-TMUX tmux -2l attach"),
+        desc="Tfloat",
     ),  # M-t -> M, "t"
     Key(
         M + S, "o", L.spawn("obsidian-vault-selector.sh"), desc="Obs"
@@ -157,13 +165,6 @@ keys = [
     Key(M, "o", L.spawn("qutebrowser"), desc="Qute"),  # M-o -> M, "o"
     Key(M, "b", L.spawn("opera"), desc="Opera"),  # M-b -> M, "b"
     Key(M, "Print", L.spawn("screenshot"), desc="Shot"),  # M-<Print> -> M, "Print"
-    Key(
-        M + C, "Print", L.spawn("screenshot --select"), desc="ShotSel"
-    ),  # M-C-<Print> -> M+C, "Print"
-    Key(
-        M + A, "Print", L.spawn("ocrdesktop"), desc="OCR"
-    ),  # M-A-<Print> -> M+A, "Print"
-    # Scratchpads
     Key(
         [], "F12", L.group["dock"].dropdown_toggle("terminal"), desc="STerm"
     ),  # F12 -> [], "F12"
@@ -190,10 +191,7 @@ keys = [
     KeyChord(
         M,
         "x",
-        [
-            # EzKey("S-n", ...) -> Key(S, "n", ...)
-            # Key(S, "n", L.spawn("jupyter_new_notebook.xsh"), desc="NewNb"), # Uncomment if needed
-        ],
+        [],
         name="quicklaunch",
         mode=True,
         desc="Quick",

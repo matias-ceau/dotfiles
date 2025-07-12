@@ -5,7 +5,7 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local lint = require("lint")
-			lint.linters_by_ft = lint.linters_by_ft or {}
+			-- lint.linters_by_ft = lint.linters_by_ft or {}
 			-- lint.linters_by_ft['markdown'] = { 'markdownlint' }
 			--
 			-- However, note that this will enable a set of default linters,
@@ -30,7 +30,8 @@ return {
 			-- lint.linters_by_ft['janet'] = nil
 			-- lint.linters_by_ft['json'] = nil
 			lint.linters_by_ft["markdown"] = nil
-			-- lint.linters_by_ft['rst'] = nil
+			lint.linters_by_ft["python"] = { "ruff" }
+			lint.linters_by_ft["yaml"] = { "yamllint" }
 			-- lint.linters_by_ft['ruby'] = nil
 			-- lint.linters_by_ft['terraform'] = nil
 			lint.linters_by_ft["text"] = nil

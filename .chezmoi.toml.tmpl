@@ -3,8 +3,8 @@ progress = true
 color = "on"
 
 [diff]
-    command = "meld"
-
+    command = "nvim"
+    args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
 [edit]
     apply = true
 
