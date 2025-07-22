@@ -3,6 +3,8 @@ import subprocess
 
 from libqtile import hook
 
+__all__ = ["autostart", "reset_wallpaper"]
+
 
 @hook.subscribe.startup_once
 def autostart():

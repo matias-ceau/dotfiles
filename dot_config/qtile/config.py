@@ -2,10 +2,11 @@
 # from libqtile.log_utils import logger
 import re
 
+import _hooks
+
 # _custom : custom widgets/scripts/pop ups
 # _style : colors, decorations
 from _groups import groups
-from _hooks import *
 from _keys import keys, mouse
 from _layouts import layouts
 from _screens import screens

@@ -110,84 +110,48 @@ keys = [
         L.window.center().when(when_floating=True),
         desc="Float++",
     ),
-    Key(
-        M, "Prior", L.layout.toggle_split(), desc="Split"
-    ),  # M-<Prior> -> M, "Prior" (PageUp key)
+    Key(M, "Prior", L.layout.toggle_split(), desc="Split"),
     Key(M, "f", L.window.toggle_floating(), desc="Float"),  # M-f -> M, "f"
     Key(M, "m", L.window.toggle_fullscreen(), desc="Full"),  # M-m -> M, "m"
     Key(M, "Up", L.screen.toggle_group(), desc="LastGrp"),  # M-<Up> -> M, "Up"
-    # Media / function keys
     Key(
         [], "XF86MonBrightnessUp", L.spawn("light -A 10"), desc="Bri+"
     ),  # <XF86MonBrightnessUp> -> [], "XF86MonBrightnessUp"
-    Key(
-        [], "XF86MonBrightnessDown", L.spawn("light -U 10"), desc="Bri-"
-    ),  # <XF86MonBrightnessDown> -> [], "XF86MonBrightnessDown"
-    Key(
-        [], "XF86AudioMute", L.spawn("amixer -q set Master toggle"), desc="Mute"
-    ),  # <XF86AudioMute> -> [], "XF86AudioMute"
-    Key(
-        [], "XF86AudioLowerVolume", L.widget["volume"].decrease_vol(), desc="Vol-"
-    ),  # <XF86AudioLowerVolume> -> [], "XF86AudioLowerVolume"
-    Key(
-        [], "XF86AudioRaiseVolume", L.widget["volume"].increase_vol(), desc="Vol+"
-    ),  # <XF86AudioRaiseVolume> -> [], "XF86AudioRaiseVolume"
-    Key(
-        M + S, "F2", L.spawn("wallpaper.sh --select"), desc="Wall"
-    ),  # M-S-F2 -> M+S, "F2"
+    Key([], "XF86MonBrightnessDown", L.spawn("light -U 10"), desc="Bri-"),
+    Key([], "XF86AudioMute", L.spawn("amixer -q set Master toggle"), desc="Mute"),
+    Key([], "XF86AudioLowerVolume", L.widget["volume"].decrease_vol(), desc="Vol-"),
+    Key([], "XF86AudioRaiseVolume", L.widget["volume"].increase_vol(), desc="Vol+"),
+    Key(M + S, "F2", L.spawn("wallpaper.sh --select"), desc="Wall"),
     # Commands
     Key(M + S, "d", L.spawn("dmenu_run -l 30"), desc="Dmenu"),  # M-S-d -> M+S, "d"
     Key(M, "space", L.spawn("fzfmenu_run.sh"), desc="Fzf"),  # M-<space> -> M, "space"
-    Key(
-        M + S, "space", L.spawn("fuzzel"), desc="Fuzzel"
-    ),  # M-S-<space> -> M+S, "space"
-    Key(
-        M, "semicolon", L.spawn("script_launcher.sh"), desc="Script"
-    ),  # M-<semicolon> -> M, "semicolon"
-    Key(
-        M, "Return", L.spawn(["kitty", "-1"]), desc="Term"
-    ),  # M-<Return> -> M, "Return"
+    Key(M + S, "space", L.spawn("fuzzel"), desc="Fuzzel"),
+    Key(M, "semicolon", L.spawn("script_launcher.sh"), desc="Script"),
+    Key(M, "Return", L.spawn(["kitty", "-1"]), desc="Term"),
     Key(
         M + S,
         "t",
         L.spawn(["footclient"]),
         desc="Term2",
-    ),  # M-S-t -> M+S, "t"
+    ),
     Key(
         M,
         "t",
-        L.spawn("footclient --title=floating-TMUX tmux -2l attach"),
+        L.spawn("footclient --title=floating-TMUX"),
         desc="Tfloat",
-    ),  # M-t -> M, "t"
-    Key(
-        M + S, "o", L.spawn("obsidian-vault-selector.sh"), desc="Obs"
-    ),  # M-S-o -> M+S, "o"
-    Key(M, "o", L.spawn("qutebrowser"), desc="Qute"),  # M-o -> M, "o"
-    Key(M, "b", L.spawn("opera"), desc="Opera"),  # M-b -> M, "b"
-    Key(M, "Print", L.spawn("screenshot"), desc="Shot"),  # M-<Print> -> M, "Print"
-    Key(
-        [], "F12", L.group["dock"].dropdown_toggle("terminal"), desc="STerm"
-    ),  # F12 -> [], "F12"
-    Key(
-        M, "F11", L.group["dock"].dropdown_toggle("nvim"), desc="SNvim"
-    ),  # M-F11 -> M, "F11"
-    Key(
-        M, "F10", L.group["dock"].dropdown_toggle("ranger"), desc="SRang"
-    ),  # M-F10 -> M, "F10"
-    Key(
-        M, "F9", L.group["dock"].dropdown_toggle("sysmon"), desc="SSys"
-    ),  # M-F9 -> M, "F9"
-    Key(
-        M, "c", L.group["scratch"].dropdown_toggle("chatbot"), desc="Chat"
-    ),  # M-c -> M, "c"
-    Key(
-        M, "n", L.group["scratch"].dropdown_toggle("note"), desc="Note"
-    ),  # M-n -> M, "n"
-    Key(
-        M, "p", L.group["scratch"].dropdown_toggle("keepassxc"), desc="Keep"
-    ),  # M-p -> M, "p"
-    # KeyChord examples
-    # EzKeyChord("M-x", [...]) -> KeyChord(M, "x", [...])
+    ),
+    Key(M + S, "o", L.spawn("obsidian-vault-selector.sh"), desc="Obs"),
+    Key(M, "o", L.spawn("qutebrowser"), desc="Qute"),
+    Key(M, "b", L.spawn("opera"), desc="Opera"),
+    Key([], "Print", L.spawn("screenshot.sh"), desc="Shot"),
+    Key(S, "Print", L.spawn("screenshot.sh --select"), desc="Shot"),
+    Key([], "F12", L.group["dock"].dropdown_toggle("terminal"), desc="STerm"),
+    Key(M, "F11", L.group["dock"].dropdown_toggle("nvim"), desc="SNvim"),
+    Key(M, "F10", L.group["dock"].dropdown_toggle("ranger"), desc="SRang"),
+    Key(M, "F9", L.group["dock"].dropdown_toggle("sysmon"), desc="SSys"),
+    Key(M, "c", L.group["scratch"].dropdown_toggle("chatbot"), desc="Chat"),
+    Key(M, "n", L.group["scratch"].dropdown_toggle("note"), desc="Note"),
+    Key(M, "p", L.group["scratch"].dropdown_toggle("keepassxc"), desc="Keep"),
     KeyChord(
         M,
         "x",
@@ -196,59 +160,45 @@ keys = [
         mode=True,
         desc="Quick",
     ),
-    # EzKeyChord("M-s", [...]) -> KeyChord(M, "s", [...])
     KeyChord(
         M,
         "s",
         [
-            # EzKey("c", ...) -> Key([], "c", ...) (no modifiers needed within chord unless specified)
             Key(
                 [],
                 "c",
                 L.spawn("kitty -T floating -e tmux attach -t MUSIC:cmus"),
                 desc="Tmux",
             ),
-            # EzKey("<Right>", ...) -> Key([], "Right", ...)
             Key([], "Right", L.spawn("cmus-remote -n"), desc="Next"),
-            # EzKey("C-<Right>", ...) -> Key(C, "Right", ...) (modifiers within chord are needed)
             Key(C, "Right", L.spawn("next_album.xsh"), desc="NAlb"),
-            # EzKey("Left", ...) -> Key([], "Left", ...)
             Key([], "Left", L.spawn("cmus-remote -r"), desc="Prev"),
-            # EzKey("space", ...) -> Key([], "space", ...)
             Key([], "space", L.spawn("cmus-remote -u"), desc="Play"),
-            # EzKey("s", ...) -> Key([], "s", ...)
             Key(
                 [],
                 "s",
                 L.spawn(["alacritty", "-T", "floating", "-e", "fzf_songlauncher.sh"]),
                 desc="Song",
             ),
-            # EzKey("a", ...) -> Key([], "a", ...)
             Key(
                 [],
                 "a",
                 L.spawn("alacritty -T floating -e fzf_albumlauncher.xsh"),
                 desc="Alb",
             ),
-            # EzKey("r", ...) -> Key([], "r", ...)
             Key([], "r", L.spawn("random_album.xsh"), desc="Rand"),
-            # EzKey("p", ...) -> Key([], "p", ...)
             Key([], "p", L.spawn("playlist_player.xsh"), desc="Plst"),
-            # EzKey("A-p", ...) -> Key(A, "p", ...) (modifiers within chord are needed)
             Key(A, "p", L.spawn("playlist_randomizer.xsh"), desc="PlRnd"),
         ],
         name="cmus",
         mode=True,
         desc="Music",
     ),
-    # EzKeyChord("M-F1", [...]) -> KeyChord(M, "F1", [...])
     KeyChord(
         M,
         "F1",
         [
-            # EzKey("k", ...) -> Key([], "k", ...)
             Key([], "k", L.spawn("keyboard-help.sh"), desc="Keymap"),
-            # EzKey("q", ...) -> Key([], "q", ...)
             Key([], "q", L.ungrab_all_chords(), desc="Exit"),
         ],
         name="help",
