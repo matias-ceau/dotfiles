@@ -20,7 +20,6 @@ alias batterie='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
 alias kdr='sudo keyd reload'
 alias loadenv="source $HOME/.environment"
 alias v='NVIM_APPNAME=lazyvim nvim'
-alias claude="/home/matias/.claude/local/claude"
 
 alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
