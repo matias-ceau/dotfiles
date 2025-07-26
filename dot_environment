@@ -152,4 +152,5 @@ source_if_found <<EOF
 "$XDG_CONFIG_HOME/broot/launcher/bash/br"
 EOF
 
+eval "$(codex completion)"
 # vim: set ft=sh

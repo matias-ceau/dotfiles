@@ -20,3 +20,4 @@ start_if_exists swww-daemon
 start_if_exists tmux_manager.py --auto
 #start_if_exists /usr/bin/emacs --daemon
 #start_if_exists /usr/bin/xonsh ~/scripts/karjala_screen.xsh
+start_if_exist systemd run --scope --user internxt webdav enable
