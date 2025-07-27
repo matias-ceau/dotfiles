@@ -43,7 +43,7 @@ ui:
 
 import:
   # write metadata to music files
-  write: no #temp
+  write: yes
 
   # move imported files from source to the music directory
   move: no #temp
@@ -71,16 +71,16 @@ plugins:
     # - duplicates
     - mbcollection
     # - scrub
-    - spotify
-    - mpdstats
-    - mpdupdate
-    - xtractor
-    - listenbrainz
+    # - spotify
+    # - mpdstats
+    # - mpdupdate
+    # - xtractor
+    # - listenbrainz
     # - playlist
     # - random
-    - smartplaylist
+    # - smartplaylist
     # - lyrics
-    - web
+    # - web
     # - autobpm
     # - importfeeds
     # - describe # pip install beets-describe
