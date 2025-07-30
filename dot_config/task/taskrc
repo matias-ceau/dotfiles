@@ -132,4 +132,6 @@ context.these.read=project:Thesis
 context.these.write=project:Thesis
 context.inbox.read=project:
 context.inbox.write=project:
+context.dev.read=project:dev
+comtext.dev.write=project:dev
 context=inbox

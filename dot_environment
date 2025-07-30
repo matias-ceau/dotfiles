@@ -138,6 +138,7 @@ mkdir -p "$XDG_DATA_HOME/aichat/rags"
 mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
 source <(pass show api_keys)
+source <(pass show secret_env)
 
 # [[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
 # \t\e[34m${SHELL}\e[0m"

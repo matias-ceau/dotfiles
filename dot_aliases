@@ -76,3 +76,14 @@ X() {
     deactivate
 }
 alias skb="setxkbmap us altgr-intl"
+
+check_new_env () {
+    comm -13 \
+        <(env | cut -d= -f1 | sort) \
+        <(cat "$XDG_CONFIG_HOME"/environment.d/* | cut -d= -f1 | sort) |
+        grep -vP '#|^$'
+    }
+
+convert_env_dir() { 
+    cat "$XDG_CONFIG_HOME"/environment.d/* | rg '=' | sed -E 's/^(.*=)/export \1/'
+}
