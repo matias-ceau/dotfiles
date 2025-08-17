@@ -1,9 +1,9 @@
 
 # ---- llm ----
 # model: groq:qwen-qwq-32b
-model: openai:gpt-4.1
+model: openai:gpt-5
 # model: openai:gpt-4o-2024-08-06         # Specify the LLM to use
-temperature: 0.7                # Set default temperature parameter
+# temperature: 0.7                # Set default temperature parameter
 top_p: null                      # Set default top-p parameter, range (0, 1)
 
 # ---- behavior ----

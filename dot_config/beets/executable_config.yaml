@@ -72,15 +72,15 @@ plugins:
     - mbcollection
     # - scrub
     - spotify
-    - mpdstats
-    - mpdupdate
+    # - mpdstats
+    # - mpdupdate
     - xtractor
     - listenbrainz
     # - playlist
     # - random
     - smartplaylist
     # - lyrics
-    - web
+    # - web
     # - autobpm
     # - importfeeds
     # - describe # pip install beets-describe
@@ -149,11 +149,11 @@ lastgenre:
   title_case: yes
   separator: ;
 
-chroma:
-  auto: yes
+# chroma:
+  # auto: yes
 
-acousticbrainz:
-  auto: yes
+# acousticbrainz:
+  # auto: yes
 
 # embedart:
   

@@ -24,6 +24,7 @@ alias v='NVIM_APPNAME=lazyvim nvim'
 alias ß="interactive_git_sync.sh"
 alias s="script_launcher.sh --embedded"
 alias cfg="edit_chezmoi_cfg_files.sh"
+alias ú="paru -Syu --noconfirm --nouseask"
 alias ¶="pacman-fuzzy-search.sh"
 alias pacfzf="pacman-fuzzy-search.sh"
 alias f='fzf-file-manager.sh'
@@ -76,3 +77,14 @@ X() {
     deactivate
 }
 alias skb="setxkbmap us altgr-intl"
+
+check_new_env () {
+    comm -13 \
+        <(env | cut -d= -f1 | sort) \
+        <(cat "$XDG_CONFIG_HOME"/environment.d/* | cut -d= -f1 | sort) |
+        grep -vP '#|^$'
+    }
+
+convert_env_dir() { 
+    cat "$XDG_CONFIG_HOME"/environment.d/* | rg '=' | sed -E 's/^(.*=)/export \1/'
+}

@@ -44,7 +44,7 @@ c.auto_save.interval = 15000
 ## `session.default_name` setting.
 ## Type: Bool
 # ===>
-c.auto_save.session = False
+c.auto_save.session = True
 c.session.default_name = "default"
 
 # <===  Backend to use to display websites. qutebrowser supports two different
@@ -119,9 +119,9 @@ c.completion.min_chars = 1
 c.completion.open_categories = [
     "quickmarks",
     "bookmarks",
+    "searchengines",
     "history",
     "filesystem",
-    "searchengines",
 ]
 
 # <===  Move on to the next part when there's only one possible completion
@@ -441,7 +441,7 @@ c.content.javascript.can_open_tabs_automatically = (
 ##   - access: Allow reading from and writing to the clipboard.
 ##   - access-paste: Allow accessing the clipboard and pasting clipboard content.
 # ===>
-c.content.javascript.clipboard = "none"
+c.content.javascript.clipboard = "access-paste"
 
 #
 c.content.javascript.enabled = True  ## Enable JavaScript.
@@ -514,10 +514,10 @@ c.content.local_content_can_access_file_urls = (
     True  ## Allow locally loaded documents to access other local URLs.
 )
 c.content.local_content_can_access_remote_urls = (
-    False  ## Allow locally loaded documents to access remote URLs.
+    True  ## Allow locally loaded documents to access remote URLs.
 )
 c.content.local_storage = True  ## Enable support for HTML 5 local storage and Web SQL.
-c.content.media.audio_capture = "ask"  ## Allow websites to record audio.
+c.content.media.audio_capture = True  ## Allow websites to record audio.
 c.content.media.audio_video_capture = "ask"  ## Allow websites to record audio and video. Type: BoolAsk Valid values: true false ask
 c.content.media.video_capture = (
     "ask"  ## Allow websites to record video. ## Type: BoolAsk
@@ -1088,7 +1088,7 @@ c.input.insert_mode.auto_leave = (
 c.input.insert_mode.auto_load = False  ## Automatically enter insert mode if an editable element is focused after loading the page.
 c.input.insert_mode.leave_on_load = True  ## Leave insert mode when starting a new page load. Patterns may be unreliable on this setting, and they may match the url you are navigating to, or the URL you are navigating from.
 c.input.insert_mode.plugins = (
-    False  ## Switch to insert mode when clicking flash and other plugins.
+    True  ## Switch to insert mode when clicking flash and other plugins.
 )
 c.input.links_included_in_focus_chain = (
     True  ## Include hyperlinks in the keyboard focus chain when tabbing.
@@ -1331,7 +1331,7 @@ c.search.incremental = True  ## Find text on a page incrementally, renewing the 
 c.search.wrap = True  ## Wrap around at the top and bottom of the page when advancing through ## text matches using `:search-next` and `:search-prev`.
 c.search.wrap_messages = True  ## Display messages when advancing through text matches at the top and bottom of the page, e.g. `Search hit TOP`.
 c.session.default_name = "default"  ## Name of the session to save by default. If this is set to null, the session which was last loaded is saved. ## Type: SessionName
-c.session.lazy_restore = False  ## Load a restored tab as soon as it takes focus.
+c.session.lazy_restore = True  ## Load a restored tab as soon as it takes focus.
 
 # <===  Languages to use for spell checking. You can check for available
 ## languages and install dictionaries using scripts/dictcli.py. Run the
@@ -1570,7 +1570,7 @@ c.tabs.title.elide = "right"  ## Position of ellipsis in truncated title of tabs
 ## page. * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
 # ===>
-c.tabs.title.format = "{private}{audio}{index}: {current_title} {title_sep} {host}"
+c.tabs.title.format = "{private}{audio}[{protocol}] {current_title} {title_sep} {host}"
 
 # <===  Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
@@ -1578,9 +1578,7 @@ c.tabs.title.format = "{private}{audio}{index}: {current_title} {title_sep} {hos
 # ===>
 c.tabs.title.format_pinned = "{index}"
 c.tabs.tooltips = True  ## Show tooltips on tabs. Note this setting only affects windows opened# after it has been set.
-c.tabs.undo_stack_size = (
-    -1
-)  ## Number of closed tabs (per window) and closed windows to remember for :undo (-1 for no maximum).
+c.tabs.undo_stack_size = 20  ## Number of closed tabs (per window) and closed windows to remember for :undo (-1 for no maximum).
 c.tabs.width = "15%"  ## Width (in pixels or as percentage of the window) of the tab bar if it's vertical. ## Type: PercOrInt
 c.tabs.wrap = True  ## Wrap when changing tabs.
 
@@ -1640,18 +1638,20 @@ c.url.open_base_url = True
 # ===>
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-    "=ggl": "https://google.com/search?q={}",
-    "=gh": "https://github.com/search?q={}&type=repositories",
-    "=wiki": "https://en.wikipedia.org/w/index.php?search={}",
-    "=pydoc": "https://docs.python.org/3/search.html?q={}",
-    "=doi": "https://dx.doi.org/{}",
-    "=archwiki": "https://wiki.archlinux.org/title/Special:Search/{}",
-    "=entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
-    "=pubchem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
-    "=pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
-    "=mesh": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
-    "=clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
-    "=readdocs": "https://{}.readthedocs.io/en/latest/index.html",
+    "!ppx": "https://www.perplexity.ai/?s=o&q={}",
+    "!chat": "https://chatgpt.com/?q={}&hints=search",
+    "!g": "https://google.com/search?q={}",
+    "!github": "https://github.com/search?q={}&type=repositories",
+    "!wiki": "https://en.wikipedia.org/w/index.php?search={}",
+    "!pydocs": "https://docs.python.org/3/search.html?q={}",
+    "!doi": "https://dx.doi.org/{}",
+    "!archwiki": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "!entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
+    "!pubchem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
+    "!pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
+    "!meshterm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
+    "!clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
+    "!rtd": "https://{}.readthedocs.io/en/latest/index.html",
 }
 
 # <===  Page(s) to open at the start.

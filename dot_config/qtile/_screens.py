@@ -26,7 +26,7 @@ screens = [
                     this_screen_border=UI.groupbox_block,
                 ),
                 # Current Layout icon
-                widget.CurrentLayoutIcon(use_mask=True, scale=0.9),
+                widget.CurrentLayout(use_mask=True, scale=0.9),
                 # Chords
                 widget.Chord(
                     chords_colors={

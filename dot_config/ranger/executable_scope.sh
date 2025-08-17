@@ -49,13 +49,26 @@ OPENSCAD_COLORSCHEME=${RNGR_OPENSCAD_COLORSCHEME:-Tomorrow Night}
 
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
+        tex)
+        python - <<'PY'
+import sys, os
+import importlib.util, pathlib
+cmd_path = pathlib.Path('~/.config/ranger/commands.py').expanduser()
+spec = importlib.util.spec_from_file_location("ranger_commands", cmd_path)
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
+c = mod.preview_latex(None)
+c.arg = lambda i: sys.argv[1]  # hack: command receives argument via argv[1]
+c.execute()
+PY
+            && exit 5
+            ;;
             # use bat if pssible
-            sh|py|lua|vim|yaml|yml|log|lisp|css|bib|csv|tsv|c|cpp|go|cfg|md|\
-            tex|pyx|xsh|r|txt|rs|sql|toml|tml|ts|xml|zig|htm|html|xhtml)
+        sh|py|lua|vim|yaml|yml|log|lisp|css|bib|csv|tsv|c|cpp|go|cfg|md|pyx|xsh|r|txt|rs|sql|toml|tml|ts|xml|zig|htm|html|xhtml)
             bat --color=always --theme=ansi -pp "${FILE_PATH}" && exit 5
             ;;
             ## Archive
-            a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
+        a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
             rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
             atool --list -- "${FILE_PATH}" && exit 5
             bsdtar --list --file "${FILE_PATH}" && exit 5

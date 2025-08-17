@@ -42,8 +42,6 @@ elif (hostname == "karjala") or (hostname == "kukko"):
     )
     custom_args = dict(
         format="GPU {temp}°C",
-        width=60,
-        dpi=96,
     )
 
     system_clock_args = dict(format="%Y-%m-%d %a %H:%M")

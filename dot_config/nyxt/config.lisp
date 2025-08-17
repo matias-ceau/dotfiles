@@ -40,7 +40,7 @@
 (define-configuration browser
  ((theme (make-instance 'theme:theme 
                         :dark-p t
-                        :font-family "Iosevka"
+                        :font-family "Iosevka NF"
                         :monospace-font-family "Iosevka"
                         :background-color- "#000000"  ; true_black
                         :background-color "#100F0F"   ; black (bg)
@@ -129,9 +129,9 @@ peeking at the screen."
 (defmethod ffi-buffer-make :after ((buffer nyxt/renderer/gtk:gtk-buffer))
   "Set fonts for the WebKitGTK renderer."
   (let ((settings (webkit:webkit-web-view-get-settings (nyxt/renderer/gtk:gtk-object buffer))))
-    (setf (webkit:webkit-settings-serif-font-family settings) "Iosevka"
-          (webkit:webkit-settings-sans-serif-font-family settings) "Iosevka"
-          (webkit:webkit-settings-monospace-font-family settings) "Iosevka")))
+    (setf (webkit:webkit-settings-serif-font-family settings) "Iosevka NF"
+          (webkit:webkit-settings-sans-serif-font-family settings) "Iosevka NF"
+          (webkit:webkit-settings-monospace-font-family settings) "Iosevka NF")))
 
 ;; ---------------------------------------------------------
 ;; remove tabs
