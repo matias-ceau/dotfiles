@@ -1638,6 +1638,7 @@ c.url.open_base_url = True
 # ===>
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
+<<<<<<< HEAD
     "!ppx": "https://www.perplexity.ai/?s=o&q={}",
     "!chat": "https://chatgpt.com/?q={}&hints=search",
     "!g": "https://google.com/search?q={}",
@@ -1652,6 +1653,22 @@ c.url.searchengines = {
     "!meshterm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
     "!clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
     "!rtd": "https://{}.readthedocs.io/en/latest/index.html",
+=======
+    "/ppx": "https://www.perplexity.ai/?s=o&q={}",
+    "/chat": "https://chatgpt.com/?q={}&hints=search",
+    "/g": "https://google.com/search?q={}",
+    "/github": "https://github.com/search?q={}&type=repositories",
+    "/wiki": "https://en.wikipedia.org/w/index.php?search={}",
+    "/pydocs": "https://docs.python.org/3/search.html?q={}",
+    "/doi": "https://dx.doi.org/{}",
+    "/archwiki": "https://wiki.archlinux.org/title/Special:Search/{}",
+    "/entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
+    "/pubchem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
+    "/pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
+    "/meshterm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
+    "/clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
+    "/rtd": "https://{}.readthedocs.io/en/latest/index.html",
+>>>>>>> bc45700f87423db88141f8263b3e2b8a29880c2a
 }
 
 # <===  Page(s) to open at the start.

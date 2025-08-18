@@ -43,7 +43,7 @@ ui:
 
 import:
   # write metadata to music files
-  write: no #temp
+  write: yes
 
   # move imported files from source to the music directory
   move: no #temp
@@ -71,14 +71,22 @@ plugins:
     # - duplicates
     - mbcollection
     # - scrub
+<<<<<<< HEAD
     - spotify
     # - mpdstats
     # - mpdupdate
     - xtractor
     - listenbrainz
+=======
+    # - spotify
+    # - mpdstats
+    # - mpdupdate
+    # - xtractor
+    # - listenbrainz
+>>>>>>> bc45700f87423db88141f8263b3e2b8a29880c2a
     # - playlist
     # - random
-    - smartplaylist
+    # - smartplaylist
     # - lyrics
     # - web
     # - autobpm
