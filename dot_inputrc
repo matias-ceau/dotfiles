@@ -10,13 +10,14 @@ TAB: complete
 "\C-p": menu-complete-backward
 
 # Substring history search using UP and DOWN arrow keys.
-"\M[A": history-substring-search-backward
-"\M[B": history-substring-search-forward
-"\C-j": next-history
-"\C-k": previous-history
+# "\M[A": history-substring-search-backward
+"\C-j": history-substring-search-backward
+"\C-k": history-substring-search-forward
+# "\C-j": next-history
+# "\C-k": previous-history
 
-"\C-S-e": emacs-editing-mode
-"\C-S-v": vi-editing-mode
+"\C-e": emacs-editing-mode
+"\ev": vi-editing-mode
 
 # set completion-display-width 0 1 2
 
