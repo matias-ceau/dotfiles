@@ -8,9 +8,9 @@
 
 alias wlqt='qtile start -b wayland'
 
-alias r-pipewire='systemctl --user restart pipewire.service'
-alias r-load-qtile='qtile cmd-obj -o cmd -f reload_config'
-alias r-start-qtile='qtile cmd-obj -o cmd -f restart'
+alias fucking-pipewire='systemctl --user restart pipewire.service'
+alias fucking-qtile='qtile cmd-obj -o cmd -f reload_config'
+alias restart-qtile='qtile cmd-obj -o cmd -f restart'
 alias poweroff='sudo systemctl poweroff'
 alias reboot='sudo systemctl reboot'
 alias suspend='sudo systemctl suspend'

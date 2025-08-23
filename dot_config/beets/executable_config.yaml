@@ -9,12 +9,14 @@ original_date: yes
 include:
   - secret-config.yaml
 
-# paths:
-#     default: $albumartist/$album%aunique{}/$track $title
-#     singleton: Non-Album/$artist/$title
-#     comp: Compilations/$album%aunique{}/$track $title
+paths:
+    default: $albumartist/$album%aunique{}/$track_$title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$track_$title
 
-# Available colors are black, darkred, darkgreen, brown (darkyellow), darkblue, purple (darkmagenta), teal (darkcyan), lightgray, darkgray, red, green, yellow, blue, fuchsia (magenta), turquoise (cyan), white
+# Available colors are black, darkred, darkgreen, brown (darkyellow),
+# darkblue, purple (darkmagenta), teal (darkcyan), lightgray, darkgray,
+# red, green, yellow, blue, fuchsia (magenta), turquoise (cyan), white
 ui:
   color: yes
   colors:
@@ -30,13 +32,13 @@ ui:
     text_faint: ['faint']
     import_path: ['bold', 'blue']
     import_path_items: ['bold', 'blue']
-    added:   ['green']
+    added: ['green']
     removed: ['red']
     changed: ['yellow']
-    added_highlight:   ['bold', 'green']
+    added_highlight: ['bold', 'green']
     removed_highlight: ['bold', 'red']
     changed_highlight: ['bold', 'yellow']
-    text_diff_added:   ['bold', 'red']
+    text_diff_added: ['bold', 'red']
     text_diff_removed: ['bold', 'red']
     text_diff_changed: ['bold', 'red']
     action_description: ['white']
@@ -46,7 +48,7 @@ import:
   write: yes
 
   # move imported files from source to the music directory
-  move: no #temp
+  move: yes
   resume: ask
   log: ~/.cache/beetslog.log 
   # set_fields:
@@ -64,36 +66,29 @@ plugins:
     - discogs
     - info
     - export
-    # - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
+    - chroma # pacman -S gstreamer python-gobject (chromaprint) shit ton of other stuff
     - edit
     - mbsync
     - bareasc
-    # - duplicates
+    - duplicates
     - mbcollection
     # - scrub
-<<<<<<< HEAD
     - spotify
-    # - mpdstats
-    # - mpdupdate
+    - mpdstats
+    - mpdupdate
     - xtractor
     - listenbrainz
-=======
-    # - spotify
-    # - mpdstats
-    # - mpdupdate
-    # - xtractor
-    # - listenbrainz
->>>>>>> bc45700f87423db88141f8263b3e2b8a29880c2a
     # - playlist
     # - random
     # - smartplaylist
     # - lyrics
-    # - web
+    - web
     # - autobpm
     # - importfeeds
     # - describe # pip install beets-describe
     #- acousticbrainz #pacman -S python-pyacoustid DEPRECATED
-    #- summarize # pip install git+git://github.com/steven-murray/beet-summarize.git
+    #- summarize 
+        # pip install git+git://github.com/steven-murray/beet-summarize.git
     #- bpmanalyser # pip install beets-bpmanalyser
     # - fuzzy
     #- cmus

@@ -277,7 +277,7 @@ c.content.blocking.whitelist = []
 ## network.
 ## Type: Bool
 # ===>
-# c.content.cache.appcache = True #unavailable?
+# c.content.cache.appcache = True  # unavailable?
 
 # <===  Maximum number of pages to hold in the global memory page cache. The
 ## page cache allows for a nicer user experience when navigating forth or
@@ -293,7 +293,7 @@ c.content.blocking.whitelist = []
 ## GB).
 ## Type: Int
 # ===>
-c.content.cache.size = 268_435_456
+c.content.cache.size = 247_836_470
 
 # <===  Allow websites to read canvas elements. Note this is needed for some
 ## websites to work properly. On QtWebEngine < 6.6, this setting requires
@@ -429,7 +429,7 @@ c.content.images = True  ## Load images automatically in web pages.
 c.content.javascript.alert = True  ## Show javascript alerts.
 # c.content.javascript.can_close_tabs = False  ## Allow JavaScript to close tabs. #unavailable?
 c.content.javascript.can_open_tabs_automatically = (
-    False  ## Allow JavaScript to open new tabs without user interaction.
+    True  ## Allow JavaScript to open new tabs without user interaction.
 )
 
 # <===  Allow JavaScript to read from or write to the clipboard. With
@@ -571,7 +571,7 @@ c.content.notifications.show_origin = True
 # ===>
 c.content.pdfjs = True  # False
 c.content.persistent_storage = "ask"  ## Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`.
-c.content.plugins = False  ## Enable plugins in Web pages.
+c.content.plugins = True  ## Enable plugins in Web pages.
 
 # <===  Request websites to minimize non-essentials animations and motion.
 ## This results in the `prefers-reduced-motion` CSS media query to
@@ -695,7 +695,7 @@ c.downloads.position = (
 ## Type: Bool
 # ===>
 c.downloads.prevent_mixed_content = True
-c.downloads.remove_finished = 5000  ## Duration (in milliseconds) to wait before removing finished downloads. If set to -1, downloads are never removed.
+c.downloads.remove_finished = 3000  ## Duration (in milliseconds) to wait before removing finished downloads. If set to -1, downloads are never removed.
 #
 
 # <===  Editor (and arguments) to use for the `edit-*` commands. The following
@@ -707,11 +707,13 @@ c.downloads.remove_finished = 5000  ## Duration (in milliseconds) to wait before
 ## Type: ShellCommand TODO
 # ===>
 c.editor.command = [
-    "alacritty",
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "kitty",
     "--class",
-    "Alacritty,floating-term",
-    "-T",
-    "qutebrowser-editor",
+    "floating-term",
     "-e",
     "nvim",
     "{file}",
@@ -736,7 +738,7 @@ c.fileselect.folder.command = [
     "--scope",
     "--quiet",
     "kitty",
-    "-e",
+    "--class-e",
     "ranger",
     "--show-only-dirs",
     "--choosedir={}",
@@ -768,7 +770,7 @@ c.fileselect.multiple_files.command = [
     "--scope",
     "--quiet",
     "kitty",
-    "-e",
+    "--class-e",
     "ranger",
     "--choosefiles={}",
 ]
@@ -785,6 +787,8 @@ c.fileselect.single_file.command = [
     "--scope",
     "--quiet",
     "kitty",
+    "--class",
+    "floating-term",
     "-e",
     "ranger",
     "--choosefile={}",
@@ -1267,7 +1271,7 @@ c.qt.force_software_rendering = "none"
 ## `zoom.default` setting.
 ## Type: Bool
 # ===>
-c.qt.highdpi = False
+c.qt.highdpi = True
 
 # <===  Disable accelerated 2d canvas to avoid graphical glitches. On some
 ## setups graphical issues can occur on sites like Google sheets and
@@ -1570,7 +1574,7 @@ c.tabs.title.elide = "right"  ## Position of ellipsis in truncated title of tabs
 ## page. * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
 # ===>
-c.tabs.title.format = "{private}{audio}[{protocol}] {current_title} {title_sep} {host}"
+c.tabs.title.format = "[{private}]{audio} {current_title} {title_sep} {host}"
 
 # <===  Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
@@ -1638,7 +1642,6 @@ c.url.open_base_url = True
 # ===>
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
-<<<<<<< HEAD
     "!ppx": "https://www.perplexity.ai/?s=o&q={}",
     "!chat": "https://chatgpt.com/?q={}&hints=search",
     "!g": "https://google.com/search?q={}",
@@ -1653,22 +1656,6 @@ c.url.searchengines = {
     "!meshterm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
     "!clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
     "!rtd": "https://{}.readthedocs.io/en/latest/index.html",
-=======
-    "/ppx": "https://www.perplexity.ai/?s=o&q={}",
-    "/chat": "https://chatgpt.com/?q={}&hints=search",
-    "/g": "https://google.com/search?q={}",
-    "/github": "https://github.com/search?q={}&type=repositories",
-    "/wiki": "https://en.wikipedia.org/w/index.php?search={}",
-    "/pydocs": "https://docs.python.org/3/search.html?q={}",
-    "/doi": "https://dx.doi.org/{}",
-    "/archwiki": "https://wiki.archlinux.org/title/Special:Search/{}",
-    "/entrez": "https://www.ncbi.nlm.nih.gov/search/all/?term={}",
-    "/pubchem": "https://pubchem.ncbi.nlm.nih.gov/#query={}",
-    "/pubmed": "https://pubmed.ncbi.nlm.nih.gov/?term={}",
-    "/meshterm": "https://www.ncbi.nlm.nih.gov/mesh/?term={}",
-    "/clintrials": "https://clinicaltrials.gov/search?term={}&viewType=Table",
-    "/rtd": "https://{}.readthedocs.io/en/latest/index.html",
->>>>>>> bc45700f87423db88141f8263b3e2b8a29880c2a
 }
 
 # <===  Page(s) to open at the start.

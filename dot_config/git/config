@@ -1,0 +1,25 @@
+# vim: set ft=gitconfig
+[user]
+	name = Matias Ceau
+	email = matias@ceau.net
+	signingkey = 164081FDBE3861993D299B124655BB0EC0308BA3 
+[init]
+	defaultBranch = main
+[alias]
+	repo = !git_clone_by_author-repo.sh
+	cd   = !source git_cd.sh
+	sync = !sync-repo.py
+	update = !git_update_all_other_repos.sh
+	ai-commit = !git commit --file <(generate_commit_message.py)
+
+[protocol]
+	file = allow
+
+[tag]
+	gpgsign = true
+[gpg "openpgp"]
+	program = /bin/gpg
+[commit]
+	gpgsign = true
+[diff]
+	tool = nvimdiff
