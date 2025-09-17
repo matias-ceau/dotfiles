@@ -1,45 +1,99 @@
-
+# -----------------------------------------------------------------------------
 # vim: set ft=bash
-#---------------------------
+# ---------------------------=
+#
+# Heavy SDKs/completions are lazy-loaded. Prompt is fast by default.
 # Source profile and aliases
-#---------------------------
+#---------------------------=
+
+# Shell & Environment
 export SHELL=/usr/bin/bash
 
+# Optional external settings
 [ -f "$HOME/.environment" ] && source "$HOME/.environment"
 [ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
-#---------------------------
 
-shopt -s autocd                  # change directory without entering the 'cd' command
-shopt -s cdspell                 # automatically fix directory typos when changing directory
-shopt -s direxpand               # automatically expand directory globs when completing
-shopt -s dirspell                # automatically fix directory typos when completing
-shopt -s globstar                # ** recursive glob
-shopt -s histappend              # append to history, don't overwrite
-shopt -s histverify              # expand, but don't automatically execute, history expansions
-shopt -s nocaseglob              # case-insensitive globbing
-shopt -s no_empty_cmd_completion # do not TAB expand empty lines
-shopt -s expand_aliases
-shopt -s progcomp_alias
+# -----------------------------------------------------------------------------
+# Bash options
+# -----------------------------------------------------------------------------
+shopt -s autocd \
+    cdspell \
+    direxpand \
+    dirspell \
+    globstar \
+    histappend \
+    histverify
+shopt -s nocaseglob no_empty_cmd_completion expand_aliases progcomp_alias
 
-# HISTORY XDG
+# -----------------------------------------------------------------------------
+# History (XDG)
+# -----------------------------------------------------------------------------
+: "${XDG_STATE_HOME:=$HOME/.local/state}"
 mkdir -p "$XDG_STATE_HOME/bash"
 HISTFILE="$XDG_STATE_HOME/bash/history"
-HISTCONTROL=ignoreboth:erasedups        # Ignore and erase duplicates
-# HISTIGNORE=?:??                         # Ignore one and two letter commands
-HISTFILESIZE=99999                      # Max size of history file
-HISTSIZE=99999                          # Amount of history to preserve
-PROMPT_COMMAND="history -a; history -n" # Share history between concurrent sessions
+HISTCONTROL=ignoreboth:erasedups
+HISTFILESIZE=99999
+HISTSIZE=99999
+# We will augment PROMPT_COMMAND below to run a tiny post-init once
+PROMPT_COMMAND="history -a; history -n"
 
-# VIM
-# set -o vi
-#bind '"\C-e": "\ev"'
+# -----------------------------------------------------------------------------
+# Prompt (fast; no git subprocesses by default)
+# -----------------------------------------------------------------------------
+# export PS1='\[\e[33m\]\u@\h\[\e[36m\] \w\[\e[32m\] $\[\e[0m\] '
+# If you want git info in prompt, uncomment below (may be slow in huge repos):
+parse_git_branch() { git branch --show-current 2>/dev/null; }
+git_dirty() { [[ -n $(git status --porcelain 2>/dev/null) ]] && echo "*"; }
+export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch)$(git_dirty) \[\e[32m\]$\[\e[0m\] '
 
-parse_git_branch() {
-    git branch 2>/dev/null | grep '^\*' | sed 's/^\* //'
+# -----------------------------------------------------------------------------
+# Light, safe immediate inits
+# -----------------------------------------------------------------------------
+# Zoxide is relatively light; keep it immediate if available
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init bash)"
+fi
+
+# Completions paths (used by some aliases below)
+export BASH_COMPLETION_USER_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion"
+export BASH_COMP_DIR="$HOME/.bash_completion.d"
+
+# Simple completion example (cheap)
+complete -W 'google.com cyberciti.biz nixcraft.com' host
+
+# -----------------------------------------------------------------------------
+# Lazy-loaders (load only when used)
+# -----------------------------------------------------------------------------
+
+# Google Cloud SDK (large scripts)
+__GCLOUD_INIT_DONE=
+_gcloud_init() {
+    [[ -n "$__GCLOUD_INIT_DONE" ]] && return 0
+    source "$HOME/google-cloud-sdk/path.bash.inc" 2>/dev/null || :
+    source "$HOME/google-cloud-sdk/completion.bash.inc" 2>/dev/null || :
+    __GCLOUD_INIT_DONE=1
 }
-export -f parse_git_branch
-git_dirty() {
-    [[ $(git status --porcelain 2>/dev/null) != "" ]] && echo "*"
+gcloud() { _gcloud_init; command gcloud "$@"; }
+
+# NVM / Node (notoriously heavy)
+__NVM_INIT_DONE=
+_load_nvm() {
+    [[ -n "$__NVM_INIT_DONE" ]] && return 0
+    export NVM_DIR="$HOME/.config/nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    __NVM_INIT_DONE=1
+}
+nvm()  { _load_nvm; command nvm  "$@"; }
+node() { _load_nvm; command node "$@"; }
+npm()  { _load_nvm; command npm  "$@"; }
+
+# broot (load launcher on first use, then hand off)
+alias br='__broot_lazy'
+__broot_lazy() {
+    . "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br" 2>/dev/null || :
+    unalias br 2>/dev/null || :
+    br "$@"
 }
 export -f git_dirty
 export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch) $(git_dirty) \[\e[32m\]$\[\e[0m\] '
@@ -54,24 +108,61 @@ eval "$(zoxide init bash)"
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
 export BASH_COMP_DIR=$HOME/.bash_completion.d
 
+. <(_MARIMO_COMPLETE=bash_source marimo)
 . <(fzf --bash)
-# command -v pandoc --bash-completion > $BASH_COMP_DIR/pandoc
+alias pandoc='command -v pandoc --bash-completion > $BASH_COMP_DIR/pandoc \
+    && unalias pandoc && pandoc'
 
-# function _ai() { aichat "$@" ; }
-# complete -F aichat _ai
+# marimo (load completion on first use)
+__MARIMO_INIT_DONE=
+__marimo_init() {
+    [[ -n "$__MARIMO_INIT_DONE" ]] && return 0
+    if command -v marimo >/dev/null 2>&1; then
+        . <(_MARIMO_COMPLETE=bash_source marimo) 2>/dev/null || :
+    fi
+    __MARIMO_INIT_DONE=1
+}
+marimo() { __marimo_init; command marimo "$@"; }
 
-#NOTE: complete -W 'google.com cyberciti.biz nixcraft.com' host
+# fzf keybindings/completions: defer to first prompt draw (fast afterward)
+__FZF_LOADED=
+__post_init_once() {
+    # Load fzf bindings once (guarded)
+    if [[ -z "$__FZF_LOADED" ]] && command -v fzf >/dev/null 2>&1; then
+        eval "$(fzf --bash)" 2>/dev/null || :
+        __FZF_LOADED=1
+    fi
+    # Remove self from PROMPT_COMMAND after first run
+    if [[ -n "$__ORIG_PROMPT_COMMAND" ]]; then
+        PROMPT_COMMAND="$__ORIG_PROMPT_COMMAND"
+    else
+        PROMPT_COMMAND=
+    fi
+}
+# Chain our one-time post-init before the existing PROMPT_COMMAND
+__ORIG_PROMPT_COMMAND="$PROMPT_COMMAND"
+PROMPT_COMMAND="__post_init_once${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
-# The next line updates PATH for the Google Cloud SDK.
-# . "$HOME/google-cloud-sdk/path.bash.inc" 2>/dev/null || :
+# -----------------------------------------------------------------------------
+# User Aliases and PATH
+# -----------------------------------------------------------------------------
+# pandoc completion bootstrap (on first actual pandoc run)
+alias pandoc='command -v pandoc --bash-completion > "$BASH_COMP_DIR/pandoc" 2>/dev/null \
+    && unalias pandoc && pandoc'
+
+# mcli completion setup on first run
+alias mcli='unalias mcli 2>/dev/null && complete -C /usr/bin/mcli mcli && mcli'
 
 # The next line enables shell command completion for gcloud.
-# . "$HOME/google-cloud-sdk/completion.bash.inc" 2>/dev/null || :
+. "$HOME/google-cloud-sdk/completion.bash.inc" 2>/dev/null || :
+
+# . /opt/esp-idf/export.sh
+
+export PATH="${PATH}:${HOME}/.opencode/bin"
 
 # . /opt/esp-idf/export.sh
 
 # opencode
-export PATH="${PATH}:${HOME}/.opencode/bin"
 
 . "$XDG_CONFIG_HOME/broot/launcher/bash/br" 2>/dev/null || :
 
@@ -79,4 +170,8 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-complete -C /usr/bin/mcli mcli
+alias mcli='unalias mcli && complete -C /usr/bin/mcli mcli && mcli'
+export PATH="${PATH}:${HOME}/.opencode/bin"
+
+# Kiro terminal integration
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)" 2>/dev/null || :

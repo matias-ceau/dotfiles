@@ -12,3 +12,5 @@ function fish_prompt
     set_color normal
     echo -n " "
 end
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)

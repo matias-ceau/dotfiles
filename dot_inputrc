@@ -8,6 +8,7 @@ TAB: complete
 "\e[Z": complete-backward
 "\C-n": menu-complete
 "\C-p": menu-complete-backward
+"\C-l": clear-screen
 
 # Substring history search using UP and DOWN arrow keys.
 # "\M[A": history-substring-search-backward
@@ -17,7 +18,7 @@ TAB: complete
 # "\C-k": previous-history
 
 "\C-e": emacs-editing-mode
-"\ev": vi-editing-mode
+# "\ev": vi-editing-mode
 
 # set completion-display-width 0 1 2
 

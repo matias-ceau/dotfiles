@@ -154,5 +154,6 @@ source_if_found <<EOF
 "$XDG_CONFIG_HOME/broot/launcher/bash/br"
 EOF
 
+# export SSL_CERT_FILE=$HOME/.internxt-cli/certs/cert.crt
 # eval "$(codex completion)" >/dev/null 2>&1
 # vim: set ft=sh
