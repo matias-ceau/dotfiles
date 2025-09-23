@@ -28,7 +28,7 @@ shopt -s nocaseglob no_empty_cmd_completion expand_aliases progcomp_alias
 # -----------------------------------------------------------------------------
 # History (XDG)
 # -----------------------------------------------------------------------------
-: "${XDG_STATE_HOME:=$HOME/.local/state}"
+# : "${XDG_STATE_HOME:=$HOME/.local/state}"
 mkdir -p "$XDG_STATE_HOME/bash"
 HISTFILE="$XDG_STATE_HOME/bash/history"
 HISTCONTROL=ignoreboth:erasedups
@@ -42,9 +42,10 @@ PROMPT_COMMAND="history -a; history -n"
 # -----------------------------------------------------------------------------
 # export PS1='\[\e[33m\]\u@\h\[\e[36m\] \w\[\e[32m\] $\[\e[0m\] '
 # If you want git info in prompt, uncomment below (may be slow in huge repos):
-parse_git_branch() { git branch --show-current 2>/dev/null; }
-git_dirty() { [[ -n $(git status --porcelain 2>/dev/null) ]] && echo "*"; }
-export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch)$(git_dirty) \[\e[32m\]$\[\e[0m\] '
+# parse_git_branch() { git branch --show-current 2>/dev/null; }
+# git_dirty() { [[ -n $(git status --porcelain 2>/dev/null) ]] && echo "*"; }
+# export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch)$(git_dirty) \[\e[32m\]$\[\e[0m\] '
+export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # -----------------------------------------------------------------------------
 # Light, safe immediate inits
@@ -95,9 +96,6 @@ __broot_lazy() {
     unalias br 2>/dev/null || :
     br "$@"
 }
-export -f git_dirty
-export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch) $(git_dirty) \[\e[32m\]$\[\e[0m\] '
-
 # lx() {
 #     pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
 # }
@@ -108,8 +106,7 @@ eval "$(zoxide init bash)"
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
 export BASH_COMP_DIR=$HOME/.bash_completion.d
 
-. <(_MARIMO_COMPLETE=bash_source marimo)
-. <(fzf --bash)
+eval "$(fzf --bash)" 2>/dev/null || :
 alias pandoc='command -v pandoc --bash-completion > $BASH_COMP_DIR/pandoc \
     && unalias pandoc && pandoc'
 
@@ -123,25 +120,6 @@ __marimo_init() {
     __MARIMO_INIT_DONE=1
 }
 marimo() { __marimo_init; command marimo "$@"; }
-
-# fzf keybindings/completions: defer to first prompt draw (fast afterward)
-__FZF_LOADED=
-__post_init_once() {
-    # Load fzf bindings once (guarded)
-    if [[ -z "$__FZF_LOADED" ]] && command -v fzf >/dev/null 2>&1; then
-        eval "$(fzf --bash)" 2>/dev/null || :
-        __FZF_LOADED=1
-    fi
-    # Remove self from PROMPT_COMMAND after first run
-    if [[ -n "$__ORIG_PROMPT_COMMAND" ]]; then
-        PROMPT_COMMAND="$__ORIG_PROMPT_COMMAND"
-    else
-        PROMPT_COMMAND=
-    fi
-}
-# Chain our one-time post-init before the existing PROMPT_COMMAND
-__ORIG_PROMPT_COMMAND="$PROMPT_COMMAND"
-PROMPT_COMMAND="__post_init_once${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
 # -----------------------------------------------------------------------------
 # User Aliases and PATH
@@ -162,16 +140,23 @@ export PATH="${PATH}:${HOME}/.opencode/bin"
 
 # . /opt/esp-idf/export.sh
 
-# opencode
-
 . "$XDG_CONFIG_HOME/broot/launcher/bash/br" 2>/dev/null || :
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias mcli='unalias mcli && complete -C /usr/bin/mcli mcli && mcli'
 export PATH="${PATH}:${HOME}/.opencode/bin"
 
+# NVM / Node (notoriously heavy)
+__NVM_INIT_DONE=
+_load_nvm() {
+    [[ -n "$__NVM_INIT_DONE" ]] && return 0
+    export NVM_DIR="$HOME/.config/nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    __NVM_INIT_DONE=1
+}
+nvm()  { _load_nvm; command nvm  "$@"; }
+node() { _load_nvm; command node "$@"; }
+npm()  { _load_nvm; command npm  "$@"; }
 # Kiro terminal integration
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)" 2>/dev/null || :
+# [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)" 2>/dev/null || :
