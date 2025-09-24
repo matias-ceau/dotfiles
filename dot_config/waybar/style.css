@@ -1,0 +1,124 @@
+/* Waybar styling inspired by Flexoki palette (https://stephango.com/flexoki) */
+
+@define-color flexoki-black      #100f0f;
+@define-color flexoki-base-950   #1c1b1a;
+@define-color flexoki-base-900   #282726;
+@define-color flexoki-base-850   #343331;
+@define-color flexoki-base-800   #403e3c;
+@define-color flexoki-base-700   #575653;
+@define-color flexoki-base-500   #878580;
+@define-color flexoki-base-300   #b7b5ac;
+@define-color flexoki-base-200   #cecdc3;
+@define-color flexoki-base-150   #dad8ce;
+@define-color flexoki-base-100   #e6e4d9;
+@define-color flexoki-base-50    #f2f0e5;
+@define-color flexoki-highlight  #3aa99f; /* cyan_2 */
+@define-color flexoki-accent     #4385be; /* blue_2 */
+@define-color flexoki-warning    #d0a215; /* yellow_2 */
+@define-color flexoki-critical   #d14d41; /* red_2 */
+
+* {
+  font-family: "Iosevka Term SS08", "Iosevka", "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13px;
+  border: none;
+  min-height: 0;
+  color: @flexoki-base-200;
+}
+
+window#waybar {
+  background: alpha(@flexoki-black, 0.9);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2px 6px;
+}
+
+tooltip {
+  background: @flexoki-base-900;
+  border-radius: 6px;
+  border: 1px solid alpha(@flexoki-base-700, 0.6);
+  padding: 6px 6px;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @flexoki-base-500;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+#workspaces button.focused {
+  background: alpha(@flexoki-accent, 0.25);
+  color: @flexoki-base-50;
+  border: 1px solid alpha(@flexoki-accent, 0.5);
+}
+
+#workspaces button.active {
+  color: @flexoki-base-50;
+}
+
+#workspaces button:hover {
+  background: alpha(@flexoki-highlight, 0.18);
+  color: @flexoki-base-100;
+}
+
+#window {
+  padding: 0 14px;
+  color: @flexoki-base-100;
+  font-weight: 500;
+}
+
+#clock {
+  padding: 0 14px;
+  color: @flexoki-base-150;
+}
+
+#pulseaudio,
+#network,
+#disk,
+#battery,
+#tray {
+  padding: 0 10px;
+  background: alpha(@flexoki-base-700, 0.7);
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+#pulseaudio.muted {
+  color: alpha(@flexoki-base-900, 0.6);
+}
+
+#network.disconnected {
+  color: alpha(@flexoki-base-900, 0.6);
+}
+
+#battery.warning {
+  color: @flexoki-warning;
+}
+
+#battery.critical {
+  color: @flexoki-critical;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#tray > .passive {
+  opacity: 0.8;
+}
+
+#tray > .needs-attention {
+  background: alpha(@flexoki-critical, 0.25);
+  border-radius: 6px;
+}

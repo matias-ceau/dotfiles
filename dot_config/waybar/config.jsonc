@@ -1,0 +1,85 @@
+// Waybar configuration tailored for Hyprland with Flexoki palette accents
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "margin": "0",
+  "spacing": 6,
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "mpd",
+    "cpu",
+    "disk",
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray",
+    "clock"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "warp-on-scroll": false,
+    "on-click": "activate" 
+  },
+
+  "hyprland/window": {
+    "separate-outputs": false,
+    "max-length": 80,
+    "format": "{title}",
+    "rewrite": {
+      "^$": "Desktop"
+    }
+  },
+
+  "clock": {
+    "format": "{:%a %d %b  %H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d %B %Y}\nWeek %V"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": " muted",
+    "tooltip": true,
+    "scroll-step": 2,
+    "on-click": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": "󰖪 offline",
+    "tooltip": true
+  },
+
+  "disk": {
+    "format": "  {percentage_used}%",
+    "tooltip-format": "{path}: {used} / {size}",
+    "path": "/",
+    "interval": 30
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{time}",
+    "states": {
+      "warning": 25,
+      "critical": 10
+    }
+  },
+
+  "tray": {
+    "spacing": 8,
+    "show-passive-items": true
+  }
+}

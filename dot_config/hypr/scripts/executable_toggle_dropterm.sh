@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TITLE="dropterm-unique"
+TITLE="dropdown-term"
 SPECIAL="term"
 
 # Ensure dropdown geometry even if rules miss (fallback)
@@ -69,7 +69,7 @@ elif command -v kitty >/dev/null 2>&1; then
 elif command -v foot >/dev/null 2>&1; then
   TERM_CMD=(foot --app-id "$TITLE" --title "$TITLE")
 else
-  echo "No supported terminal found (kitty/alacritty/foot)." >&2
+  echo "No supported terminal found (alacritty/kitty/foot)." >&2
   exit 1
 fi
 
