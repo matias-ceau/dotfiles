@@ -1,148 +1,135 @@
 #~/.environment
 #
 export EDITOR="nvim"
-# export VISUAL="alacritty --class floating -e nvim"
-export BROWSER="qutebrowser"
+export BROWSER="minimal-browser"
 
-# PATHS ####################################
-
-# FREEDESKTOP
-export XDG_DATA_HOME=$HOME/.local/share
-export LOCALSHARE="$XDG_DATA_HOME"
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_STATE_HOME=$HOME/.local/state
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_DIRS=/usr/local/share:/usr/share
-export XDG_CONFIG_DIRS=/etc/xdg
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_DIRS="/etc/xdg"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 export XKB_DEFAULT_LAYOUT="us"
 export XKB_DEFAULT_VARIANT="altgr-intl"
-export GRIM_OUTPUT_DIR="$XDG_DATA_HOME/screenshots"
-
-# PATH
-export LOCALBIN="$HOME/.local/bin" ; mkdir -p $LOCALBIN
-export LOCALOPT="$HOME/.local/opt" ; mkdir -p $LOCALOPT
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export GOPATH="$HOME/.local/opt/go"
-PATH="$(printf %s "$PATH:$LOCALBIN:$LOCALOPT/bin:$CARGO_HOME/bin" |
-    awk -vRS=: '!a[$0]++' |
-    paste -s -d:)"
-export PATH
-
-export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
-export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
-export PYTHONUSERBASE="$XDG_DATA_HOME/python"
-export PYTHONDOCS=/usr/share/doc/python/html/library
-# export PYTHON_GIL=1
-
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
-
-####################################################
-export CHEZMOI="$HOME/.local/share/chezmoi"
-export LOCALDATA="$HOME/.localdata"
-export SCRIPTS="$HOME/.scripts"
-export GIT_REPOS="$HOME/git"
-export PLAYGROUND="$HOME/playground"
-export PSYRIS="$GIT_REPOS/matias-ceau/psyris"
-export ONDANSETRON="$GIT_REPOS/matias-ceau/ondansetron"
-
-export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
-export MONKEYPATH="$LOCALDATA/monkeypass"
-
-# MAKE VIM XDG COMPLIANT
 mkdir -p "$XDG_CONFIG_HOME/vim"
-mkdir -p "$XDG_STATE_HOME/vim"
 mkdir -p "$XDG_DATA_HOME/vim"
-export VIM_CONFIG_HOME="$XDG_CONFIG_HOME/vim"
-
-# THEME
-export FLEXOKI_BLACK='#100f0f'
-export FLEXOKI_BASE_950='#1C1B1A'
-export FLEXOKI_BASE_900='#282726'
-export FLEXOKI_BASE_850='#343331'
-export FLEXOKI_BASE_800='#403E3C'
-export FLEXOKI_BASE_700='#575653'
-export FLEXOKI_BASE_600='#6F6E69'
-export FLEXOKI_BASE_500='#878580'
-export FLEXOKI_BASE_300='#B7B5AC'
-export FLEXOKI_BASE_200='#CECDC3'
-export FLEXOKI_BASE_150='#DAD8CE'
-export FLEXOKI_BASE_100='#E6E4D9'
-export FLEXOKI_BASE_50='#F2F0E5'
-export FLEXOKI_PAPER='#FFFCF0'
-export FLEXOKI_RED='#AF3029'
-export FLEXOKI_ORANGE='#BC5215'
-export FLEXOKI_YELLOW='#AD8301'
-export FLEXOKI_GREEN='#66800B'
-export FLEXOKI_CYAN='#24837B'
-export FLEXOKI_BLUE='#205EA6'
-export FLEXOKI_PURPLE='#5E409D'
-export FLEXOKI_MAGENTA='#A02F6F'
-export FLEXOKI_RED_2='#D14D41'
-export FLEXOKI_ORANGE_2='#DA702C'
-export FLEXOKI_YELLOW_2='#D0A215'
-export FLEXOKI_GREEN_2='#879A39'
-export FLEXOKI_CYAN_2='#3AA99F'
-export FLEXOKI_BLUE_2='#4385BE'
-export FLEXOKI_PURPLE_2='#8B7EC8'
-export FLEXOKI_MAGENTA_2='#CE5D97'
-
-## BATPIPE
-
-LESSOPEN="|/usr/bin/batpipe %s";
-export LESSOPEN;
-unset LESSCLOSE;
-
-# The following will enable colors when using batpipe with less:
-LESS="$LESS -R";
-BATPIPE="color";
-export LESS;
-export BATPIPE;
+mkdir -p "$XDG_STATE_HOME/vim"
 
 export QT_QPA_PLATFORM="wayland;xcb"
-export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_QPA_PLATFORMTHEME="hyperqt6engine"
+# export PYTHON_GIL=1
+# XDG_CURRENT_DESKTOP=qtile
+# XDG_SESSION_DESKTOP=qtile
+export _ZO_ECHO=1
+export CHEZMOI="$HOME/.local/share/chezmoi"
+export EZA_ICONS_AUTO="1"
+export EZA_ICON_SPACING="2"
+export FLEXOKI_BASE_100="#E6E4D9"
+export FLEXOKI_BASE_150="#DAD8CE"
+export FLEXOKI_BASE_200="#CECDC3"
+export FLEXOKI_BASE_300="#B7B5AC"
+export FLEXOKI_BASE_500="#878580"
+export FLEXOKI_BASE_50="#F2F0E5"
+export FLEXOKI_BASE_600="#6F6E69"
+export FLEXOKI_BASE_700="#575653"
+export FLEXOKI_BASE_800="#403E3C"
+export FLEXOKI_BASE_850="#343331"
+export FLEXOKI_BASE_900="#282726"
+export FLEXOKI_BASE_950="#1C1B1A"
+export FLEXOKI_BLACK="#100f0f"
+export FLEXOKI_BLUE="#205EA6"
+export FLEXOKI_BLUE_2="#4385BE"
+export FLEXOKI_CYAN="#24837B"
+export FLEXOKI_CYAN_2="#3AA99F"
+export FLEXOKI_GREEN="#66800B"
+export FLEXOKI_GREEN_2="#879A39"
+export FLEXOKI_MAGENTA="#A02F6F"
+export FLEXOKI_MAGENTA_2="#CE5D97"
+export FLEXOKI_ORANGE="#BC5215"
+export FLEXOKI_ORANGE_2="#DA702C"
+export FLEXOKI_PAPER="#FFFCF0"
+export FLEXOKI_PURPLE="#5E409D"
+export FLEXOKI_PURPLE_2="#8B7EC8"
+export FLEXOKI_RED="#AF3029"
+export FLEXOKI_RED_2="#D14D41"
+export FLEXOKI_YELLOW="#AD8301"
+export FLEXOKI_YELLOW_2="#D0A215"
 
-# FZF
-export FZF_DEFAULT_OPTS=" --color=fg:$FLEXOKI_BASE_200,bg:$FLEXOKI_BLACK,hl:$FLEXOKI_MAGENTA --color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_900,hl+:$FLEXOKI_MAGENTA --color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700 --color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW --color=label:$FLEXOKI_YELLOW --highlight-line"
-export FZF_CTRL_T_OPTS="--walker file,dir,follow,hidden --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS=" --preview 'tree -C {}'"
+export FZF_CTRL_T_OPTS=" --walker file,dir,follow,hidden --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_DEFAULT_OPTS=" --color=fg:$FLEXOKI_BASE_200,bg:$FLEXOKI_BLACK,hl:$FLEXOKI_MAGENTA --color=fg+:$FLEXOKI_PAPER,bg+:$FLEXOKI_BASE_900,hl+:$FLEXOKI_MAGENTA --color=border:$FLEXOKI_YELLOW,header:$FLEXOKI_BASE_200,gutter:$FLEXOKI_BLACK --color=spinner:$FLEXOKI_GREEN,info:$FLEXOKI_GREEN,separator:$FLEXOKI_BASE_700 --color=pointer:$FLEXOKI_YELLOW,scrollbar:$FLEXOKI_GREEN,prompt:$FLEXOKI_YELLOW --color=label:$FLEXOKI_YELLOW --highlight-line"
 
-# EZA
-export EZA_ICONS_AUTO=1
-export EZA_ICON_SPACING=2
+export GDK_BACKEND="wayland"
+export GIT_REPOS="$HOME/git"
+export GOPATH="$HOME/.local/opt/go"
+export GRIM_OUTPUT_DIR="$XDG_DATA_HOME/screenshots"
+export IPFS="$XDG_DATA_HOME/ipfs"
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+
+export LOCALBIN="$HOME/.local/bin"
+export LOCALDATA="$HOME/.localdata"
+export LOCALOPT="$HOME/.local/opt"
+export LOCALSHARE="$XDG_DATA_HOME"
+export MONKEYPATH="$LOCALDATA/monkeypass"
+
+export MOZ_ENABLE_WAYLAND="1"
+
+export ONDANSETRON="$GIT_REPOS/matias-ceau/ondansetron"
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export PASSWORD_STORE_DIR="$LOCALDATA/password-store"
+export PATH="$PATH:$LOCALBIN:$LOCALOPT/bin:$CARGO_HOME/bin:$HOME/.opencode/bin"
+export PLAYGROUND="$HOME/playground"
+export PSYRIS="$GIT_REPOS/matias-ceau/psyris"
+
+export PYTHONDOCS="/usr/share/doc/python/html/library"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+
+export RANGER_LOAD_DEFAULT_RC="false"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export SCRIPTS="$HOME/.scripts"
+export SDL_VIDEODRIVER="wayland"
+export VIM_CONFIG_HOME=""$XDG_CONFIG_HOME/vim""
+# BATMAN
+eval "$(batman --export-env)"
+
+LESSOPEN="|/usr/bin/batpipe %s"
+export LESSOPEN
+unset LESSCLOSE
+
+# The following will enable colors when using batpipe with less:
+LESS="$LESS -R"
+BATPIPE="color"
+export LESS
+export BATPIPE
 
 # GTK
 # ___both can be useful on old screens
 # export GSK_RENDERER='gl'
 # export GSK_DEBUG='gl-no-fractional'
 
-# BATMAN
-eval "$(batman --export-env)"
-
-# ZOXIDE
-export _ZO_ECHO=1
-
 # RANGER
 export RANGER_LOAD_DEFAULT_RC=false
 
 # OLLAMA
+export OLLAMA_KEEP_ALIVE="10m"
 if [ "$(hostnamectl hostname)" = "karjala" ]; then
     export OLLAMA_MODELS="/mnt/.croute/ollama_models"
     export GBM_BACKEND=nvidia-drm
 fi
-export OLLAMA_KEEP_ALIVE="10m" #default is 5m
 
 export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat"
-# mkdir -p "$AICHAT_CONFIG_DIR/functions"
+mkdir -p "$AICHAT_CONFIG_DIR/functions"
 mkdir -p "$AICHAT_CONFIG_DIR/roles"
 mkdir -p "$XDG_DATA_HOME/aichat/rags"
 mkdir -p "$XDG_DATA_HOME/aichat/sessions"
 
+
 eval "$(pass show api_keys 2>/dev/null)"
 eval "$(pass show secret_env 2>/dev/null)"
 
-# [[ -z "$(env | rg 'DISPLAY')" ]] && fastfetch || echo -e "\t\e[33m${TERM}"
-# \t\e[34m${SHELL}\e[0m"
 source_if_found() {
     while read -r filepath ; do
         [[ -f "$filepath" ]] && . "${filepath}"
@@ -154,6 +141,17 @@ source_if_found <<EOF
 "$XDG_CONFIG_HOME/broot/launcher/bash/br"
 EOF
 
+PATH="$(printf %s "$PATH:$LOCALBIN:$LOCALOPT/bin:$CARGO_HOME/bin" |
+    awk -vRS=: '!a[$0]++' |
+    paste -s -d:)"
+export PATH
+
 # export SSL_CERT_FILE=$HOME/.internxt-cli/certs/cert.crt
-# eval "$(codex completion)" >/dev/null 2>&1
-# vim: set ft=sh
+
+# XCURSOR_THEME=Bibata-Modern-Ice
+# XCURSOR_SIZE=24
+# GDK_BACKEND=wayland
+# QT_QPA_PLATFORM=wayland
+# SDL_VIDEODRIVER=wayland
+# XDG_CURRENT_DESKTOP=qtile
+# XDG_SESSION_DESKTOP=qtile

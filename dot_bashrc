@@ -9,10 +9,12 @@
 # Shell & Environment
 export SHELL=/usr/bin/bash
 
-# Optional external settings
 [ -f "$HOME/.environment" ] && source "$HOME/.environment"
 [ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
+[ -f "$HOME/.completions" ] && source "$HOME/.completions"
 
+export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
+export BASH_COMP_DIR=$HOME/.bash_completion.d
 # -----------------------------------------------------------------------------
 # Bash options
 # -----------------------------------------------------------------------------
@@ -25,10 +27,7 @@ shopt -s autocd \
     histverify
 shopt -s nocaseglob no_empty_cmd_completion expand_aliases progcomp_alias
 
-# -----------------------------------------------------------------------------
 # History (XDG)
-# -----------------------------------------------------------------------------
-# : "${XDG_STATE_HOME:=$HOME/.local/state}"
 mkdir -p "$XDG_STATE_HOME/bash"
 HISTFILE="$XDG_STATE_HOME/bash/history"
 HISTCONTROL=ignoreboth:erasedups
@@ -37,30 +36,16 @@ HISTSIZE=99999
 # We will augment PROMPT_COMMAND below to run a tiny post-init once
 PROMPT_COMMAND="history -a; history -n"
 
-# -----------------------------------------------------------------------------
-# Prompt (fast; no git subprocesses by default)
-# -----------------------------------------------------------------------------
-# export PS1='\[\e[33m\]\u@\h\[\e[36m\] \w\[\e[32m\] $\[\e[0m\] '
-# If you want git info in prompt, uncomment below (may be slow in huge repos):
 # parse_git_branch() { git branch --show-current 2>/dev/null; }
 # git_dirty() { [[ -n $(git status --porcelain 2>/dev/null) ]] && echo "*"; }
 # export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w $(parse_git_branch)$(git_dirty) \[\e[32m\]$\[\e[0m\] '
 export PS1='\[\e[31m\]@\[\e[0m\]\[\e[33m\]\h\[\e[36m\] \w \[\e[32m\]$\[\e[0m\] '
 
 # -----------------------------------------------------------------------------
-# Light, safe immediate inits
-# -----------------------------------------------------------------------------
 # Zoxide is relatively light; keep it immediate if available
 if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init bash)"
 fi
-
-# Completions paths (used by some aliases below)
-export BASH_COMPLETION_USER_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion"
-export BASH_COMP_DIR="$HOME/.bash_completion.d"
-
-# Simple completion example (cheap)
-complete -W 'google.com cyberciti.biz nixcraft.com' host
 
 # -----------------------------------------------------------------------------
 # Lazy-loaders (load only when used)
@@ -76,87 +61,29 @@ _gcloud_init() {
 }
 gcloud() { _gcloud_init; command gcloud "$@"; }
 
-# NVM / Node (notoriously heavy)
-__NVM_INIT_DONE=
-_load_nvm() {
-    [[ -n "$__NVM_INIT_DONE" ]] && return 0
-    export NVM_DIR="$HOME/.config/nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-    __NVM_INIT_DONE=1
-}
-nvm()  { _load_nvm; command nvm  "$@"; }
-node() { _load_nvm; command node "$@"; }
-npm()  { _load_nvm; command npm  "$@"; }
-
-# broot (load launcher on first use, then hand off)
-alias br='__broot_lazy'
-__broot_lazy() {
-    . "${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br" 2>/dev/null || :
-    unalias br 2>/dev/null || :
-    br "$@"
-}
-# lx() {
-#     pdflatex --interaction=batchmode "$1" 1>/dev/null 2>&1
-# }
-# eval "$(register-python-argcomplete pipx)"
-eval "$(zoxide init bash)"
-# eval "$(uv generate-shell-completion bash)"
-
-export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
-export BASH_COMP_DIR=$HOME/.bash_completion.d
-
-eval "$(fzf --bash)" 2>/dev/null || :
-alias pandoc='command -v pandoc --bash-completion > $BASH_COMP_DIR/pandoc \
-    && unalias pandoc && pandoc'
-
-# marimo (load completion on first use)
-__MARIMO_INIT_DONE=
-__marimo_init() {
-    [[ -n "$__MARIMO_INIT_DONE" ]] && return 0
-    if command -v marimo >/dev/null 2>&1; then
-        . <(_MARIMO_COMPLETE=bash_source marimo) 2>/dev/null || :
-    fi
-    __MARIMO_INIT_DONE=1
-}
-marimo() { __marimo_init; command marimo "$@"; }
-
-# -----------------------------------------------------------------------------
-# User Aliases and PATH
-# -----------------------------------------------------------------------------
-# pandoc completion bootstrap (on first actual pandoc run)
-alias pandoc='command -v pandoc --bash-completion > "$BASH_COMP_DIR/pandoc" 2>/dev/null \
-    && unalias pandoc && pandoc'
-
-# mcli completion setup on first run
 alias mcli='unalias mcli 2>/dev/null && complete -C /usr/bin/mcli mcli && mcli'
 
 # The next line enables shell command completion for gcloud.
 . "$HOME/google-cloud-sdk/completion.bash.inc" 2>/dev/null || :
 
-# . /opt/esp-idf/export.sh
+esp-idf() {
+    [[ ! -f '/opt/esp-idf/export.sh' ]] && /opt/esp-idf/install.sh
+    /opt/esp-idf/export.sh
+    }
 
-export PATH="${PATH}:${HOME}/.opencode/bin"
-
-# . /opt/esp-idf/export.sh
-
-. "$XDG_CONFIG_HOME/broot/launcher/bash/br" 2>/dev/null || :
-
-
-alias mcli='unalias mcli && complete -C /usr/bin/mcli mcli && mcli'
-export PATH="${PATH}:${HOME}/.opencode/bin"
 
 # NVM / Node (notoriously heavy)
 __NVM_INIT_DONE=
 _load_nvm() {
+    NVM_DIR='.config/nvm'
     [[ -n "$__NVM_INIT_DONE" ]] && return 0
-    export NVM_DIR="$HOME/.config/nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
     __NVM_INIT_DONE=1
 }
-nvm()  { _load_nvm; command nvm  "$@"; }
-node() { _load_nvm; command node "$@"; }
-npm()  { _load_nvm; command npm  "$@"; }
+alias nvm='_load_nvm && unalias nvm && command nvm'
+alias node='_load_nvm && unalias node && command node'
+alias npm='_load_nvm &&  unalias npm && command npm'
+alias npx='_load_nvm &&  unalias npx && command npx'
 # Kiro terminal integration
 # [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)" 2>/dev/null || :

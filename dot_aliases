@@ -55,10 +55,6 @@ tmux_fzf() {
     tmux attach -t "$(tmux ls | cut -d: -f1 | fzf --select-1 --height=~100%)"
 }
 
-espp() {
-    [[ ! -f '/opt/esp-idf/export.sh' ]] && /opt/esp-idf/install.sh
-    /opt/esp-idf/export.sh
-    }
 alias serv="list_process.sh"
 
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
@@ -69,7 +65,7 @@ alias serv="list_process.sh"
 alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 30 --save /etc/pacman.d/mirrorlist'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
-alias ip_livebox="curl -4 -s ifconfig.me"
+alias current_ip="curl -4 -s ifconfig.me"
 
 O() {
     source "$(fd 'activate$' -I -H | fzf --select-1 --height=~100%)"
