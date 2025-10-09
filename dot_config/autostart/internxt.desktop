@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Internxt
+Exec=internxt --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=internxt
+StartupWMClass=Internxt
+X-AppImage-Version=2.4.8
+Comment=Internxt Drive client UI
+Categories=Development;

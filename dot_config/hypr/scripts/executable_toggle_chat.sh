@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SPECIAL="magic"
+SPECIAL="ai"
 TITLE="chatbot"
 
 if command -v alacritty >/dev/null 2>&1; then

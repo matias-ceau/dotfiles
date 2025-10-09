@@ -159,7 +159,7 @@ embedart:
 #   auto: yes      #default
 #   overwrite: no  #default
 
-#bpmanalyser:
+# bpmanalyser:
 #  auto: no
 #  dry-run: no
 #  write: yes

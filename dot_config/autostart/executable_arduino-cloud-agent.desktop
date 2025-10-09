@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=0.9.4
+Name=arduino-cloud-agent
+Comment=
+Icon=/home/matias/ArduinoCloudAgent/InstallerIcon.png
+Exec=/home/matias/ArduinoCloudAgent/Arduino_Cloud_Agent -hibernate
+Terminal=false

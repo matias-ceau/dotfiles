@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SPECIAL="note"
+SPECIAL="quick"
 TITLE="note"
 FILE="$HOME/notes/draft.md"
 

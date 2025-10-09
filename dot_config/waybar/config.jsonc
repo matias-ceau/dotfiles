@@ -62,7 +62,7 @@
 
   "disk": {
     "format": "  {percentage_used}%",
-    "tooltip-format": "{path}: {used} / {size}",
+    "tooltip-format": "{path}: {used} / {total}",
     "path": "/",
     "interval": 30
   },
