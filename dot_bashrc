@@ -18,6 +18,8 @@ export BASH_COMP_DIR=$HOME/.bash_completion.d
 # -----------------------------------------------------------------------------
 # Bash options
 # -----------------------------------------------------------------------------
+
+
 shopt -s autocd \
     cdspell \
     direxpand \
@@ -73,18 +75,15 @@ esp-idf() {
 
 
 # NVM / Node (notoriously heavy)
-__NVM_INIT_DONE=
-_load_nvm() {
-    NVM_DIR='.config/nvm'
-    [[ -n "$__NVM_INIT_DONE" ]] && return 0
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-    __NVM_INIT_DONE=1
-}
-alias nvm='echo "loading..." && _load_nvm && unalias nvm && command nvm'
-alias node='loading..." && _load_nvm && unalias node && command node'
-alias npm='loading..." && _load_nvm &&  unalias npm && command npm'
-alias npx='loading..." && _load_nvm &&  unalias npx && command npx'
+NVM_DIR='.config/nvm'
+[[ -n "$__NVM_INIT_DONE" ]] && return 0
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+# alias nvm='echo loading completions && _load_nvm && unalias nvm && command nvm'
+# alias npm='echo loading completions && _load_nvm && unalias npm && command npm'
+# alias npx='echo loading completions && _load_nvm && unalias npx && command npx'
+# alias node='echo loading completions && _load_nvm && unalias node && command node'
 # Kiro terminal integration
 # [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)" 2>/dev/null || :
 
@@ -96,6 +95,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 #
-\. <(fzf --bash)
+. <(fzf --bash)
 
 bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"'

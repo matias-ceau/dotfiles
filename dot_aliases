@@ -41,7 +41,7 @@ alias r='ranger'
 alias ai='aichat'
 alias nv='nvim'
 alias ×='chmod +x'
-alias cx='chmod +x'
+alias X='chmod +x'
 alias kdr='sudo keyd reload'
 
 # TMUX
@@ -60,28 +60,17 @@ alias serv="list_process.sh"
 #aliases['cpu-max'] = 'tuned-adm profile latency-performance'
 #aliases['cpu-balanced'] = 'tuned-adm profile balanced'
 #aliases['cpu-min'] = 'tuned-adm profile laptop-battery-powersave'
-#aliases['lobechat'] = 'docker run -p 3210:3210 f7e1581b25a3'
 
 alias update_mirrors='sudo reflector --sort rate --country France,Germany,USA --protocol https --latest 30 --save /etc/pacman.d/mirrorlist'
 
 # core not in system comm -23 <(pacman -Slq core | sort) <(pacman -Qq | sort)
 alias current_ip="curl -4 -s ifconfig.me"
 
-O() {
+env_on() {
     source "$(fd 'activate$' -I -H | fzf --select-1 --height=~100%)"
 }
-X() {
+env_off() {
     deactivate
 }
 alias skb="setxkbmap us altgr-intl"
 
-check_new_env () {
-    comm -13 \
-        <(env | cut -d= -f1 | sort) \
-        <(cat "$XDG_CONFIG_HOME"/environment.d/* | cut -d= -f1 | sort) |
-        grep -vP '#|^$'
-    }
-
-convert_env_dir() { 
-    cat "$XDG_CONFIG_HOME"/environment.d/* | rg '=' | sed -E 's/^(.*=)/export \1/'
-}
