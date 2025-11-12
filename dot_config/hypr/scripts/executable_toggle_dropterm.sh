@@ -89,6 +89,8 @@ if command -v jq >/dev/null 2>&1; then
       ensure_geometry
     else
       # It is visible; hide it. Do not touch geometry to avoid re-showing.
+      ensure_geometry
+      sleep 0.03
       hyprctl dispatch togglespecialworkspace "$SPECIAL"
     fi
     exit 0
