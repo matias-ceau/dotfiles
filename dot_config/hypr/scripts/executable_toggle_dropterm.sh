@@ -54,7 +54,7 @@ EOF
 
   # Compute target: 95% width, 60% height, x=2.5% (center), y=1%
   read -r x y w h <<EOF
-$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.95);h=int(mh*0.60);x=int(x0+mw*0.025);y=int(y0+mh*0.01);printf "%d %d %d %d", x,y,w,h }')
+$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.95);h=int(mh*0.60);x=int(x0+mw*0.025);y=int(26+y0+mh*0.01);printf "%d %d %d %d", x,y,w,h }')
 EOF
 
   hyprctl dispatch movewindowpixel "exact $x $y, address:$addr" >/dev/null 2>&1 || true
@@ -89,8 +89,6 @@ if command -v jq >/dev/null 2>&1; then
       ensure_geometry
     else
       # It is visible; hide it. Do not touch geometry to avoid re-showing.
-      ensure_geometry
-      sleep 0.03
       hyprctl dispatch togglespecialworkspace "$SPECIAL"
     fi
     exit 0
