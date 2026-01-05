@@ -155,3 +155,5 @@ export PATH
 # SDL_VIDEODRIVER=wayland
 # XDG_CURRENT_DESKTOP=qtile
 # XDG_SESSION_DESKTOP=qtile
+export GPG_TTY=/dev/tty1
+gpg-connect-agent /bye

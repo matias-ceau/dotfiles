@@ -9,7 +9,7 @@
 alias wlqt='qtile start -b wayland'
 
 alias t='task'
-alias y=yazi
+# alias y=yazi
 alias fucking-pipewire='systemctl --user restart pipewire.service'
 alias fucking-qtile='qtile cmd-obj -o cmd -f reload_config'
 alias restart-qtile='qtile cmd-obj -o cmd -f restart'
@@ -38,7 +38,8 @@ alias l=eza
 alias l1='eza --oneline'
 alias ll='eza -l --icons=auto'
 alias la='eza -la --icons=auto'
-alias r='ranger'
+alias R='ranger'
+alias r='yazi'
 alias ai='aichat'
 alias nv='nvim'
 alias ×='chmod +x'
