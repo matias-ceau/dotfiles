@@ -96,9 +96,12 @@ chezmoi re-add <file>         # Update source from target
    chezmoi re-add ~/.bashrc
    # OR manually: cat ~/.bashrc > ~/.local/share/chezmoi/dot_bashrc
    ```
-4. **Always commit and push** changes in chezmoi:
+4. **Commit frequently with minimal changes** - each commit should be:
+   - Small and focused (one logical change per commit)
+   - Clearly described so it's easy to revert specific changes
+   - Example: "hypr: migrate windowrules to 0.53 syntax" not "update configs"
    ```bash
-   chezmoi cd && git add -A && git commit -m "description" && git push
+   chezmoi cd && git add -A && git commit -m "app: brief description" && git push
    ```
 
 **Adding new files to chezmoi:**
