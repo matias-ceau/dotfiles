@@ -52,9 +52,9 @@ EOF
     hyprctl dispatch togglefloating >/dev/null 2>&1 || true
   fi
 
-  # Compute target: 95% width, 60% height, x=2.5% (center), y=1%
+  # Compute target: 98% width, 60% height, x=1% (center), y=22px (below waybar)
   read -r x y w h <<EOF
-$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.95);h=int(mh*0.60);x=int(x0+mw*0.025);y=int(26+y0+mh*0.01);printf "%d %d %d %d", x,y,w,h }')
+$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.98);h=int(mh*0.60);x=int(x0+mw*0.01);y=int(y0+22);printf "%d %d %d %d", x,y,w,h }')
 EOF
 
   hyprctl dispatch movewindowpixel "exact $x $y, address:$addr" >/dev/null 2>&1 || true
@@ -83,9 +83,12 @@ if command -v jq >/dev/null 2>&1; then
   if [ -n "$existing" ]; then
     hidden=$(printf '%s' "$existing" | jq -r '.hidden')
     if [ "$hidden" = "true" ]; then
-      # It is hidden; show it, then enforce geometry.
+      # It is hidden; show it, focus it, then enforce geometry.
       hyprctl dispatch togglespecialworkspace "$SPECIAL"
-      sleep 0.08
+      sleep 0.05
+      addr=$(printf '%s' "$existing" | jq -r '.address')
+      hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+      sleep 0.03
       ensure_geometry
     else
       # It is visible; hide it. Do not touch geometry to avoid re-showing.
@@ -110,4 +113,9 @@ hyprctl dispatch togglespecialworkspace "$SPECIAL"
 
 # Enforce geometry after showing
 sleep 0.08
+# Explicit final focus to ensure dropdown is active
+if command -v jq >/dev/null 2>&1; then
+  addr=$(hyprctl clients -j | jq -r '.[] | select(.title=="'"$TITLE"'") | .address' | head -n1)
+  [ -n "$addr" ] && hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+fi
 ensure_geometry

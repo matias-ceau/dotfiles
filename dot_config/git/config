@@ -7,7 +7,7 @@
 	defaultBranch = main
 [alias]
 	repo = !git_clone_by_author-repo.sh
-	cd   = !git_cd.sh
+	cd   = !eval $(git_cd.sh)
 	sync = !sync-repo.py
 	update = !git_update_all_other_repos.sh
 	ai-commit = !git commit --file <(generate_commit_message.py)
