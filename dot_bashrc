@@ -100,3 +100,6 @@ esac
 bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+# OpenClaw Completion
+source "/home/matias/.openclaw/completions/openclaw.bash"
