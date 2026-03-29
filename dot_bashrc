@@ -97,7 +97,7 @@ esac
 #
 . <(fzf --bash)
 
-bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"'
+bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"' || true
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
