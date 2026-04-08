@@ -103,3 +103,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 # OpenClaw Completion
 source "/home/matias/.openclaw/completions/openclaw.bash"
+eval "$(hyprvoice completion bash)" || true

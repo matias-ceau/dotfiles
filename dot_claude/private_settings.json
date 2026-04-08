@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); printf '\\e[31m@\\e[0m\\e[33m%s\\e[36m %s\\e[0m' \"$(hostname -s)\" \"$(echo \"$input\" | jq -r '.workspace.current_dir')\""
+  },
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "serena@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "learning-output-style@claude-plugins-official": true
+  },
+  "autoUpdatesChannel": "latest",
+  "voiceEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "language": "French"
+}
