@@ -116,3 +116,6 @@ done
 hyprctl dispatch togglespecialworkspace "$SPECIAL"
 sleep 0.05
 ensure_geometry
+# Alacritty sends its own XDG configure after mapping — apply again once it settles
+sleep 0.25
+ensure_geometry
