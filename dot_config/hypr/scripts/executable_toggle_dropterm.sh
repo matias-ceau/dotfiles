@@ -108,8 +108,11 @@ fi
 # Otherwise, spawn it into the special workspace and then toggle to show it.
 hyprctl dispatch exec "[workspace special:$SPECIAL] ${TERM_CMD[*]}"
 
-# Wait for the client to map before showing and enforcing geometry
-sleep 0.15
+# Poll until the client is registered (up to 2s), then show and enforce geometry
+for _ in $(seq 1 40); do
+  sleep 0.05
+  hyprctl clients -j | jq -e '.[] | select(.title=="'"$TITLE"'")' >/dev/null 2>&1 && break
+done
 hyprctl dispatch togglespecialworkspace "$SPECIAL"
-sleep 0.1
+sleep 0.05
 ensure_geometry
