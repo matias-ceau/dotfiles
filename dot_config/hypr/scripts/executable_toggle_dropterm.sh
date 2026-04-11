@@ -26,8 +26,9 @@ ensure_geometry() {
 
   [ -z "${addr:-}" ] && return 0
 
-  # Focus the window to target dispatches
+  # Focus the window first — required for moveactive/resizeactive
   hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+  sleep 0.03
 
   # Determine monitor and its geometry
   if command -v jq >/dev/null 2>&1; then
@@ -50,15 +51,17 @@ EOF
   # Ensure floating
   if [ "$floating" != "true" ]; then
     hyprctl dispatch togglefloating >/dev/null 2>&1 || true
+    sleep 0.02
   fi
 
-  # Compute target: 98% width, 60% height, x=1% (center), y=22px (below waybar)
+  # Compute target: 98% width, 60% height, x=1%, y=20px (below waybar)
   read -r x y w h <<EOF
-$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.98);h=int(mh*0.60);x=int(x0+mw*0.01);y=int(y0+22);printf "%d %d %d %d", x,y,w,h }')
+$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.98);h=int(mh*0.60);x=int(x0+mw*0.01);y=int(y0+20);printf "%d %d %d %d", x,y,w,h }')
 EOF
 
-  hyprctl dispatch movewindowpixel "exact $x $y, address:$addr" >/dev/null 2>&1 || true
-  hyprctl dispatch resizewindowpixel "exact $w $h, address:$addr" >/dev/null 2>&1 || true
+  # moveactive/resizeactive work in absolute coords on the focused window
+  hyprctl dispatch moveactive "exact $x $y" >/dev/null 2>&1 || true
+  hyprctl dispatch resizeactive "exact $w $h" >/dev/null 2>&1 || true
 }
 
 # Pick a terminal (prefer kitty, then alacritty, then foot)
@@ -85,10 +88,8 @@ if command -v jq >/dev/null 2>&1; then
     if [ "$hidden" = "true" ]; then
       # It is hidden; show it, focus it, then enforce geometry.
       hyprctl dispatch togglespecialworkspace "$SPECIAL"
-      sleep 0.05
+      sleep 0.08
       addr=$(printf '%s' "$existing" | jq -r '.address')
-      hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
-      sleep 0.03
       ensure_geometry
     else
       # It is visible; hide it. Do not touch geometry to avoid re-showing.
@@ -107,15 +108,8 @@ fi
 # Otherwise, spawn it into the special workspace and then toggle to show it.
 hyprctl dispatch exec "[workspace special:$SPECIAL] ${TERM_CMD[*]}"
 
-# Give Hyprland a moment to register the new client, then toggle.
-sleep 0.05
+# Wait for the client to map before showing and enforcing geometry
+sleep 0.15
 hyprctl dispatch togglespecialworkspace "$SPECIAL"
-
-# Enforce geometry after showing
-sleep 0.08
-# Explicit final focus to ensure dropdown is active
-if command -v jq >/dev/null 2>&1; then
-  addr=$(hyprctl clients -j | jq -r '.[] | select(.title=="'"$TITLE"'") | .address' | head -n1)
-  [ -n "$addr" ] && hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
-fi
+sleep 0.1
 ensure_geometry
