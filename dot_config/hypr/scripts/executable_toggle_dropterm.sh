@@ -56,7 +56,7 @@ EOF
 
   # Compute target: 98% width, 60% height, x=1%, y=20px (below waybar)
   read -r x y w h <<EOF
-$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.98);h=int(mh*0.60);x=int(x0+mw*0.01);y=int(y0+20);printf "%d %d %d %d", x,y,w,h }')
+$(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN{w=int(mw*0.98);h=int(mh*0.60);x=int(x0+mw*0.01);y=int(y0+25);printf "%d %d %d %d", x,y,w,h }')
 EOF
 
   # moveactive/resizeactive work in absolute coords on the focused window
