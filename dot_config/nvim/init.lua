@@ -84,7 +84,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 end ---@diagnostic disable-next-line: undefined-field
@@ -113,7 +113,7 @@ require("lazy").setup({
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
 
-	{ "norcalli/nvim-colorizer.lua", opts = {} },
+	{ "catgoose/nvim-colorizer.lua", opts = {} },
 
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
@@ -510,7 +510,7 @@ require("lazy").setup({
 				end
 				return {
 					timeout_ms = 1000,
-					lsp_fallback = lsp_format_opt,
+					lsp_format = lsp_format_opt,
 				}
 			end,
 			formatters_by_ft = {
