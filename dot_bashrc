@@ -99,8 +99,12 @@ esac
 
 bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"' || true
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 # OpenClaw Completion
-source "/home/matias/.openclaw/completions/openclaw.bash"
+source "/home/matias/.openclaw/completions/openclaw.bash" || true
 eval "$(hyprvoice completion bash)" || true
+
+# >>> spawn >>>
+export PATH="/home/matias/.bun/bin:$PATH"
+# <<< spawn <<<
+[ -f ~/.spawnrc ] && source ~/.spawnrc
