@@ -2,42 +2,48 @@
 set -euo pipefail
 
 SPECIAL="kp"
-APP="${APP:-keepassxc}"
-# Be liberal with identifiers so it works for Wayland/Xwayland
-CLASS_REGEX="${CLASS_REGEX:-^(KeePassXC|keepassxc|org\.keepassxc\.KeePassXC)$}"
 
-# Modes:
-#  - default: toggle behavior (spawn or show/hide)
-#  - --ensure: if running, move it to special workspace without toggling; do not spawn
+# Unlock the KeePassXC database using the master password from pass.
+KP_CMD="pass lavomatyc show | keepassxc --keyfile ${HOME}/Documents/georgeabitbol --pw-stdin ${HOME}/.localdata/monkeypass/database.kdbx"
+KP_CLASS_RE="^(KeePassXC|keepassxc|org\\.keepassxc\\.KeePassXC)$"
+
+PP_CMD="proton-pass"
+PP_CLASS_RE="^(proton-pass|Proton Pass)$"
+
 MODE="toggle"
 if [[ "${1:-}" == "--ensure" ]]; then
   MODE="ensure"
 fi
 
 has_client() {
-  # Match by class/app field in `hyprctl clients` output
-  hyprctl clients | grep -E "(class|app): .*${CLASS_REGEX%$}" -q
+  local class_re="$1"
+  hyprctl clients | grep -Eq "(class|app): .*${class_re}"
 }
 
 move_to_special_if_present() {
-  # Move any matching client to the special workspace, silently
-  hyprctl dispatch movetoworkspacesilent "special:${SPECIAL},class:${CLASS_REGEX}" || true
+  local class_re="$1"
+  hyprctl dispatch movetoworkspacesilent "special:${SPECIAL},class:${class_re}" || true
 }
 
-if has_client; then
-  move_to_special_if_present
-  if [[ "$MODE" == "toggle" ]]; then
-    hyprctl dispatch togglespecialworkspace "$SPECIAL"
+ensure_app() {
+  local class_re="$1" cmd="$2"
+  if has_client "${class_re}"; then
+    move_to_special_if_present "${class_re}"
+    return 0
   fi
-  exit 0
-fi
 
-if [[ "$MODE" == "ensure" ]]; then
-  # Do not spawn in ensure mode; just exit quietly
-  exit 0
-fi
+  if [[ "$MODE" == "ensure" ]]; then
+    return 0
+  fi
 
-# Otherwise spawn it on the special workspace and toggle to show it.
-hyprctl dispatch exec "[workspace special:${SPECIAL}] ${APP}"
-sleep 0.05
-hyprctl dispatch togglespecialworkspace "$SPECIAL"
+  hyprctl dispatch exec "[workspace special:${SPECIAL}] ${cmd}"
+}
+
+ensure_app "${KP_CLASS_RE}" "${KP_CMD}"
+ensure_app "${PP_CLASS_RE}" "${PP_CMD}"
+
+sleep 0.1
+
+if [[ "$MODE" == "toggle" ]]; then
+  hyprctl dispatch togglespecialworkspace "$SPECIAL"
+fi
