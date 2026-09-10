@@ -71,7 +71,7 @@ alias mcli='unalias mcli 2>/dev/null && complete -C /usr/bin/mcli mcli && mcli'
 esp-idf() {
     [[ ! -f '/opt/esp-idf/export.sh' ]] && /opt/esp-idf/install.sh
     /opt/esp-idf/export.sh
-    }
+}
 
 
 # NVM / Node (notoriously heavy)
@@ -90,21 +90,20 @@ export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 # pnpm
 export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 #
-. <(fzf --bash)
+. <(fzf --bash) || true
 
 bind -m vi-insert '"\ez": "`__zoxide_zi`\C-M"' || true
-
 
 # OpenClaw Completion
 source "/home/matias/.openclaw/completions/openclaw.bash" || true
 eval "$(hyprvoice completion bash)" || true
-
+eval "$(register-python-argcomplete qp)" || true
 # >>> spawn >>>
 export PATH="/home/matias/.bun/bin:$PATH"
 # <<< spawn <<<
-[ -f ~/.spawnrc ] && source ~/.spawnrc
+[ -f ~/.spawnrc ] && source ~/.spawnrc || true

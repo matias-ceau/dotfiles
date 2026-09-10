@@ -16,10 +16,12 @@
     "figma@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
-    "learning-output-style@claude-plugins-official": true
+    "learning-output-style@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
   },
+  "language": "French",
   "autoUpdatesChannel": "latest",
-  "voiceEnabled": true,
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "language": "French"
+  "voiceEnabled": true
 }
