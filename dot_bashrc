@@ -107,3 +107,8 @@ eval "$(register-python-argcomplete qp)" || true
 export PATH="/home/matias/.bun/bin:$PATH"
 # <<< spawn <<<
 [ -f ~/.spawnrc ] && source ~/.spawnrc || true
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+[[ -r "$HOME/.grok/completions/bash/grok.bash" ]] && source "$HOME/.grok/completions/bash/grok.bash"
+# <<< grok installer <<<

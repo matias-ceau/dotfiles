@@ -3,3 +3,8 @@ if [[ -f ~/.bashrc ]]; then
 fi
 
 source /home/matias/.config/broot/launcher/bash/br
+
+# >>> spawn >>>
+export PATH="/home/matias/.bun/bin:$PATH"
+# <<< spawn <<<
+[ -f ~/.spawnrc ] && source ~/.spawnrc
