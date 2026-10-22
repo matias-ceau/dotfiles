@@ -9,10 +9,14 @@ original_date: yes
 include:
   - secret-config.yaml
 
+# ATTENTION: toujours utiliser ${track} avec les accolades.
+# Ecrire "$track_$title" fait lire a beets un champ nomme "track_" qui
+# n'existe pas : il ecrit alors le texte litteral "$track_" dans le nom de
+# fichier. C'est la cause des 3628 fichiers "$track_Titre.flac" de sept. 2026.
 paths:
-    default: $albumartist/$album%aunique{}/$track_$title
+    default: $albumartist/$album%aunique{}/${track} $title
     singleton: Non-Album/$artist/$title
-    comp: Compilations/$album%aunique{}/$track_$title
+    comp: Compilations/$album%aunique{}/${track} $title
 
 # Available colors are black, darkred, darkgreen, brown (darkyellow),
 # darkblue, purple (darkmagenta), teal (darkcyan), lightgray, darkgray,
@@ -60,6 +64,10 @@ import:
   languages: en fr fi
 
 plugins:
+    # depuis beets 2.x, MusicBrainz est un plugin : sans cette ligne, aucun
+    # candidat MB n'est propose a l'import et mbsync/mbcollection ne trouvent
+    # rien ("Release ID ... not found"), seuls Spotify/Discogs repondent.
+    - musicbrainz
     # - fetchart
     # - embedart
     - lastgenre

@@ -1,4 +1,4 @@
-# CLAUDE.md — Global Preferences
+# CLAUDE.md — Global Preference
 
 ## Context Awareness & Role
 Before starting a task, use your bash capabilities to determine your context:
@@ -8,6 +8,11 @@ Before starting a task, use your bash capabilities to determine your context:
 ## Language & Communication
 - Match the language of my prompt for explanations and conversations.
 - Code, variables, identifiers, file names, and commit messages must always remain in English.
+
+## Système (Arch Linux)
+- Gestionnaire de paquets Python : `uv` — jamais `pip install` directement
+- Installer un outil CLI Python : `uv tool install -e .` (symlink dans `~/.local/bin`)
+- Lancer sans installer : `uv run <script>`
 
 ## Execution & Agent Capabilities
 - You have full permissions to execute bash commands. Run commands directly to accomplish tasks.
@@ -61,3 +66,13 @@ When given a refactoring or performance goal, treat the existing test suite as a
 - Development: `dev/<feature>` → merge to `main` only when all tests pass.
 - Never `git commit --amend`, `rebase`, or `force-push` a commit already pushed to a remote.
 - Never commit an empty `README.md` or useless stub files.
+
+## Language
+Respond in the langage the user interacts or by the best suited one in the context. English is mostly used by the user but French is his native tongue.
+Code, credentials, filenames, commits should be in english, except if told otherwise.
+
+## Style de code (Python)
+- Préférer stdlib plutôt que dépendances tierces quand c'est raisonnable
+- Zero subprocess Python secondaire si possible (pas de wrappers CLI comme `llm`)
+- Type hints sur toutes les signatures publiques
+- Pas de docstrings si la logique est évidente

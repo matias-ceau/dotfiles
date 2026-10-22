@@ -14,3 +14,7 @@ function fish_prompt
 end
 
 string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/matias/.local/bin" $PATH

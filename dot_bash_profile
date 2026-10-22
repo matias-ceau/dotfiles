@@ -8,3 +8,7 @@ source /home/matias/.config/broot/launcher/bash/br
 export PATH="/home/matias/.bun/bin:$PATH"
 # <<< spawn <<<
 [ -f ~/.spawnrc ] && source ~/.spawnrc
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/matias/.local/bin:$PATH"

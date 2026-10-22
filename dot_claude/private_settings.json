@@ -2,7 +2,7 @@
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "claude-sonnet-5.5",
   "statusLine": {
     "type": "command",
     "command": "input=$(cat); printf '\\e[31m@\\e[0m\\e[33m%s\\e[36m %s\\e[0m' \"$(hostname -s)\" \"$(echo \"$input\" | jq -r '.workspace.current_dir')\""
@@ -27,5 +27,6 @@
   "voiceEnabled": true,
   "editorMode": "vim",
   "verbose": true,
-  "preferredNotifChannel": "kitty"
+  "preferredNotifChannel": "kitty",
+  "agentPushNotifEnabled": true
 }

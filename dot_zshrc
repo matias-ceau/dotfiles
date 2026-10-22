@@ -69,3 +69,7 @@ complete -o nospace -C /usr/bin/mcli mcli
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 [ -f ~/.spawnrc ] && source ~/.spawnrc
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/matias/.local/bin:$PATH"
