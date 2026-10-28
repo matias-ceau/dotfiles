@@ -17,12 +17,13 @@ fi
 
 has_client() {
   local class_re="$1"
-  hyprctl clients | grep -Eq "(class|app): .*${class_re}"
+  local re="${class_re#^}"
+  hyprctl clients | grep -Eq "class: ${re%\$}\$"
 }
 
 move_to_special_if_present() {
   local class_re="$1"
-  hyprctl dispatch movetoworkspacesilent "special:${SPECIAL},class:${class_re}" || true
+  hyprctl dispatch "hl.dsp.window.move({ workspace = \"special:${SPECIAL}\", follow = false, window = \"class:${class_re//\\/\\\\}\" })" || true
 }
 
 ensure_app() {
@@ -36,7 +37,7 @@ ensure_app() {
     return 0
   fi
 
-  hyprctl dispatch exec "[workspace special:${SPECIAL}] ${cmd}"
+  hyprctl dispatch "hl.dsp.exec_cmd([==[${cmd}]==], { workspace = \"special:${SPECIAL}\" })"
 }
 
 ensure_app "${KP_CLASS_RE}" "${KP_CMD}"
@@ -45,5 +46,5 @@ ensure_app "${PP_CLASS_RE}" "${PP_CMD}"
 sleep 0.1
 
 if [[ "$MODE" == "toggle" ]]; then
-  hyprctl dispatch togglespecialworkspace "$SPECIAL"
+  hyprctl dispatch "hl.dsp.workspace.toggle_special(\"${SPECIAL}\")"
 fi

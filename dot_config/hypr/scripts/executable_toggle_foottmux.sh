@@ -24,28 +24,28 @@ if command -v jq >/dev/null 2>&1; then
     hidden=$(printf '%s' "$existing" | jq -r '.hidden')
     addr=$(printf '%s' "$existing" | jq -r '.address')
     if [ "$hidden" = "true" ]; then
-      hyprctl dispatch togglespecialworkspace "$SPECIAL"
+      hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
       sleep 0.08
-      [ -n "$addr" ] && hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+      [ -n "$addr" ] && hyprctl dispatch "hl.dsp.focus({ window = \"address:$addr\" })" >/dev/null 2>&1 || true
     else
-      hyprctl dispatch togglespecialworkspace "$SPECIAL"
+      hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
     fi
     exit 0
   fi
 else
   if hyprctl clients | grep -q "title: $TITLE"; then
-    hyprctl dispatch togglespecialworkspace "$SPECIAL"
+    hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
     exit 0
   fi
 fi
 
 # Spawn on the special workspace, then toggle to show it and focus
-hyprctl dispatch exec "[workspace special:$SPECIAL] ${TERM_CMD[*]}"
+hyprctl dispatch "hl.dsp.exec_cmd([==[${TERM_CMD[*]}]==], { workspace = \"special:$SPECIAL\" })"
 sleep 0.06
-hyprctl dispatch togglespecialworkspace "$SPECIAL"
+hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
 sleep 0.06
 if command -v jq >/dev/null 2>&1; then
   addr=$(hyprctl clients -j | jq -r '.[] | select(.title=="'"$TITLE"'") | .address' | head -n1)
-  [ -n "$addr" ] && hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+  [ -n "$addr" ] && hyprctl dispatch "hl.dsp.focus({ window = \"address:$addr\" })" >/dev/null 2>&1 || true
 fi
 

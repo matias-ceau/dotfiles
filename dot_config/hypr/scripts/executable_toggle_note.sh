@@ -20,12 +20,12 @@ fi
 
 # If a note window exists, toggle special workspace
 if hyprctl clients | grep -q "title: $TITLE"; then
-  hyprctl dispatch togglespecialworkspace "$SPECIAL"
+  hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
   exit 0
 fi
 
 # Spawn it into the special workspace and then toggle.
-hyprctl dispatch exec "[workspace special:$SPECIAL] ${TERM_CMD[*]}"
+hyprctl dispatch "hl.dsp.exec_cmd([==[${TERM_CMD[*]}]==], { workspace = \"special:$SPECIAL\" })"
 sleep 0.05
-hyprctl dispatch togglespecialworkspace "$SPECIAL"
+hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
 

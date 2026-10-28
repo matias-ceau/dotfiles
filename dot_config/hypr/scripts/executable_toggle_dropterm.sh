@@ -27,7 +27,7 @@ ensure_geometry() {
   [ -z "${addr:-}" ] && return 0
 
   # Focus the window first — required for moveactive/resizeactive
-  hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+  hyprctl dispatch "hl.dsp.focus({ window = \"address:$addr\" })" >/dev/null 2>&1 || true
   sleep 0.03
 
   # Determine monitor and its geometry
@@ -50,7 +50,7 @@ EOF
 
   # Ensure floating
   if [ "$floating" != "true" ]; then
-    hyprctl dispatch togglefloating >/dev/null 2>&1 || true
+    hyprctl dispatch "hl.dsp.window.float({ action = \"toggle\" })" >/dev/null 2>&1 || true
     sleep 0.02
   fi
 
@@ -60,8 +60,8 @@ $(awk -v x0="${x0:-0}" -v y0="${y0:-0}" -v mw="${mw:-0}" -v mh="${mh:-0}" 'BEGIN
 EOF
 
   # moveactive/resizeactive work in absolute coords on the focused window
-  hyprctl dispatch moveactive "exact $x $y" >/dev/null 2>&1 || true
-  hyprctl dispatch resizeactive "exact $w $h" >/dev/null 2>&1 || true
+  hyprctl dispatch "hl.dsp.window.move({ x = $x, y = $y })" >/dev/null 2>&1 || true
+  hyprctl dispatch "hl.dsp.window.resize({ x = $w, y = $h })" >/dev/null 2>&1 || true
 }
 
 # Pick a terminal (prefer kitty, then alacritty, then foot)
@@ -87,33 +87,33 @@ if command -v jq >/dev/null 2>&1; then
     hidden=$(printf '%s' "$existing" | jq -r '.hidden')
     if [ "$hidden" = "true" ]; then
       # It is hidden; show it, focus it, then enforce geometry.
-      hyprctl dispatch togglespecialworkspace "$SPECIAL"
+      hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
       sleep 0.08
       addr=$(printf '%s' "$existing" | jq -r '.address')
       ensure_geometry
     else
       # It is visible; hide it. Do not touch geometry to avoid re-showing.
-      hyprctl dispatch togglespecialworkspace "$SPECIAL"
+      hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
     fi
     exit 0
   fi
 else
   # Fallback without jq: naive toggle if title present
   if hyprctl clients | grep -q "title: $TITLE"; then
-    hyprctl dispatch togglespecialworkspace "$SPECIAL"
+    hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
     exit 0
   fi
 fi
 
 # Otherwise, spawn it into the special workspace and then toggle to show it.
-hyprctl dispatch exec "[workspace special:$SPECIAL] ${TERM_CMD[*]}"
+hyprctl dispatch "hl.dsp.exec_cmd([==[${TERM_CMD[*]}]==], { workspace = \"special:$SPECIAL\" })"
 
 # Poll until the client is registered (up to 2s), then show and enforce geometry
 for _ in $(seq 1 40); do
   sleep 0.05
   hyprctl clients -j | jq -e '.[] | select(.title=="'"$TITLE"'")' >/dev/null 2>&1 && break
 done
-hyprctl dispatch togglespecialworkspace "$SPECIAL"
+hyprctl dispatch "hl.dsp.workspace.toggle_special(\"$SPECIAL\")"
 sleep 0.05
 ensure_geometry
 # Alacritty sends its own XDG configure after mapping — apply again once it settles

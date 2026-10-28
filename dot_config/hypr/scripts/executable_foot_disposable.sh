@@ -18,14 +18,14 @@ else
 fi
 
 # Spawn it; rules will ensure floating. Focus will raise above others.
-hyprctl dispatch exec "${TERM_CMD[*]}" >/dev/null 2>&1 || true
+hyprctl dispatch "hl.dsp.exec_cmd([==[${TERM_CMD[*]}]==])" >/dev/null 2>&1 || true
 
 # Try to focus by title (brings it to the top of floating stack)
 sleep 0.05
 if command -v jq >/dev/null 2>&1; then
   addr=$(hyprctl clients -j | jq -r '.[] | select(.title=="'"$TITLE"'") | .address' | head -n1)
   if [ -n "$addr" ]; then
-    hyprctl dispatch focuswindow "address:$addr" >/dev/null 2>&1 || true
+    hyprctl dispatch "hl.dsp.focus({ window = \"address:$addr\" })" >/dev/null 2>&1 || true
   fi
 fi
 
