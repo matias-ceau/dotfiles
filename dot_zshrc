@@ -73,3 +73,10 @@ complete -o nospace -C /usr/bin/mcli mcli
 
 # Added by Antigravity CLI installer
 export PATH="/home/matias/.local/bin:$PATH"
+
+# gog: use file-backed keyring, password from pass (synced via chezmoi across machines)
+gog() {
+    GOG_KEYRING_BACKEND=file \
+    GOG_KEYRING_PASSWORD="$(pass google/gog-keyring)" \
+    command gog "$@"
+}
